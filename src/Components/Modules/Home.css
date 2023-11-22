@@ -4,20 +4,18 @@
 } */
 
 .home-banner-one {
-    background-image:  url("../../assets/images/slider/slider-1.jpg");
-    background: "linear-gradient(rgba(20, 30, 40, 0.5),rgba(20, 30, 40, 0.5)),rgba(20, 30, 40, 0.5) , url(assets/images/slider/slider-1.jpg);" ;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  .home-banner-two {
-    background-image:  url("../../assets/images/slider/slider-2.jpg");
-    background: "linear-gradient(rgba(20, 30, 40, 0.5),rgba(20, 30, 40, 0.5)),rgba(20, 30, 40, 0.5) , url(assets/images/slider/slider-1.jpg);" ;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  .home-banner-three {
-    background-image:  url("../../assets/images/slider/slider-3.jpg");
-    background: "linear-gradient(rgba(20, 30, 40, 0.5),rgba(20, 30, 40, 0.5)),rgba(20, 30, 40, 0.5) , url(assets/images/slider/slider-1.jpg);" ;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
+  background: linear-gradient(rgba(20, 30, 40, 0.5), rgba(20, 30, 40, 0.5)), url("../../assets/images/slider/slider-1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.home-banner-two {
+  background: linear-gradient(rgba(20, 30, 40, 0.5), rgba(20, 30, 40, 0.5)), url("../../assets/images/slider/slider-2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.home-banner-three {
+  background: linear-gradient(rgba(20, 30, 40, 0.5), rgba(20, 30, 40, 0.5)), url("../../assets/images/slider/slider-3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
