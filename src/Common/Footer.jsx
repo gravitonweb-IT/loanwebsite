@@ -6,7 +6,8 @@ import {
   faLinkedin,
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
-import Ftlogoimg from "../../assets/images/brand/company-logo/ft-logo.png";
+import Ftlogoimg from "../assets/images/brand/company-logo/ft-logo.png";
+
 const Footer = () => {
   return (
     <>

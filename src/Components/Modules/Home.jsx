@@ -71,7 +71,7 @@ const Home = () => {
 
   return (
     <>
-     <div className="bg-primary py-1">
+     {/* <div className="bg-primary py-1">
         <div className="container px-md-0">
           <div className="row justify-content-between align-items-center">
             <div className="col-xl-4 col-lg-5 col-md-5 col-12">
@@ -104,874 +104,511 @@ const Home = () => {
           {"      "}
         </div>
         {"    "}
-      </div>  
+      </div>   */}
 
-       <nav className="navbar navbar-expand-lg py-3 navbar-default">
-        {"      "}
-        <div className="container px-0">
-          {"        "}
-          <a className="navbar-brand" href="index-2.html">
-            <img alt="" src={Logoimg} />
-          </a>
-
-          <button
-            aria-controls="navbar-default"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-            className="navbar-toggler collapsed"
-            data-bs-target="#navbar-default"
-            data-bs-toggle="collapse"
-            type="button"
-          >
-            <span className="icon-bar top-bar mt-0" />
-
-            <span className="icon-bar middle-bar" />
-
-            <span className="icon-bar bottom-bar" />
-            {"        "}
-          </button>
-
-          <div className="collapse navbar-collapse" id="navbar-default">
-            <ul className="navbar-nav ms-auto">
-              <li className="nav-item dropdown">
-                {"              "}
-                <a
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                  className="nav-link "
-                  data-bs-display="static"
-                  data-bs-toggle="dropdown"
-                  href="#"
-                  id="navbarHome"
-                >
-                  Home  <FontAwesomeIcon icon={faChevronDown} />
-                </a>
-                {"              "}
-                <ul
-                  aria-labelledby="navbarHome"
-                  className="dropdown-menu dropdown-menu-arrow dropdown-menu-lg"
-                >
-                  <li>
-                    {"                  "}
-                    <div className="row g-0">
-                      {"                    "}
-                      <div className="col-12 col-lg-6">
-                        {"                                            "}
-                        <h6 className="dropdown-header text-primary">
-                          Homepage
-                        </h6>
-                        {"                                            "}
-                        <a
-                          className="dropdown-item"
-                          href="pages/home-modern.html"
-                        >
-                          {"                        "}Home Modern
-                          {"                        "}
-                          <span className="badge bg-primary ms-1">New</span>
-                          {"                      "}
-                        </a>
-                        {"                                            "}
-                        <a className="dropdown-item" href="index-2.html">
-                          {"                        "}Homepage
-                          {"                      "}
-                        </a>
-                        {"                      "}
-                        <a className="dropdown-item" href="pages/index-1.html">
-                          {"                        "}Homepage 1
-                          {"                      "}
-                        </a>
-                        {"                      "}
-                        <a className="dropdown-item" href="pages/index-2.html">
-                          {"                        "}Homepage 2
-                          {"                      "}
-                        </a>
-                        {"                      "}
-                        <a className="dropdown-item" href="pages/index-3.html">
-                          {"                        "}Homepage 3
-                          {"                      "}
-                        </a>
-                        {"                      "}
-                        <h6 className="dropdown-header text-primary mt-2">
-                          {"                        "}Advance Pages
-                          {"                      "}
-                        </h6>
-                        {"                                            "}
-                        <a
-                          className="dropdown-item"
-                          href="pages/index-4-students-loan.html"
-                        >
-                          {"                        "}Student Loan
-                          {"                      "}
-                        </a>
-                        {"                      "}
-                        <a
-                          className="dropdown-item"
-                          href="pages/index-5-business-loan.html"
-                        >
-                          {"                        "}Business Loan
-                          {"                      "}
-                        </a>
-                        {"                      "}
-                        <a
-                          className="dropdown-item mb-lg-0"
-                          href="pages/index-6.html"
-                        >
-                          {"                        "}Home Tabbed
-                          {"                      "}
-                        </a>
-                        {"                      "}
-                        <a
-                          className="dropdown-item mb-lg-0"
-                          href="pages/index-7-borrow-bank.html"
-                        >
-                          {"                        "}Bank Homepage
-                          {"                      "}
-                        </a>
-                        {"                      "}
-                        <a
-                          className="dropdown-item mb-lg-0"
-                          href="pages/index-8-compare-shop.html"
-                        >
-                          {"                        "}Compare & Shop
-                          {"                      "}
-                        </a>
-                        {"                      "}
-                        <a
-                          className="dropdown-item mb-lg-0"
-                          href="pages/index-forex.html"
-                        >
-                          {"                        "}Forex
-                          {"                      "}
-                        </a>
-                        {"                      "}
-                        <a
-                          className="dropdown-item"
-                          href="pages/index-creditcards.html"
-                        >
-                          {"                        "}Credit Card
-                          {"                      "}
-                        </a>
-                        {"                      "}
-                        <a
-                          className="dropdown-item"
-                          href="pages/index-creditscore.html"
-                        >
-                          {"                        "}Credit Score
-                          {"                      "}
-                        </a>
-                        {"                    "}
-                      </div>
-                      {"                    "}
-                      <div className="col-12 col-lg-6">
-                        {"                                            "}
-                        <h6 className="dropdown-header text-primary">
-                          {"                        "}Landing pages
-                          {"                      "}
-                        </h6>
-                        {"                                            "}
-                        <a
-                          className="dropdown-item"
-                          href="pages/landing-page-car-loan.html"
-                        >
-                          {"                        "}Car Loan
-                          {"                      "}
-                        </a>
-                        {"                      "}
-                        <a
-                          className="dropdown-item"
-                          href="pages/landing-page-home-loan.html"
-                        >
-                          {"                        "}Home Loan
-                          {"                      "}
-                        </a>
-                        {"                                            "}
-                        <a
-                          className="dropdown-item"
-                          href="pages/landing-page-refinancing.html"
-                        >
-                          {"                        "}Refinance Loan
-                          {"                      "}
-                        </a>
-                        {"                      "}
-                        <a
-                          className="dropdown-item"
-                          href="pages/landing-page-lead-generator.html"
-                        >
-                          {"                        "}Lead Generator
-                          {"                      "}
-                        </a>
-                        {"                      "}
-                        <a
-                          className="dropdown-item"
-                          href="pages/landing-page-card.html"
-                        >
-                          {"                        "}Card Landing Page
-                          {"                      "}
-                        </a>
-                        {"                                          "}
-                      </div>
-                      {"                  "}
-                    </div>
-                  </li>
-                  {"              "}
-                </ul>
-              </li>
-
-              <li className="nav-item dropdown">
-                {"              "}
-                <a
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                  className="nav-link "
-                  data-bs-toggle="dropdown"
-                  href="#"
-                  id="navbarProducts"
-                >
-                  Products   <FontAwesomeIcon icon={faChevronDown} />
-                </a>
-                {"              "}
-                <ul
-                  aria-labelledby="navbarProducts"
-                  className="dropdown-menu dropdown-menu-arrow"
-                >
-                  <li className="dropdown-submenu dropstart-lg">
-                    {"                  "}
-                    <a
-                      className="dropdown-item dropdown-list-group-item dropdown-toggle"
-                      href="#"
-                    >
-                      {"                    "}Loans{"                  "}
-                    </a>
-                    {"                  "}
-                    <ul className="dropdown-menu">
-                      {"                    "}
-                      <li>
-                        {"                      "}
-                        <a
-                          className="dropdown-item"
-                          href="pages/loan-listing-image.html"
-                        >
-                          {"                        "}Loan List Image
-                          {"                      "}
-                        </a>
-                        {"                    "}
-                      </li>
-                      {"                    "}
-                      <li>
-                        {"                      "}
-                        <a
-                          className="dropdown-item"
-                          href="pages/loan-listing-icon.html"
-                        >
-                          {"                        "}Loan List Icon
-                          {"                      "}
-                        </a>
-                        {"                    "}
-                      </li>
-                      {"                    "}
-                      <li>
-                        {"                      "}
-                        <a className="dropdown-item" href="pages/car-loan.html">
-                          {"                        "}Car Loan Single
-                          {"                      "}
-                        </a>
-                        {"                    "}
-                      </li>
-                      {"                    "}
-                      <li>
-                        {"                      "}
-                        <a
-                          className="dropdown-item"
-                          href="pages/home-loan.html"
-                        >
-                          {"                        "}Home Loan Single
-                          {"                      "}
-                        </a>
-                        {"                    "}
-                      </li>
-                      {"                    "}
-                      <li>
-                        {"                      "}
-                        <a
-                          className="dropdown-item"
-                          href="pages/personal-loan.html"
-                        >
-                          {"                        "}Personal Loan Single
-                          {"                      "}
-                        </a>
-                        {"                    "}
-                      </li>
-                      {"                    "}
-                      <li>
-                        {"                      "}
-                        <a
-                          className="dropdown-item"
-                          href="pages/education-loan.html"
-                        >
-                          {"                        "}Education Loan Single
-                          {"                      "}
-                        </a>
-                        {"                    "}
-                      </li>
-                      {"                  "}
-                    </ul>
-                  </li>
-
-                  <li className="dropdown-submenu dropstart-lg">
-                    {"                  "}
-                    <a
-                      className="dropdown-item dropdown-list-group-item dropdown-toggle"
-                      href="#"
-                    >
-                      {"                    "}Credit Card{"                  "}
-                    </a>
-                    {"                  "}
-                    <ul className="dropdown-menu">
-                      {"                    "}
-                      <li>
-                        {"                      "}
-                        <a
-                          className="dropdown-item"
-                          href="pages/credit-card-listing.html"
-                        >
-                          {"                        "}Credit Card List
-                          {"                      "}
-                        </a>
-                        {"                    "}
-                      </li>
-                      {"                    "}
-                      <li>
-                        {"                      "}
-                        <a
-                          className="dropdown-item"
-                          href="pages/credit-card-single.html"
-                        >
-                          {"                        "}Credit Card Single
-                          {"                      "}
-                        </a>
-                        {"                    "}
-                      </li>
-                      {"                  "}
-                    </ul>
-                  </li>
-                  {"              "}
-                </ul>
-                {"              "}
-                <ul
-                  aria-labelledby="navbarProducts"
-                  className="dropdown-menu dropdown-menu-arrow"
-                >
-                  <li className="dropdown-submenu dropstart-lg">
-                    {"                  "}
-                    <a
-                      className="dropdown-item dropdown-list-group-item dropdown-toggle"
-                      href="#"
-                    >
-                      {"                    "}Loans{"                  "}
-                    </a>
-                    {"                  "}
-                    <ul className="dropdown-menu">
-                      {"                    "}
-                      <li>
-                        {"                      "}
-                        <a
-                          className="dropdown-item"
-                          href="pages/loan-listing-image.html"
-                        >
-                          {"                        "}Loan List Image
-                          {"                      "}
-                        </a>
-                        {"                    "}
-                      </li>
-                      {"                    "}
-                      <li>
-                        {"                      "}
-                        <a
-                          className="dropdown-item"
-                          href="pages/loan-listing-icon.html"
-                        >
-                          {"                        "}Loan List Icon
-                          {"                      "}
-                        </a>
-                        {"                    "}
-                      </li>
-                      {"                    "}
-                      <li>
-                        {"                      "}
-                        <a className="dropdown-item" href="pages/car-loan.html">
-                          {"                        "}Car Loan Single
-                          {"                      "}
-                        </a>
-                        {"                    "}
-                      </li>
-                      {"                    "}
-                      <li>
-                        {"                      "}
-                        <a
-                          className="dropdown-item"
-                          href="pages/home-loan.html"
-                        >
-                          {"                        "}Home Loan Single
-                          {"                      "}
-                        </a>
-                        {"                    "}
-                      </li>
-                      {"                    "}
-                      <li>
-                        {"                      "}
-                        <a
-                          className="dropdown-item"
-                          href="pages/personal-loan.html"
-                        >
-                          {"                        "}Personal Loan Single
-                          {"                      "}
-                        </a>
-                        {"                    "}
-                      </li>
-                      {"                    "}
-                      <li>
-                        {"                      "}
-                        <a
-                          className="dropdown-item"
-                          href="pages/education-loan.html"
-                        >
-                          {"                        "}Education Loan Single
-                          {"                      "}
-                        </a>
-                        {"                    "}
-                      </li>
-                      {"                  "}
-                    </ul>
-                  </li>
-
-                  <li className="dropdown-submenu dropstart-lg">
-                    {"                  "}
-                    <a
-                      className="dropdown-item dropdown-list-group-item dropdown-toggle"
-                      href="#"
-                    >
-                      {"                    "}Credit Card{"                  "}
-                    </a>
-                    {"                  "}
-                    <ul className="dropdown-menu">
-                      {"                    "}
-                      <li>
-                        {"                      "}
-                        <a
-                          className="dropdown-item"
-                          href="pages/credit-card-listing.html"
-                        >
-                          {"                        "}List
-                          {"                      "}
-                        </a>
-                        {"                    "}
-                      </li>
-                      {"                    "}
-                      <li>
-                        {"                      "}
-                        <a
-                          className="dropdown-item"
-                          href="pages/credit-card-single.html"
-                        >
-                          {"                        "}Single
-                          {"                      "}
-                        </a>
-                        {"                    "}
-                      </li>
-                      {"                  "}
-                    </ul>
-                  </li>
-
-                  <li className="dropdown-submenu dropstart-lg">
-                    {"                  "}
-                    <a
-                      className="dropdown-item dropdown-list-group-item dropdown-toggle"
-                      href="#"
-                    >
-                      {"                    "}Landers{"                  "}
-                    </a>
-                    {"                  "}
-                    <ul className="dropdown-menu">
-                      {"                    "}
-                      <li>
-                        {"                      "}
-                        <a
-                          className="dropdown-item"
-                          href="pages/lender-listing.html"
-                        >
-                          {"                        "}List
-                          {"                      "}
-                        </a>
-                        {"                    "}
-                      </li>
-                      {"                    "}
-                      <li>
-                        {"                      "}
-                        <a
-                          className="dropdown-item"
-                          href="pages/lender-single.html"
-                        >
-                          {"                        "}Single
-                          {"                      "}
-                        </a>
-                        {"                    "}
-                      </li>
-                      {"                  "}
-                    </ul>
-                  </li>
-
-                  <li className="dropdown-submenu dropstart-lg">
-                    {"                  "}
-                    <a
-                      className="dropdown-item dropdown-list-group-item dropdown-toggle"
-                      href="#"
-                    >
-                      {"                    "}Bank Account{"                  "}
-                    </a>
-                    {"                  "}
-                    <ul className="dropdown-menu">
-                      {"                    "}
-                      <li>
-                        {"                      "}
-                        <a
-                          className="dropdown-item"
-                          href="pages/personal-bank-account.html"
-                        >
-                          {"                        "}Account
-                          {"                      "}
-                        </a>
-                        {"                    "}
-                      </li>
-                      {"                    "}
-                      <li>
-                        {"                      "}
-                        <a
-                          className="dropdown-item"
-                          href="pages/personal-bank-account-list.html"
-                        >
-                          {"                        "}Account List
-                          {"                      "}
-                        </a>
-                        {"                    "}
-                      </li>
-                      {"                    "}
-                      <li>
-                        {"                      "}
-                        <a
-                          className="dropdown-item"
-                          href="pages/personal-bank-account-single.html"
-                        >
-                          {"                        "}Account Single
-                          {"                      "}
-                        </a>
-                        {"                    "}
-                      </li>
-                      {"                  "}
-                    </ul>
-                  </li>
-
-                  <li className="dropdown-submenu dropstart-lg">
-                    {"                  "}
-                    <a
-                      className="dropdown-item dropdown-list-group-item dropdown-toggle"
-                      href="#"
-                    >
-                      {"                    "}Compare Page{"                  "}
-                    </a>
-                    {"                  "}
-                    <ul className="dropdown-menu">
-                      {"                    "}
-                      <li>
-                        {"                      "}
-                        <a
-                          className="dropdown-item"
-                          href="pages/compare-credit-card.html"
-                        >
-                          {"                        "}Compare Credit Card
-                          {"                      "}
-                        </a>
-                        {"                    "}
-                      </li>
-                      {"                    "}
-                      <li>
-                        {"                      "}
-                        <a
-                          className="dropdown-item"
-                          href="pages/compare-personal-loan.html"
-                        >
-                          {"                        "}Compare Personal
-                          {"                      "}
-                        </a>
-                        {"                    "}
-                      </li>
-                      {"                    "}
-                      <li>
-                        {"                      "}
-                        <a
-                          className="dropdown-item"
-                          href="pages/compare-student-loan.html"
-                        >
-                          {"                        "}Compare Student Loan
-                          {"                      "}
-                        </a>
-                        {"                    "}
-                      </li>
-                      {"                    "}
-                      <li>
-                        {"                      "}
-                        <a
-                          className="dropdown-item"
-                          href="pages/compare-loan.html"
-                        >
-                          {"                        "}Compare Loan
-                          {"                      "}
-                        </a>
-                        {"                    "}
-                      </li>
-                      {"                  "}
-                    </ul>
-                  </li>
-
-                  <li className="dropdown-submenu dropstart-lg">
-                    {"                  "}
-                    <a
-                      className="dropdown-item dropdown-list-group-item dropdown-toggle"
-                      href="#"
-                    >
-                      {"                    "}Forex Page{"                  "}
-                    </a>
-                    {"                  "}
-                    <ul className="dropdown-menu">
-                      {"                    "}
-                      <li>
-                        {"                      "}
-                        <a
-                          className="dropdown-item"
-                          href="pages/forex-list.html"
-                        >
-                          {"                        "}Forex List
-                          {"                      "}
-                        </a>
-                        {"                    "}
-                      </li>
-                      {"                    "}
-                      <li>
-                        {"                      "}
-                        <a
-                          className="dropdown-item"
-                          href="pages/forex-list-single.html"
-                        >
-                          {"                        "}Forex Single
-                          {"                      "}
-                        </a>
-                        {"                    "}
-                      </li>
-                      {"                  "}
-                    </ul>
-                  </li>
-
-                  <li>
-                    {"                  "}
-                    <a
-                      className="dropdown-item"
-                      href="pages/loan-calculator.html"
-                    >
-                      {"                    "}Loan Calculator
-                      {"                  "}
-                    </a>
-                  </li>
-
-                  <li>
-                    {"                  "}
-                    <a
-                      className="dropdown-item"
-                      href="pages/loan-eligibility.html"
-                    >
-                      {"                    "}Eligibility Calculator
-                      {"                  "}
-                    </a>
-                  </li>
-                  {"              "}
-                </ul>
-              </li>
-
-              <li className="nav-item dropdown">
-                {"              "}
-                <a
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                  className="nav-link "
-                  data-bs-toggle="dropdown"
-                  href="#"
-                  id="navbarBlog"
-                  role="button"
-                >
-                  Blog <FontAwesomeIcon icon={faChevronDown} /> 
-                </a>
-                {"              "}
-                <div aria-labelledby="navbarBlog" className="dropdown-menu">
-                  <a className="dropdown-item" href="pages/blog-listing.html">
-                    Blog Listing
-                  </a>
-
-                  <a
-                    className="dropdown-item"
-                    href="pages/blog-two-column.html"
-                  >
-                    Two Column
-                  </a>
-
-                  <a
-                    className="dropdown-item"
-                    href="pages/blog-three-column.html"
-                  >
-                    Three Column
-                  </a>
-
-                  <a className="dropdown-item" href="pages/blog-single.html">
-                    Blog Single
-                  </a>
-                  {"              "}
-                </div>
-              </li>
-
-              <li className="nav-item dropdown">
-                {"              "}
-                <a
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                  className="nav-link "
-                  data-bs-toggle="dropdown"
-                  href="#"
-                  id="navbarFeatures"
-                  role="button"
-                >
-                  Features <FontAwesomeIcon icon={faChevronDown} />
-                </a>
-                {"              "}
-                <ul aria-labelledby="navbarFeatures" className="dropdown-menu">
-                  <li>
-                    {"                  "}
-                    <a className="dropdown-item" href="pages/about.html">
-                      About Us
-                    </a>
-                  </li>
-
-                  <li>
-                    {"                  "}
-                    <a className="dropdown-item" href="pages/team.html">
-                      Team
-                    </a>
-                  </li>
-
-                  <li>
-                    <a className="dropdown-item" href="pages/faq.html">
-                      FAQ
-                    </a>
-                  </li>
-
-                  <li>
-                    {"                  "}
-                    <a className="dropdown-item" href="pages/error.html">
-                      404 error
-                    </a>
-                  </li>
-
-                  <li className="dropdown-submenu dropstart-lg">
-                    {"                  "}
-                    <a
-                      className="dropdown-item dropdown-list-group-item dropdown-toggle"
-                      href="#"
-                    >
-                      {"                    "}Gallery{"                  "}
-                    </a>
-                    {"                  "}
-                    <ul className="dropdown-menu">
-                      {"                    "}
-                      <li>
-                        {"                      "}
-                        <a
-                          className="dropdown-item"
-                          href="pages/gallery-filter-2.html"
-                        >
-                          {"                        "}Two Column
-                          {"                      "}
-                        </a>
-                        {"                    "}
-                      </li>
-                      {"                    "}
-                      <li>
-                        {"                      "}
-                        <a
-                          className="dropdown-item"
-                          href="pages/gallery-filter-3.html"
-                        >
-                          {"                        "}Three Column
-                          {"                      "}
-                        </a>
-                        {"                    "}
-                      </li>
-                      {"                    "}
-                      <li>
-                        {"                      "}
-                        <a
-                          className="dropdown-item"
-                          href="pages/gallery-masonry.html"
-                        >
-                          {"                        "}Masonry
-                          {"                      "}
-                        </a>
-                        {"                    "}
-                      </li>
-                      {"                    "}
-                      <li>
-                        {"                      "}
-                        <a
-                          className="dropdown-item"
-                          href="pages/gallery-zoom.html"
-                        >
-                          {"                        "}Zoom
-                          {"                      "}
-                        </a>
-                        {"                    "}
-                      </li>
-                      {"                  "}
-                    </ul>
-                  </li>
-
-                  <li>
-                    {"                  "}
-                    <a className="dropdown-item" href="pages/contact-us.html">
-                      Contact{"                  "}
-                    </a>
-                  </li>
-                  {"              "}
-                </ul>
-              </li>
-
-              <li className="nav-item">
-                {"              "}
-                <a className="nav-link" href="docs/index.html">
-                  {" "}
-                  Docs{" "}
-                </a>
-              </li>
-            </ul>
-
-            <div className="ms-lg-3 mt-3 d-grid mt-lg-0">
+          {/* <nav class="navbar navbar-expand-lg py-3 navbar-default">
+      <div class="container px-0">
+        <a class="navbar-brand" href="../index-2.html"
+          ><img src="../assets/images/brand/logo/logo.svg" alt=""
+        /></a>
+     
+        <button
+          class="navbar-toggler collapsed"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbar-default"
+          aria-controls="navbar-default"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="icon-bar top-bar mt-0"></span>
+          <span class="icon-bar middle-bar"></span>
+          <span class="icon-bar bottom-bar"></span>
+        </button>
+   
+        <div class="collapse navbar-collapse" id="navbar-default">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item dropdown">
               <a
-                className="btn btn-primary btn-sm"
-                href="https://1.envato.market/xJB55"
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarHome"
+                data-bs-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                data-bs-display="static"
               >
-                Buy Now
+                Home
               </a>
-            </div>
-            {"        "}
+              <ul
+                class="dropdown-menu dropdown-menu-arrow dropdown-menu-lg"
+                aria-labelledby="navbarHome"
+              >
+                <li>
+                  <div class="row g-0">
+                    <div class="col-12 col-lg-6">
+                
+                      <h6 class="dropdown-header text-primary">Homepage</h6>
+                  
+                      <a class="dropdown-item" href="home-modern.html">
+                        Home Modern
+                        <span class="badge bg-primary ms-1">New</span>
+                      </a>
+                 
+                      <a class="dropdown-item" href="../index-2.html">
+                        Homepage
+                      </a>
+                      <a class="dropdown-item" href="index-1.html">
+                        Homepage 1
+                      </a>
+                      <a class="dropdown-item" href="index-2.html">
+                        Homepage 2
+                      </a>
+                      <a class="dropdown-item" href="index-3.html">
+                        Homepage 3
+                      </a>
+                      <h6 class="dropdown-header text-primary mt-2">
+                        Advance Pages
+                      </h6>
+                
+                      <a
+                        class="dropdown-item"
+                        href="index-4-students-loan.html"
+                      >
+                        Student Loan
+                      </a>
+                      <a
+                        class="dropdown-item"
+                        href="index-5-business-loan.html"
+                      >
+                        Business Loan
+                      </a>
+                      <a class="dropdown-item mb-lg-0" href="index-6.html">
+                        Home Tabbed
+                      </a>
+                      <a
+                        class="dropdown-item mb-lg-0"
+                        href="index-7-borrow-bank.html"
+                      >
+                        Bank Homepage
+                      </a>
+
+                      <a
+                        class="dropdown-item mb-lg-0"
+                        href="index-8-compare-shop.html"
+                      >
+                        Compare & Shop
+                      </a>
+                      <a class="dropdown-item mb-lg-0" href="index-forex.html">
+                        Forex
+                      </a>
+                      <a class="dropdown-item" href="index-creditcards.html">
+                        Credit Card
+                      </a>
+                      <a class="dropdown-item" href="index-creditscore.html">
+                        Credit Score
+                      </a>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                   
+                      <h6 class="dropdown-header text-primary">
+                        Landing pages
+                      </h6>
+             
+                      <a
+                        class="dropdown-item"
+                        href="landing-page-car-loan.html"
+                      >
+                        Car Loan
+                      </a>
+                      <a
+                        class="dropdown-item"
+                        href="landing-page-home-loan.html"
+                      >
+                        Home Loan
+                      </a>
+                 
+                      <a
+                        class="dropdown-item"
+                        href="landing-page-refinancing.html"
+                      >
+                        Refinance Loan
+                      </a>
+
+                      <a
+                        class="dropdown-item"
+                        href="landing-page-lead-generator.html"
+                      >
+                        Lead Generator
+                      </a>
+                      <a class="dropdown-item" href="landing-page-card.html">
+                        Card Landing Page
+                      </a>
+
+               
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarProducts"
+                data-bs-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Products
+              </a>
+              <ul
+                class="dropdown-menu dropdown-menu-arrow"
+                aria-labelledby="navbarProducts"
+              >
+                <li class="dropdown-submenu dropstart-lg">
+                  <a
+                    class="dropdown-item dropdown-list-group-item dropdown-toggle"
+                    href="#"
+                  >
+                    Loans
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="loan-listing-image.html">
+                        Loan List Image
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="loan-listing-icon.html">
+                        Loan List Icon
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="car-loan.html">
+                        Car Loan Single
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="home-loan.html">
+                        Home Loan Single
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="personal-loan.html">
+                        Personal Loan Single
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="education-loan.html">
+                        Education Loan Single
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="dropdown-submenu dropstart-lg">
+                  <a
+                    class="dropdown-item dropdown-list-group-item dropdown-toggle"
+                    href="#"
+                  >
+                    Credit Card
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="credit-card-listing.html">
+                        Credit Card List
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="credit-card-single.html">
+                        Credit Card Single
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <ul
+                class="dropdown-menu dropdown-menu-arrow"
+                aria-labelledby="navbarProducts"
+              >
+                <li class="dropdown-submenu dropstart-lg">
+                  <a
+                    class="dropdown-item dropdown-list-group-item dropdown-toggle"
+                    href="#"
+                  >
+                    Loans
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="loan-listing-image.html">
+                        Loan List Image
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="loan-listing-icon.html">
+                        Loan List Icon
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="car-loan.html">
+                        Car Loan Single
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="home-loan.html">
+                        Home Loan Single
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="personal-loan.html">
+                        Personal Loan Single
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="education-loan.html">
+                        Education Loan Single
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="dropdown-submenu dropstart-lg">
+                  <a
+                    class="dropdown-item dropdown-list-group-item dropdown-toggle"
+                    href="#"
+                  >
+                    Credit Card
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="credit-card-listing.html">
+                        List
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="credit-card-single.html">
+                        Single
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="dropdown-submenu dropstart-lg">
+                  <a
+                    class="dropdown-item dropdown-list-group-item dropdown-toggle"
+                    href="#"
+                  >
+                    Landers
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="lender-listing.html">
+                        List
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="lender-single.html">
+                        Single
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="dropdown-submenu dropstart-lg">
+                  <a
+                    class="dropdown-item dropdown-list-group-item dropdown-toggle"
+                    href="#"
+                  >
+                    Bank Account
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="personal-bank-account.html"
+                      >
+                        Account
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="personal-bank-account-list.html"
+                      >
+                        Account List
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="personal-bank-account-single.html"
+                      >
+                        Account Single
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="dropdown-submenu dropstart-lg">
+                  <a
+                    class="dropdown-item dropdown-list-group-item dropdown-toggle"
+                    href="#"
+                  >
+                    Compare Page
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="compare-credit-card.html">
+                        Compare Credit Card
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="compare-personal-loan.html"
+                      >
+                        Compare Personal
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="compare-student-loan.html">
+                        Compare Student Loan
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="compare-loan.html">
+                        Compare Loan
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="dropdown-submenu dropstart-lg">
+                  <a
+                    class="dropdown-item dropdown-list-group-item dropdown-toggle"
+                    href="#"
+                  >
+                    Forex Page
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="forex-list.html">
+                        Forex List
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="forex-list-single.html">
+                        Forex Single
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="loan-calculator.html" class="dropdown-item">
+                    Loan Calculator
+                  </a>
+                </li>
+                <li>
+                  <a href="loan-eligibility.html" class="dropdown-item">
+                    Eligibility Calculator
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarBlog"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Blog
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarBlog">
+                <a class="dropdown-item" href="blog-listing.html"
+                  >Blog Listing</a
+                >
+                <a class="dropdown-item" href="blog-two-column.html"
+                  >Two Column</a
+                >
+                <a class="dropdown-item" href="blog-three-column.html"
+                  >Three Column</a
+                >
+                <a class="dropdown-item" href="blog-single.html">Blog Single</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarFeatures"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Features
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarFeatures">
+                <li><a class="dropdown-item" href="about.html">About Us</a></li>
+                <li><a class="dropdown-item" href="team.html">Team</a></li>
+                <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
+
+                <li>
+                  <a class="dropdown-item" href="error.html">404 error</a>
+                </li>
+                <li class="dropdown-submenu dropstart-lg">
+                  <a
+                    class="dropdown-item dropdown-list-group-item dropdown-toggle"
+                    href="#"
+                  >
+                    Gallery
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="gallery-filter-2.html">
+                        Two Column
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="gallery-filter-3.html">
+                        Three Column
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="gallery-masonry.html">
+                        Masonry
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="gallery-zoom.html">
+                        Zoom
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="contact-us.html">Contact </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../docs/index.html"> Docs </a>
+            </li>
+          </ul>
+          <div class="ms-lg-3 mt-3 d-grid mt-lg-0">
+            <a
+              href="https://1.envato.market/xJB55"
+              class="btn btn-primary btn-sm"
+              >Buy Now</a
+            >
           </div>
-          {"      "}
         </div>
-        {"    "}
-      </nav>   
+      </div>
+         </nav>      */}
+
+
 
       <main>
         <section>

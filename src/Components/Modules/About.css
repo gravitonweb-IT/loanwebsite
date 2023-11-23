@@ -51,3 +51,8 @@
     background-size: cover;
 }
 
+.galary-header-page{
+    background: linear-gradient(rgba(20, 30, 40, 0.5), rgba(20, 30, 40, 0.5)), url("../../assets/images/background/page-header.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}

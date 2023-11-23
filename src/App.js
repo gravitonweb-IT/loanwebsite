@@ -19,8 +19,10 @@ import HomeLoan from "./Components/Modules/HomeLoan";
 import BusinessLoan from './Components/Modules/BusinessLoan';
 import PersonalLoan from './Components/Modules/PersonalLoan';
 import CarLoan from "./Components/Modules/CarLoan";
-import Footer from './assets/Common/Footer';
+import Footer from './Common/Footer';
 import EducationLoan from "./Components/Modules/EducationLoan";
+import Navbar from './Common/Navbar';
+import Gallary from './Components/Modules/Gallary';
 
 
 
@@ -28,6 +30,7 @@ import EducationLoan from "./Components/Modules/EducationLoan";
 function App() {
   return (
     <>
+    <Navbar/>
       <Routes>
         <Route index path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -41,6 +44,9 @@ function App() {
         <Route path="/personalloan" element={<PersonalLoan />} />
         <Route path="/studentloan" element={<StudentLoan />} />
         <Route path="/refinanceloan" element={<RefinanceLoan />} />
+        <Route path="/gallary" element={<Gallary />} />
+
+
       </Routes>
       <Footer/>
     </>
