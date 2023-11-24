@@ -7,7 +7,7 @@ import Mansonryimg4 from "../../assets/images/background/masonry-4.jpg"
 import Mansonryimg5 from "../../assets/images/background/masonry-5.jpg"
 import Mansonryimg6 from "../../assets/images/background/masonry-6.jpg"
 
-const Gallary = () => {
+const Gallery = () => {
   return (
     <>
       <main>
@@ -146,4 +146,4 @@ const Gallary = () => {
   );
 };
 
-export default Gallary;
+export default Gallery;

@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
-import './Businessloan.css';
+import "./Businessloan.css";
 import { tns } from "tiny-slider/src/tiny-slider";
-import '@fortawesome/fontawesome-free/css/all.css';
+import "@fortawesome/fontawesome-free/css/all.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faArrowLeft,
@@ -23,18 +23,19 @@ const BusinessLoan = () => {
       prevButton: ".prev",
       nextButton: ".next",
     });
-    document.querySelector('.tns-nav').style.display = 'none';
+    document.querySelector(".tns-nav").style.display = "none";
     // Clean up on component unmount
     return () => {
       slider.destroy();
     };
   }, []);
+
   return (
     <>
       <main>
         <section>
           <div className="position-relative">
-          <ul className="controls" id="sliderFirstControls">
+            <ul className="controls" id="sliderFirstControls">
               <li className="prev">
                 <FontAwesomeIcon icon={faArrowLeft} />
               </li>
@@ -44,17 +45,8 @@ const BusinessLoan = () => {
               </li>
             </ul>
             <div className="sliderFirst">
-
               <div className="item">
-
-                <div
-                  className="py-22 businessloan-banner-one"
-                  // style={{
-                  //   background:
-                  //     "url(../assets/images/slider/business-slider-1.jpg)no-repeat",
-                  //   "background-size": "cover",
-                  // }}
-                >
+                <div className="py-22 businessloan-banner-one">
                   <div className="container">
                     <div className="row">
                       <div className="col-xl-8 col-lg-9 col-md-12 col-sm-12 col-12">
@@ -83,7 +75,7 @@ const BusinessLoan = () => {
                   </div>
                 </div>
               </div>
-              
+
               <div className="item">
                 <div
                   className="py-22 businessloan-banner-two "
@@ -160,8 +152,6 @@ const BusinessLoan = () => {
                   </div>
                 </div>
               </div>
-
-
             </div>
           </div>
         </section>
@@ -195,7 +185,7 @@ const BusinessLoan = () => {
             </div>
           </div>
         </div>
-        <section className="py-lg-16 py-10 bg-white border-bottom border-top ">
+        <section className="py-lg-10 py-8 bg-white border-bottom border-top ">
           <div className="container">
             <div className="row">
               <div className="offset-xl-2 col-xl-8  col-md-12 col-12">
@@ -293,7 +283,7 @@ const BusinessLoan = () => {
             </div>
           </div>
         </section>
-        <section className="py-lg-16 py-10">
+        <section className="py-lg-8 py-6">
           <div className="container">
             <div className="row">
               <div className="offset-xl-3 col-xl-6 offset-md-2 col-md-8 offset-md-2 col-md-8 col-sm-12 col-12">
@@ -311,7 +301,7 @@ const BusinessLoan = () => {
             <div className="row">
               <div className="col-xl-4 col-lg-4 col-md-6 col-sm-4 col-12">
                 <div className="card smooth-shadow-sm border-0 text-center mb-4">
-                  <div className="card-body px-6 py-7">
+                  <div className="card-body px-6 py-5">
                     <div className="mb-3">
                       <i className="flaticon-get-money fs-1 text-primary" />
                     </div>
@@ -327,7 +317,7 @@ const BusinessLoan = () => {
               </div>
               <div className="col-xl-4 col-lg-4 col-md-6 col-sm-4 col-12">
                 <div className="card smooth-shadow-sm border-0 text-center mb-4">
-                  <div className="card-body px-6 py-7">
+                  <div className="card-body px-6 py-5">
                     <div className="mb-3">
                       <i className="flaticon-time-is-money  fs-1 text-primary" />
                     </div>
@@ -344,7 +334,7 @@ const BusinessLoan = () => {
               </div>
               <div className="col-xl-4 col-lg-4 col-md-6 col-sm-4 col-12">
                 <div className="card smooth-shadow-sm border-0 text-center mb-4">
-                  <div className="card-body px-6 py-7">
+                  <div className="card-body px-6 py-5">
                     <div className="mb-3">
                       <i className="flaticon-rich  fs-1 text-primary" />
                     </div>
@@ -360,7 +350,7 @@ const BusinessLoan = () => {
               </div>
               <div className="col-xl-4 col-lg-4 col-md-6 col-sm-4 col-12">
                 <div className="card smooth-shadow-sm border-0 text-center mb-4">
-                  <div className="card-body px-6 py-7">
+                  <div className="card-body px-6 py-5">
                     <div className="mb-3">
                       <i className="flaticon-store-1  fs-1 text-primary" />
                     </div>
@@ -376,7 +366,7 @@ const BusinessLoan = () => {
               </div>
               <div className="col-xl-4 col-lg-4 col-md-6 col-sm-4 col-12">
                 <div className="card smooth-shadow-sm border-0 text-center mb-4">
-                  <div className="card-body px-6 py-7">
+                  <div className="card-body px-6 py-5">
                     <div className="mb-3">
                       <i className="flaticon-stand  fs-1 text-primary" />
                     </div>
@@ -392,7 +382,7 @@ const BusinessLoan = () => {
               </div>
               <div className="col-xl-4 col-lg-4 col-md-6 col-sm-4 col-12">
                 <div className="card smooth-shadow-sm border-0 text-center">
-                  <div className="card-body px-6 py-7">
+                  <div className="card-body px-6 py-5">
                     <div className="mb-3">
                       <i className="flaticon-safebox-1  fs-1 text-primary" />
                     </div>
@@ -409,79 +399,193 @@ const BusinessLoan = () => {
             </div>
           </div>
         </section>
-        <section className="py-lg-16 py-10 bg-white border-bottom border-top">
+
+        <section className="py-5">
           <div className="container">
-            <div className="row align-items-center">
-              <div className="offset-xl-2 col-xl-8  col-md-12 col-12">
-                <div className="mb-8 text-center">
+            <div className="mb-8">
+              <div className="offset-xl-2 col-xl-8 offset-lg-2 col-lg-8 col-md-12 col-sm-12 col-12">
+                <div className="mb-6 text-center">
                   {/* section title start*/}
-                  <h1>About Business Loan and How does it work</h1>
-                  <p className="lead">
-                    Cras nunc leo bibendum at sapien nec, tempus aliquet turpis.{" "}
-                  </p>
+                  <h1 className="mb-0">Loan Application Form </h1>
                 </div>
-                {/* /.section title start*/}
               </div>
-              <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 px-6 mb-6 mb-lg-0">
-                <p className="lead">
-                  Donec ullamcorper magna non orci scele risque consect enean
-                  ornare lectus nunc, elementum fermentum erat mattis id.
-                </p>
-                <p>
-                  Mauris fermentum ipsum in dolor sollicitudin, scelerisque
-                  placeed. Aliquam feugiat at odio at consectetur.
-                </p>
-                <p>
-                  In nec lacinia nisi. Cras at orci suscipit, sodales libero
-                  vitae, rhoncus lectus. Quisque congue leo pharetra sapien
-                  pellentesque varius.
-                </p>
-                <a href="#!" className="btn btn-primary mb-3 mb-lg-0">
-                  Frequently Asked Questions
-                </a>
-              </div>
-              <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 px-6">
-                <div className="section-about-video">
-                  <div
-                    className="about-img"
-                    style={{
-                      background:
-                        "url(../assets/images/background/business-loan-about.jpg)",
-                      "background-size": "cover",
-                      "background-repeat": "no-repeat",
-                      "min-height": "335px",
-                      display: "flex",
-                      "-webkit-box-pack": "center",
-                      "-webkit-justify-content": "center",
-                      "-ms-flex-pack": "center",
-                      "justify-content": "center",
-                    }}
-                  >
-                    <div className="d-flex align-items-center">
-                      <a
-                        className="popup-youtube text-decoration-none"
-                        href="https://www.youtube.com/watch?v=JRzWRZahOVU"
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width={48}
-                          height={48}
-                          fill="currentColor"
-                          className="bi bi-play-circle text-white"
-                          viewBox="0 0 16 16"
+              <form method="post" action="">
+                <div>
+                  {/* Text input*/}
+                  <div className="row">
+                    <h3> User Details </h3>
+                    <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
+                      <div className="mb-3">
+                        <label
+                          className="sr-only form-label mb-0"
+                          htmlFor="name"
                         >
-                          <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
-                          <path d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445z" />
-                        </svg>
-                      </a>
+                          name
+                        </label>
+                        <input
+                          id="name"
+                          name="name"
+                          type="text"
+                          placeholder="Name"
+                          className="form-control"
+                          required
+                        />
+                      </div>
                     </div>
+                    {/* Text input*/}
+                    <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
+                      <div className="mb-3">
+                        <label
+                          className="sr-only form-label mb-0"
+                          htmlFor="email"
+                        >
+                          Email
+                        </label>
+                        <input
+                          id="email"
+                          name="email"
+                          type="email"
+                          placeholder="Email"
+                          className="form-control"
+                          required
+                        />
+                      </div>
+                    </div>
+                    {/* Text input*/}
+                    <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
+                      <div className="mb-3">
+                        <label
+                          className="sr-only form-label mb-0"
+                          htmlFor="phone"
+                        >
+                          Phone
+                        </label>
+                        <input
+                          id="phone"
+                          name="phone"
+                          type="text"
+                          placeholder="Phone"
+                          className="form-control"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
+                      <div className="mb-3">
+                        <label
+                          className="sr-only form-label mb-0"
+                          htmlFor="name"
+                        >
+                  
+                        </label>
+                        <input
+                          id="name"
+                          name="name"
+                          type="text"
+                          placeholder="Application No"
+                          className="form-control"
+                          required
+                        />
+                      </div>
+                    </div>
+                    {/* Text input*/}
+                    <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
+                      <div className="mb-3">
+                        <label
+                          className="sr-only form-label mb-0"
+                          htmlFor="text"
+                        >
+                          Email
+                        </label>
+                        <input
+                          id="number"
+                          name="number"
+                          type="text"
+                          placeholder="Salary"
+                          className="form-control"
+                          required
+                        />
+                      </div>
+                    </div>
+                    {/* Text input*/}
+                    <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
+                      <div className="mb-3">
+                      <select id="city" name="city" className="form-select">
+                          <option value="" disabled selected>
+                            Select a Type of Loan
+                          </option>
+                          <option value="home">Home Loan</option>
+                          <option value="student">Student Loan</option>
+                          <option value="personal">Personal Loan</option>
+                          <option value="Car">Car Loan</option>
+                          <option value="Education">Education Loan</option>
+                          <option value="Gold">Gold Loan</option>
+                          <option value="Business">Business Loan</option>
+                          <option value="Refinance">Refinance Loan</option>
+                        </select>
+                      </div>
+                    </div>
+
+
+
+
+
+
+
+
+                    {/* Select Basic */}
+                  
+                    <div className="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12">
+                      <div className="mb-3">
+                        <label
+                          className="sr-only form-label mb-0"
+                          htmlFor="message"
+                        ></label>
+                        <textarea
+                          className="form-control"
+                          id="message"
+                          rows={4}
+                          name="message"
+                          placeholder="Residence Address"
+                          defaultValue={""}
+                        />
+                      </div>
+                    </div>
+                    <div className="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12">
+                      <div className="mb-3">
+                        <label
+                          className="sr-only form-label mb-0"
+                          htmlFor="message"
+                        ></label>
+                        <textarea
+                          className="form-control"
+                          id="message"
+                          rows={4}
+                          name="message"
+                          placeholder="Business Address"
+                          defaultValue={""}
+                        />
+                      </div>
+                    </div>
+
+                    <h3> Banking  Details </h3> 
+                    {/* Button */}
+
+
+                    {/* <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                      <button type="submit" className="btn btn-primary">
+                        Submit
+                      </button>
+                    </div> */}
+
                   </div>
                 </div>
-              </div>
+              </form>
             </div>
           </div>
         </section>
-        <section className="py-lg-14 py-10 bg-dual-gradient">
+
+        <section className="py-lg-12 py-8 bg-dual-gradient">
           <div className="container">
             <div className="row align-items-center">
               <div className="col-xl-6 col-lg-5 col-md-6 col-sm-12 col-12">
@@ -513,7 +617,7 @@ const BusinessLoan = () => {
               </div>
               <div className="offset-xl-1 col-lg-5 offset-lg-2 col-lg-5 col-md-6 col-sm-12 col-12">
                 <div className="card card-body border-0">
-                  <h3 className="mb-3">Let us help your business grow!</h3>
+                  <h3 className="mb-3">Loan Application From</h3>
                   <form
                     method="post"
                     action="https://easetemplate.com/borrow/pages/get-quote.php"
@@ -564,14 +668,21 @@ const BusinessLoan = () => {
                       {/* Select Basic */}
                       <div className="mb-3  col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <label className="form-label sr-only" htmlFor="city">
-                          City
+                          Type of Loan
                         </label>
+
                         <select id="city" name="city" className="form-select">
-                          <option value="Ahmedabad">Ahmedabad</option>
-                          <option value="Surat">Surat</option>
-                          <option value="Vadodara">Vadodara</option>
-                          <option value="Rajkot">Rajkot</option>
-                          <option value="Bhavnagar">Bhavnagar</option>
+                          <option value="" disabled selected>
+                            Select a Type of Loan
+                          </option>
+                          <option value="home">Home Loan</option>
+                          <option value="student">Student Loan</option>
+                          <option value="personal">Personal Loan</option>
+                          <option value="Car">Car Loan</option>
+                          <option value="Education">Education Loan</option>
+                          <option value="Gold">Gold Loan</option>
+                          <option value="Business">Business Loan</option>
+                          <option value="Refinance">Refinance Loan</option>
                         </select>
                       </div>
                       <div className=" col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-3">
@@ -596,7 +707,7 @@ const BusinessLoan = () => {
             </div>
           </div>
         </section>
-        <section className="py-12">
+        <section className="py-8">
           <div className="container-fluid">
             <div className="row">
               <div className="offset-xl-3 col-xl-6 col-sm-12 col-12">
@@ -627,7 +738,7 @@ const BusinessLoan = () => {
                 <div className="card mb-4 mb-lg-0 d-block text-center shadow border-0">
                   <div className="card-body">
                     <img
-                    src={Logoimg2}
+                      src={Logoimg2}
                       alt="Borrow - Loan Company Responsive Website Templates"
                       className="img-fluid"
                     />

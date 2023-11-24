@@ -1,26 +1,25 @@
 import React from 'react'
 import { Link, animateScroll as scroll } from 'react-scroll';
-// import "./Navbar.css"
+import "./Navbar.css"
 
 import '@fortawesome/fontawesome-free/css/all.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faChevronDown,
 } from "@fortawesome/free-solid-svg-icons";
-import Logoimg from "../assets/images/brand/logo/logo.svg";
+import Logoimg from "../assets/images/brand/logo/logoimg.jpeg";
 
 const Navbar = () => {
 
-   
   return (
   <>
-  
-       <nav className="navbar navbar-expand-lg py-3 navbar-default">
-  
+
+        <nav className="navbar navbar-expand-lg py-3 navbar-default fixed-top">
+
         <div className="container px-0">
 
           <a className="navbar-brand" href="index-2.html">
-            <img alt="" src={Logoimg} />
+            <img alt="" src={Logoimg} className='logo-img'/>
           </a>
 
           <button
@@ -40,6 +39,9 @@ const Navbar = () => {
             {"        "}
           </button>
 
+
+    
+
           <div className="collapse navbar-collapse" id="navbar-default">
             <ul className="navbar-nav ms-auto">
               <li className="nav-item dropdown">
@@ -53,11 +55,11 @@ const Navbar = () => {
                   href="/"
                   id="navbarHome"
                 >
-                  Home  
-              
+                  Home
+
                 </a>
                 {"              "}
-            
+
               </li>
 
               <li className="nav-item dropdown">
@@ -70,13 +72,12 @@ const Navbar = () => {
                   href="/about"
                   id="navbarProducts"
                 >
-                  About Us 
-                 
+                  About Us
+
                 </a>
                 {"              "}
-          
-              </li>
 
+              </li>
 
               <li className="nav-item dropdown">
                 {"              "}
@@ -89,7 +90,7 @@ const Navbar = () => {
                   id="navbarBlog"
                   role="button"
                 >
-                Loans <FontAwesomeIcon icon={faChevronDown} /> 
+                Loans <FontAwesomeIcon icon={faChevronDown} />
                 </a>
                 {"              "}
                 <div aria-labelledby="navbarBlog" className="dropdown-menu">
@@ -141,10 +142,10 @@ const Navbar = () => {
                   id="navbarProducts"
                 >
                 Blog
-                 
+
                 </a>
                 {"              "}
-          
+
               </li>
 
               <li className="nav-item dropdown">
@@ -157,11 +158,11 @@ const Navbar = () => {
                   href="/gallary"
                   id="navbarProducts"
                 >
-        Gallary 
-                 
+        Gallery 
+
                 </a>
                 {"              "}
-          
+
               </li>
               <li className="nav-item dropdown">
                 {"              "}
@@ -173,46 +174,138 @@ const Navbar = () => {
                   href="/contact"
                   id="navbarProducts"
                 >
-                 Contact 
-                 
+                 Contact
+
                 </a>
                 {"              "}
-          
+
               </li>
             </ul>
 
-         
-      
           </div>
-  
+
         </div>
 
-      </nav>    
-   
-  
+      </nav>     
 
-
-  {/* <nav>
-<Link to="main" className="logo">
-<img src="https://png.pngtree.com/png-vector/20220723/ourmid/pngtree-long-shadow-glyph-icon-of-selfeducation-in-yellow-flat-design-vector-png-image_32872310.png" alt="logo" />
-</Link>
-<input className="menu-btn" type="checkbox" id="menu-btn" />
-<label className="menu-icon" for="menu-btn">
-<span className="nav-icon"></span>
-</label>
-<ul className="menu">
-<li><Link to='main' className="active">Home</Link></li>
-<li><Link to='Courses' >Courses</Link></li>
-<li><Link to='Teachers'>Teachers</Link></li>
-<li><Link to='Price' >Price</Link></li>
-<li><Link to='Testmonial'>Testmonial</Link></li>
-<li><Link to='Blog' >Blog</Link></li>
-<li><Link to='Facts' >Facts</Link></li>
-<li><Link to='Contact'>Contact</Link></li>
-</ul>
-</nav> */}
   </>
   )
 }
 
 export default Navbar
+
+
+
+// import React, { useEffect, useState } from 'react'
+// import './Navbar.css';
+// import { GiHamburgerMenu , GiCancel } from "react-icons/gi";
+
+// import Logoimg from "../assets/images/brand/logo/logo.svg";
+
+
+
+
+// const Navbar = () => {
+//   const [showMediaIcons, setShowMediaIcons] = useState(false);
+//   const [isScrolled, setIsScrolled] = useState(false);
+
+//   useEffect(() => {
+//     const handleScroll = () => {
+//       const isTop = window.scrollY < 100;
+//       if (!isTop) {
+//         setIsScrolled(true);
+//       } else {
+//         setIsScrolled(false);
+//       }
+//     };
+
+//     window.addEventListener('scroll', handleScroll);
+//     return () => {
+//       window.removeEventListener('scroll', handleScroll);
+//     };
+//   }, []);
+
+//   const toggleMenu = () => {
+//     setShowMediaIcons(!showMediaIcons);
+//   };
+//   const toggleDropdown = () => {
+//     setShowMediaIcons(true);
+//   };
+
+//   const closeDropdown = () => {
+//     setShowMediaIcons(false);
+//   };
+
+//   return (
+//    <>
+//      <nav className={`main-nav ${isScrolled ? 'fixed-nav' : ''}`}>
+//         <div className="logo">
+//           <img src={Logoimg} alt="Logo" />
+//         </div>
+
+//         {/* 2nd menu part */}
+//         <div className={showMediaIcons ? 'menu-link mobile-menu-link' : 'menu-link'}>
+//           <ul>
+//             <li>
+//               <a href="/" onClick={toggleMenu}>
+//                 Home
+//               </a>
+//             </li>
+//             <li>
+//             <a href ="/about" onClick={toggleMenu}>
+//                 About
+//               </a>
+//             </li>
+//             <li onMouseEnter={toggleDropdown} onMouseLeave={closeDropdown} className="dropdown-container">
+//               <a href='/loan' to="/loan">Loan</a>
+//               {showMediaIcons && (
+//                 <div className="dropdown-content">
+//                   <a href='/homeloan' to="/loan/page1" onClick={toggleMenu}>
+//                    Home Loan
+//                   </a>
+//                   <a href='/studentloan' to="/loan/page2" onClick={toggleMenu}>
+//                  Student Loan
+//                   </a>
+//                   <a href='/carloan' to="/loan/page3" onClick={toggleMenu}>
+//                 Carloan
+//                   </a>
+//                   {/* Add other pages as needed */}
+//                 </div>
+//               )}
+//             </li>
+//             <li>
+//             <a href ="/about" onClick={toggleMenu}>
+//                 About
+//               </a>
+//             </li>
+//             <li>
+//             <a href ="/about" onClick={toggleMenu}>
+//                 About
+//               </a>
+//             </li>
+//             <li>
+//             <a href ="/about" onClick={toggleMenu}>
+//                 About
+//               </a>
+//             </li>
+          
+//           </ul>
+//         </div>
+
+//         {/* 3rd social media links */}
+//         <div className="social-media">
+//           {/* hamburger or close menu start */}
+//           <div className="hamburger-menu">
+//             <a href="#" onClick={toggleMenu}>
+//               {showMediaIcons ? <GiCancel /> : <GiHamburgerMenu />}
+//             </a>
+//           </div>
+//         </div>
+//       </nav>
+
+
+//    </>
+//   )
+// }
+
+// export default Navbar

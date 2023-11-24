@@ -63,7 +63,7 @@ const Contact = () => {
                     </div>
                     <form
                       method="post"
-                      action="https://easetemplate.com/borrow/pages/contact-us.php"
+                      action=""
                     >
                       <div>
                         {/* Text input*/}
@@ -150,6 +150,7 @@ const Contact = () => {
                         </div>
                       </div>
                     </form>
+                    
                   </div>
                   {/* /.section title start*/}
                   <div className="contact-us mb-8">

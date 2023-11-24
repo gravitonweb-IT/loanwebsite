@@ -135,7 +135,7 @@ const Footer = () => {
                 <ul className="list-unstyled text-muted">
                   <li className="d-flex">
                     {"                  "}
-                    <a className="text-inherit fs-5" href="#">
+                    <a className="text-inherit fs-5" href="/">
                       {"                    "}
                       <i className="bi bi-chevron-right fs-6 me-2" />
                       Home
@@ -144,16 +144,16 @@ const Footer = () => {
 
                   <li className="d-flex">
                     {"                  "}
-                    <a className="text-inherit fs-5" href="#">
+                    <a className="text-inherit fs-5" href="/gallary">
                       {"                    "}
                       <i className="bi bi-chevron-right fs-6 me-2" />
-                      Services
+                    Gallary
                     </a>
                   </li>
 
                   <li className="d-flex">
                     {"                  "}
-                    <a className="text-inherit fs-5" href="#">
+                    <a className="text-inherit fs-5" href="/about">
                       {"                    "}
                       <i className="bi bi-chevron-right fs-6 me-2" />
                       About Us
@@ -162,25 +162,18 @@ const Footer = () => {
 
                   <li className="d-flex">
                     {"                  "}
-                    <a className="text-inherit fs-5" href="#">
+                    <a className="text-inherit fs-5" href="/loan">
                       {"                    "}
                       <i className="bi bi-chevron-right fs-6 me-2" />
                       News
                     </a>
                   </li>
 
-                  <li className="d-flex">
-                    {"                  "}
-                    <a className="text-inherit fs-5" href="#">
-                      {"                    "}
-                      <i className="bi bi-chevron-right fs-6 me-2" />
-                      Faq
-                    </a>
-                  </li>
+                
 
                   <li className="d-flex">
                     {"                  "}
-                    <a className="text-inherit fs-5" href="#">
+                    <a className="text-inherit fs-5" href="/contact">
                       {"                    "}
                       <i className="bi bi-chevron-right fs-6 me-2" />
                       Contact Us
@@ -198,7 +191,7 @@ const Footer = () => {
                 <ul className="list-unstyled text-muted">
                   <li className="d-flex">
                     {"                  "}
-                    <a className="text-inherit fs-5" href="#">
+                    <a className="text-inherit fs-5" href="/carloan">
                       {"                    "}
                       <i className="bi bi-chevron-right fs-6 me-2" />
                       Car Loan
@@ -207,7 +200,7 @@ const Footer = () => {
 
                   <li className="d-flex">
                     {"                  "}
-                    <a className="text-inherit fs-5" href="#">
+                    <a className="text-inherit fs-5" href="/personalloan">
                       {"                    "}
                       <i className="bi bi-chevron-right fs-6 me-2" />
                       Personal Loan
@@ -216,7 +209,7 @@ const Footer = () => {
 
                   <li className="d-flex">
                     {"                  "}
-                    <a className="text-inherit fs-5" href="#">
+                    <a className="text-inherit fs-5" href="/educationloan">
                       {"                    "}
                       <i className="bi bi-chevron-right fs-6 me-2" />
                       Education Loan
@@ -225,7 +218,7 @@ const Footer = () => {
 
                   <li className="d-flex">
                     {"                  "}
-                    <a className="text-inherit fs-5" href="#">
+                    <a className="text-inherit fs-5" href="/businessloan">
                       {"                    "}
                       <i className="bi bi-chevron-right fs-6 me-2" />
                       Business Loan
@@ -234,7 +227,7 @@ const Footer = () => {
 
                   <li className="d-flex">
                     {"                  "}
-                    <a className="text-inherit fs-5" href="#">
+                    <a className="text-inherit fs-5" href="/homeloan">
                       {"                    "}
                       <i className="bi bi-chevron-right fs-6 me-2" />
                       Home Loan
@@ -243,10 +236,10 @@ const Footer = () => {
 
                   <li className="d-flex">
                     {"                  "}
-                    <a className="text-inherit fs-5" href="#">
+                    <a className="text-inherit fs-5" href="/studentloan">
                       {"                    "}
                       <i className="bi bi-chevron-right fs-6 me-2" />
-                      Debt Consolidation
+                    Student Loan
                     </a>
                   </li>
                   {"              "}
