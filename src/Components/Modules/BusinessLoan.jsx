@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./Businessloan.css";
 import { tns } from "tiny-slider/src/tiny-slider";
 import "@fortawesome/fontawesome-free/css/all.css";
@@ -30,6 +30,17 @@ const BusinessLoan = () => {
     };
   }, []);
 
+  const [selectedLanguage, setSelectedLanguage] = useState('');
+
+  const handleLanguageChange = (event) => {
+    setSelectedLanguage(event.target.value);
+  }
+  const handleSubmit = (event) => {
+    event.preventDefault(); // Prevents the default form submission behavior
+
+    // Add your form submission logic here
+    console.log('Form submitted!');
+  }
   return (
     <>
       <main>
@@ -155,6 +166,9 @@ const BusinessLoan = () => {
             </div>
           </div>
         </section>
+
+
+        
         <div className="py-2 bg-light">
           <div className="container">
             <div className="row">
@@ -185,7 +199,7 @@ const BusinessLoan = () => {
             </div>
           </div>
         </div>
-        <section className="py-lg-10 py-8 bg-white border-bottom border-top ">
+        <section className="py-lg-6 py-8 bg-white border-bottom border-top ">
           <div className="container">
             <div className="row">
               <div className="offset-xl-2 col-xl-8  col-md-12 col-12">
@@ -283,11 +297,11 @@ const BusinessLoan = () => {
             </div>
           </div>
         </section>
-        <section className="py-lg-8 py-6">
+        <section className="py-lg-6 py-6">
           <div className="container">
             <div className="row">
               <div className="offset-xl-3 col-xl-6 offset-md-2 col-md-8 offset-md-2 col-md-8 col-sm-12 col-12">
-                <div className="mb-10 text-center">
+                <div className="mb-6 text-center">
                   {/* section title start*/}
                   <h1>Our Business Loan Products</h1>
                   <p className="mb-0 lead">
@@ -400,20 +414,21 @@ const BusinessLoan = () => {
           </div>
         </section>
 
-        <section className="py-5">
+        <section className="">
           <div className="container">
-            <div className="mb-8">
+            <div className="mb-2">
               <div className="offset-xl-2 col-xl-8 offset-lg-2 col-lg-8 col-md-12 col-sm-12 col-12">
-                <div className="mb-6 text-center">
+                <div className="mb-4 text-center">
                   {/* section title start*/}
                   <h1 className="mb-0">Loan Application Form </h1>
                 </div>
               </div>
-              <form method="post" action="">
+              <form onSubmit={handleSubmit}>
                 <div>
                   {/* Text input*/}
                   <div className="row">
                     <h3> User Details </h3>
+
                     <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
                       <div className="mb-3">
                         <label
@@ -475,9 +490,7 @@ const BusinessLoan = () => {
                         <label
                           className="sr-only form-label mb-0"
                           htmlFor="name"
-                        >
-                  
-                        </label>
+                        ></label>
                         <input
                           id="name"
                           name="name"
@@ -510,7 +523,7 @@ const BusinessLoan = () => {
                     {/* Text input*/}
                     <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
                       <div className="mb-3">
-                      <select id="city" name="city" className="form-select">
+                        <select id="city" name="city" className="form-select">
                           <option value="" disabled selected>
                             Select a Type of Loan
                           </option>
@@ -525,16 +538,39 @@ const BusinessLoan = () => {
                         </select>
                       </div>
                     </div>
-
-
-
-
-
-
-
+                    <div className="py-2">
+                      <span className="mx-4">
+                        Are you Salaried or Self Employed?
+                        <span className="mx-2">
+                        <input
+                          type="radio"
+                          id=""
+                          name=""
+                          className="m-2"
+                          value="Yes"
+                          checked={selectedLanguage === "Yes"}
+                          onChange={handleLanguageChange}
+                        />
+                        <label htmlFor="html">Yes</label>
+                        </span>
+                        <span className="mx-2">
+                        <input
+                          type="radio"
+                          id="chexk"
+                          name=""
+                          className="m-2"
+                          value="No"
+                          checked={selectedLanguage === "No"}
+                          onChange={handleLanguageChange}
+                        />
+                        <label htmlFor="css">No</label>
+                        </span>
+                        <br />
+                      </span>
+                    </div>
 
                     {/* Select Basic */}
-                  
+
                     <div className="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12">
                       <div className="mb-3">
                         <label
@@ -568,16 +604,350 @@ const BusinessLoan = () => {
                       </div>
                     </div>
 
-                    <h3> Banking  Details </h3> 
+                    <h3> Banking Details </h3>
+
+                    <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
+                      <div className="mb-3">
+                        <label
+                          className="sr-only form-label mb-0"
+                          htmlFor="name"
+                        >
+                          Name of Bank
+                        </label>
+                        <input
+                          id="name"
+                          name="name"
+                          type="text"
+                          placeholder="Name of Bank"
+                          className="form-control"
+                          required
+                        />
+                      </div>
+                    </div>
+                    {/* Text input*/}
+                    <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
+                      <div className="mb-3">
+                        <select id="city" name="city" className="form-select">
+                          <option value="" disabled selected>
+                            Types of Account
+                          </option>
+                          <option value="home">Current Account</option>
+                          <option value="student">Saving Account</option>
+                          <option value="personal">Salary Account</option>
+                          <option value="Car">Fixed Deposit Account</option>
+                          <option value="Education">NRI Account</option>
+                          <option value="Gold">DEMAT Account</option>
+                        </select>
+                      </div>
+                    </div>
+                    {/* Text input*/}
+                    <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
+                      <div className="mb-3">
+                        <label
+                          className="sr-only form-label mb-0"
+                          htmlFor="phone"
+                        >
+                          Account Number
+                        </label>
+                        <input
+                          id="text"
+                          name="text"
+                          type="text"
+                          placeholder="Account Number"
+                          className="form-control"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
+                      <div className="mb-3">
+                        <label
+                          className="sr-only form-label mb-0"
+                          htmlFor="name"
+                        ></label>
+                        <input
+                          id="name"
+                          name="name"
+                          type="text"
+                          placeholder="IFSC Code"
+                          className="form-control"
+                          required
+                        />
+                      </div>
+                    </div>
+                    {/* Text input*/}
+                    <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
+                      <div className="mb-3">
+                        <label
+                          className="sr-only form-label mb-0"
+                          htmlFor="text"
+                        >
+                       Branch Name
+                        </label>
+                        <input
+                          id="number"
+                          name="number"
+                          type="text"
+                          placeholder="Branch Name"
+                          className="form-control"
+                          required
+                        />
+                      </div>
+                    </div>
+                    {/* Text input*/}
+                    <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
+                      <div className="mb-3">
+                        <label
+                          className="sr-only form-label mb-0"
+                          htmlFor="text"
+                        >
+                         Remarks
+                        </label>
+                        <input
+                          id="number"
+                          name="number"
+                          type="text"
+                          placeholder="Remarks"
+                          className="form-control"
+                          required
+                        />
+                      </div>
+                    </div>
+
+                    <h3>Loan Repyment Details </h3>
+
+                    <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
+                      <div className="mb-3">
+                        <label
+                          className="sr-only form-label mb-0"
+                          htmlFor="text"
+                        >
+                       Name OfBank NBFC
+                        </label>
+                        <input
+                          id="number"
+                          name="number"
+                          type="text"
+                          placeholder="Name OfBank NBFC"
+                          className="form-control"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
+                    <div className="mb-3">
+                        <select id="city" name="city" className="form-select">
+                          <option value="" disabled selected>
+                           Type of Loan
+                          </option>
+                          <option value="home">Home Loan</option>
+                          <option value="student">Student Loan</option>
+                          <option value="personal">Personal Loan</option>
+                          <option value="Car">Car Loan</option>
+                          <option value="Education">Education Loan</option>
+                          <option value="Gold">Gold Loan</option>
+                          <option value="Business">Business Loan</option>
+                          <option value="Refinance">Refinance Loan</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
+                      <div className="mb-3">
+                        <label
+                          className="sr-only form-label mb-0"
+                          htmlFor="text"
+                        >
+                    EMI
+                        </label>
+                        <input
+                          id="number"
+                          name="number"
+                          type="text"
+                          placeholder="EMI"
+                          className="form-control"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
+                      <div className="mb-3">
+                        <label
+                          className="sr-only form-label mb-0"
+                          htmlFor="text"
+                        >
+                    Pending
+                        </label>
+                        <input
+                          id="number"
+                          name="number"
+                          type="text"
+                          placeholder="Pending"
+                          className="form-control"
+                          required
+                        />
+                      </div>
+                    </div>
+
+                    <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
+                      <div className="mb-3">
+                        <label
+                          className="sr-only form-label mb-0"
+                          htmlFor="text"
+                        >
+                      Applicant Pan No.
+                        </label>
+                        <input
+                          id="number"
+                          name="number"
+                          type="text"
+                          placeholder="Applicant Pan No."
+                          className="form-control"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
+                      <div className="mb-3">
+                        <label
+                          className="sr-only form-label mb-0"
+                          htmlFor="text"
+                        >
+                      Adhar No.
+                        </label>
+                        <input
+                          id="number"
+                          name="number"
+                          type="text"
+                          placeholder="Adhar No."
+                          className="form-control"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
+                      <div className="mb-3">
+                        <label
+                          className="sr-only form-label mb-0"
+                          htmlFor="text"
+                        >
+                        Applicant DOB
+                        </label>
+                        <input
+                          id="number"
+                          name="number"
+                          type="text"
+                          placeholder="Applicant DOB"
+                          className="form-control"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
+                      <div className="mb-3">
+                        <label
+                          className="sr-only form-label mb-0"
+                          htmlFor="text"
+                        >
+                       Voter Id No.
+                        </label>
+                        <input
+                          id="number"
+                          name="number"
+                          type="text"
+                          placeholder="Voter Id No."
+                          className="form-control"
+                          required
+                        />
+                      </div>
+                    </div>
+
+                    <h3>Details of Profession </h3>
+
+                    <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
+                      <div className="mb-3">
+                      <h6 className="text-center">Last Three Month Salary Slip</h6>
+                        <label
+                          className="sr-only form-label mb-0"
+                          htmlFor="text"
+                        >
+                        </label>
+                        <input
+                          id="number"
+                          name="pdfFile"
+                          type="file"
+                          placeholder="Last Three Month Salary Slip."
+                          className="form-control"
+                          required
+                        />
+                      
+                      </div>
+                    </div>
+                    <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
+                      <div className="mb-3">
+                      <h6 className="text-center">Last Two Year ITR</h6>
+                        <label
+                          className="sr-only form-label mb-0"
+                          htmlFor="text"
+                        >
+                        </label>
+                        <input
+                          id="number"
+                          name="pdfFile"
+                          type="file"
+                          placeholder="Last Three Month Salary Slip."
+                          className="form-control"
+                          required
+                        />
+                      
+                      </div>
+                    </div>
+                    <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
+                      <div className="mb-3">
+                      <h6 className="text-center">Other Income Proof</h6>
+                        <label
+                          className="sr-only form-label mb-0"
+                          htmlFor="text"
+                        >
+                        </label>
+                        <input
+                          id="number"
+                          name="pdfFile"
+                          type="file"
+                          placeholder="Last Three Month Salary Slip."
+                          className="form-control"
+                          required
+                        />
+                      
+                      </div>
+                    </div>
+                    <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
+                      <div className="mb-3">
+                      <h6 className="text-center">Business Registration Proof</h6>
+                        <label
+                          className="sr-only form-label mb-0"
+                          htmlFor="text"
+                        >
+                        </label>
+                        <input
+                          id="number"
+                          name="pdfFile"
+                          type="file"
+                          placeholder="Last Three Month Salary Slip."
+                          className="form-control"
+                          required
+                        />
+                      
+                      </div>
+                    </div>
+
+
+
                     {/* Button */}
-
-
-                    {/* <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                    <div className=" col-lg-12 col-md-12 col-sm-12 col-12">
                       <button type="submit" className="btn btn-primary">
                         Submit
                       </button>
-                    </div> */}
-
+                    </div>
                   </div>
                 </div>
               </form>
@@ -585,7 +955,11 @@ const BusinessLoan = () => {
           </div>
         </section>
 
-        <section className="py-lg-12 py-8 bg-dual-gradient">
+
+
+
+
+        <section className="py-lg-5 py-5 bg-dual-gradient">
           <div className="container">
             <div className="row align-items-center">
               <div className="col-xl-6 col-lg-5 col-md-6 col-sm-12 col-12">
@@ -617,7 +991,7 @@ const BusinessLoan = () => {
               </div>
               <div className="offset-xl-1 col-lg-5 offset-lg-2 col-lg-5 col-md-6 col-sm-12 col-12">
                 <div className="card card-body border-0">
-                  <h3 className="mb-3">Loan Application From</h3>
+                  <h3 className="mb-3">Let us help your business grow!</h3>
                   <form
                     method="post"
                     action="https://easetemplate.com/borrow/pages/get-quote.php"
@@ -684,6 +1058,7 @@ const BusinessLoan = () => {
                           <option value="Business">Business Loan</option>
                           <option value="Refinance">Refinance Loan</option>
                         </select>
+
                       </div>
                       <div className=" col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-3">
                         <div className="steps-slider" />
@@ -695,7 +1070,7 @@ const BusinessLoan = () => {
                       {/* Button */}
                       <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <div className="d-grid">
-                          <button type="submit" className="btn btn-primary">
+                        <button type="submit" className="btn btn-primary">
                             Send A Request
                           </button>
                         </div>
@@ -707,16 +1082,19 @@ const BusinessLoan = () => {
             </div>
           </div>
         </section>
-        <section className="py-8">
+
+
+
+        <section className="py-4">
           <div className="container-fluid">
             <div className="row">
               <div className="offset-xl-3 col-xl-6 col-sm-12 col-12">
-                <div className="mb-8 text-center px-lg-18">
+                <div className="mb-3 text-center px-lg-18">
                   {/* section title start*/}
                   <h1>Meet our lenders</h1>
                   <p className="lead">
-                    Compare 60+ business funding options &amp; check eligibility
-                    saving you time/ money
+                    Compare 60+ business funding options &amp; check eligibility saving you time/ money
+                   
                   </p>
                 </div>
                 {/* /.section title start*/}

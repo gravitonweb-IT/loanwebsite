@@ -144,10 +144,10 @@ const Footer = () => {
 
                   <li className="d-flex">
                     {"                  "}
-                    <a className="text-inherit fs-5" href="/gallary">
+                    <a className="text-inherit fs-5" href="/gallery">
                       {"                    "}
                       <i className="bi bi-chevron-right fs-6 me-2" />
-                    Gallary
+                    Gallery
                     </a>
                   </li>
 

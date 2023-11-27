@@ -46,27 +46,27 @@ const Home = () => {
     };
   }, []);
 
-  useEffect(() => {
-    // Initialize the Tiny Slider
-    const slider1 = tns({
-      container: ".sliderSecond",
-      items: 3,
-      controlsContainer: "#sliderSecondControls",
-      prevButton: ".prev",
-      nextButton: ".next",
-    });
+  // useEffect(() => {
+  //   // Initialize the Tiny Slider
+  //   const slider1 = tns({
+  //     container: ".sliderSecond",
+  //     items: 3,
+  //     controlsContainer: "#sliderSecondControls",
+  //     prevButton: ".prev",
+  //     nextButton: ".next",
+  //   });
 
 
-    const navButtons = document.querySelectorAll('.tns-nav button');
-    navButtons.forEach(button => {
-      button.style.display = 'none';
-    });
+  //   const navButtons = document.querySelectorAll('.tns-nav button');
+  //   navButtons.forEach(button => {
+  //     button.style.display = 'none';
+  //   });
     
-    // Clean up on component unmount
-    return () => {
-      slider1.destroy();
-    };
-  }, []);
+  //   // Clean up on component unmount
+  //   return () => {
+  //     slider1.destroy();
+  //   };
+  // }, []);
 
 
   return (
@@ -837,10 +837,10 @@ const Home = () => {
           {"      "}
         </section>
 
-        <section className="py-lg-16 py-10">
+        <section className="py-lg-0 py-0">
           <div className="container">
             <div className="row">
-              <div className="offset-xl-2 col-xl-8 col-md-12 col-12">
+              {/* <div className="offset-xl-2 col-xl-8 col-md-12 col-12">
                 <div className="mb-8 text-center">
                   <h1 className="mb-3">Find Loan Products We Offers</h1>
 
@@ -851,10 +851,10 @@ const Home = () => {
                     <strong>within 24 hours of application.</strong>
                   </p>
                 </div>
-              </div>
+              </div> */}
             </div>
         
-            <div className="position-relative">
+            {/* <div className="position-relative">
 
             <ul class="controls controls-bottom" id="sliderSecondControls">
               <li class="prev">
@@ -1065,12 +1065,12 @@ const Home = () => {
               </div>
             
             </div>
-         
+          */}
             
           </div>
         </section>
 
-        <section className="py-lg-16 py-10 bg-white border-bottom border-top">
+        <section className="py-lg-7 py-10 bg-white border-bottom border-top">
           <div className="container">
             <div className="row">
               <div className="offset-xl-2 col-xl-8 col-md-12 col-12">
@@ -1171,7 +1171,7 @@ const Home = () => {
           {"      "}
         </section>
         {"      "}
-        <section className="py-lg-16 py-10">
+        <section className="py-lg-10 py-10">
           {"        "}
           <div className="container">
             <div className="row">
@@ -1315,7 +1315,7 @@ const Home = () => {
           {"      "}
         </section>
         {"      "}
-        <section className="bg-dark py-lg-16 py-10">
+        <section className="bg-dark py-lg-10 py-10">
           {"        "}
           <div className="container">
             <div className="row">
@@ -1516,7 +1516,7 @@ const Home = () => {
           {"      "}
         </div>
         {"      "}
-        <section className="py-lg-16 py-10">
+        <section className="py-lg-10 py-10">
           {"        "}
           <div className="container">
             <div className="row">
@@ -1701,7 +1701,7 @@ const Home = () => {
           {"      "}
         </section>
         {"      "}
-        <section className="py-lg-16 py-10 bg-white border-top">
+        <section className="py-lg-10 py-10 bg-white border-top">
           {"        "}
           <div className="container">
             <div className="row">

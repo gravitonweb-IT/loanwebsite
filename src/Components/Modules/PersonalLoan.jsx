@@ -1,7 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import './About.css'
 
 const PersonalLoan = () => {
+
+
+  const [selectedLanguage, setSelectedLanguage] = useState('');
+
+  const handleLanguageChange = (event) => {
+    setSelectedLanguage(event.target.value);
+  }
+  const handleSubmit = (event) => {
+    event.preventDefault(); // Prevents the default form submission behavior
+
+    // Add your form submission logic here
+    console.log('Form submitted!');
+  }
+
+
   return (
     <>
       <main>
@@ -346,299 +361,553 @@ const PersonalLoan = () => {
                     </div>
                   </div>
                 </div>
-                <div className="section-scroll" id="section-faq">
-                  <div className="p-lg-10 p-5">
-                    <div className="row">
-                      <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                        <div className="mb-4">
-                          <h2>Frequently Ask Questions</h2>
-                          <p>
-                            If you have a question that deals with clients,
-                            customers or the public in general, there is bound
-                            to be a need for the FAQ page.
-                          </p>
-                        </div>
+              
+                <section className="">
+          <div className="container">
+            <div className="mb-2">
+              <div className="offset-xl-2 col-xl-8 offset-lg-2 col-lg-8 col-md-12 col-sm-12 col-12">
+                <div className="mb-4 text-center">
+                  {/* section title start*/}
+                  <h1 className="mb-0">Loan Application Form </h1>
+                </div>
+              </div>
+              <form onSubmit={handleSubmit}>
+                <div>
+                  {/* Text input*/}
+                  <div className="row">
+                    <h3> User Details </h3>
+
+                    <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
+                      <div className="mb-3">
+                        <label
+                          className="sr-only form-label mb-0"
+                          htmlFor="name"
+                        >
+                          name
+                        </label>
+                        <input
+                          id="name"
+                          name="name"
+                          type="text"
+                          placeholder="Name"
+                          className="form-control"
+                          required
+                        />
                       </div>
                     </div>
-                    <div className="row">
-                      <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                        <div className="accordion" id="faqExample">
-                          <div className="card mb-2">
-                            <div
-                              className="card-header rounded-3 border-bottom-0"
-                              id="faqOne"
-                            >
-                              <h4 className="mb-0">
-                                <a
-                                  href="#!"
-                                  data-bs-toggle="collapse"
-                                  data-bs-target="#faqcollapseOne"
-                                  aria-expanded="true"
-                                  aria-controls="faqcollapseOne"
-                                >
-                                  <i className="fa fa-plus-circle me-2" />
-                                  How much can I borrow?
-                                </a>
-                              </h4>
-                            </div>
-                            <div
-                              id="faqcollapseOne"
-                              className="collapse show"
-                              aria-labelledby="faqOne"
-                              data-bs-parent="#faqExample"
-                            >
-                              <div className="card-body border-top">
-                                Anim pariatur cliche reprehenderit, enim eiusmod
-                                high life accusamus terry richardson ad squid. 3
-                                wolf moon officia aute, non cupidatat skateboard
-                                dolor brunch. Food truck quinoa nesciunt laborum
-                                eiusmod. Brunch 3 wolf moon tempor, sunt aliqua
-                                put a bird on it squid single-origin coffee
-                                nulla assumenda shoreditch et. Nihil anim
-                                keffiyeh helvetica, craft beer labore wes
-                                anderson cred nesciunt sapiente ea proident. Ad
-                                vegan excepteur butcher vice lomo. Leggings
-                                occaecat craft beer farm-to-table, raw denim
-                                aesthetic synth nesciunt you probably haven't
-                                heard of them accusamus labore sustainable VHS.
-                              </div>
-                            </div>
-                          </div>
-                          <div className="card mb-2">
-                            <div
-                              className="card-header rounded-3 border-bottom-0"
-                              id="faqTwo"
-                            >
-                              <h4 className="mb-0">
-                                <a
-                                  href="#!"
-                                  className="collapsed"
-                                  data-bs-toggle="collapse"
-                                  data-bs-target="#faqcollapseTwo"
-                                  aria-expanded="false"
-                                  aria-controls="faqcollapseTwo"
-                                >
-                                  <i className="fa fa-plus-circle me-2" />
-                                  Can I pay off my loan early?
-                                </a>
-                              </h4>
-                            </div>
-                            <div
-                              id="faqcollapseTwo"
-                              className="collapse"
-                              aria-labelledby="faqTwo"
-                              data-bs-parent="#faqExample"
-                            >
-                              <div className="card-body border-top">
-                                Anim pariatur cliche reprehenderit, enim eiusmod
-                                high life accusamus terry richardson ad squid. 3
-                                wolf moon officia aute, non cupidatat skateboard
-                                dolor brunch. Food truck quinoa nesciunt laborum
-                                eiusmod. Brunch 3 wolf moon tempor, sunt aliqua
-                                put a bird on it squid single-origin coffee
-                                nulla assumenda shoreditch et. Nihil anim
-                                keffiyeh helvetica, craft beer labore wes
-                                anderson cred nesciunt sapiente ea proident. Ad
-                                vegan excepteur butcher vice lomo. Leggings
-                                occaecat craft beer farm-to-table, raw denim
-                                aesthetic synth nesciunt you probably haven't
-                                heard of them accusamus labore sustainable VHS.
-                              </div>
-                            </div>
-                          </div>
-                          <div className="card mb-2">
-                            <div
-                              className="card-header rounded-3 border-bottom-0"
-                              id="faqThree"
-                            >
-                              <h4 className="mb-0">
-                                <a
-                                  href="#!"
-                                  className="collapsed"
-                                  data-bs-toggle="collapse"
-                                  data-bs-target="#faqcollapseThree"
-                                  aria-expanded="false"
-                                  aria-controls="faqcollapseThree"
-                                >
-                                  <i className="fa fa-plus-circle me-2" />
-                                  Do you offering refinancing ?
-                                </a>
-                              </h4>
-                            </div>
-                            <div
-                              id="faqcollapseThree"
-                              className="collapse"
-                              aria-labelledby="faqThree"
-                              data-bs-parent="#faqExample"
-                            >
-                              <div className="card-body border-top">
-                                Anim pariatur cliche reprehenderit, enim eiusmod
-                                high life accusamus terry richardson ad squid. 3
-                                wolf moon officia aute, non cupidatat skateboard
-                                dolor brunch. Food truck quinoa nesciunt laborum
-                                eiusmod. Brunch 3 wolf moon tempor, sunt aliqua
-                                put a bird on it squid single-origin coffee
-                                nulla assumenda shoreditch et. Nihil anim
-                                keffiyeh helvetica, craft beer labore wes
-                                anderson cred nesciunt sapiente ea proident. Ad
-                                vegan excepteur butcher vice lomo. Leggings
-                                occaecat craft beer farm-to-table, raw denim
-                                aesthetic synth nesciunt you probably haven't
-                                heard of them accusamus labore sustainable VHS.
-                              </div>
-                            </div>
-                          </div>
-                          <div className="card">
-                            <div
-                              className="card-header rounded-3 border-bottom-0"
-                              id="faqfour"
-                            >
-                              <h4 className="mb-0">
-                                <a
-                                  href="#!"
-                                  className="collapsed"
-                                  data-bs-toggle="collapse"
-                                  data-bs-target="#faqcollapsefour"
-                                  aria-expanded="false"
-                                  aria-controls="faqcollapsefour"
-                                >
-                                  <i className="fa fa-plus-circle me-2" />
-                                  When should i apply?
-                                </a>
-                              </h4>
-                            </div>
-                            <div
-                              id="faqcollapsefour"
-                              className="collapse"
-                              aria-labelledby="faqfour"
-                              data-bs-parent="#faqExample"
-                            >
-                              <div className="card-body border-top">
-                                Ad vegan excepteur butcher vice lomo. Leggings
-                                occaecat craft beer farm-to-table, raw denim
-                                aesthetic synth nesciunt you probably haven't
-                                heard of them accusamus labore sustainable VHS.
-                              </div>
-                            </div>
-                          </div>
-                        </div>
+                    {/* Text input*/}
+                    <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
+                      <div className="mb-3">
+                        <label
+                          className="sr-only form-label mb-0"
+                          htmlFor="email"
+                        >
+                          Email
+                        </label>
+                        <input
+                          id="email"
+                          name="email"
+                          type="email"
+                          placeholder="Email"
+                          className="form-control"
+                          required
+                        />
                       </div>
+                    </div>
+                    {/* Text input*/}
+                    <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
+                      <div className="mb-3">
+                        <label
+                          className="sr-only form-label mb-0"
+                          htmlFor="phone"
+                        >
+                          Phone
+                        </label>
+                        <input
+                          id="phone"
+                          name="phone"
+                          type="text"
+                          placeholder="Phone"
+                          className="form-control"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
+                      <div className="mb-3">
+                        <label
+                          className="sr-only form-label mb-0"
+                          htmlFor="name"
+                        ></label>
+                        <input
+                          id="name"
+                          name="name"
+                          type="text"
+                          placeholder="Application No"
+                          className="form-control"
+                          required
+                        />
+                      </div>
+                    </div>
+                    {/* Text input*/}
+                    <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
+                      <div className="mb-3">
+                        <label
+                          className="sr-only form-label mb-0"
+                          htmlFor="text"
+                        >
+                          Email
+                        </label>
+                        <input
+                          id="number"
+                          name="number"
+                          type="text"
+                          placeholder="Salary"
+                          className="form-control"
+                          required
+                        />
+                      </div>
+                    </div>
+                    {/* Text input*/}
+                    <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
+                      <div className="mb-3">
+                        <select id="city" name="city" className="form-select">
+                          <option value="" disabled selected>
+                            Select a Type of Loan
+                          </option>
+                          <option value="home">Home Loan</option>
+                          <option value="student">Student Loan</option>
+                          <option value="personal">Personal Loan</option>
+                          <option value="Car">Car Loan</option>
+                          <option value="Education">Education Loan</option>
+                          <option value="Gold">Gold Loan</option>
+                          <option value="Business">Business Loan</option>
+                          <option value="Refinance">Refinance Loan</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div className="py-2">
+                      <span className="mx-4">
+                        Are you Salaried or Self Employed?
+                        <span className="mx-2">
+                        <input
+                          type="radio"
+                          id=""
+                          name=""
+                          className="m-2"
+                          value="Yes"
+                          checked={selectedLanguage === "Yes"}
+                          onChange={handleLanguageChange}
+                        />
+                        <label htmlFor="html">Yes</label>
+                        </span>
+                        <span className="mx-2">
+                        <input
+                          type="radio"
+                          id="chexk"
+                          name=""
+                          className="m-2"
+                          value="No"
+                          checked={selectedLanguage === "No"}
+                          onChange={handleLanguageChange}
+                        />
+                        <label htmlFor="css">No</label>
+                        </span>
+                        <br />
+                      </span>
+                    </div>
+
+                    {/* Select Basic */}
+
+                    <div className="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12">
+                      <div className="mb-3">
+                        <label
+                          className="sr-only form-label mb-0"
+                          htmlFor="message"
+                        ></label>
+                        <textarea
+                          className="form-control"
+                          id="message"
+                          rows={4}
+                          name="message"
+                          placeholder="Residence Address"
+                          defaultValue={""}
+                        />
+                      </div>
+                    </div>
+                    <div className="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12">
+                      <div className="mb-3">
+                        <label
+                          className="sr-only form-label mb-0"
+                          htmlFor="message"
+                        ></label>
+                        <textarea
+                          className="form-control"
+                          id="message"
+                          rows={4}
+                          name="message"
+                          placeholder="Business Address"
+                          defaultValue={""}
+                        />
+                      </div>
+                    </div>
+
+                    <h3> Banking Details </h3>
+
+                    <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
+                      <div className="mb-3">
+                        <label
+                          className="sr-only form-label mb-0"
+                          htmlFor="name"
+                        >
+                          Name of Bank
+                        </label>
+                        <input
+                          id="name"
+                          name="name"
+                          type="text"
+                          placeholder="Name of Bank"
+                          className="form-control"
+                          required
+                        />
+                      </div>
+                    </div>
+                    {/* Text input*/}
+                    <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
+                      <div className="mb-3">
+                        <select id="city" name="city" className="form-select">
+                          <option value="" disabled selected>
+                            Types of Account
+                          </option>
+                          <option value="home">Current Account</option>
+                          <option value="student">Saving Account</option>
+                          <option value="personal">Salary Account</option>
+                          <option value="Car">Fixed Deposit Account</option>
+                          <option value="Education">NRI Account</option>
+                          <option value="Gold">DEMAT Account</option>
+                        </select>
+                      </div>
+                    </div>
+                    {/* Text input*/}
+                    <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
+                      <div className="mb-3">
+                        <label
+                          className="sr-only form-label mb-0"
+                          htmlFor="phone"
+                        >
+                          Account Number
+                        </label>
+                        <input
+                          id="text"
+                          name="text"
+                          type="text"
+                          placeholder="Account Number"
+                          className="form-control"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
+                      <div className="mb-3">
+                        <label
+                          className="sr-only form-label mb-0"
+                          htmlFor="name"
+                        ></label>
+                        <input
+                          id="name"
+                          name="name"
+                          type="text"
+                          placeholder="IFSC Code"
+                          className="form-control"
+                          required
+                        />
+                      </div>
+                    </div>
+                    {/* Text input*/}
+                    <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
+                      <div className="mb-3">
+                        <label
+                          className="sr-only form-label mb-0"
+                          htmlFor="text"
+                        >
+                       Branch Name
+                        </label>
+                        <input
+                          id="number"
+                          name="number"
+                          type="text"
+                          placeholder="Branch Name"
+                          className="form-control"
+                          required
+                        />
+                      </div>
+                    </div>
+                    {/* Text input*/}
+                    <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
+                      <div className="mb-3">
+                        <label
+                          className="sr-only form-label mb-0"
+                          htmlFor="text"
+                        >
+                         Remarks
+                        </label>
+                        <input
+                          id="number"
+                          name="number"
+                          type="text"
+                          placeholder="Remarks"
+                          className="form-control"
+                          required
+                        />
+                      </div>
+                    </div>
+
+                    <h3>Loan Repyment Details </h3>
+
+                    <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
+                      <div className="mb-3">
+                        <label
+                          className="sr-only form-label mb-0"
+                          htmlFor="text"
+                        >
+                       Name OfBank NBFC
+                        </label>
+                        <input
+                          id="number"
+                          name="number"
+                          type="text"
+                          placeholder="Name OfBank NBFC"
+                          className="form-control"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
+                    <div className="mb-3">
+                        <select id="city" name="city" className="form-select">
+                          <option value="" disabled selected>
+                           Type of Loan
+                          </option>
+                          <option value="home">Home Loan</option>
+                          <option value="student">Student Loan</option>
+                          <option value="personal">Personal Loan</option>
+                          <option value="Car">Car Loan</option>
+                          <option value="Education">Education Loan</option>
+                          <option value="Gold">Gold Loan</option>
+                          <option value="Business">Business Loan</option>
+                          <option value="Refinance">Refinance Loan</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
+                      <div className="mb-3">
+                        <label
+                          className="sr-only form-label mb-0"
+                          htmlFor="text"
+                        >
+                    EMI
+                        </label>
+                        <input
+                          id="number"
+                          name="number"
+                          type="text"
+                          placeholder="EMI"
+                          className="form-control"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
+                      <div className="mb-3">
+                        <label
+                          className="sr-only form-label mb-0"
+                          htmlFor="text"
+                        >
+                    Pending
+                        </label>
+                        <input
+                          id="number"
+                          name="number"
+                          type="text"
+                          placeholder="Pending"
+                          className="form-control"
+                          required
+                        />
+                      </div>
+                    </div>
+
+                    <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
+                      <div className="mb-3">
+                        <label
+                          className="sr-only form-label mb-0"
+                          htmlFor="text"
+                        >
+                      Applicant Pan No.
+                        </label>
+                        <input
+                          id="number"
+                          name="number"
+                          type="text"
+                          placeholder="Applicant Pan No."
+                          className="form-control"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
+                      <div className="mb-3">
+                        <label
+                          className="sr-only form-label mb-0"
+                          htmlFor="text"
+                        >
+                      Adhar No.
+                        </label>
+                        <input
+                          id="number"
+                          name="number"
+                          type="text"
+                          placeholder="Adhar No."
+                          className="form-control"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
+                      <div className="mb-3">
+                        <label
+                          className="sr-only form-label mb-0"
+                          htmlFor="text"
+                        >
+                        Applicant DOB
+                        </label>
+                        <input
+                          id="number"
+                          name="number"
+                          type="text"
+                          placeholder="Applicant DOB"
+                          className="form-control"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
+                      <div className="mb-3">
+                        <label
+                          className="sr-only form-label mb-0"
+                          htmlFor="text"
+                        >
+                       Voter Id No.
+                        </label>
+                        <input
+                          id="number"
+                          name="number"
+                          type="text"
+                          placeholder="Voter Id No."
+                          className="form-control"
+                          required
+                        />
+                      </div>
+                    </div>
+
+                    <h3>Details of Profession </h3>
+
+                    <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
+                      <div className="mb-3">
+                      <h6 className="text-center">Last Three Month Salary Slip</h6>
+                        <label
+                          className="sr-only form-label mb-0"
+                          htmlFor="text"
+                        >
+                        </label>
+                        <input
+                          id="number"
+                          name="pdfFile"
+                          type="file"
+                          placeholder="Last Three Month Salary Slip."
+                          className="form-control"
+                          required
+                        />
+                      
+                      </div>
+                    </div>
+                    <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
+                      <div className="mb-3">
+                      <h6 className="text-center">Last Two Year ITR</h6>
+                        <label
+                          className="sr-only form-label mb-0"
+                          htmlFor="text"
+                        >
+                        </label>
+                        <input
+                          id="number"
+                          name="pdfFile"
+                          type="file"
+                          placeholder="Last Three Month Salary Slip."
+                          className="form-control"
+                          required
+                        />
+                      
+                      </div>
+                    </div>
+                    <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
+                      <div className="mb-3">
+                      <h6 className="text-center">Other Income Proof</h6>
+                        <label
+                          className="sr-only form-label mb-0"
+                          htmlFor="text"
+                        >
+                        </label>
+                        <input
+                          id="number"
+                          name="pdfFile"
+                          type="file"
+                          placeholder="Last Three Month Salary Slip."
+                          className="form-control"
+                          required
+                        />
+                      
+                      </div>
+                    </div>
+                    <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
+                      <div className="mb-3">
+                      <h6 className="text-center">Business Registration Proof</h6>
+                        <label
+                          className="sr-only form-label mb-0"
+                          htmlFor="text"
+                        >
+                        </label>
+                        <input
+                          id="number"
+                          name="pdfFile"
+                          type="file"
+                          placeholder="Last Three Month Salary Slip."
+                          className="form-control"
+                          required
+                        />
+                      
+                      </div>
+                    </div>
+
+
+
+                    {/* Button */}
+                    <div className=" col-lg-12 col-md-12 col-sm-12 col-12">
+                      <button type="submit" className="btn btn-primary">
+                        Submit
+                      </button>
                     </div>
                   </div>
                 </div>
-                <div className="section-scroll" id="section-apply">
-                  <div className="bg-light p-md-12 p-6">
-                    <div className="row">
-                      <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                        <div className="mb-8 text-center">
-                          <h1>Get a Quote</h1>
-                          <p>
-                            Now apply for a Car Loan online, All you need to do
-                            is provide your details below application form.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="row">
-                      <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                        <form>
-                          <fieldset>
-                            {/* Text input*/}
-                            <div className="row">
-                              <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
-                                <div className="mb-3">
-                                  <label className="form-label" htmlFor="name">
-                                    Name
-                                  </label>
-                                  <input
-                                    id="name"
-                                    name="name"
-                                    type="text"
-                                    placeholder="Name"
-                                    className="form-control "
-                                    required
-                                  />
-                                </div>
-                              </div>
-                              {/* Text input*/}
-                              <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
-                                <div className="mb-3">
-                                  <label
-                                    className=" form-label"
-                                    htmlFor="email"
-                                  >
-                                    E-Mail
-                                  </label>
-                                  <input
-                                    id="email"
-                                    name="email"
-                                    type="text"
-                                    placeholder="E-mail"
-                                    className="form-control "
-                                  />
-                                </div>
-                              </div>
-                              {/* Text input*/}
-                              <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
-                                <div className="mb-3">
-                                  <label className="form-label" htmlFor="phone">
-                                    Phone
-                                  </label>
-                                  <input
-                                    id="phone"
-                                    name="phone"
-                                    type="text"
-                                    placeholder="Phone"
-                                    className="form-control"
-                                  />
-                                </div>
-                              </div>
-                              <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-                                <div className=" my-4 amountSlider" />
-                                <label htmlFor="amount" className="form-label">
-                                  Loan Amount
-                                </label>
-                                <input
-                                  type="text"
-                                  id="amount"
-                                  className="form-control amountInput"
-                                />
-                              </div>
-                              <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-                                <div className=" my-4 yearSlider" />
-                                <label htmlFor="year" className="form-label">
-                                  Loan Amount
-                                </label>
-                                <input
-                                  type="text"
-                                  id="year"
-                                  className="form-control yearInput"
-                                />
-                              </div>
-                              {/* Button */}
-                              <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-4">
-                                <div className="d-grid">
-                                  <button
-                                    id="Submit"
-                                    name="Submit"
-                                    className="btn btn-primary btn-block"
-                                  >
-                                    Submit New Quote
-                                  </button>
-                                </div>
-                              </div>
-                            </div>
-                          </fieldset>
-                        </form>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+
               </div>
             </div>
           </div>
         </section>
-        {/* /.content end */}
+   
       </main>
     </>
   );
