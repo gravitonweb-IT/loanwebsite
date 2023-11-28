@@ -103,7 +103,7 @@ const HomeLoan = () => {
   
 
     if (!validateForm()) {
-      
+
       console.log(formData);
       // If form validation fails, do not submit
       return;
@@ -250,10 +250,6 @@ const HomeLoan = () => {
         </section>
 
 
-
-
-
-
         <section className="pt-3 pb-6 ">
           <div className="container">
             <div className="row">
@@ -318,8 +314,6 @@ const HomeLoan = () => {
             </div>
           </div>
         </section>
-
-
 
         {/* content start */}
         <section>

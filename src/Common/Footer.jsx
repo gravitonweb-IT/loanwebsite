@@ -163,10 +163,10 @@ const Footer = () => {
 
                   <li className="d-flex">
                     {"                  "}
-                    <a className="text-inherit fs-5" href="/loan">
+                    <a className="text-inherit fs-5" href="/termcondation">
                       {"                    "}
                       <i className="bi bi-chevron-right fs-6 me-2" />
-                      News
+                     Term & Condation
                     </a>
                   </li>
 
