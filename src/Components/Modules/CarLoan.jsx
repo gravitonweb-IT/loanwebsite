@@ -4,17 +4,115 @@ import Featureimg from "../../assets/images/background/lp-feature-img.jpg"
 
 const CarLone = () => {
 
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    applicationno: '',
+    salary : '',
+    resaddress :'',
+    busaddress: '',
+    bankname: '',
+    accountnumber:'',
+    ifsccode : '',
+    branchname: '',
+    remark :'',
+    nbfcnname: '',
+    emi : '',
+    padding : '',
+    applicationpanno: '',
+    addherno : '',
+    dob : '',
+    voteridno : '',
+    // ... other form fields
+  });
+  const [error, setError] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    applicationno: '',
+    salary : '',
+    resaddress :'',
+    busaddress: '',
+    bankname: '',
+    accountnumber:'',
+    ifsccode : '',
+    branchname: '',
+    remark :'',
+    nbfcnname: '',
+    emi : '',
+    padding : '',
+    applicationpanno: '',
+    addherno : '',
+    dob : '',
+    voteridno : ''
+
+  });
+
   const [selectedLanguage, setSelectedLanguage] = useState('');
 
-  const handleLanguageChange = (event) => {
-    setSelectedLanguage(event.target.value);
-  }
-  const handleSubmit = (event) => {
-    event.preventDefault(); // Prevents the default form submission behavior
 
-    // Add your form submission logic here
-    console.log('Form submitted!');
-  }
+  const Validation = () => {
+
+    const formError = {};
+  
+
+    if (formData.name.trim() === '') {
+      formError.name = "required";
+    }
+    if (formData.email.trim() === '') {
+      formError.email = "required";
+    }
+    else if (!isValideEmail(formData.email)){
+      formError.email ="invalid email"
+    }
+    const isValideEmail= (email)=>{
+      
+    }
+  
+  
+   setError(formError);
+  
+    return Object.keys(formError).length === 0;
+  };
+  
+ const handleChange = (e) => {
+
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+    
+    setError({
+      ...error,
+      [e.target.name]: e.target.value,
+    })
+  };
+
+  const handleLanguageChange = (e) => {
+    setSelectedLanguage(e.target.value);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  
+    const isValid = Validation();
+  
+    if (isValid) {
+      // Your form submission logic here using formData and selectedLanguage
+      console.log(formData);
+      // Optional: Reset form fields after submission
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        // ... reset other form fields
+      });
+  
+      setSelectedLanguage('');
+    }
+  };
+  
   return (
     <>
       <main>
@@ -46,94 +144,7 @@ const CarLone = () => {
                   </a>
                 </div>
               </div>
-              {/* <div className="offset-xl-1 col-xl-5 offset-lg-1 col-lg-5 col-md-6  col-sm-12 col-12">
-                <div className="card">
-                  <div className="card-body">
-                    <h2>Request Quote Now</h2>
-                    <p>
-                      Easy to apply for a loan with us,Once you have complete
-                      this form.{" "}
-                    </p>
-                    <form
-                      method="post"
-                      action="https://easetemplate.com/borrow/pages/get-quote.php"
-                    >
-                 
-                      <div className="mb-3">
-                        <label className="form-label sr-only" htmlFor="name">
-                          Name
-                        </label>
-                        <input
-                          id="name"
-                          name="name"
-                          type="text"
-                          placeholder="Name"
-                          className="form-control "
-                          required
-                        />
-                      </div>
-                    
-                      <div className="mb-3">
-                        <label className="form-label sr-only" htmlFor="email">
-                          E-Mail
-                        </label>
-                        <input
-                          id="email"
-                          name="email"
-                          type="text"
-                          placeholder="E-mail"
-                          className="form-control "
-                          required
-                        />
-                      </div>
-                   
-                      <div className="mb-3">
-                        <label className="form-label sr-only" htmlFor="phone">
-                          Phone
-                        </label>
-                        <input
-                          id="phone"
-                          name="phone"
-                          type="text"
-                          placeholder="Phone"
-                          className="form-control "
-                          required
-                        />
-                      </div>
-                    
-                      <div className="mb-3">
-                        <label className="form-label sr-only" htmlFor="city">
-                          City
-                        </label>
-                        <select id="city" name="city" className="form-select">
-                          <option value="Ahmedabad">Ahmedabad</option>
-                          <option value="Surat">Surat</option>
-                          <option value="Vadodara">Vadodara</option>
-                          <option value="Rajkot">Rajkot</option>
-                          <option value="Bhavnagar">Bhavnagar</option>
-                        </select>
-                      </div>
-                      <div className="slide-ranger mb-4">
-                        <label htmlFor="x" className="form-label sr-only">
-                          Loan Amount
-                        </label>
-                        <input
-                          type="text"
-                          id="x"
-                          className="form-control my-3 input-with-keypress-0"
-                        />
-                        <div className="steps-slider" />
-                      </div>
-                  
-                      <div className="mb-3 mb-0 d-grid">
-                        <button type="submit" className="btn btn-primary">
-                          Send A Request
-                        </button>
-                      </div>
-                    </form>
-                  </div>
-                </div>
-              </div> */}
+           
               
             </div>
           </div>
@@ -209,6 +220,8 @@ const CarLone = () => {
             </div>
           </div>
         </section>
+
+
         <section className="py-lg-16 py-10 bg-white border-bottom border-top">
           <div className="container">
             <div className="row">
@@ -335,10 +348,13 @@ const CarLone = () => {
                                     id="name"
                                     name="name"
                                     type="text"
+                                    value={formData.name}
+                                    onChange={handleChange}
                                     placeholder="Name"
                                     className="form-control"
-                                    required
+                                 
                                   />
+                                  {error.name}
                                 </div>
                               </div>
                               {/* Text input*/}
@@ -354,9 +370,11 @@ const CarLone = () => {
                                     id="email"
                                     name="email"
                                     type="email"
+                                    value={formData.email}
+                                    onChange={handleChange}
                                     placeholder="Email"
                                     className="form-control"
-                                    required
+                                   
                                   />
                                 </div>
                               </div>
@@ -373,9 +391,11 @@ const CarLone = () => {
                                     id="phone"
                                     name="phone"
                                     type="text"
+                                    value={formData.phone}
+                                    onChange={handleChange}
                                     placeholder="Phone"
                                     className="form-control"
-                                    required
+                                   
                                   />
                                 </div>
                               </div>
@@ -386,12 +406,14 @@ const CarLone = () => {
                                     htmlFor="name"
                                   ></label>
                                   <input
-                                    id="name"
-                                    name="name"
+                                    id="applicationno"
+                                    name="applicationno"
                                     type="text"
+                                    value={formData.applicationno}
+                                    onChange={handleChange}
                                     placeholder="Application No"
                                     className="form-control"
-                                    required
+                                   
                                   />
                                 </div>
                               </div>
@@ -402,15 +424,17 @@ const CarLone = () => {
                                     className="sr-only form-label mb-0"
                                     htmlFor="text"
                                   >
-                                    Email
+                                  Salary
                                   </label>
                                   <input
-                                    id="number"
-                                    name="number"
+                                    id="salary"
+                                    name="salary"
                                     type="text"
+                                    value={formData.salary}
+                                    onChange={handleChange}
                                     placeholder="Salary"
                                     className="form-control"
-                                    required
+                                   
                                   />
                                 </div>
                               </div>
@@ -487,9 +511,11 @@ const CarLone = () => {
                                   ></label>
                                   <textarea
                                     className="form-control"
-                                    id="message"
+                                    id="resmessage"
                                     rows={4}
-                                    name="message"
+                                    name="resmessage"
+                                    value={formData.resmessage}
+                                    onChange={handleChange}
                                     placeholder="Residence Address"
                                     defaultValue={""}
                                   />
@@ -503,9 +529,11 @@ const CarLone = () => {
                                   ></label>
                                   <textarea
                                     className="form-control"
-                                    id="message"
+                                    id="busmessage"
                                     rows={4}
-                                    name="message"
+                                    value={formData.busmessage}
+                                    onChange={handleChange}
+                                    name="busmessage"
                                     placeholder="Business Address"
                                     defaultValue={""}
                                   />
@@ -523,12 +551,14 @@ const CarLone = () => {
                                     Name of Bank
                                   </label>
                                   <input
-                                    id="name"
-                                    name="name"
+                                    id="bankname"
+                                    name="bankname"
                                     type="text"
+                                    value={formData.bankname}
+                                    onChange={handleChange}
                                     placeholder="Name of Bank"
                                     className="form-control"
-                                    required
+                                   
                                   />
                                 </div>
                               </div>
@@ -572,12 +602,14 @@ const CarLone = () => {
                                     Account Number
                                   </label>
                                   <input
-                                    id="text"
-                                    name="text"
+                                    id="accountnumber"
+                                    name="accountnumber"
                                     type="text"
+                                    value={formData.accountnumber}
+                                    onChange={handleChange}
                                     placeholder="Account Number"
                                     className="form-control"
-                                    required
+                                   
                                   />
                                 </div>
                               </div>
@@ -588,12 +620,14 @@ const CarLone = () => {
                                     htmlFor="name"
                                   ></label>
                                   <input
-                                    id="name"
-                                    name="name"
+                                    id="ifsccode"
+                                    name="ifsccode"
                                     type="text"
+                                    value={formData.ifsccode}
+                                    onChange={handleChange}
                                     placeholder="IFSC Code"
                                     className="form-control"
-                                    required
+                                   
                                   />
                                 </div>
                               </div>
@@ -607,12 +641,14 @@ const CarLone = () => {
                                     Branch Name
                                   </label>
                                   <input
-                                    id="number"
-                                    name="number"
+                                    id="branchname"
+                                    name="branchname"
                                     type="text"
+                                    value={formData.branchname}
+                                    onChange={handleChange}
                                     placeholder="Branch Name"
                                     className="form-control"
-                                    required
+                                   
                                   />
                                 </div>
                               </div>
@@ -626,12 +662,14 @@ const CarLone = () => {
                                     Remarks
                                   </label>
                                   <input
-                                    id="number"
-                                    name="number"
+                                    id="remark"
+                                    name="remark"
                                     type="text"
+                                    value={formData.remark}
+                                    onChange={handleChange}
                                     placeholder="Remarks"
                                     className="form-control"
-                                    required
+                                   
                                   />
                                 </div>
                               </div>
@@ -647,12 +685,14 @@ const CarLone = () => {
                                     Name OfBank NBFC
                                   </label>
                                   <input
-                                    id="number"
-                                    name="number"
+                                    id="nbfcnname"
+                                    name="nbfcnname"
                                     type="text"
+                                    value={formData.nbfcnname}
+                                    onChange={handleChange}
                                     placeholder="Name OfBank NBFC"
                                     className="form-control"
-                                    required
+                                   
                                   />
                                 </div>
                               </div>
@@ -696,12 +736,14 @@ const CarLone = () => {
                                     EMI
                                   </label>
                                   <input
-                                    id="number"
-                                    name="number"
+                                    id="emi"
+                                    name="emi"
                                     type="text"
+                                    value={formData.emi}
+                                    onChange={handleChange}
                                     placeholder="EMI"
                                     className="form-control"
-                                    required
+                                   
                                   />
                                 </div>
                               </div>
@@ -714,12 +756,14 @@ const CarLone = () => {
                                     Pending
                                   </label>
                                   <input
-                                    id="number"
-                                    name="number"
+                                    id="padding"
+                                    name="padding"
                                     type="text"
+                                    value={formData.padding}
+                                    onChange={handleChange}
                                     placeholder="Pending"
                                     className="form-control"
-                                    required
+                                   
                                   />
                                 </div>
                               </div>
@@ -733,12 +777,14 @@ const CarLone = () => {
                                     Applicant Pan No.
                                   </label>
                                   <input
-                                    id="number"
-                                    name="number"
+                                    id="applicationpanno"
+                                    name="applicationpanno"
                                     type="text"
+                                    value={formData.applicationpanno}
+                                    onChange={handleChange}
                                     placeholder="Applicant Pan No."
                                     className="form-control"
-                                    required
+                                   
                                   />
                                 </div>
                               </div>
@@ -751,12 +797,14 @@ const CarLone = () => {
                                     Adhar No.
                                   </label>
                                   <input
-                                    id="number"
-                                    name="number"
+                                    id="addherno"
+                                    name="addherno"
                                     type="text"
+                                    value={formData.addherno}
+                                    onChange={handleChange}
                                     placeholder="Adhar No."
                                     className="form-control"
-                                    required
+                                   
                                   />
                                 </div>
                               </div>
@@ -769,12 +817,14 @@ const CarLone = () => {
                                     Applicant DOB
                                   </label>
                                   <input
-                                    id="number"
-                                    name="number"
+                                    id="dob"
+                                    name="dob"
                                     type="text"
+                                    value={formData.dob}
+                                    onChange={handleChange}
                                     placeholder="Applicant DOB"
                                     className="form-control"
-                                    required
+                                   
                                   />
                                 </div>
                               </div>
@@ -787,12 +837,14 @@ const CarLone = () => {
                                     Voter Id No.
                                   </label>
                                   <input
-                                    id="number"
-                                    name="number"
+                                    id="voteridno"
+                                    name="voteridno"
                                     type="text"
+                                    value={formData.voteridno}
+                                    onChange={handleChange}
                                     placeholder="Voter Id No."
                                     className="form-control"
-                                    required
+                                   
                                   />
                                 </div>
                               </div>
@@ -814,7 +866,7 @@ const CarLone = () => {
                                     type="file"
                                     placeholder="Last Three Month Salary Slip."
                                     className="form-control"
-                                    required
+                                   
                                   />
                                 </div>
                               </div>
@@ -833,7 +885,7 @@ const CarLone = () => {
                                     type="file"
                                     placeholder="Last Three Month Salary Slip."
                                     className="form-control"
-                                    required
+                                   
                                   />
                                 </div>
                               </div>
@@ -852,7 +904,7 @@ const CarLone = () => {
                                     type="file"
                                     placeholder="Last Three Month Salary Slip."
                                     className="form-control"
-                                    required
+                                   
                                   />
                                 </div>
                               </div>
@@ -871,7 +923,7 @@ const CarLone = () => {
                                     type="file"
                                     placeholder="Last Three Month Salary Slip."
                                     className="form-control"
-                                    required
+                                   
                                   />
                                 </div>
                               </div>

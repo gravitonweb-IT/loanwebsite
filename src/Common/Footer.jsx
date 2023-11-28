@@ -6,7 +6,7 @@ import {
   faLinkedin,
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
-import Ftlogoimg from "../assets/images/brand/company-logo/ft-logo.png";
+import Logoimg from "../assets/images/brand/logo/logoimg.jpeg";
 
 const Footer = () => {
   return (
@@ -20,7 +20,7 @@ const Footer = () => {
                 {"                            "}
                 <img
                   alt="Borrow            - Loan Company Website Templates"
-                  src={Ftlogoimg}
+                  src={Logoimg}
                 />
               </div>
               {"                      "}

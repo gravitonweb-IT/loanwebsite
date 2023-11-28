@@ -23,6 +23,7 @@ import Footer from './Common/Footer';
 import EducationLoan from "./Components/Modules/EducationLoan";
 import Navbar from './Common/Navbar';
 import Gallery from './Components/Modules/Gallery';
+import Career from './Components/Modules/Career';
 
 
 
@@ -45,6 +46,11 @@ function App() {
         <Route path="/studentloan" element={<StudentLoan />} />
         <Route path="/refinanceloan" element={<RefinanceLoan />} />
         <Route path="/gallery" element={<Gallery />} />
+        <Route path="/career" element={<Career />} />
+
+       
+
+
 
 
       </Routes>

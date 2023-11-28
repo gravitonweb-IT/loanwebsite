@@ -191,15 +191,15 @@ const Navbar = () => {
           </ul>
         </li>
 
-
-
-
-        
         <li class="nav-item">
           <a class="nav-link" href="/gallery">Gallery</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/blog">Blog</a>
+         
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/career">Career</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/contact">Contact</a>
