@@ -30,11 +30,95 @@ const HomeLoan = () => {
   const handleLanguageChange = (event) => {
     setSelectedLanguage(event.target.value);
   };
-  const handleSubmit = (event) => {
-    event.preventDefault(); // Prevents the default form submission behavior
+ 
 
-    // Add your form submission logic here
-    console.log("Form submitted!");
+
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    password: '',
+    application_no: '',
+    salary: '',
+    loan_type: '',
+    employment_type: '',
+    address: '',
+    business_address: '',
+    bank_name: '',
+    account_type: '',
+    account_number: '',
+    ifsc_code: '',
+    branch_name: '',
+    remark: '',
+    pan_no: '',
+    adhar_no: '',
+    dob: '',
+    voter_id: '',
+    three_month_salary: null,
+    itr: null,
+    income_proof: null,
+    registration_proof: null,
+    reference_name: '',
+  });
+
+  const [errors, setErrors] = useState({});
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+    setErrors({ ...errors, [name]: null }); // Clear errors for the changed field
+  };
+
+  const handleFileChange = (e) => {
+    const { name, files } = e.target;
+    setFormData({ ...formData, [name]: files[0] });
+    setErrors({ ...errors, [name]: null }); // Clear errors for the changed field
+  };
+
+  const validateForm = () => {
+    const newErrors = {};
+
+    // Add your validation logic here
+    if (!formData.name) {
+      newErrors.name = 'Name is required';
+    }
+
+    // Add more validations for other fields
+
+    setErrors(newErrors);
+
+    // Return true if there are no errors
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (!validateForm()) {
+      // If form validation fails, do not submit
+      return;
+    }
+
+    // Prepare FormData for file uploads
+    const formBody = new FormData();
+    for (const key in formData) {
+      formBody.append(key, formData[key]);
+    }
+
+    // Make the API call
+    fetch('http://127.0.0.1:8000/loan/api/formLoan/', {
+      method: 'POST',
+      body: formBody,
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log('API Response:', data);
+        // Handle the API response as needed
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+        // Handle errors
+      });
   };
   return (
     <>

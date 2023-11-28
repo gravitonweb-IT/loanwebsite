@@ -1,4 +1,4 @@
-import React, { useEffect,useRef } from "react";
+import React, { useEffect,useRef, useState } from "react";
 import { tns } from "tiny-slider/src/tiny-slider";
 import '@fortawesome/fontawesome-free/css/all.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -46,6 +46,51 @@ const Home = () => {
     };
   }, []);
 
+  const [apiData, setApiData] = useState(null);
+  const [showPopup, setShowPopup] = useState(false);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch('http://127.0.0.1:8000/loan/api/normalData/', {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          // If you need to include any query parameters, you can append them to the URL
+          // Example: http://127.0.0.1:8000/loan/api/normalData/?param1=value1&param2=value2
+        });
+
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+
+        const data = await response.json();
+        setApiData(data);
+        console.log('API Data:', data);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+
+    fetchData();
+  }, []); // Empty dependency array ensures the effect runs once on mount
+
+useEffect(()=>{
+
+  setTimeout(() => {
+    openPopup()
+  }, 2000);
+},[])
+
+  const openPopup = () => {
+    setShowPopup(true);
+  };
+
+  const closePopup = () => {
+    setShowPopup(false);
+  };
+
   // useEffect(() => {
   //   // Initialize the Tiny Slider
   //   const slider1 = tns({
@@ -71,6 +116,16 @@ const Home = () => {
 
   return (
     <>
+
+{showPopup && (
+        <div className="popup" onClick={closePopup}>
+          <div className="popup-content" onClick={(e) => e.stopPropagation()}>
+            <span className="close" onClick={closePopup}>&times;</span>
+            <h2>API Data</h2>
+            <pre>{JSON.stringify(apiData, null, 2)}</pre>
+          </div>
+        </div>
+      )}
      {/* <div className="bg-primary py-1">
         <div className="container px-md-0">
           <div className="row justify-content-between align-items-center">
