@@ -1,4 +1,5 @@
 import React from 'react'
+import './Footer.css'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebook,
@@ -19,8 +20,8 @@ const Footer = () => {
               <div className="mb-4 mb-lg-0">
                 {"                            "}
                 <img
-                  alt="Borrow            - Loan Company Website Templates"
-                  src={Logoimg}
+                  alt="Borrow  - Loan Company Website Templates"
+                  src={Logoimg} className='logo-img'
                 />
               </div>
               {"                      "}

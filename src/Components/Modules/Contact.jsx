@@ -1,14 +1,74 @@
-import React from "react";
-import  "./About.css"
+import React, { useState } from "react";
+import "./About.css";
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+
+  const [errors, setErrors] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+    setErrors({ ...errors, [name]: "" }); // Clear the error when the user starts typing
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    let hasErrors = false;
+
+    // Validation logic for each field
+    if (formData.name === "") {
+      setErrors((prevErrors) => ({ ...prevErrors, name: "Name is " }));
+      hasErrors = true;
+    }
+
+    if (formData.email === "") {
+      setErrors((prevErrors) => ({
+        ...prevErrors,
+        email: "Email is ",
+      }));
+      hasErrors = true;
+    }
+
+    if (formData.phone === "") {
+      setErrors((prevErrors) => ({
+        ...prevErrors,
+        phone: "Phone is ",
+      }));
+      hasErrors = true;
+    }
+
+    if (formData.message === "") {
+      setErrors((prevErrors) => ({
+        ...prevErrors,
+        message: "Message is ",
+      }));
+      hasErrors = true;
+    }
+
+    // Add more validation rules as needed for other fields
+
+    if (!hasErrors) {
+      // Submit the form data
+      console.log("Form submitted:", formData);
+      // You can add your form submission logic here
+    }
+  };
+
   return (
     <>
       <main>
-        <section
-          className="pt-18 pb-10 Contact-header-page"
-        
-        >
+        <section className="pt-18 pb-10 Contact-header-page">
           <div className="container">
             <div className="row">
               <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
@@ -61,10 +121,7 @@ const Contact = () => {
                         </p>
                       </div>
                     </div>
-                    <form
-                      method="post"
-                      action=""
-                    >
+                    <form onSubmit={handleSubmit}>
                       <div>
                         {/* Text input*/}
                         <div className="row">
@@ -82,8 +139,11 @@ const Contact = () => {
                                 type="text"
                                 placeholder="Name"
                                 className="form-control"
-                                required
+                                value={formData.name}
+                                onChange={handleChange}
+                                
                               />
+                                   {errors.name && <div className="text-danger">{errors.name}</div>}
                             </div>
                           </div>
                           {/* Text input*/}
@@ -99,10 +159,13 @@ const Contact = () => {
                                 id="email"
                                 name="email"
                                 type="email"
+                                value={formData.email}
+                                onChange={handleChange}
                                 placeholder="Email"
                                 className="form-control"
-                                required
+                                
                               />
+                                   {errors.email && <div className="text-danger">{errors.email}</div>}
                             </div>
                           </div>
                           {/* Text input*/}
@@ -118,10 +181,13 @@ const Contact = () => {
                                 id="phone"
                                 name="phone"
                                 type="text"
+                                value={formData.phone}
+                                onChange={handleChange}
                                 placeholder="Phone"
                                 className="form-control"
-                                required
+                                
                               />
+                                   {errors.phone && <div className="text-danger">{errors.phone}</div>}
                             </div>
                           </div>
                           {/* Select Basic */}
@@ -134,11 +200,14 @@ const Contact = () => {
                               <textarea
                                 className="form-control"
                                 id="message"
-                                rows={7}
+                                rows={5}
                                 name="message"
+                                value={formData.message}
+                                onChange={handleChange}
                                 placeholder="Message"
                                 defaultValue={""}
                               />
+                                 {errors.message && <div className="text-danger">{errors.message}</div>}
                             </div>
                           </div>
                           {/* Button */}
@@ -150,7 +219,6 @@ const Contact = () => {
                         </div>
                       </div>
                     </form>
-                    
                   </div>
                   {/* /.section title start*/}
                   <div className="contact-us mb-8">

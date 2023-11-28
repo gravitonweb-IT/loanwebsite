@@ -24,6 +24,10 @@ import EducationLoan from "./Components/Modules/EducationLoan";
 import Navbar from './Common/Navbar';
 import Gallery from './Components/Modules/Gallery';
 import Career from './Components/Modules/Career';
+import Login from './Components/Modules/Login';
+import User from './Components/Modules/User';
+import Admin from './Components/Modules/Admin';
+import Agent from './Components/Modules/Agent';
 
 
 
@@ -47,6 +51,13 @@ function App() {
         <Route path="/refinanceloan" element={<RefinanceLoan />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/career" element={<Career />} />
+        <Route path="/login" element={<Login/>}/>
+        <Route path="/user" element={<User/>}/>
+        <Route path="/admin" element={<Admin/>}/>
+        <Route path="/agent" element={<Agent/>}/>
+
+
+        
 
        
 

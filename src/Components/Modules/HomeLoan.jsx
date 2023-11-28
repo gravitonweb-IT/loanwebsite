@@ -25,6 +25,9 @@ const HomeLoan = () => {
       slider.destroy();
     };
   }, []);
+
+
+
   const [selectedLanguage, setSelectedLanguage] = useState("");
 
   const handleLanguageChange = (event) => {
@@ -59,6 +62,9 @@ const HomeLoan = () => {
     income_proof: null,
     registration_proof: null,
     reference_name: '',
+    
+// need to this data add
+    bank_nbfc: '',
   });
 
   const [errors, setErrors] = useState({});
@@ -80,7 +86,7 @@ const HomeLoan = () => {
 
     // Add your validation logic here
     if (!formData.name) {
-      newErrors.name = 'Name is required';
+      newErrors.name = 'Name is ';
     }
 
     // Add more validations for other fields
@@ -94,7 +100,11 @@ const HomeLoan = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+  
+
     if (!validateForm()) {
+      
+      console.log(formData);
       // If form validation fails, do not submit
       return;
     }
@@ -617,9 +627,12 @@ const HomeLoan = () => {
                                     id="name"
                                     name="name"
                                     type="text"
+                                    value={formData.name}
+                                    onChange={handleInputChange}
+                                  
                                     placeholder="Name"
                                     className="form-control"
-                                    required
+                                    
                                   />
                                 </div>
                               </div>
@@ -636,9 +649,11 @@ const HomeLoan = () => {
                                     id="email"
                                     name="email"
                                     type="email"
+                                    value={formData.email}
+                                    onChange={handleInputChange}
                                     placeholder="Email"
                                     className="form-control"
-                                    required
+                                    
                                   />
                                 </div>
                               </div>
@@ -655,9 +670,11 @@ const HomeLoan = () => {
                                     id="phone"
                                     name="phone"
                                     type="text"
+                                    value={formData.phone}
+                                    onChange={handleInputChange}
                                     placeholder="Phone"
                                     className="form-control"
-                                    required
+                                    
                                   />
                                 </div>
                               </div>
@@ -668,12 +685,14 @@ const HomeLoan = () => {
                                     htmlFor="name"
                                   ></label>
                                   <input
-                                    id="name"
-                                    name="name"
+                                    id="application_no"
+                                    name="application_no"
                                     type="text"
+                                    value={formData.application_no}
+                                    onChange={handleInputChange}
                                     placeholder="Application No"
                                     className="form-control"
-                                    required
+                                    
                                   />
                                 </div>
                               </div>
@@ -684,15 +703,17 @@ const HomeLoan = () => {
                                     className="sr-only form-label mb-0"
                                     htmlFor="text"
                                   >
-                                    Email
+                                   Pasword
                                   </label>
                                   <input
-                                    id="number"
-                                    name="number"
-                                    type="text"
-                                    placeholder="Salary"
+                                    id="password"
+                                    name="password"
+                                    type="password"
+                                    value={formData.password}
+                                    onChange={handleInputChange}
+                                    placeholder="Password"
                                     className="form-control"
-                                    required
+                                    
                                   />
                                 </div>
                               </div>
@@ -769,9 +790,11 @@ const HomeLoan = () => {
                                   ></label>
                                   <textarea
                                     className="form-control"
-                                    id="message"
-                                    rows={4}
-                                    name="message"
+                                    id="address"
+                                    rows={3}
+                                    name="address"
+                                    value={formData.address}
+                                    onChange={handleInputChange}
                                     placeholder="Residence Address"
                                     defaultValue={""}
                                   />
@@ -785,9 +808,11 @@ const HomeLoan = () => {
                                   ></label>
                                   <textarea
                                     className="form-control"
-                                    id="message"
-                                    rows={4}
-                                    name="message"
+                                    id="business_address"
+                                    rows={3}
+                                    name="business_address"
+                                    value={formData.business_address}
+                                    onChange={handleInputChange}
                                     placeholder="Business Address"
                                     defaultValue={""}
                                   />
@@ -805,12 +830,14 @@ const HomeLoan = () => {
                                     Name of Bank
                                   </label>
                                   <input
-                                    id="name"
-                                    name="name"
+                                    id="bank_name"
+                                    name="bank_name"
                                     type="text"
+                                    value={formData.bank_name}
+                                    onChange={handleInputChange}
                                     placeholder="Name of Bank"
                                     className="form-control"
-                                    required
+                                    
                                   />
                                 </div>
                               </div>
@@ -818,9 +845,11 @@ const HomeLoan = () => {
                               <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
                                 <div className="mb-3">
                                   <select
-                                    id="city"
-                                    name="city"
+                                    id="account_type"
+                                    name="account_type"
                                     className="form-select"
+                                    value={formData.account_type}
+                                    onChange={handleInputChange}
                                   >
                                     <option value="" disabled selected>
                                       Types of Account
@@ -854,12 +883,14 @@ const HomeLoan = () => {
                                     Account Number
                                   </label>
                                   <input
-                                    id="text"
-                                    name="text"
+                                    id="account_number"
+                                    name="account_number"
                                     type="text"
+                                    value={formData.account_number}
+                                    onChange={handleInputChange}
                                     placeholder="Account Number"
                                     className="form-control"
-                                    required
+                                    
                                   />
                                 </div>
                               </div>
@@ -870,12 +901,14 @@ const HomeLoan = () => {
                                     htmlFor="name"
                                   ></label>
                                   <input
-                                    id="name"
-                                    name="name"
+                                    id="ifsc_code"
+                                    name="ifsc_code"
                                     type="text"
+                                    value={formData.ifsc_code}
+                                    onChange={handleInputChange}
                                     placeholder="IFSC Code"
                                     className="form-control"
-                                    required
+                                    
                                   />
                                 </div>
                               </div>
@@ -889,12 +922,14 @@ const HomeLoan = () => {
                                     Branch Name
                                   </label>
                                   <input
-                                    id="number"
-                                    name="number"
+                                    id="branch_name"
+                                    name="branch_name"
                                     type="text"
+                                    value={formData.branch_name}
+                                    onChange={handleInputChange}
                                     placeholder="Branch Name"
                                     className="form-control"
-                                    required
+                                    
                                   />
                                 </div>
                               </div>
@@ -905,15 +940,17 @@ const HomeLoan = () => {
                                     className="sr-only form-label mb-0"
                                     htmlFor="text"
                                   >
-                                    Remarks
+                                   Salary
                                   </label>
                                   <input
-                                    id="number"
-                                    name="number"
+                                    id="salary"
+                                    name="salary"
                                     type="text"
+                                    value={formData.salary}
+                                    onChange={handleInputChange}
                                     placeholder="Remarks"
                                     className="form-control"
-                                    required
+                                    
                                   />
                                 </div>
                               </div>
@@ -926,24 +963,28 @@ const HomeLoan = () => {
                                     className="sr-only form-label mb-0"
                                     htmlFor="text"
                                   >
-                                    Name OfBank NBFC
+                                    Name Of Bank NBFC
                                   </label>
                                   <input
-                                    id="number"
-                                    name="number"
+                                    id="bank_nbfc"
+                                    name="bank_nbfc"
                                     type="text"
+                                    value={formData.bank_nbfc}
+                                    onChange={handleInputChange}
                                     placeholder="Name OfBank NBFC"
                                     className="form-control"
-                                    required
+                                    
                                   />
                                 </div>
                               </div>
                               <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
                                 <div className="mb-3">
                                   <select
-                                    id="city"
-                                    name="city"
+                                    id="loan_type"
+                                    name="loan_type"
                                     className="form-select"
+                                    value={formData.loan_type}
+                                    onChange={handleInputChange}
                                   >
                                     <option value="" disabled selected>
                                       Type of Loan
@@ -983,7 +1024,7 @@ const HomeLoan = () => {
                                     type="text"
                                     placeholder="EMI"
                                     className="form-control"
-                                    required
+                                    
                                   />
                                 </div>
                               </div>
@@ -1001,7 +1042,7 @@ const HomeLoan = () => {
                                     type="text"
                                     placeholder="Pending"
                                     className="form-control"
-                                    required
+                                   
                                   />
                                 </div>
                               </div>
@@ -1018,9 +1059,10 @@ const HomeLoan = () => {
                                     id="number"
                                     name="number"
                                     type="text"
+                                    
                                     placeholder="Applicant Pan No."
                                     className="form-control"
-                                    required
+                                    
                                   />
                                 </div>
                               </div>
@@ -1033,12 +1075,14 @@ const HomeLoan = () => {
                                     Adhar No.
                                   </label>
                                   <input
-                                    id="number"
-                                    name="number"
+                                    id="adhar_no"
+                                    name="adhar_no"
                                     type="text"
+                                    value={formData.adhar_no}
+                                    onChange={handleInputChange}
                                     placeholder="Adhar No."
                                     className="form-control"
-                                    required
+                                    
                                   />
                                 </div>
                               </div>
@@ -1051,12 +1095,14 @@ const HomeLoan = () => {
                                     Applicant DOB
                                   </label>
                                   <input
-                                    id="number"
-                                    name="number"
+                                    id="dob"
+                                    name="dob"
                                     type="text"
+                                    value={formData.dob}
+                                    onChange={handleInputChange}
                                     placeholder="Applicant DOB"
                                     className="form-control"
-                                    required
+                                    
                                   />
                                 </div>
                               </div>
@@ -1069,12 +1115,14 @@ const HomeLoan = () => {
                                     Voter Id No.
                                   </label>
                                   <input
-                                    id="number"
-                                    name="number"
+                                    id="voter_id"
+                                    name="voter_id"
                                     type="text"
+                                    value={formData.voter_id}
+                                    onChange={handleInputChange}
                                     placeholder="Voter Id No."
                                     className="form-control"
-                                    required
+                                    
                                   />
                                 </div>
                               </div>
@@ -1091,12 +1139,14 @@ const HomeLoan = () => {
                                     htmlFor="text"
                                   ></label>
                                   <input
-                                    id="number"
-                                    name="pdfFile"
+                                    id="three_month_salary"
+                                    name="three_month_salary"
                                     type="file"
+                                    value={formData.three_month_salary}
+                                    onChange={handleFileChange}
                                     placeholder="Last Three Month Salary Slip."
                                     className="form-control"
-                                    required
+                                    
                                   />
                                 </div>
                               </div>
@@ -1110,12 +1160,14 @@ const HomeLoan = () => {
                                     htmlFor="text"
                                   ></label>
                                   <input
-                                    id="number"
-                                    name="pdfFile"
+                                    id="itr"
+                                    name="itr"
                                     type="file"
+                                    value={formData.itr}
+                                    onChange={handleFileChange}
                                     placeholder="Last Three Month Salary Slip."
                                     className="form-control"
-                                    required
+                                    
                                   />
                                 </div>
                               </div>
@@ -1129,12 +1181,14 @@ const HomeLoan = () => {
                                     htmlFor="text"
                                   ></label>
                                   <input
-                                    id="number"
-                                    name="pdfFile"
+                                    id="income_proof"
+                                    name="income_proof"
                                     type="file"
+                                    value={formData.income_proof}
+                                    onChange={handleFileChange}
                                     placeholder="Last Three Month Salary Slip."
                                     className="form-control"
-                                    required
+                                    
                                   />
                                 </div>
                               </div>
@@ -1148,12 +1202,14 @@ const HomeLoan = () => {
                                     htmlFor="text"
                                   ></label>
                                   <input
-                                    id="number"
-                                    name="pdfFile"
+                                    id="registration_proof"
+                                    name="registration_proof"
                                     type="file"
+                                    value={formData.registration_proof}
+                                    onChange={handleFileChange}
                                     placeholder="Last Three Month Salary Slip."
                                     className="form-control"
-                                    required
+                                    
                                   />
                                 </div>
                               </div>
