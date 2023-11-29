@@ -145,7 +145,7 @@ useEffect(()=>{
                             {"                          "}
                             <br />
                             {"                          "}
-                            <strong>(555) 123-4567</strong>
+                            <strong>02269620449</strong>
                             {"                        "}
                           </p>
                           {"                        "}
@@ -340,233 +340,10 @@ useEffect(()=>{
         <section className="py-lg-0 py-0">
           <div className="container">
             <div className="row">
-              {/* <div className="offset-xl-2 col-xl-8 col-md-12 col-12">
-                <div className="mb-8 text-center">
-                  <h1 className="mb-3">Find Loan Products We Offers</h1>
-
-                  <p className="lead px-md-8">
-                    {"                  "}We will match you with a loan program
-                    that meet your financial need. In short term liquidity, by
-                    striving to make funds available to them
-                    <strong>within 24 hours of application.</strong>
-                  </p>
-                </div>
-              </div> */}
+            
             </div>
         
-            {/* <div className="position-relative">
-
-            <ul class="controls controls-bottom" id="sliderSecondControls">
-              <li class="prev">
-                <i class="fas fa-angle-left"></i>
-              </li>
-              <li class="next">
-                <i class="fas fa-angle-right"></i>
-              </li>
-            </ul>
-
-
-              <div className="sliderSecond">
-                
-                <div className="item">
-                  <div className="card smooth-shadow-sm border-0 m-2">
-                    <div className="card-body p-5">
-                      <div className="mb-5">
-                        <img
-                          alt="Borrow - Loan Company Website Template"
-                          className="icon-xxl"
-                          src={Loanimg2}
-                        />
-                      </div>
-
-                      <h3>
-                        <a className="text-inherit" href="#!">
-                          Personal Loan
-                        </a>
-                      </h3>
-
-                      <p>
-                        {"                      "}Lorem ipsum dolor sit
-                        ameectetuer adipiscing elit. Aenean commodo ligula eget
-                        dolor.
-                      </p>
-
-                      <a
-                        className="btn-link border-bottom border-primary border-2 fw-bold fs-5"
-                        href="#!"
-                      >
-                        Read More
-                      </a>
-                      {"                  "}
-                    </div>
-                  </div>
-                  {"              "}
-                </div>
-
-                <div className="item">
-                  <div className="card smooth-shadow-sm border-0 m-2">
-                    {"                  "}
-                    <div className="card-body p-5">
-                      {"                    "}
-                      <div className="mb-5">
-                        {"                      "}
-                        <img
-                          alt="Borrow - Loan Company Website Template"
-                          className="icon-xxl"
-                          src={Mortgageimg2}
-                        />
-                        {"                    "}
-                      </div>
-                      {"                    "}
-                      <h3>
-                        <a className="text-inherit" href="#!">
-                          Home Loan
-                        </a>
-                      </h3>
-                      {"                    "}
-                      <p>
-                        {"                      "}Sed ut perspiciatis unde omnis
-                        rror sit voluptatem accusan tium remque laudantium
-                        lkoremn totam.{"                    "}
-                      </p>
-                      {"                    "}
-                      <a
-                        className="btn-link border-bottom border-primary border-2 fw-bold fs-5"
-                        href="#!"
-                      >
-                        Read More
-                      </a>
-                      {"                  "}
-                    </div>
-                  </div>
-                  {"              "}
-                </div>
-
-                <div className="item">
-                  <div className="card smooth-shadow-sm border-0 m-2">
-                    {"                  "}
-                    <div className="card-body p-5">
-                      {"                    "}
-                      <div className="mb-5">
-                        {"                      "}
-                        <img
-                          alt="Borrow - Loan Company Website Template"
-                          className="icon-xxl"
-                          src={Piggyimg}
-                        />
-                        {"                    "}
-                      </div>
-                      {"                    "}
-                      <h3>
-                        {"                      "}
-                        <a className="text-inherit" href="#!">
-                          Education Loan
-                        </a>
-                        {"                    "}
-                      </h3>
-                      {"                    "}
-                      <p>
-                        {"                      "}Consectetuer adipiscing elmodo
-                        ligula eget dolor ociis natoque sit amet le polo konsog.
-                        {"                    "}
-                      </p>
-                      {"                    "}
-                      <a
-                        className="btn-link border-bottom border-primary border-2 fw-bold fs-5"
-                        href="#!"
-                      >
-                        Read More
-                      </a>
-                      {"                  "}
-                    </div>
-                  </div>
-                  {"              "}
-                </div>
-
-                <div className="item">
-                  <div className="card smooth-shadow-sm border-0 m-2">
-                    {"                  "}
-                    <div className="card-body p-5">
-                      {"                    "}
-                      <div className="mb-5">
-                        {"                      "}
-                        <img
-                          alt="Borrow - Loan Company Website Template"
-                          className="icon-xxl"
-                          src={Loanimg}
-                        />
-                        {"                    "}
-                      </div>
-                      {"                    "}
-                      <h3>
-                        <a className="text-inherit" href="#!">
-                          Business Loan
-                        </a>
-                      </h3>
-                      {"                    "}
-                      <p>
-                        {"                      "}Dolor sit nean commodo ligula
-                        eget dolor simple dummyum sociis nat nsectetuer
-                        adipiscing elit.{"                    "}
-                      </p>
-                      {"                    "}
-                      <a
-                        className="btn-link border-bottom border-primary border-2 fw-bold fs-5"
-                        href="#!"
-                      >
-                        Read More
-                      </a>
-                      {"                  "}
-                    </div>
-                  </div>
-                  {"              "}
-                </div>
-
-                <div className="item">
-                  <div className="card smooth-shadow-sm border-0 m-2">
-                    {"                  "}
-                    <div className="card-body p-5">
-                      {"                    "}
-                      <div className="mb-5">
-                        {"                      "}
-                        <img
-                          alt="Borrow - Loan Company Website Template"
-                          className="icon-xxl"
-                          src={Carimg}
-                        />
-                        {"                    "}
-                      </div>
-                      {"                    "}
-                      <h3>
-                        <a className="text-inherit" href="#!">
-                          Car Loan
-                        </a>
-                      </h3>
-                      {"                    "}
-                      <p>
-                        {"                      "}Aenean commodo ligula eget
-                        dolor. Cum sociis ipsum dolor sit amet, consectetuer
-                        adipiscing elit..{"                    "}
-                      </p>
-                      {"                    "}
-                      <a
-                        className="btn-link border-bottom border-primary border-2 fw-bold fs-5"
-                        href="#!"
-                      >
-                        Read More
-                      </a>
-                      {"                  "}
-                    </div>
-                  </div>
-                  {"              "}
-                </div>
-               
-                
-              </div>
-            
-            </div>
-          */}
-            
+      
           </div>
         </section>
 
@@ -580,9 +357,8 @@ useEffect(()=>{
                   <h1>Fast & Easy Application Process.</h1>
 
                   <p>
-                    {"                  "}Suspendisse aliquet varius nunc
-                    atcibus lacus sit amet coed portaeri sque mami luctus viveed
-                    congue lobortis faucibus.{"                "}
+                  "Effortless start: Begin your application with a quick and user-friendly online form."
+                  "Minimal paperwork: Enjoy a hassle-free experience with straightforward documentation."
                   </p>
                   {"              "}
                 </div>
@@ -604,9 +380,7 @@ useEffect(()=>{
                     <h3 className="mb-2">Choose Loan Amount</h3>
                     {"                  "}
                     <p className="mb-0">
-                      {"                    "}Suspendisse accumsan imperdue
-                      ligula dignissim sit amet vestibulum in mollis etfelis.
-                      {"                  "}
+                    Select the loan amount that suits your financial needs and goals 
                     </p>
                   </div>
                   {"              "}
@@ -626,9 +400,7 @@ useEffect(()=>{
                     <h3 className="mb-2">Approved Your Loan</h3>
                     {"                  "}
                     <p className="mb-0">
-                      {"                    "}Fusce tempor sstibulum varius sem
-                      nec mi luctus viverra edcongue lobortis faucibus.
-                      {"                  "}
+                    Approval confirmed! You're now set to access the funds you require with your approved loan
                     </p>
                   </div>
                   {"              "}
@@ -648,9 +420,7 @@ useEffect(()=>{
                     <h3 className="mb-2">Get Your Cash</h3>
                     {"                  "}
                     <p className="mb-0">
-                      {"                    "}Get your money in minutes
-                      simtibulm varius semnec mluctus gue lobortis faucibus.
-                      {"                  "}
+                    Your wait is over – the funds you need are now at your fingertips. Get your cash hassle-free
                     </p>
                   </div>
                   {"              "}
@@ -671,21 +441,22 @@ useEffect(()=>{
           {"      "}
         </section>
         {"      "}
-        <section className="py-lg-10 py-10">
+        <section className="py-lg-8 py-8 ">
           {"        "}
           <div className="container">
             <div className="row">
-              <div className="offset-xl-2 col-xl-8 col-md-12 col-12">
+              <div className="">
                 {"              "}
-                <div className="mb-10 text-center">
+                <div className="mb-10 px-3">
                   {"                                "}
-                  <h1 className="mb-2">Why People Choose Us</h1>
+                  <h1 className="mb-4 text-center">Why People Choose Us</h1>
 
-                  <p className="">
-                    {"                  "}Quisque gravida, mi sit amet lacinia
-                    maximus ulla rutrum tellus vel mauris tristique gravida odio
-                    lacus convallis est, vel pharetra leo massa ut sapien.
-                    {"                "}
+                  <p className="text-center">
+                  People choose us because we prioritize their financial well-being with a 
+                  commitment to excellence that sets us apart. Our reputation for transparency, reliability, and customer satisfaction 
+                  precedes us, instilling confidence in those seeking financial solutions. What distinguishes us is not just our competitive 
+                  offerings, but our unwavering dedication to understanding the unique needs of each individual. Our streamlined processes make the journey from application to approval seamless and stress-free, and our team is committed to providing personalized support at every step. Whether it's the trust we've earned through consistent service or the tailored assistance we provide, people choose us as their financial partner because we 
+                  go beyond transactions to build lasting relationships based on integrity and customer-centric values.
                   </p>
                   {"              "}
                 </div>
@@ -718,10 +489,9 @@ useEffect(()=>{
                     {"                  "}
                     <h3>Dedicated Specialists</h3>
                     {"                  "}
-                    <p className="mb-4">
-                      {"                    "}Duis eget diam quis elit erdiet
-                      alidvolutp terdum tfanissim non intwesollis eu mauris.
-                      {"                  "}
+                    <p className="mb-4 ">
+                    Our dedicated specialists are the cornerstone of our commitment to providing exceptional service. Trained to understand the 
+                    diverse needs of our clients, these experts go beyond the ordinary to offer personalized solutions
                     </p>
                     {"                  "}
                     <a className="btn btn-outline-primary btn-sm" href="#!">
@@ -757,9 +527,8 @@ useEffect(()=>{
                     <h3>Success Stories Rating</h3>
                     {"                  "}
                     <p className="mb-4">
-                      {"                    "}Integer facilisis fringilla dolor
-                      ut luctus lvinar felis miat velitliquam at lorem fermentum
-                      orci.{"                  "}
+                    Our success stories are not just narratives; they are testimonials that reflect the satisfaction and triumphs of our clients. 
+                    Their success is our success, in consistently earning high ratings for our services.                
                     </p>
                     {"                  "}
                     <a className="btn btn-outline-primary btn-sm" href="#!">
@@ -797,9 +566,8 @@ useEffect(()=>{
                     <h3>No front Appraisal Fees!</h3>
                     {"                  "}
                     <p className="mb-4">
-                      {"                    "}Integer faisis fringilla dolor ut
-                      luctus nisi eneinar felis viverra dignissim fermentum
-                      orci.{"                  "}
+                    At our institution, we believe in transparency and fairness. That's why we proudly declare: no upfront appraisal fees! We understand that navigating
+                     financial decisions can be challenging, any unnecessary burdens. 
                     </p>
                     {"                  "}
                     <a className="btn btn-outline-primary btn-sm" href="#!">
@@ -810,9 +578,9 @@ useEffect(()=>{
                 </div>
               </div>
             </div>
-            {"        "}
+         
           </div>
-          {"      "}
+      
         </section>
         {"      "}
         <section className="bg-dark py-lg-10 py-10">
@@ -1212,9 +980,8 @@ useEffect(()=>{
                   <h1 className="mb-1">We are Here to Help You</h1>
 
                   <p>
-                    {"                  "}Nulla rutrum tellus vel mauris
-                    tristique gravida in vulputate velit. Nulla dictum porttitor
-                    diam, ut molestie lorem mattis.{"                "}
+                  We are here to help you navigate your financial journey with confidence and ease. Our dedicated team is committed to providing the support and
+                   assistance you need, whether you have questions, require guidance, or are ready to explore our services. Whatever your financial aspirations may be, we're here to help you every step of the way.
                   </p>
                   {"              "}
                 </div>
@@ -1294,11 +1061,11 @@ useEffect(()=>{
                       Call us at
                     </h4>
                     {"                  "}
-                    <h1 className="fs-3 mb-0">800-123-456 / 789</h1>
+                    <h2 className="fs-3 mb-0">02269620449</h2>
                     {"                  "}
                     <p>
                       <a className="fs-5" href="#">
-                        lnfo@loanadvisor.com
+                      Info@joyoglobe.com
                       </a>
                     </p>
                     {"                  "}

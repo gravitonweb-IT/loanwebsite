@@ -120,7 +120,7 @@ const Footer = () => {
                         {"                    "}
                       </svg>
                       {"                    "}
-                      <div className="ms-3 fs-3">800-123-456</div>
+                      <div className="ms-3 fs-3">02269620449</div>
                       {"                  "}
                     </div>
                   </div>
@@ -166,7 +166,15 @@ const Footer = () => {
                     <a className="text-inherit fs-5" href="/termcondation">
                       {"                    "}
                       <i className="bi bi-chevron-right fs-6 me-2" />
-                     Term & Condation
+                  Privacy Policy 
+                    </a>
+                  </li>
+                  <li className="d-flex">
+                    {"                  "}
+                    <a className="text-inherit fs-5" href="/termcondation">
+                      {"                    "}
+                      <i className="bi bi-chevron-right fs-6 me-2" />
+                 Term & Condation
                     </a>
                   </li>
 

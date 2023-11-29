@@ -28,7 +28,6 @@ import Login from './Components/Modules/Login';
 import User from './Components/Modules/User';
 import Admin from './Components/Modules/Admin';
 import Agent from './Components/Modules/Agent';
-import Privacypolicy from './Components/Modules/Privacypolicy';
 import Termcondation from './Components/Modules/Termcondation';
 
 
@@ -57,7 +56,7 @@ function App() {
         <Route path="/user" element={<User/>}/>
         <Route path="/admin" element={<Admin/>}/>
         <Route path="/agent" element={<Agent/>}/>
-        <Route path="/privacypolicy" element={<Privacypolicy/>}/>
+     
         <Route path="/Termcondation" element={<Termcondation/>}/>
 
 

@@ -280,7 +280,7 @@ const Contact = () => {
                             <h4 className="text-uppercase text-primary fw-semi-bold mb-2">
                               Call us at
                             </h4>
-                            <h2 className="text-big">800-123-456 / 789</h2>
+                            <h3 className="text-big">02269620449</h3>
                           </div>
                         </div>
                       </div>
@@ -302,7 +302,7 @@ const Contact = () => {
                             <h4 className="text-uppercase text-primary fw-semi-bold">
                               Email Address
                             </h4>
-                            <p>lnfo@loanadvisor.com</p>
+                            <p>Info@joyoglobe.com</p>
                           </div>
                         </div>
                       </div>

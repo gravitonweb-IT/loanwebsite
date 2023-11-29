@@ -57,41 +57,32 @@ const About = () => {
                       <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
                         <h2 className="mb-4">Who We Are?</h2>
                         <p className="lead mb-4">
-                          Insight loan advisors is completely independent loan
-                          advising service and our directory of lenders gives
-                          you all the information lorem ipsums sitamets.
-                        </p>
-                        <p>
-                          Vestibulum condimentum neque at interdum dignissim.
-                          Integer colutpat vel lorem ac fringilla. Vestibulum
-                          porttitor euismod udiam viverra euismod non hendrerit
-                          eros.
+                        As a leading financial service provider, we pride ourselves on being a trusted 
+                        partner in the pursuit of your financial goals. Our identity is rooted in a commitment to excellence, 
+                        transparency, and customer satisfaction. With a team of seasoned professionals, we bring a wealth of expertise 
+                        to the table, ensuring that our clients receive tailored solutions that meet their unique needs. Choose us as your financial partner,
+                         and experience the difference of working with a service provider that understands and values your financial aspirations.
                         </p>
                       </div>
                       <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
                         <div className="mb-8">
                           <h2 className="mb-4">What We Offer?</h2>
                           <p className="lead mb-4">
-                            Our loan sanction is one of the quicke with eas
-                            documentation and doorstep lorem ipsum serviceullam
-                            dolor sitisi.
-                          </p>
-                          <p>
-                            Nullam tincidunt ligula purus, eget aliquet urna
-                            maximus id. lorem nisi vel sapien sollicitudin
-                            rutrum.Quisque sed felis metus Intocus pellentesque
-                            nisi eu mollis.
+                          As a dedicated financial service provider, we offer a comprehensive range of solutions designed to 
+                          meet the diverse needs of our clients. From personalized wealth management and investment advisory 
+                          services to flexible loan options and strategic financial planning, we provide a holistic approach to
+                           financial well-being. Our team of experienced professionals is committed to delivering
+                           excellence, ensuring that each client receives tailored solutions aligned with their unique goals. 
                           </p>
                         </div>
                       </div>
-                      <div className="offset-xl-2 col-xl-8 offset-lg-2 col-lg-8 col-md-12 col-sm-12 col-12">
+                      <div className="">
                         <div className="text-center pt-6 pb-1">
                           <h2>Our Vision &amp; Mission</h2>
                           <p>
-                            Our goal at Insight Loan Advisors is to provide
-                            access to personal loans, car loan, at insight
-                            competitive interest raa timely mannerlorem ipsums
-                            deconse resonescon.
+                          At our core, our vision is to be a beacon of financial empowerment, guiding individuals and businesses towards sustained prosperity.
+                          We envision a future where everyone has access to sound financial solutions that pave the way for growth and security,
+                          Aligned with this vision, our mission is to provide comprehensive and innovative financial services that transcend expectations. We are committed to fostering financial literacy, instilling confidence in decision-making, and building lasting relationships based on trust and integrity. 
                           </p>
                         </div>
                       </div>
@@ -173,8 +164,8 @@ const About = () => {
                           <div className="text-center mb-8">
                             <h2>Why apply with us</h2>
                             <p>
-                              Quisque in augunean suscipit ipsum nibh sit amet
-                              venerem
+                            Apply with us for unparalleled financial expertise,
+                             tailored solutions, and a commitment to your long-term financial success
                             </p>
                           </div>
                         </div>
@@ -184,8 +175,7 @@ const About = () => {
                           <div className="text-center mb-4">
                             <h3 className="mb-2">Multiple Loan Options</h3>
                             <p>
-                              Various versions have evolved over the
-                              years,sometimes by accident.
+                            Explore a multitude of loan options tailored to your needs and financial goals
                             </p>
                           </div>
                         </div>
@@ -193,8 +183,7 @@ const About = () => {
                           <div className="text-center mb-4">
                             <h3 className="mb-2">Competitive Rate</h3>
                             <p>
-                              Nam enim semex eli aliquet nec lorem ipsum
-                              pretiumlacinia eget elit.
+                            Benefit from our competitive rates, ensuring cost-effective and value-driven financial solutions
                             </p>
                           </div>
                         </div>
@@ -202,8 +191,8 @@ const About = () => {
                           <div className="text-center mb-4">
                             <h3 className="mb-2">Safe &amp; Secure</h3>
                             <p>
-                              Lorem ipsum dolor sit amet, consectetur adipiscing
-                              acinam rutrum sit amet.
+                            Experience peace of mind with our safe and secure financial services,
+                             prioritizing the confidentiality and protection of your information
                             </p>
                           </div>
                         </div>
@@ -353,14 +342,14 @@ const About = () => {
                               <h4 className="mb-3 text-uppercase fw-semi-bold">
                                 Call us at
                               </h4>
-                              <h1 className="fs-3">800-123-456 / 789</h1>
+                              <h1 className="fs-3">02269620449</h1>
                               <p>
                                 <a href="#" className="fs-5">
-                                  lnfo@loanadvisor.com
+                                Info@joyoglobe.com
                                 </a>
                               </p>
                               <a
-                                href="#!"
+                                href="/contact"
                                 className="btn-link border-bottom border-primary border-2 fw-bold fs-5"
                               >
                                 Contact us
@@ -390,7 +379,7 @@ const About = () => {
                                 Need to loan advise? Talk to our Loan advisors.
                               </p>
                               <a
-                                href="#!"
+                                href="/contact"
                                 className="btn-link border-bottom border-primary border-2 fw-bold fs-5"
                               >
                                 Meet The Advisor
