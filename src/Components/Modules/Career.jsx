@@ -23,6 +23,9 @@ const Career = () => {
     setErrors({ ...errors, [name]: "" }); // Clear error when user starts typing
   };
 
+
+ 
+
   const handleSubmit = (e) => {
     e.preventDefault();
 

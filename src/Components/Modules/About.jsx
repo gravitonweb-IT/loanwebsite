@@ -1,16 +1,13 @@
 import React from "react";
-import './About.css'
+import "./About.css";
 import Avatarimg1 from "../../assets/images/avatar/avatar-1.jpg";
-import Avatarimg2 from "../../assets/images/avatar/avatar-2.jpg"
+import Avatarimg2 from "../../assets/images/avatar/avatar-2.jpg";
 
 const About = () => {
   return (
     <>
       <main>
-        <section
-          className="pt-18 pb-10 about-header-page"
-         
-        >
+        <section className="pt-18 pb-10 about-header-page">
           <div className="container">
             <div className="row">
               <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
@@ -21,26 +18,12 @@ const About = () => {
                     </div>
                     <div className="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
                       <div className="text-md-end mt-3 mt-md-0">
-                        <a href="#!" className="btn btn-primary">
+                        <a href="/contact" className="btn btn-primary">
                           How To Apply
                         </a>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div>
-                  <ul className="nav nav-fill nav-pills-gray-fill">
-                    <li className="nav-item">
-                      <a href="contact-us.html" className="nav-link">
-                        Give me call back
-                      </a>
-                    </li>
-                    <li className="nav-item">
-                      <a href="#!" className="nav-link">
-                        Emi Caculator
-                      </a>
-                    </li>
-                  </ul>
                 </div>
               </div>
             </div>
@@ -57,22 +40,33 @@ const About = () => {
                       <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
                         <h2 className="mb-4">Who We Are?</h2>
                         <p className="lead mb-4">
-                        As a leading financial service provider, we pride ourselves on being a trusted 
-                        partner in the pursuit of your financial goals. Our identity is rooted in a commitment to excellence, 
-                        transparency, and customer satisfaction. With a team of seasoned professionals, we bring a wealth of expertise 
-                        to the table, ensuring that our clients receive tailored solutions that meet their unique needs. Choose us as your financial partner,
-                         and experience the difference of working with a service provider that understands and values your financial aspirations.
+                          As a leading financial service provider, we pride
+                          ourselves on being a trusted partner in the pursuit of
+                          your financial goals. Our identity is rooted in a
+                          commitment to excellence, transparency, and customer
+                          satisfaction. With a team of seasoned professionals,
+                          we bring a wealth of expertise to the table, ensuring
+                          that our clients receive tailored solutions that meet
+                          their unique needs. Choose us as your financial
+                          partner, and experience the difference of working with
+                          a service provider that understands and values your
+                          financial aspirations.
                         </p>
                       </div>
                       <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
                         <div className="mb-8">
                           <h2 className="mb-4">What We Offer?</h2>
                           <p className="lead mb-4">
-                          As a dedicated financial service provider, we offer a comprehensive range of solutions designed to 
-                          meet the diverse needs of our clients. From personalized wealth management and investment advisory 
-                          services to flexible loan options and strategic financial planning, we provide a holistic approach to
-                           financial well-being. Our team of experienced professionals is committed to delivering
-                           excellence, ensuring that each client receives tailored solutions aligned with their unique goals. 
+                            As a dedicated financial service provider, we offer
+                            a comprehensive range of solutions designed to meet
+                            the diverse needs of our clients. From personalized
+                            wealth management and investment advisory services
+                            to flexible loan options and strategic financial
+                            planning, we provide a holistic approach to
+                            financial well-being. Our team of experienced
+                            professionals is committed to delivering excellence,
+                            ensuring that each client receives tailored
+                            solutions aligned with their unique goals.
                           </p>
                         </div>
                       </div>
@@ -80,9 +74,18 @@ const About = () => {
                         <div className="text-center pt-6 pb-1">
                           <h2>Our Vision &amp; Mission</h2>
                           <p>
-                          At our core, our vision is to be a beacon of financial empowerment, guiding individuals and businesses towards sustained prosperity.
-                          We envision a future where everyone has access to sound financial solutions that pave the way for growth and security,
-                          Aligned with this vision, our mission is to provide comprehensive and innovative financial services that transcend expectations. We are committed to fostering financial literacy, instilling confidence in decision-making, and building lasting relationships based on trust and integrity. 
+                            At our core, our vision is to be a beacon of
+                            financial empowerment, guiding individuals and
+                            businesses towards sustained prosperity. We envision
+                            a future where everyone has access to sound
+                            financial solutions that pave the way for growth and
+                            security, Aligned with this vision, our mission is
+                            to provide comprehensive and innovative financial
+                            services that transcend expectations. We are
+                            committed to fostering financial literacy,
+                            instilling confidence in decision-making, and
+                            building lasting relationships based on trust and
+                            integrity.
                           </p>
                         </div>
                       </div>
@@ -125,7 +128,7 @@ const About = () => {
                             </svg>
                           </div>
                           <h1 className="display-4 fw-bold mb-0">
-                            $5 billion+
+                            &#x20B9;5 billion+
                           </h1>
                           <div className="text-dark fs-5">Borrowed</div>
                         </div>
@@ -164,8 +167,9 @@ const About = () => {
                           <div className="text-center mb-8">
                             <h2>Why apply with us</h2>
                             <p>
-                            Apply with us for unparalleled financial expertise,
-                             tailored solutions, and a commitment to your long-term financial success
+                              Apply with us for unparalleled financial
+                              expertise, tailored solutions, and a commitment to
+                              your long-term financial success
                             </p>
                           </div>
                         </div>
@@ -175,7 +179,8 @@ const About = () => {
                           <div className="text-center mb-4">
                             <h3 className="mb-2">Multiple Loan Options</h3>
                             <p>
-                            Explore a multitude of loan options tailored to your needs and financial goals
+                              Explore a multitude of loan options tailored to
+                              your needs and financial goals
                             </p>
                           </div>
                         </div>
@@ -183,7 +188,9 @@ const About = () => {
                           <div className="text-center mb-4">
                             <h3 className="mb-2">Competitive Rate</h3>
                             <p>
-                            Benefit from our competitive rates, ensuring cost-effective and value-driven financial solutions
+                              Benefit from our competitive rates, ensuring
+                              cost-effective and value-driven financial
+                              solutions
                             </p>
                           </div>
                         </div>
@@ -191,8 +198,9 @@ const About = () => {
                           <div className="text-center mb-4">
                             <h3 className="mb-2">Safe &amp; Secure</h3>
                             <p>
-                            Experience peace of mind with our safe and secure financial services,
-                             prioritizing the confidentiality and protection of your information
+                              Experience peace of mind with our safe and secure
+                              financial services, prioritizing the
+                              confidentiality and protection of your information
                             </p>
                           </div>
                         </div>
@@ -345,7 +353,7 @@ const About = () => {
                               <h1 className="fs-3">02269620449</h1>
                               <p>
                                 <a href="#" className="fs-5">
-                                Info@joyoglobe.com
+                                  Info@joyoglobe.com
                                 </a>
                               </p>
                               <a

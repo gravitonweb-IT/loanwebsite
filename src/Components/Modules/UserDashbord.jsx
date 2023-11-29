@@ -1,14 +1,14 @@
 import React from 'react'
 
-const Agent = () => {
+const UserDashbord = () => {
   return (
     <>
     <div className='py-lg-20 py-16 '>
 
-    This is Agent  Pannel
+    This is user  Pannel
    </div>
    </>
   )
 }
 
-export default Agent
+export default UserDashbord

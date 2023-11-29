@@ -25,10 +25,10 @@ import Navbar from './Common/Navbar';
 import Gallery from './Components/Modules/Gallery';
 import Career from './Components/Modules/Career';
 import Login from './Components/Modules/Login';
-import User from './Components/Modules/User';
 import Admin from './Components/Modules/Admin';
 import Agent from './Components/Modules/Agent';
 import Termcondation from './Components/Modules/Termcondation';
+import UserDashbord from './Components/Modules/UserDashbord';
 
 
 
@@ -53,7 +53,7 @@ function App() {
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/career" element={<Career />} />
         <Route path="/login" element={<Login/>}/>
-        <Route path="/user" element={<User/>}/>
+        <Route path="/userdashbord" element={<UserDashbord/>}/>
         <Route path="/admin" element={<Admin/>}/>
         <Route path="/agent" element={<Agent/>}/>
      

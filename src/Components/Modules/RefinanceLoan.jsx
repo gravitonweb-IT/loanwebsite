@@ -3,43 +3,44 @@ import './About.css';
 
 const RefinanceLoan = () => {
 
+
   const [selectedLanguage, setSelectedLanguage] = useState("");
 
   const handleLanguageChange = (event) => {
     setSelectedLanguage(event.target.value);
   };
- 
 
-
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    password: '',
-    application_no: '',
-    salary: '',
-    loan_type: '',
-    employment_type: '',
-    address: '',
-    business_address: '',
-    bank_name: '',
-    account_type: '',
-    account_number: '',
-    ifsc_code: '',
-    branch_name: '',
-    remark: '',
-    pan_no: '',
-    adhar_no: '',
-    dob: '',
-    voter_id: '',
+  const [formData, setFormData] = useState(
+    {
+    name: "",
+    email: "",
+    phone: "",
+    password: "",
+    application_no: "",
+    salary: "",
+    loan_type: "",
+    user_loan_type:'',
+    employment_type: "",
+    address: "",
+    business_address: "",
+    bank_name: "",
+    account_type: "",
+    account_number: "",
+    ifsc_code: "",
+    branch_name: "",
+    pan_no: "",
+    adhar_no: "",
+    dob: "",
+    voter_id: "",
     three_month_salary: null,
     itr: null,
     income_proof: null,
     registration_proof: null,
-    reference_name: '',
-    
-// need to this data add
-    bank_nbfc: '',
+    reference_name: "",
+    // need to this data add
+    bank_nbfc: "",
+    emi: "",
+    pandding: "",
   });
 
   const [errors, setErrors] = useState({});
@@ -50,18 +51,115 @@ const RefinanceLoan = () => {
     setErrors({ ...errors, [name]: null }); // Clear errors for the changed field
   };
 
-  const handleFileChange = (e) => {
-    const { name, files } = e.target;
-    setFormData({ ...formData, [name]: files[0] });
-    setErrors({ ...errors, [name]: null }); // Clear errors for the changed field
-  };
 
+
+  const handleFileChange = (e, fieldName) => {
+    const file = e.target.files[0];
+
+    // Ensure the selected file is a PDF file
+    if (file && file.type === "application/pdf") {
+      // Update the specific field in formData
+      setFormData({
+        ...formData,
+        [fieldName]: file,
+      });
+    } else {
+      // Handle the case where the selected file is not a PDF
+      alert("Please select a PDF file.");
+      e.target.value = null; // Clear the input field
+    }
+  };
+ 
+  
   const validateForm = () => {
     const newErrors = {};
 
     // Add your validation logic here
     if (!formData.name) {
-      newErrors.name = 'Name is ';
+      newErrors.name = "Name is Requried";
+    }
+    if (!formData.email) {
+      newErrors.email = "Email is Requried";
+    }
+
+    if (!formData.phone) {
+      newErrors.phone = "Phone is Requried";
+    }
+    if (!formData.application_no) {
+      newErrors.application_no = "Application is Requried";
+    }
+
+    if (!formData.password) {
+      newErrors.password = "Password is Requried";
+    }
+  
+    if (!formData.loan_type) {
+      newErrors.loan_type = "Select Loan Types is Requried";
+    }
+
+    if (!formData.employment_type) {
+      newErrors.employment_type = "Employment is Requried";
+    }
+    if (!formData.address) {
+      newErrors.address = "Address is Requried";
+    }
+    
+    if (!formData.business_address) {
+      newErrors.business_address = "Business_Address is Requried";
+    }
+    if (!formData.bank_name) {
+      newErrors.bank_name = " Bank name is Requried";
+    }
+    if (!formData.account_type) {
+      newErrors.account_type = "account type  is Requried";
+    }
+    if (!formData.user_loan_type) {
+      newErrors.user_loan_type= "Loan Type  is Requried";
+    }
+    if (!formData.account_number) {
+      newErrors.account_number = "Account Number is Requried";
+    }
+    if (!formData.ifsc_code) {
+      newErrors.ifsc_code = "Ifsc_code is Requried";
+    }
+    if (!formData.branch_name) {
+      newErrors.branch_name = "Branch_name is Requried";
+    }
+    if (!formData.salary) {
+      newErrors.salary = "Salary is Requried";
+    }
+    if (!formData.bank_nbfc) {
+      newErrors.bank_nbfc = "Bank_nbfc is Requried";
+    }
+    if (!formData.emi) {
+      newErrors.emi = "EMI is Requried";
+    }
+    if (!formData.pandding) {
+      newErrors.pandding = "Pending is Requried";
+    }
+    if (!formData.pan_no) {
+      newErrors.pan_no = "Pancard is Requried";
+    }
+    if (!formData.adhar_no) {
+      newErrors.adhar_no = "Adhar_no is Requried";
+    }
+    if (!formData.dob) {
+      newErrors.dob = "dob is Requried";
+    }
+    if (!formData.voter_id) {
+      newErrors.voter_id = "VoterId is Requried";
+    }
+    if (!formData.three_month_salary) {
+      newErrors.three_month_salary = "Files is Requried";
+    }
+    if (!formData.itr) {
+      newErrors.itr = "ITR Files is Requried";
+    }
+    if (!formData.income_proof) {
+      newErrors.income_proof = "Income Files is Requried";
+    }
+    if (!formData.registration_proof) {
+      newErrors.registration_proof = "Regproof is Requried";
     }
 
     // Add more validations for other fields
@@ -72,22 +170,46 @@ const RefinanceLoan = () => {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e) => {
+  const handleClick = (e) => {
     e.preventDefault();
+    console.log(formData)
 
-  
-
-    if (!validateForm()) {
-      
-      console.log(formData);
+    setFormData(
+      {
+      name: "",
+      email: "",
+      phone: "",
+      password: "",
+      application_no: "",
+      salary: "",
+      loan_type: "",
+      user_loan_type:'',
+      employment_type: "",
+      address: "",
+      business_address: "",
+      bank_name: "",
+      account_type: "",
+      account_number: "",
+      ifsc_code: "",
+      branch_name: "",
+      remark: "",
+      pan_no: "",
+      adhar_no: "",
+      dob: "",
+      voter_id: "",
+      three_month_salary: null,
+      itr: null,
+      income_proof: null,
+      registration_proof: null,
+      // need to this data add
+      bank_nbfc: "",
+      emi: "",
+      pandding: "",
+    })
+    if (validateForm()) {
+     console.log(formData)
       // If form validation fails, do not submit
       return;
-    }
-
-    // Prepare FormData for file uploads
-    const formBody = new FormData();
-    for (const key in formData) {
-      formBody.append(key, formData[key]);
     }
   }
   return (
@@ -601,7 +723,7 @@ const RefinanceLoan = () => {
                             </p>
                           </div>
                         </div>
-                        <form onSubmit={handleSubmit}>
+                        <form>
                           <div>
                             {/* Text input*/}
                             <div className="row">
@@ -621,11 +743,10 @@ const RefinanceLoan = () => {
                                     type="text"
                                     value={formData.name}
                                     onChange={handleInputChange}
-                                  
                                     placeholder="Name"
                                     className="form-control"
-                                    
                                   />
+                                     {errors.name && <div className="text-danger">{errors.name}</div>}
                                 </div>
                               </div>
                               {/* Text input*/}
@@ -645,8 +766,8 @@ const RefinanceLoan = () => {
                                     onChange={handleInputChange}
                                     placeholder="Email"
                                     className="form-control"
-                                    
                                   />
+                                   {errors.email && <div className="text-danger">{errors.email}</div>}
                                 </div>
                               </div>
                               {/* Text input*/}
@@ -666,8 +787,8 @@ const RefinanceLoan = () => {
                                     onChange={handleInputChange}
                                     placeholder="Phone"
                                     className="form-control"
-                                    
                                   />
+                                    {errors.phone && <div className="text-danger">{errors.phone}</div>}
                                 </div>
                               </div>
                               <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
@@ -684,8 +805,8 @@ const RefinanceLoan = () => {
                                     onChange={handleInputChange}
                                     placeholder="Application No"
                                     className="form-control"
-                                    
                                   />
+                                    {errors.application_no && <div className="text-danger">{errors.application_no}</div>}
                                 </div>
                               </div>
                               {/* Text input*/}
@@ -695,7 +816,7 @@ const RefinanceLoan = () => {
                                     className="sr-only form-label mb-0"
                                     htmlFor="text"
                                   >
-                                   Pasword
+                                    Pasword
                                   </label>
                                   <input
                                     id="password"
@@ -705,18 +826,23 @@ const RefinanceLoan = () => {
                                     onChange={handleInputChange}
                                     placeholder="Password"
                                     className="form-control"
-                                    
                                   />
+                                    {errors.password && <div className="text-danger">{errors.password}</div>}
+
                                 </div>
                               </div>
                               {/* Text input*/}
                               <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
                                 <div className="mb-3">
                                   <select
-                                    id="city"
-                                    name="city"
-                                    className="form-select"
+                                    id="user_loan_type"
+                                    name="user_loan_type"
+                                    className="form-select"                               
+                                    value={formData.user_loan_type}
+                                    onChange={handleInputChange}
+
                                   >
+                                   
                                     <option value="" disabled selected>
                                       Select a Type of Loan
                                     </option>
@@ -739,6 +865,7 @@ const RefinanceLoan = () => {
                                       Refinance Loan
                                     </option>
                                   </select>
+                                  {errors.user_loan_type && <div className="text-danger">{errors.user_loan_type}</div>}
                                 </div>
                               </div>
                               <div className="py-2">
@@ -770,6 +897,8 @@ const RefinanceLoan = () => {
                                   </span>
                                   <br />
                                 </span>
+                             
+
                               </div>
 
                               {/* Select Basic */}
@@ -790,6 +919,8 @@ const RefinanceLoan = () => {
                                     placeholder="Residence Address"
                                     defaultValue={""}
                                   />
+                                  {errors.address && <div className="text-danger">{errors.address}</div>}
+
                                 </div>
                               </div>
                               <div className="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12">
@@ -808,6 +939,8 @@ const RefinanceLoan = () => {
                                     placeholder="Business Address"
                                     defaultValue={""}
                                   />
+                                  {errors.business_address && <div className="text-danger">{errors.business_address }</div>}
+
                                 </div>
                               </div>
 
@@ -829,8 +962,9 @@ const RefinanceLoan = () => {
                                     onChange={handleInputChange}
                                     placeholder="Name of Bank"
                                     className="form-control"
-                                    
                                   />
+                                  {errors.bank_name && <div className="text-danger">{errors.bank_name }</div>}
+
                                 </div>
                               </div>
                               {/* Text input*/}
@@ -863,6 +997,8 @@ const RefinanceLoan = () => {
                                     </option>
                                     <option value="Gold">DEMAT Account</option>
                                   </select>
+                                  {errors.account_type && <div className="text-danger">{errors.account_type }</div>}
+
                                 </div>
                               </div>
                               {/* Text input*/}
@@ -882,8 +1018,9 @@ const RefinanceLoan = () => {
                                     onChange={handleInputChange}
                                     placeholder="Account Number"
                                     className="form-control"
-                                    
                                   />
+                                  {errors.account_number && <div className="text-danger">{errors.account_number}</div>}
+
                                 </div>
                               </div>
                               <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
@@ -900,8 +1037,9 @@ const RefinanceLoan = () => {
                                     onChange={handleInputChange}
                                     placeholder="IFSC Code"
                                     className="form-control"
-                                    
                                   />
+                                  {errors.ifsc_code && <div className="text-danger">{errors.ifsc_code}</div>}
+
                                 </div>
                               </div>
                               {/* Text input*/}
@@ -921,8 +1059,9 @@ const RefinanceLoan = () => {
                                     onChange={handleInputChange}
                                     placeholder="Branch Name"
                                     className="form-control"
-                                    
                                   />
+                                  {errors.branch_name && <div className="text-danger">{errors.branch_name}</div>}
+
                                 </div>
                               </div>
                               {/* Text input*/}
@@ -932,7 +1071,7 @@ const RefinanceLoan = () => {
                                     className="sr-only form-label mb-0"
                                     htmlFor="text"
                                   >
-                                   Salary
+                                    Salary
                                   </label>
                                   <input
                                     id="salary"
@@ -940,10 +1079,11 @@ const RefinanceLoan = () => {
                                     type="text"
                                     value={formData.salary}
                                     onChange={handleInputChange}
-                                    placeholder="Remarks"
+                                    placeholder="Salary"
                                     className="form-control"
-                                    
                                   />
+                                  {errors.salary && <div className="text-danger">{errors.salary}</div>}
+
                                 </div>
                               </div>
 
@@ -965,8 +1105,9 @@ const RefinanceLoan = () => {
                                     onChange={handleInputChange}
                                     placeholder="Name OfBank NBFC"
                                     className="form-control"
-                                    
                                   />
+                                  {errors.bank_nbfc && <div className="text-danger">{errors.bank_nbfc}</div>}
+
                                 </div>
                               </div>
                               <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
@@ -1000,6 +1141,8 @@ const RefinanceLoan = () => {
                                       Refinance Loan
                                     </option>
                                   </select>
+                                  {errors.loan_type && <div className="text-danger">{errors.loan_type}</div>}
+
                                 </div>
                               </div>
                               <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
@@ -1011,13 +1154,16 @@ const RefinanceLoan = () => {
                                     EMI
                                   </label>
                                   <input
-                                    id="number"
-                                    name="number"
+                                    id="emi"
+                                    name="emi"
                                     type="text"
+                                    value={formData.emi}
+                                    onChange={handleInputChange}
                                     placeholder="EMI"
                                     className="form-control"
-                                    
                                   />
+                                  {errors.emi && <div className="text-danger">{errors.emi}</div>}
+
                                 </div>
                               </div>
                               <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
@@ -1029,13 +1175,16 @@ const RefinanceLoan = () => {
                                     Pending
                                   </label>
                                   <input
-                                    id="number"
-                                    name="number"
+                                    id="pandding"
+                                    name="pandding"
                                     type="text"
+                                    value={formData.pandding}
+                                    onChange={handleInputChange}
                                     placeholder="Pending"
                                     className="form-control"
-                                   
                                   />
+                                  {errors.pandding && <div className="text-danger">{errors.pandding}</div>}
+
                                 </div>
                               </div>
 
@@ -1048,14 +1197,16 @@ const RefinanceLoan = () => {
                                     Applicant Pan No.
                                   </label>
                                   <input
-                                    id="number"
-                                    name="number"
+                                    id="pan_no"
+                                    name="pan_no"
                                     type="text"
-                                    
+                                    value={formData.pan_no}
+                                    onChange={handleInputChange}
                                     placeholder="Applicant Pan No."
                                     className="form-control"
-                                    
                                   />
+                                  {errors.pan_no && <div className="text-danger">{errors.pan_no}</div>}
+
                                 </div>
                               </div>
                               <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
@@ -1074,8 +1225,9 @@ const RefinanceLoan = () => {
                                     onChange={handleInputChange}
                                     placeholder="Adhar No."
                                     className="form-control"
-                                    
                                   />
+                                  {errors.adhar_no && <div className="text-danger">{errors.adhar_no}</div>}
+
                                 </div>
                               </div>
                               <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
@@ -1094,8 +1246,9 @@ const RefinanceLoan = () => {
                                     onChange={handleInputChange}
                                     placeholder="Applicant DOB"
                                     className="form-control"
-                                    
                                   />
+                                  {errors.dob && <div className="text-danger">{errors.dob}</div>}
+
                                 </div>
                               </div>
                               <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
@@ -1114,8 +1267,9 @@ const RefinanceLoan = () => {
                                     onChange={handleInputChange}
                                     placeholder="Voter Id No."
                                     className="form-control"
-                                    
                                   />
+                                  {errors.voter_id && <div className="text-danger">{errors.voter_id}</div>}
+
                                 </div>
                               </div>
 
@@ -1130,16 +1284,26 @@ const RefinanceLoan = () => {
                                     className="sr-only form-label mb-0"
                                     htmlFor="text"
                                   ></label>
+                                 
                                   <input
                                     id="three_month_salary"
                                     name="three_month_salary"
                                     type="file"
-                                    value={formData.three_month_salary}
-                                    onChange={handleFileChange}
-                                    placeholder="Last Three Month Salary Slip."
+                                    onChange={(e) =>
+                                      handleFileChange(e,"three_month_salary")
+                                    }
                                     className="form-control"
-                                    
                                   />
+                                    {errors.three_month_salary && <div className="text-danger">{errors.three_month_salary}</div>}
+                                  {formData.three_month_salary && (
+                                    <p>
+                                      Selected File:{" "}
+                                      {formData.three_month_salary.name}
+                                    </p>
+                                    
+                                  )}
+                                
+
                                 </div>
                               </div>
                               <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
@@ -1155,12 +1319,21 @@ const RefinanceLoan = () => {
                                     id="itr"
                                     name="itr"
                                     type="file"
-                                    value={formData.itr}
-                                    onChange={handleFileChange}
+                                    onChange={(e) =>
+                                      handleFileChange(e, "itr")
+                                    }
                                     placeholder="Last Three Month Salary Slip."
                                     className="form-control"
-                                    
                                   />
+                                  {errors.itr && <div className="text-danger">{errors.itr}</div>}
+                                    {formData.itr && (
+                                    <p>
+                                      Selected File:{" "}
+                                      {formData.itr.name}
+                                    </p>
+                                  )}
+                                  
+
                                 </div>
                               </div>
                               <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
@@ -1176,12 +1349,21 @@ const RefinanceLoan = () => {
                                     id="income_proof"
                                     name="income_proof"
                                     type="file"
-                                    value={formData.income_proof}
-                                    onChange={handleFileChange}
+                                    onChange={(e) =>
+                                      handleFileChange(e, "income_proof")
+                                    }
                                     placeholder="Last Three Month Salary Slip."
                                     className="form-control"
-                                    
                                   />
+                                      {errors.income_proof && <div className="text-danger">{errors.income_proof}</div>}
+                                    {formData.income_proof && (
+                                    <p>
+                                      Selected File:{" "}
+                                      {formData.income_proof.name}
+                                    </p>
+                                  )}
+                              
+
                                 </div>
                               </div>
                               <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
@@ -1197,18 +1379,28 @@ const RefinanceLoan = () => {
                                     id="registration_proof"
                                     name="registration_proof"
                                     type="file"
-                                    value={formData.registration_proof}
-                                    onChange={handleFileChange}
+                                    onChange={(e) =>
+                                      handleFileChange(e, "registration_proof")
+                                    }
                                     placeholder="Last Three Month Salary Slip."
                                     className="form-control"
-                                    
                                   />
+                                     {errors.registration_proof && <div className="text-danger">{errors.registration_proof}</div>}
+                                   {formData.registration_proof && (
+                                    <p>
+                                      Selected File:{" "}
+                                      {formData.registration_proof.name}
+                                    </p>
+                                  )}
+                               
+
                                 </div>
                               </div>
 
                               {/* Button */}
                               <div className=" col-lg-12 col-md-12 col-sm-12 col-12">
                                 <button
+                                 onClick={handleClick}
                                   type="submit"
                                   className="btn btn-primary mb-4"
                                 >

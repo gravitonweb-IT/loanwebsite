@@ -80,26 +80,13 @@ const Contact = () => {
                     <div className="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
                       <div className="text-md-end mt-3 mt-md-0">
                         <a href="#!" className="btn btn-primary">
-                          How To Apply
+                          Here To Apply
                         </a>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div>
-                  <ul className="nav nav-fill nav-pills-gray-fill">
-                    <li className="nav-item">
-                      <a href="contact-us.html" className="nav-link">
-                        Give me call back
-                      </a>
-                    </li>
-                    <li className="nav-item">
-                      <a href="#!" className="nav-link">
-                        Emi Caculator
-                      </a>
-                    </li>
-                  </ul>
-                </div>
+             
               </div>
             </div>
           </div>
@@ -141,8 +128,10 @@ const Contact = () => {
                                 className="form-control"
                                 value={formData.name}
                                 onChange={handleChange}
+                                required=""
                                 
                               />
+                              
                                    {errors.name && <div className="text-danger">{errors.name}</div>}
                             </div>
                           </div>
@@ -163,6 +152,7 @@ const Contact = () => {
                                 onChange={handleChange}
                                 placeholder="Email"
                                 className="form-control"
+                                required=""
                                 
                               />
                                    {errors.email && <div className="text-danger">{errors.email}</div>}
@@ -185,6 +175,7 @@ const Contact = () => {
                                 onChange={handleChange}
                                 placeholder="Phone"
                                 className="form-control"
+                                required=""
                                 
                               />
                                    {errors.phone && <div className="text-danger">{errors.phone}</div>}
@@ -206,6 +197,7 @@ const Contact = () => {
                                 onChange={handleChange}
                                 placeholder="Message"
                                 defaultValue={""}
+                                required=""
                               />
                                  {errors.message && <div className="text-danger">{errors.message}</div>}
                             </div>
