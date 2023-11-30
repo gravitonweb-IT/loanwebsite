@@ -4,6 +4,7 @@ import { tns } from "tiny-slider/src/tiny-slider";
 import "@fortawesome/fontawesome-free/css/all.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { Alert } from "bootstrap";
 
 const HomeLoan = () => {
   useEffect(() => {
@@ -38,7 +39,7 @@ const HomeLoan = () => {
     salary: "",
     loan_type: "",
     user_loan_type:'',
-    employment_type: "",
+    employment_type: "null",
     address: "",
     business_address: "",
     bank_name: "",
@@ -54,7 +55,7 @@ const HomeLoan = () => {
     itr: null,
     income_proof: null,
     registration_proof: null,
-    reference_name: "",
+    reference_name: "null",
     // need to this data add
     bank_nbfc: "",
     emi: "",
@@ -202,7 +203,7 @@ const HomeLoan = () => {
       salary: "",
       loan_type: "",
       user_loan_type:'',
-      employment_type: "",
+      employment_type: "null",
       address: "",
       business_address: "",
       bank_name: "",
@@ -210,7 +211,7 @@ const HomeLoan = () => {
       account_number: "",
       ifsc_code: "",
       branch_name: "",
-      remark: "",
+      remark: "null",
       pan_no: "",
       adhar_no: "",
       dob: "",
@@ -230,28 +231,29 @@ const HomeLoan = () => {
       return;
     }
 
-    // Prepare FormData for file uploads
-    // const formBody = new FormData();
-    // for (const key in formData) {
-    //   formBody.append(key, formData[key]);
-    // }
+   
+    const formBody = new FormData();
+    for (const key in formData) {
+      formBody.append(key, formData[key]);
+    }
+    formBody.append("reference_name","null")
 
-    // // Make the API call
-    // fetch("http://127.0.0.1:8000/loan/api/formLoan/", {
-    //   method: "POST",
-    //   body: formBody,
-    // })
-    //   .then((response) => response.json())
-    //   .then((data) => {
-    //     console.log("API Response:", data);
-    //     // Handle the API response as needed
-
-    //     console.log("Form Data:", formData);
-    //   })
-    //   .catch((error) => {
-    //     console.error("Error:", error);
-    //     // Handle errors
-    //   });
+    // Make the API call
+    fetch("http://192.168.1.19:8000/loan/api/formLoan/", {
+      method: "POST",
+      body: formBody,
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("API Response:", data);
+        // Handle the API response as needed
+         alert("sussefully stored")
+        console.log("Form Data:", formData);
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+        // Handle errors
+      });
 
   };
   return (
