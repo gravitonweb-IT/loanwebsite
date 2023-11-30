@@ -1,6 +1,16 @@
 import React, { useEffect,useRef, useState } from "react";
 import { tns } from "tiny-slider/src/tiny-slider";
+import "../../assets/css/theme.min.css";
+import "../../assets/fonts/flat-font-icons/css/flaticon.css";
+import "../../assets/fonts/fontello-icons/fontello.css";
+import "../../assets/libs/bootstrap-icons/font/bootstrap-icons.css";
+import "../../assets/libs/jquery-ui/dist/themes/base/jquery-ui.min.css";
+import "../../assets/libs/magnific-popup/dist/magnific-popup.css";
+import "../../assets/libs/nouislider/dist/nouislider.min.css";
+import "../../assets/libs/tiny-slider/dist/tiny-slider.css";
 import '@fortawesome/fontawesome-free/css/all.css';
+
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faArrowLeft,
@@ -326,7 +336,7 @@ useEffect(()=>{
                     {"                  "}
                     <h2 className="mb-0 fw-bold">9.00%</h2>
                     {"                  "}
-                    <p className="mb-0">Credit card</p>
+                    <p className="mb-0">Business Loan</p>
                   </div>
                   {"              "}
                 </div>
@@ -567,7 +577,7 @@ useEffect(()=>{
                     {"                  "}
                     <p className="mb-4">
                     At our institution, we believe in transparency and fairness. That's why we proudly declare: no upfront appraisal fees! We understand that navigating
-                     financial decisions can be challenging, any unnecessary burdens. 
+                     financial decisions can be challenging.. 
                     </p>
                     {"                  "}
                     <a className="btn btn-outline-primary btn-sm" href="#!">

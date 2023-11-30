@@ -8,6 +8,7 @@ import {
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import Logoimg from "../assets/images/brand/logo/logoimg.jpeg";
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -352,6 +353,7 @@ const Footer = () => {
                 <a className="text-inherit" href="#">
                   Privacy Policy
                 </a>
+               
               </p>
             </div>
             {"        "}

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Businessloan.css";
+
 import { tns } from "tiny-slider/src/tiny-slider";
 import "@fortawesome/fontawesome-free/css/all.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

@@ -1,5 +1,6 @@
 import React from "react";
 import "./Blog.css"
+
 import Blogimg1 from "../../assets/images/blog/blog-post-1.jpg";
 import Blogimg2 from "../../assets/images/blog/blog-post-2.jpg";
 import Blogimg3 from "../../assets/images/blog/blog-post-3.jpg";

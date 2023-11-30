@@ -1,5 +1,6 @@
 import React from "react";
 import "./About.css";
+
 import Avatarimg1 from "../../assets/images/avatar/avatar-1.jpg";
 import Avatarimg2 from "../../assets/images/avatar/avatar-2.jpg";
 

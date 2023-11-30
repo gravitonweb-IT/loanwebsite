@@ -29,6 +29,14 @@ import Admin from './Components/Modules/Admin';
 import Agent from './Components/Modules/Agent';
 import Termcondation from './Components/Modules/Termcondation';
 import UserDashbord from './Components/Modules/UserDashbord';
+import Email from './Components/Modules/Admin/Email';
+import History from './Components/Modules/Admin/History';
+import PendingWork from './Components/Modules/Admin/PendingWork';
+import UserData from './Components/Modules/Admin/UserData';
+import Intrestrate from './Components/Modules/Admin/Intrestrate';
+import Testmonial from './Components/Modules/Admin/Testmonial';
+import GalleryImages from './Components/Modules/Admin/GalleryImages';
+
 
 
 
@@ -59,7 +67,24 @@ function App() {
      
         <Route path="/Termcondation" element={<Termcondation/>}/>
 
+        {/* AdminRoutes */}
 
+        <Route path='/adminEmail' element={<Email/>}/>
+        <Route path='/adminHistor' element={<History/>}/>
+        <Route path='/adminPending' element={<PendingWork/>}/>
+        <Route path='/adminUserData' element={<UserData/>}/>
+        <Route path='/intrestrate' element={<Intrestrate/>}/>
+        <Route path='/testmonial' element={<Testmonial/>}/>
+        <Route path='/galleryimages' element={<GalleryImages/>}/>
+
+
+
+      
+
+
+     
+
+        
       </Routes>
       <Footer/>
     </>
