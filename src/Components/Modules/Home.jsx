@@ -159,9 +159,7 @@ useEffect(()=>{
                             {"                        "}
                           </p>
                           {"                        "}
-                          <a className="btn btn-primary" href="#!">
-                            Loan Products
-                          </a>
+                      
                           {"                      "}
                         </div>
                         {"                                          "}
@@ -197,9 +195,7 @@ useEffect(()=>{
                             dummy content goes here.{"                        "}
                           </p>
                           {"                        "}
-                          <a className="btn btn-primary" href="#!">
-                            Check eligibility
-                          </a>
+                      
                           {"                      "}
                         </div>
                         {"                                          "}
@@ -236,9 +232,7 @@ useEffect(()=>{
                             {"                        "}
                           </p>
                           {"                        "}
-                          <a className="btn btn-primary" href="#!">
-                            View Products
-                          </a>
+                         
                           {"                      "}
                         </div>
                         {"                                          "}
@@ -430,7 +424,7 @@ useEffect(()=>{
                     <h3 className="mb-2">Get Your Cash</h3>
                     {"                  "}
                     <p className="mb-0">
-                    Your wait is over – the funds you need are now at your fingertips. Get your cash hassle-free
+                    Your wait is over – the funds you need are now at your fingertips. 
                     </p>
                   </div>
                   {"              "}
@@ -438,21 +432,14 @@ useEffect(()=>{
               </div>
             </div>
 
-            <div className="row">
-              <div className="offset-xl-2 col-xl-8 col-md-12 col-12 text-center">
-                {"              "}
-                <a className="btn btn-primary" href="#!">
-                  Start Today
-                </a>
-              </div>
-            </div>
-            {"        "}
+          
+         
           </div>
-          {"      "}
+        
         </section>
-        {"      "}
-        <section className="py-lg-8 py-8 ">
-          {"        "}
+     
+        <section className="py-lg- py-8 ">
+         
           <div className="container">
             <div className="row">
               <div className="">
@@ -504,9 +491,7 @@ useEffect(()=>{
                     diverse needs of our clients, these experts go beyond the ordinary to offer personalized solutions
                     </p>
                     {"                  "}
-                    <a className="btn btn-outline-primary btn-sm" href="#!">
-                      Meet the team
-                    </a>
+             
                   </div>
                   {"              "}
                 </div>
@@ -541,9 +526,7 @@ useEffect(()=>{
                     Their success is our success, in consistently earning high ratings for our services.                
                     </p>
                     {"                  "}
-                    <a className="btn btn-outline-primary btn-sm" href="#!">
-                      View Client Review
-                    </a>
+                 
                   </div>
                   {"              "}
                 </div>
@@ -580,9 +563,7 @@ useEffect(()=>{
                      financial decisions can be challenging.. 
                     </p>
                     {"                  "}
-                    <a className="btn btn-outline-primary btn-sm" href="#!">
-                      Why choose us
-                    </a>
+                 
                   </div>
                   {"              "}
                 </div>
@@ -602,7 +583,7 @@ useEffect(()=>{
                 <div className="mb-10 text-center">
                   {"                                "}
                   <h1 className="text-white mb-2">
-                    {"                  "}Some of our Awesome Testimonials
+                    {"                  "}Some of our Awesome Testimonials & Success Stories
                     {"                "}
                   </h1>
 
@@ -633,14 +614,7 @@ useEffect(()=>{
                 </div>
                 {"              "}
                 <div className="d-flex align-items-center mt-4">
-                  <div>
-                    {"                  "}
-                    <img
-                      alt="Borrow - Loan Company Website Template"
-                      className="avatar avatar-md rounded-3"
-                      src={Avatarimg}
-                    />
-                  </div>
+               
 
                   <div className="ms-3 lh-1">
                     {"                  "}
@@ -670,14 +644,7 @@ useEffect(()=>{
                 </div>
                 {"              "}
                 <div className="d-flex align-items-center mt-4">
-                  <div>
-                    {"                  "}
-                    <img
-                      alt="Borrow - Loan Company Website Template"
-                      className="avatar avatar-md rounded-3"
-                      src={Avatarimg2}
-                    />
-                  </div>
+              
 
                   <div className="ms-3 lh-1">
                     {"                  "}
@@ -707,14 +674,7 @@ useEffect(()=>{
                 </div>
                 {"              "}
                 <div className="d-flex align-items-center mt-4">
-                  <div>
-                    {"                  "}
-                    <img
-                      alt="Borrow - Loan Company Website Template"
-                      className="avatar avatar-md rounded-3"
-                      src={Avatarimg3}
-                    />
-                  </div>
+                
 
                   <div className="ms-3 lh-1">
                     {"                  "}
@@ -1030,13 +990,13 @@ useEffect(()=>{
                     </h4>
                     {"                  "}
                     <p className="mb-4">
-                      {"                    "}Looking to buy a car or home loan?
+                      {"                    "}Looking to loan?
                       then apply for loan now.{"                  "}
                     </p>
                     {"                  "}
                     <a
                       className="btn-link border-bottom border-primary border-2 fw-bold fs-5"
-                      href="#!"
+                      href="/contact"
                     >
                       Get Appointment
                     </a>
@@ -1081,7 +1041,7 @@ useEffect(()=>{
                     {"                  "}
                     <a
                       className="btn-link border-bottom border-primary border-2 fw-bold fs-5"
-                      href="#!"
+                      href="/contact"
                     >
                       Contact us
                     </a>
@@ -1124,7 +1084,7 @@ useEffect(()=>{
                     {"                  "}
                     <a
                       className="btn-link border-bottom border-primary border-2 fw-bold fs-5"
-                      href="#!"
+                      href="/contact"
                     >
                       Meet The Advisor
                     </a>

@@ -35,7 +35,7 @@ const About = () => {
           <div className="container">
             <div className="row">
               <div className="col-md-12">
-                <div className="mt-n6 bg-white mb-10 rounded-3 shadow-sm">
+                <div className="mt-n6 bg-white mb-5 rounded-3 shadow-sm">
                   <div className="p-5 p-lg-10">
                     <div className="row">
                       <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
@@ -177,7 +177,7 @@ const About = () => {
                       </div>
                       <div className="row">
                         <div className="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
-                          <div className="text-center mb-4">
+                          <div className="card text-center mb-4 py-5">
                             <h3 className="mb-2">Multiple Loan Options</h3>
                             <p>
                               Explore a multitude of loan options tailored to
@@ -186,7 +186,7 @@ const About = () => {
                           </div>
                         </div>
                         <div className="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
-                          <div className="text-center mb-4">
+                          <div className=" card text-center mb-4 py-5">
                             <h3 className="mb-2">Competitive Rate</h3>
                             <p>
                               Benefit from our competitive rates, ensuring
@@ -196,96 +196,22 @@ const About = () => {
                           </div>
                         </div>
                         <div className="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
-                          <div className="text-center mb-4">
+                          <div className="card text-center mb-4 py-5">
+                            
                             <h3 className="mb-2">Safe &amp; Secure</h3>
                             <p>
                               Experience peace of mind with our safe and secure
-                              financial services, prioritizing the
-                              confidentiality and protection of your information
+                              financial services, 
+                             and protection of your information
                             </p>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div className="bg-primary p-lg-10 p-5">
-                    <div>
-                      <div className="row">
-                        <div className="offset-xl-2 col-xl-8 offset-lg-2 col-lg-8 col-md-12 col-sm-12 col-12">
-                          <div className="mb-8 text-center">
-                            {/* section title start*/}
-                            <h1 className="text-white">Our Success Stories</h1>
-                            <p className="text-white-50 mb-0">
-                              Our partners work with us because they believe in
-                              the value of our platform.
-                            </p>
-                          </div>
-                          {/* /.section title start*/}
-                        </div>
-                      </div>
-                      <div className="row">
-                        <div className="col-md-6 col-12">
-                          <div className="card border-0">
-                            <div className="card-body p-5">
-                              <p className="mb-0 fs-4 fst-italic fw-semi-bold">
-                                “I loved the customer service you guys provided
-                                me. That was very nice and patient with
-                                questions I had. I would really like definitely
-                                come back here”
-                              </p>
-                            </div>
-                          </div>
-                          <div className="d-flex align-items-center mt-4">
-                            <div>
-                              <img
-                                src={Avatarimg1}
-                                alt="Borrow - Loan Company Website Template"
-                                className="avatar avatar-lg rounded-3"
-                              />
-                            </div>
-                            <div className="ms-3 lh-1">
-                              <h4 className="mb-0 text-white">
-                                Donny J. Griffin
-                              </h4>
-                              <span className="fs-6 text-white-50">
-                                Personal Loan
-                              </span>
-                            </div>
-                          </div>
-                        </div>
-                        <div className="col-md-6 col-12">
-                          <div className="card border-0">
-                            <div className="card-body p-5">
-                              <p className="mb-0 fs-4 fst-italic fw-semi-bold">
-                                “I had a good experience with Insight Loan
-                                Services. I am thankful to insight for the help
-                                you guys gave me. My loan was easy and fast.
-                                thank you Insigtht”
-                              </p>
-                            </div>
-                          </div>
-                          <div className="d-flex align-items-center mt-4">
-                            <div>
-                              <img
-                                src={Avatarimg2}
-                                alt="Borrow - Loan Company Website Template"
-                                className="avatar avatar-lg rounded-3"
-                              />
-                            </div>
-                            <div className="ms-3 lh-1">
-                              <h4 className="mb-0 text-white">
-                                Mary O. Randle
-                              </h4>
-                              <span className="fs-6 text-white-50">
-                                Education Loan
-                              </span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="p-lg-10 p-5">
+                  
+                
+                  <div className="p-lg-1 p-5">
                     <div className="container">
                       <div className="row">
                         <div className="offset-xl-2 col-xl-8 col-md-12 col-12">
@@ -325,7 +251,7 @@ const About = () => {
                                 for loan now.
                               </p>
                               <a
-                                href="#!"
+                                href="/contact"
                                 className="btn-link border-bottom border-primary border-2 fw-bold fs-5"
                               >
                                 Get Appointment

@@ -36,6 +36,7 @@ import UserData from './Components/Modules/Admin/UserData';
 import Intrestrate from './Components/Modules/Admin/Intrestrate';
 import Testmonial from './Components/Modules/Admin/Testmonial';
 import GalleryImages from './Components/Modules/Admin/GalleryImages';
+import BankForm from './Components/Modules/UserDashbord/BankForm';
 
 
 
@@ -76,6 +77,9 @@ function App() {
         <Route path='/intrestrate' element={<Intrestrate/>}/>
         <Route path='/testmonial' element={<Testmonial/>}/>
         <Route path='/galleryimages' element={<GalleryImages/>}/>
+        <Route path='/bankform' element={<BankForm/>}/>
+
+
 
 
 

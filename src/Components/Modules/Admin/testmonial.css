@@ -40,7 +40,7 @@
     border-radius: 4px;
   }
  
-  button {
+  .testcss {
     background-color: #4caf50;
     color: white;
     padding: 10px 15px;
@@ -49,7 +49,7 @@
     cursor: pointer;
   }
  
-  button:hover {
+  .testcss:hover {
     background-color: #45a049;
   }
  

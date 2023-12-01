@@ -19,7 +19,7 @@ const CarLone = () => {
     salary: "",
     loan_type: "",
     user_loan_type:'',
-    employment_type: "",
+    employment_type: null,
     address: "",
     business_address: "",
     bank_name: "",
@@ -35,7 +35,7 @@ const CarLone = () => {
     itr: null,
     income_proof: null,
     registration_proof: null,
-    reference_name: "",
+    reference_name: null,
     // need to this data add
     bank_nbfc: "",
     emi: "",
@@ -568,7 +568,7 @@ const CarLone = () => {
                                   {errors.user_loan_type && <div className="text-danger">{errors.user_loan_type}</div>}
                                 </div>
                               </div>
-                              <div className="py-2">
+                              {/* <div className="py-2">
                                 <span className="mx-4">
                                   Are you Salaried or Self Employed?
                                   <span className="mx-2">
@@ -599,7 +599,7 @@ const CarLone = () => {
                                 </span>
                              
 
-                              </div>
+                              </div> */}
 
                               {/* Select Basic */}
 

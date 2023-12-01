@@ -184,7 +184,7 @@ const RefinanceLoan = () => {
       salary: "",
       loan_type: "",
       user_loan_type:'',
-      employment_type: "",
+      employment_type: null,
       address: "",
       business_address: "",
       bank_name: "",
@@ -868,7 +868,7 @@ const RefinanceLoan = () => {
                                   {errors.user_loan_type && <div className="text-danger">{errors.user_loan_type}</div>}
                                 </div>
                               </div>
-                              <div className="py-2">
+                              {/* <div className="py-2">
                                 <span className="mx-4">
                                   Are you Salaried or Self Employed?
                                   <span className="mx-2">
@@ -899,7 +899,7 @@ const RefinanceLoan = () => {
                                 </span>
                              
 
-                              </div>
+                              </div> */}
 
                               {/* Select Basic */}
 

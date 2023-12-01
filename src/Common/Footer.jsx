@@ -8,7 +8,7 @@ import {
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import Logoimg from "../assets/images/brand/logo/logoimg.jpeg";
-import { Link } from 'react-router-dom';
+
 
 const Footer = () => {
   return (
@@ -258,47 +258,7 @@ const Footer = () => {
               {"                      "}
             </div>
 
-            {/* <div className="col-xl-2 col-lg-2 col-md-4 col-sm-6 col-6">
-              <div className="mb-3">
-                {"                            "}
-                <ul className="list-unstyled text-muted">
-                  <li className="d-flex">
-                    {"                  "}
-                    <a className="text-inherit" href="#!">
-                      {"                    "}
-                      <FontAwesomeIcon icon={faFacebook} />
-                      Facebook
-                    </a>
-                  </li>
-
-                  <li className="d-flex">
-                    {"                  "}
-                    <a className="text-inherit" href="#!">
-                      <FontAwesomeIcon icon={faGoogle} />
-                      Google{"                  "}
-                    </a>
-                  </li>
-
-                  <li className="d-flex">
-                    {"                  "}
-                    <a className="text-inherit" href="#!">
-                      <FontAwesomeIcon icon={faTwitter} />
-                      Twitter
-                    </a>
-                  </li>
-
-                  <li className="d-flex">
-                    {"                  "}
-                    <a className="text-inherit" href="#!">
-                      <FontAwesomeIcon icon={faLinkedin} className="" />
-                      Linked In
-                    </a>
-                  </li>
-                  {"              "}
-                </ul>
-              </div>
-              {"                      "}
-            </div> */}
+          
 
 <div className="col-xl-2 col-lg-2 col-md-4 col-sm-6 col-6">
       <div className="mb-3">

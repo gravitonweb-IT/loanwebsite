@@ -40,6 +40,7 @@ const Testmonial = () => {
               type="text"
               id="name1"
               value={form1.name}
+              placeholder='Name Here...'
               onChange={(e) => setForm1({ ...form1, name: e.target.value })}
             />
           </div>
@@ -48,6 +49,7 @@ const Testmonial = () => {
             <label htmlFor="testimonial1">Your Testimonial:</label>
             <textarea
               id="testimonial1"
+              placeholder='Message ...'
               value={form1.testimonial}
               onChange={(e) => setForm1({ ...form1, testimonial: e.target.value })}
             ></textarea>
@@ -72,6 +74,7 @@ const Testmonial = () => {
             <input
               type="text"
               id="name2"
+              placeholder='Name Here...'
               value={form2.name}
               onChange={(e) => setForm2({ ...form2, name: e.target.value })}
             />
@@ -81,6 +84,7 @@ const Testmonial = () => {
             <label htmlFor="testimonial2">Your Testimonial:</label>
             <textarea
               id="testimonial2"
+              placeholder='Name Here...'
               value={form2.testimonial}
               onChange={(e) => setForm2({ ...form2, testimonial: e.target.value })}
             ></textarea>
@@ -105,6 +109,7 @@ const Testmonial = () => {
             <input
               type="text"
               id="name3"
+              placeholder='Name Here...'
               value={form3.name}
               onChange={(e) => setForm3({ ...form3, name: e.target.value })}
             />
@@ -114,12 +119,13 @@ const Testmonial = () => {
             <label htmlFor="testimonial3">Your Testimonial:</label>
             <textarea
               id="testimonial3"
+              placeholder='Name Here...'
               value={form3.testimonial}
               onChange={(e) => setForm3({ ...form3, testimonial: e.target.value })}
             ></textarea>
           </div>
  
-          <button type="submit">Submit Testimonial</button>
+          <button type="submit" className='testcss'>Submit Testimonial</button>
         </form>
  
         {form3.isValid && <p className="success-message">Testimonial submitted successfully!</p>}

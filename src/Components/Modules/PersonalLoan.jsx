@@ -17,7 +17,7 @@ const PersonalLoan = () => {
     salary: "",
     loan_type: "",
     user_loan_type: "",
-    employment_type: "",
+    employment_type: null,
     address: "",
     business_address: "",
     bank_name: "",
@@ -721,7 +721,7 @@ const PersonalLoan = () => {
                                 )}
                               </div>
                             </div>
-                            <div className="py-2">
+                            {/* <div className="py-2">
                               <span className="mx-4">
                                 Are you Salaried or Self Employed?
                                 <span className="mx-2">
@@ -750,7 +750,7 @@ const PersonalLoan = () => {
                                 </span>
                                 <br />
                               </span>
-                            </div>
+                            </div> */}
 
                             {/* Select Basic */}
 

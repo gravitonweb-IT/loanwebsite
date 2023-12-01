@@ -381,7 +381,7 @@ const HomeLoan = () => {
                         <a href="#!" className="btn btn-primary">
                           Get A Call Back
                         </a>
-                        <a href="#!" className="btn btn-secondary">
+                        <a href="/contact" className="btn btn-secondary">
                           How To Apply
                         </a>
                       </div>

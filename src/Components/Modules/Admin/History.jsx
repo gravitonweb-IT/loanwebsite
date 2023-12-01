@@ -16,6 +16,7 @@ const History = () => {
 
   return (
     <section className='py-lg-16 py-10'>
+      <div className="container-fluid">
     <div className='histoy'>
       <h2 className='heading'>Loan History</h2>
       <div className="card-container">
@@ -32,6 +33,7 @@ const History = () => {
           </div>
         ))}
       </div>
+    </div>
     </div>
     </section>
   );

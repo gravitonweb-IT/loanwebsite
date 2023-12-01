@@ -154,7 +154,7 @@ const UserData = () => {
 
 const Popup = ({ user, onClose }) => {
   return (
-    <section className=''>
+    <section className='py-lg-20 py-10'>
       <div className="container">
     <div className="popup-overlay">
       <div className="popup1">
@@ -167,7 +167,7 @@ const Popup = ({ user, onClose }) => {
       <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
         <div className="table-container">
       <table className="responsive-table">
-        <caption>User Details</caption>
+        <h3>User Details</h3>
         <tbody>
           <tr>
             <td><strong>Name:</strong></td>
@@ -209,8 +209,8 @@ const Popup = ({ user, onClose }) => {
         {/* Bank Table */}
         <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
         <table className="responsive-table">
-          <caption>Bank Details</caption>
-          <tbody>
+          <h3>Bank Details</h3>
+          <tbody className=''>
             <tr>
               <td><strong>Name of Bank:</strong></td>
               <td>{user.bankDetails.name}</td>
@@ -238,8 +238,8 @@ const Popup = ({ user, onClose }) => {
         {/* Loan Repayment Table */}
         <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
         <table className="responsive-table">
-          <caption>Loan Repayment</caption>
-          <tbody>
+          <h3>Loan Repayment</h3>
+          <tbody className='py-5'>
             <tr>
               <td><strong>Bank Name:</strong></td>
               <td>{user.loanRepayment.bankName}</td>

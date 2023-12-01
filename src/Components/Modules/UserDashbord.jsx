@@ -1,12 +1,28 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom'
 const UserDashbord = () => {
+ 
+  
   return (
     <>
-    <div className='py-lg-20 py-16 '>
+ <section className="py-lg-16 py-10">
+      <div className="container">
+        <div className="button-container">
+          <div className="centered-buttons-container">
+            <Link to="/bankform">
+              <button className="btn btn-secondary m-2">AddBank</button>
+            </Link>
 
-    This is user  Pannel
-   </div>
+          
+
+        
+          </div>
+        </div>
+      </div>
+     
+    </section>
+
+  
    </>
   )
 }
