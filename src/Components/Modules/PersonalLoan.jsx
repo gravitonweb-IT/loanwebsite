@@ -220,10 +220,8 @@ const PersonalLoan = () => {
                     </div>
                     <div className="col-xl-4 col-md-6 col-sm-12 col-12">
                       <div className="text-md-end mt-3 mt-md-0">
-                        <a href="#!" className="btn btn-primary">
-                          Get A Call Back
-                        </a>
-                        <a href="#!" className="btn btn-secondary">
+                       
+                        <a href="/contact" className="btn btn-secondary">
                           How To Apply
                         </a>
                       </div>
@@ -316,9 +314,7 @@ const PersonalLoan = () => {
                     cintenbt mpus nec purus vitae tempor placerat leo.tesimly
                     diummy cintenbt mpus nec purus vitae tempor placerat leo.{" "}
                   </p>
-                  <a href="#!" className="btn btn-primary">
-                    Apply for loan
-                  </a>
+                 
                 </div>
                 <div className="section-scroll" id="section-typeloan">
                   <div className="bg-light p-lg-10 p-5">
@@ -386,7 +382,7 @@ const PersonalLoan = () => {
                       <h1 className="text-white mb-4">
                         Get financing for whatever you need now
                       </h1>
-                      <a href="#!" className="btn btn-white">
+                      <a href="/contact" className="btn btn-white">
                         Enquire Now
                       </a>
                     </div>

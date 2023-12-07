@@ -2,7 +2,14 @@ import React from 'react'
 
 const BankForm = () => {
   return (
-    <div>BankForm</div>
+  <>
+      <section className='py-lg-16 py-10'>
+
+        Bank form 
+      </section>
+  
+  
+  </>
   )
 }
 

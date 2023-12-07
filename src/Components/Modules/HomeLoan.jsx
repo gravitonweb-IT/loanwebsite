@@ -279,21 +279,16 @@ const HomeLoan = () => {
                         <div>
                           {/* slider-captions */}
                           <h1 className="display-2 text-white fw-bold">
-                            Hassle free Small Home loan up to $2000.00
+                            Hassle free Small Home loan up to  &#x20B9;200000.00
                           </h1>
                           <p className="d-none d-xl-block d-lg-block d-sm-block text-white mb-4">
                             Education Loan From Avanse At An Attractive Rate Of
                             Interest. Apply Now!
                           </p>
-                          <a
-                            href="loan-listing-image.html"
-                            className="btn btn-primary"
-                          >
-                            View products
-                          </a>
-                          <span className="badge bg-success ms-md-3">
+                        
+                          {/* <span className="badge bg-success ms-md-3">
                             Rate of interest: Up to 16% - 32%
-                          </span>
+                          </span> */}
                         </div>
                         {/* /.slider-captions */}
                       </div>
@@ -313,17 +308,12 @@ const HomeLoan = () => {
                           </h1>
                           <p className=" d-none d-xl-block d-lg-block d-sm-block text-white mb-4">
                             The low rate you need for the need you want! Call
-                            <strong>(555) 123-4567</strong>
+                            <strong>02269620449</strong>
                           </p>
-                          <a
-                            href="loan-listing-image.html"
-                            className="btn btn-primary "
-                          >
-                            Get started today
-                          </a>
-                          <span className="badge bg-success ms-md-3">
+                       
+                          {/* <span className="badge bg-success ms-md-3">
                             Rate of interest: Up to 16% - 32%
-                          </span>
+                          </span> */}
                         </div>
                         {/* /.slider-captions */}
                       </div>
@@ -347,15 +337,10 @@ const HomeLoan = () => {
                             Award winning car loans with low fixed rates and no
                             ongoing fees.
                           </p>
-                          <a
-                            href="loan-listing-image.html"
-                            className="btn btn-primary "
-                          >
-                            View Products
-                          </a>
-                          <span className="badge bg-success ms-md-3">
+                       
+                          {/* <span className="badge bg-success ms-md-3">
                             Rate of interest: Up to 16% - 32%
-                          </span>
+                          </span> */}
                         </div>
                         {/* /.slider-captions */}
                       </div>
@@ -473,9 +458,7 @@ const HomeLoan = () => {
                       nequeuisque lacus mi tesimly diummy cintenbt mpus nec
                       purus vitae tempor placerat leo.{" "}
                     </p>
-                    <a href="#!" className="btn btn-primary">
-                      Apply for loan
-                    </a>
+                   
                   </div>
                   <div className="section-scroll" id="section-typeloan">
                     <div className="bg-light p-lg-10 p-5">
@@ -544,7 +527,7 @@ const HomeLoan = () => {
                         <h1 className="text-white mb-4">
                           Get financing for whatever you need now
                         </h1>
-                        <a href="#!" className="btn btn-white">
+                        <a href="/contact" className="btn btn-white">
                           Enquire Now
                         </a>
                       </div>

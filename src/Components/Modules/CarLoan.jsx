@@ -227,23 +227,14 @@ const CarLone = () => {
                     Lowest Interest Rates - Calculate EMI - Check Eligibility -
                     Instant e-Approval - Special Offers{" "}
                   </p>
-                  <div className="text-white mb-5">
-                    <div className="mb-3">
-                      <span className="display-4 me-2">8.70%</span>
-                      <small className="text-white">
-                        Starting Rate for New Car
-                      </small>
-                    </div>
-                  </div>
-                  <a href="#!" className="btn btn-primary">
-                    Why Choose us ?
-                  </a>
+              
+                 
                 </div>
               </div>
             </div>
           </div>
         </section>
-        <section className="py-lg-16 py-10">
+        <section className="py-lg-4 py-10">
           <div className="container">
             <div className="row d-flex align-items-center">
               <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 mb-4 mb-lg-0">
@@ -315,7 +306,7 @@ const CarLone = () => {
           </div>
         </section>
 
-        <section className="py-lg-16 py-10 bg-white border-bottom border-top">
+        <section className="py-lg-4 py-10 bg-white border-bottom border-top">
           <div className="container">
             <div className="row">
               <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">

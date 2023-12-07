@@ -40,8 +40,7 @@ const Termcondation = () => {
               <div className="ms-3">
                 <h3>Privacy Policy: </h3>
                 <p className="mb-0">
-                  In scelerisque, urna vel pellentesque varius, diam arcu
-                  iaculis enim, sed mattis elit diam eu ex.
+                We respect your privacy. Our Privacy Policy outlines how we collect, use, and protect your personal information.
                 </p>
               </div>
             </div>

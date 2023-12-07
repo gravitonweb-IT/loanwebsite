@@ -86,7 +86,6 @@ const Contact = () => {
                     </div>
                   </div>
                 </div>
-             
               </div>
             </div>
           </div>
@@ -129,10 +128,11 @@ const Contact = () => {
                                 value={formData.name}
                                 onChange={handleChange}
                                 required=""
-                                
                               />
-                              
-                                   {errors.name && <div className="text-danger">{errors.name}</div>}
+
+                              {errors.name && (
+                                <div className="text-danger">{errors.name}</div>
+                              )}
                             </div>
                           </div>
                           {/* Text input*/}
@@ -153,9 +153,12 @@ const Contact = () => {
                                 placeholder="Email"
                                 className="form-control"
                                 required=""
-                                
                               />
-                                   {errors.email && <div className="text-danger">{errors.email}</div>}
+                              {errors.email && (
+                                <div className="text-danger">
+                                  {errors.email}
+                                </div>
+                              )}
                             </div>
                           </div>
                           {/* Text input*/}
@@ -176,9 +179,12 @@ const Contact = () => {
                                 placeholder="Phone"
                                 className="form-control"
                                 required=""
-                                
                               />
-                                   {errors.phone && <div className="text-danger">{errors.phone}</div>}
+                              {errors.phone && (
+                                <div className="text-danger">
+                                  {errors.phone}
+                                </div>
+                              )}
                             </div>
                           </div>
                           {/* Select Basic */}
@@ -199,7 +205,11 @@ const Contact = () => {
                                 defaultValue={""}
                                 required=""
                               />
-                                 {errors.message && <div className="text-danger">{errors.message}</div>}
+                              {errors.message && (
+                                <div className="text-danger">
+                                  {errors.message}
+                                </div>
+                              )}
                             </div>
                           </div>
                           {/* Button */}
@@ -248,8 +258,8 @@ const Contact = () => {
                               Branch Office
                             </h4>
                             <p>
-                              2843 Lakewood Drive <br />
-                              Jersey City, CA 07304
+                              NO.45, VRAJBHOOMI B/H. POST OFFICE Bayad Bayad
+                              Sabarkantha Gujarat - 383325 India
                             </p>
                           </div>
                         </div>

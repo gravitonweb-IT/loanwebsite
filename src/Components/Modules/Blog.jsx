@@ -408,12 +408,7 @@ const Blog = () => {
                             Business Loan
                           </a>
                         </li>
-                        <li className="mb-1">
-                          <a href="#!" className="text-inherit">
-                            <i className="bi bi-arrow-right-circle me-2 text-muted fs-6" />
-                            Debt Consolidation
-                          </a>
-                        </li>
+                      
                       </ul>
                     </div>
                   </div>
@@ -537,54 +532,7 @@ const Blog = () => {
                     </div>
                   </div>
                   {/*  tags */}
-                  <div className="card bg-light ">
-                    <div className="card-body">
-                      <h3 className="mb-3">Tags</h3>
-                      {/* widget title */}
-                      <a
-                        href="#!"
-                        title="Car Loan"
-                        className="btn btn-primary btn-xs mb-2"
-                      >
-                        Car Loan
-                      </a>{" "}
-                      <a
-                        href="#!"
-                        title="Education"
-                        className="btn btn-primary btn-xs mb-2"
-                      >
-                        Education
-                      </a>{" "}
-                      <a
-                        href="#!"
-                        title="Home"
-                        className="btn btn-primary btn-xs mb-2"
-                      >
-                        Home
-                      </a>{" "}
-                      <a
-                        href="#!"
-                        title="Debt Consolidation"
-                        className="btn btn-primary btn-xs mb-2"
-                      >
-                        Debt Consolidation
-                      </a>{" "}
-                      <a
-                        href="#!"
-                        title="Business"
-                        className="btn btn-primary btn-xs mb-2"
-                      >
-                        Business
-                      </a>{" "}
-                      <a
-                        href="#!"
-                        title="Education"
-                        className="btn btn-primary btn-xs mb-2"
-                      >
-                        Education
-                      </a>
-                    </div>
-                  </div>
+                 
                   {/* /.widget well bg */}
                 </div>
               </div>

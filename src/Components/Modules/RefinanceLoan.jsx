@@ -229,29 +229,17 @@ const RefinanceLoan = () => {
                     Easily Refinance Student Loans
                   </h1>
                   <p className="text-white mb-5">
-                    Average lifetime savings of $5,767 when members refinance to
+                    Average lifetime savings of 5,767 when members refinance to
                     a shorter term.
                   </p>
-                  <a href="#!" className="btn btn-warning ">
-                    Find my rate
-                  </a>
+                 
                 </div>
                 {/* /.hero-caption */}
               </div>
               <div className="offset-xl-2 col-xl-5 offset-lg-2 col-lg-5 col-md-12 col-sm-12 col-12 d-flex align-items-end justify-content-end">
                 <div className="d-flex bg-dark rounded-top-md text-white p-4">
-                  <div className="me-4">
-                    <span className="fs-5 fw-semi-bold text-white-50">
-                      FIXED RATES
-                    </span>
-                    <h1 className="text-white mb-0 fw-bold">3.20–7.25%</h1>
-                  </div>
-                  <div>
-                    <span className="fs-5 fw-semi-bold text-white-50">
-                      VARIABLE RATES
-                    </span>
-                    <h1 className="text-white mb-0 fw-bold">2.57–7.25%</h1>
-                  </div>
+                  
+                 
                 </div>
               </div>
             </div>
@@ -448,9 +436,7 @@ const RefinanceLoan = () => {
                 className="col-xl-12 col-lg-12 col-md-12 col-sm-4 col-12
                         text-center mt-6"
               >
-                <a href="#!" className="btn btn-white">
-                  Get started
-                </a>
+               
               </div>
             </div>
           </div>
@@ -473,9 +459,7 @@ const RefinanceLoan = () => {
                     In scelerisque, urna vel pellentesque varius, diam arcu
                     iaculis enim, sed mattis elit diam eu ex.
                   </p>
-                  <a href="#!" className="btn btn-primary">
-                    Find my rate
-                  </a>
+                 
                 </div>
               </div>
               <div className="offset-xl-1 col-xl-5 col-lg-6 col-md-6 col-sm-12 col-12">
@@ -533,7 +517,7 @@ const RefinanceLoan = () => {
             </div>
           </div>
         </section>
-        <section className="py-12 bg-white">
+        <section className="py-4 bg-white">
           <div className="container">
             <div className="row">
               <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
@@ -589,9 +573,7 @@ const RefinanceLoan = () => {
                   </table>
                 </div>
                 <div>
-                  <a href="#!" className="btn btn-primary mt-6">
-                    Check my rate
-                  </a>
+                
                 </div>
               </div>
             </div>
@@ -1419,29 +1401,7 @@ const RefinanceLoan = () => {
 
 
 
-        <section className="py-12 bg-primary">
-          <div className="container">
-            <div className="row">
-              <div
-                className="offset-xl-2 col-xl-8 offset-lg-2 col-lg-8
-                        col-md-12 col-sm-12 col-12"
-              >
-                <div className="text-center">
-                  {/* section title start*/}
-                  <h1 className="text-white">Get started in minutes</h1>
-                  <p className="text-white-50 mb-4">
-                    Nullam in semper leo, at elementum justo. In maximus rutrum
-                    sollicitudin mauris.
-                  </p>
-                  <a href="#!" className="btn btn-white">
-                    Check my rate
-                  </a>
-                </div>
-                {/* /.section title start*/}
-              </div>
-            </div>
-          </div>
-        </section>
+        
 
 
 

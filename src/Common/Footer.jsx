@@ -1,5 +1,5 @@
-import React from 'react'
-import './Footer.css'
+import React from "react";
+import "./Footer.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebook,
@@ -8,7 +8,6 @@ import {
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import Logoimg from "../assets/images/brand/logo/logoimg.jpeg";
-
 
 const Footer = () => {
   return (
@@ -22,7 +21,8 @@ const Footer = () => {
                 {"                            "}
                 <img
                   alt="Borrow  - Loan Company Website Templates"
-                  src={Logoimg} className='logo-img'
+                  src={Logoimg}
+                  className="logo-img"
                 />
               </div>
               {"                      "}
@@ -71,9 +71,9 @@ const Footer = () => {
               <div className="text-white-50 mb-3">
                 {"                            "}
                 <p>
-                  Our goal at Borrow Loan Company is to provide access to
+                  Our goal at JoyoMoney Loan Company is to provide access to
                   personal loans and education loan, car loan, home loan at
-                  insight competitive interest rates lorem ipsums. We are the
+                  insight competitive interest rates . We are the
                   loan provider, you can use our loan product.{"              "}
                 </p>
                 {"              "}
@@ -85,9 +85,9 @@ const Footer = () => {
                       <svg
                         className="bi bi-geo-alt text-white mt-1"
                         fill="currentColor"
-                        height="24"
+                        height="28"
                         viewBox="0 0 16 16"
-                        width="24"
+                        width="48"
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         {"                      "}
@@ -98,7 +98,8 @@ const Footer = () => {
                       </svg>
                       {"                    "}
                       <div className="ms-3">
-                        3895 Sycamore Road Arlington, 97812
+                        NO.45, VRAJBHOOMI B/H. POST OFFICE Bayad Bayad
+                        Sabarkantha Gujarat - 383325 India
                       </div>
                       {"                  "}
                     </div>
@@ -149,7 +150,7 @@ const Footer = () => {
                     <a className="text-inherit fs-5" href="/gallery">
                       {"                    "}
                       <i className="bi bi-chevron-right fs-6 me-2" />
-                    Gallery
+                      Gallery
                     </a>
                   </li>
 
@@ -167,7 +168,7 @@ const Footer = () => {
                     <a className="text-inherit fs-5" href="/termcondation">
                       {"                    "}
                       <i className="bi bi-chevron-right fs-6 me-2" />
-                  Privacy Policy 
+                      Privacy Policy
                     </a>
                   </li>
                   <li className="d-flex">
@@ -175,11 +176,9 @@ const Footer = () => {
                     <a className="text-inherit fs-5" href="/termcondation">
                       {"                    "}
                       <i className="bi bi-chevron-right fs-6 me-2" />
-                 Term & Condation
+                      Term & Condation
                     </a>
                   </li>
-
-                
 
                   <li className="d-flex">
                     {"                  "}
@@ -249,7 +248,7 @@ const Footer = () => {
                     <a className="text-inherit fs-5" href="/studentloan">
                       {"                    "}
                       <i className="bi bi-chevron-right fs-6 me-2" />
-                    Student Loan
+                      Student Loan
                     </a>
                   </li>
                   {"              "}
@@ -258,47 +257,51 @@ const Footer = () => {
               {"                      "}
             </div>
 
-          
-
-<div className="col-xl-2 col-lg-2 col-md-4 col-sm-6 col-6">
-      <div className="mb-3">
-        {/* widget footer */}
-        <ul className="list-unstyled text-muted">
-          <li className="d-flex">
-            <a href="#!" className="text-inherit">
-              <FontAwesomeIcon icon={faFacebook} className="me-2 fs-5" />
-              Facebook
-            </a>
-          </li>
-          <li className="d-flex">
-            <a href="#!" className="text-inherit">
-              <FontAwesomeIcon icon={faGoogle} className="me-2 fs-5" />
-              Google
-            </a>
-          </li>
-          <li className="d-flex">
-            <a href="#!" className="text-inherit">
-              <FontAwesomeIcon icon={faTwitter} className="me-2 fs-5" />
-              Twitter
-            </a>
-          </li>
-          <li className="d-flex">
-            <a href="#!" className="text-inherit">
-              <FontAwesomeIcon icon={faLinkedin} className="me-2 fs-5" />
-              LinkedIn
-            </a>
-          </li>
-        </ul>
-      </div>
-      {/* /.widget footer */}
-    </div>
+            <div className="col-xl-2 col-lg-2 col-md-4 col-sm-6 col-6">
+              <div className="mb-3">
+                {/* widget footer */}
+                <ul className="list-unstyled text-muted">
+                  <li className="d-flex">
+                    <a href="#!" className="text-inherit">
+                      <FontAwesomeIcon
+                        icon={faFacebook}
+                        className="me-2 fs-5"
+                      />
+                      Facebook
+                    </a>
+                  </li>
+                  <li className="d-flex">
+                    <a href="#!" className="text-inherit">
+                      <FontAwesomeIcon icon={faGoogle} className="me-2 fs-5" />
+                      Google
+                    </a>
+                  </li>
+                  <li className="d-flex">
+                    <a href="#!" className="text-inherit">
+                      <FontAwesomeIcon icon={faTwitter} className="me-2 fs-5" />
+                      Twitter
+                    </a>
+                  </li>
+                  <li className="d-flex">
+                    <a href="#!" className="text-inherit">
+                      <FontAwesomeIcon
+                        icon={faLinkedin}
+                        className="me-2 fs-5"
+                      />
+                      LinkedIn
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              {/* /.widget footer */}
+            </div>
             {"        "}
           </div>
           {"        "}
           <div className="row">
             <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
               <p className="fs-6 text-muted">
-                {"              "}© Copyright 2022 | Borrow Loan Company
+                {"              "}© Copyright 2022 | JoyoMoney Loan Company
                 {"            "}
               </p>
             </div>
@@ -313,7 +316,6 @@ const Footer = () => {
                 <a className="text-inherit" href="#">
                   Privacy Policy
                 </a>
-               
               </p>
             </div>
             {"        "}
@@ -322,9 +324,8 @@ const Footer = () => {
         </div>
         {"    "}
       </div>
-    
     </>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

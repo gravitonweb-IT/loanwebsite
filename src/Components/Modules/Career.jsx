@@ -134,22 +134,22 @@ const Career = () => {
       </div>
 
       </section>
-       <section className="py-lg-8 py-10 ">
+       <section className="py-lg-2 py-4 ">
         <div className="container">
           <div className="row ">
             <div className="col-xl-6 col-lg-5 col-md-6 col-sm-12 col-12">
               <div className="mb-6 mb-lg-0 ">
                 {/* section title start*/}
-                <h1 className=" mb-3">Introduction </h1>
-                <p className=" lead">
+                <h1 className=" mb-3"> </h1>
+                {/* <p className=" lead">
                   Embarking on a career journey often involves making important
                   financial decisions, and one crucial aspect is understanding
                   how loans can play a role in shaping your professional path.
-                </p>
-                <p className=" mb-4">
+                </p> */}
+                {/* <p className=" mb-4">
                   Aenean ornare lectus nunc, elementum fermentum erat mattis id.
                   Donec ullamcorper magna non orci scelerisque consectetur.{" "}
-                </p>
+                </p> */}
                 <h3 className="">Choosing the Right Career Path:</h3>
                 <div className="none">
                   <p>Financing Your Education:</p>
@@ -256,7 +256,7 @@ const Career = () => {
                         <textarea
                           className="form-control"
                           id="message"
-                          rows={4}
+                          rows={2}
                           name="message"
                           placeholder="Message"
                           value={formData.message}

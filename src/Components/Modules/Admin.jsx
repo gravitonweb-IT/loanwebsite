@@ -1,7 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import SamplePdf from  "../../assets/css/sample.pdf";
 // import '../Modules/Admin/admin.css'
 const Admin = () => {
+
+  // const handleDownload = async () => {
+  //   try {
+  //     // Fetch the PDF file content
+  //     const response = await fetch("../../assets/css/sample.pdf");
+  //     const pdfContent = await response.blob();
+
+  //     // Create a download link
+  //     const downloadLink = document.createElement('a');
+  //     downloadLink.href = URL.createObjectURL(pdfContent);
+  //     downloadLink.download = 'sample.pdf';
+
+  //     // Append the link to the body
+  //     document.body.appendChild(downloadLink);
+
+  //     // Trigger the click event to start the download
+  //     downloadLink.click();
+
+  //     // Remove the link from the body
+  //     document.body.removeChild(downloadLink);
+  //   } 
+    
+  //   catch (error) {
+  //     console.error('Error fetching or downloading the PDF file:', error);
+  //   }
+  // };
   return (
     <section className="py-lg-16 py-10">
       <div className="container">
@@ -35,6 +62,11 @@ const Admin = () => {
             <Link to="/galleryimages">
               <button className="btn btn-secondary m-2">GalleryImages</button>
             </Link>
+              <a
+               href={SamplePdf}
+               download="sample.pdf" >
+              <button className="btn btn-info m-2">PDF Download</button>
+              </a>
           </div>
         </div>
       </div>

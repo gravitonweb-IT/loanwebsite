@@ -9,10 +9,14 @@ const UserDashbord = () => {
       <div className="container">
         <div className="button-container">
           <div className="centered-buttons-container">
+
             <Link to="/bankform">
               <button className="btn btn-secondary m-2">AddBank</button>
             </Link>
 
+            <Link to="/status">
+              <button className="btn btn-secondary m-2">Application Status </button>
+            </Link>
           
 
         

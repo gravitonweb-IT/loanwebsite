@@ -269,14 +269,9 @@ const StudentLoan = () => {
                           </h1>
                           <p className=" d-none d-xl-block d-lg-block d-sm-block text-white">
                             The low rate you need for the need you want! Call
-                            <br /> (555) 123-4567
+                            <br />02269620449
                           </p>
-                          <a
-                            href="loan-listing-image.html"
-                            className="btn btn-primary "
-                          >
-                            Get started today
-                          </a>
+                        
                         </div>
                         {/* /.slider-captions */}
                       </div>
@@ -301,12 +296,7 @@ const StudentLoan = () => {
                             Award winning car loans with low fixed rates and{" "}
                             <br /> no ongoing fees.
                           </p>
-                          <a
-                            href="loan-listing-image.html"
-                            className="btn btn-primary "
-                          >
-                            View products
-                          </a>
+                        
                         </div>
                         {/* /.slider-captions */}
                       </div>
@@ -331,12 +321,7 @@ const StudentLoan = () => {
                             Education Loan From Avanse At An Attractive Rate Of
                             Interest. <br /> Apply Now!
                           </p>
-                          <a
-                            href="loan-listing-image.html"
-                            className="btn btn-primary"
-                          >
-                            View products
-                          </a>
+                        
                         </div>
                         {/* /.slider-captions */}
                       </div>
@@ -348,7 +333,7 @@ const StudentLoan = () => {
             </div>
           </div>
         </section>
-        <section className="py-lg-16 py-10 bg-white border-bottom">
+        <section className="py-lg-4 py-10 bg-white border-bottom">
           <div className="container">
             <div className="row">
               <div className="offset-xl-2 col-xl-8  col-md-12 col-12">
@@ -510,12 +495,12 @@ const StudentLoan = () => {
             </div>
           </div>
         </section>
-        <section className="py-lg-16 py-10">
+        <section className="py-lg-2 py-10">
           <div className="container">
             <div className="row">
               <div className="offset-xl-2 col-xl-8  col-md-12 col-12">
                 <div className="mb-10 text-center">
-                  {/* section title start*/}
+              
                   <h1>About Education Loan</h1>
                   <p className="lead">
                     No matter how long the educational path is, ease it with
@@ -524,7 +509,7 @@ const StudentLoan = () => {
                     future aspirations and dreams.
                   </p>
                 </div>
-                {/* /.section title start*/}
+            
               </div>
             </div>
             <div className="row">
@@ -551,12 +536,9 @@ const StudentLoan = () => {
                       </li>
                       <li className="mb-1">
                         <i className="bi bi-check-circle me-2 text-success" />
-                        Write your eligibility criteria Content
+                        Write your eligibility criteria 
                       </li>
-                      <li className="mb-0">
-                        <i className="bi bi-check-circle me-2 text-success" />
-                        Write your eligibility criteria
-                      </li>
+                     
                     </ul>
                   </div>
                 </div>
@@ -590,14 +572,8 @@ const StudentLoan = () => {
                         <i className="bi bi-check-circle me-2 text-success" />
                         Latest electricity bill
                       </li>
-                      <li className="mb-1">
-                        <i className="bi bi-check-circle me-2 text-success" />
-                        Latest mobile/telephone bill
-                      </li>
-                      <li className="mb-1">
-                        <i className="bi bi-check-circle me-2 text-success" />
-                        Existing house lease agreement
-                      </li>
+                     
+                    
                     </ul>
                   </div>
                 </div>
@@ -644,97 +620,8 @@ const StudentLoan = () => {
             </div>
           </div>
         </section>
-        <section className="py-lg-16 py-10 bg-white border-bottom border-top">
-          <div className="container">
-            <div className="row">
-              <div className="offset-xl-2 col-xl-8  col-md-12 col-12">
-                <div className="mb-10 text-center">
-                  {/* section title start*/}
-                  <h1>Education Interest Rates &amp; Charges</h1>
-                  <p className="lead">
-                    Here is an exhaustive list of all the fees and charges to be
-                    paid for the education loan. Sollicitudin um placerat
-                  </p>
-                </div>
-                {/* /.section title start*/}
-              </div>
-            </div>
-            <div className="row">
-              <div className="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 mb-3 mb-lg-0">
-                <div className="card card-body mb-1 lh-1">
-                  <h2 className="fw-bold mb-0">8.75%</h2>
-                  <p className="mb-0 fs-6">Min apr</p>
-                </div>
-                <div className="card card-body mb-1 lh-1">
-                  <h2 className="fw-bold mb-0">10.75%</h2>
-                  <p className="mb-0 fs-6">Max apr</p>
-                </div>
-                <div className="card card-body mb-1 lh-1">
-                  <h2 className="fw-bold mb-0">12.10%</h2>
-                  <p className="mb-0 fs-6">Avg apr</p>
-                </div>
-              </div>
-              <div className="col-xl-9 col-lg-9 col-md-9 col-sm-9 col-12">
-                <div>
-                  <ul className="list-group mb-3">
-                    <li className="list-group-item active">
-                      <div className="row">
-                        <div className="col-lg-6">Description of Charges</div>
-                        <div className="col-lg-6 ">Education Loan</div>
-                      </div>
-                    </li>
-                    <li className="list-group-item">
-                      <div className="row">
-                        <div className="col-lg-6">
-                          Loan Processing Charges
-                          <span className="text-danger">*</span>
-                        </div>
-                        <div className="col-lg-6 text-muted">
-                          Maximum up to 1%
-                        </div>
-                      </div>
-                    </li>
-                    <li className="list-group-item">
-                      <div className="row">
-                        <div className="col-lg-6">
-                          Pre-payment charges
-                          <span className="text-danger">*</span>
-                        </div>
-                        <div className="col-lg-6 text-muted">Nil</div>
-                      </div>
-                    </li>
-                    <li className="list-group-item">
-                      <div className="row">
-                        <div className="col-lg-6">No Due Certificate</div>
-                        <div className="col-lg-6 text-muted">Nil</div>
-                      </div>
-                    </li>
-                    <li className="list-group-item">
-                      <div className="row">
-                        <div className="col-lg-6">Solvency Certificate</div>
-                        <div className="col-lg-6 text-muted">Nil</div>
-                      </div>
-                    </li>
-                    <li className="list-group-item">
-                      <div className="row">
-                        <div className="col-lg-6">
-                          Penalty Interest on delayed / overdue EMI
-                        </div>
-                        <div className="col-lg-6 text-muted">
-                          Write here your % of delayed payment
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
-                  <p className="mb-0 fs-5">
-                    For further details, please <a href="#!">Click here</a>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section className=" py-lg-16 py-10">
+    
+        <section className=" py-lg-4 py-10">
           <div className="container">
             <div className="row">
               <div className="offset-xl-2 col-xl-8  col-md-12 col-12">
@@ -762,14 +649,7 @@ const StudentLoan = () => {
                   </div>
                 </div>
                 <div className="d-flex align-items-center mt-4">
-                  <div>
-                    {" "}
-                    <img
-                      src={Avatarimg1}
-                      alt="Borrow - Loan Company Website Template"
-                      className="avatar avatar-md rounded-3"
-                    />
-                  </div>
+                
                   <div className="ms-3 lh-1">
                     <h4 className="mb-0 ">Donny J. Griffin</h4>
                     <span className="fs-6">Personal Loan</span>
@@ -788,14 +668,7 @@ const StudentLoan = () => {
                   </div>
                 </div>
                 <div className="d-flex align-items-center mt-4">
-                  <div>
-                    {" "}
-                    <img
-                      src={Avatarimg2}
-                      alt="Borrow - Loan Company Website Template"
-                      className="avatar avatar-md rounded-3"
-                    />
-                  </div>
+                
                   <div className="ms-3 lh-1">
                     <h4 className="mb-0 ">Mary O. Randle</h4>
                     <span className="fs-6">Education Loan</span>
@@ -814,14 +687,7 @@ const StudentLoan = () => {
                   </div>
                 </div>
                 <div className="d-flex align-items-center mt-4">
-                  <div>
-                    {" "}
-                    <img
-                      src={Avatarimg3}
-                      alt="Borrow - Loan Company Website Template"
-                      className="avatar avatar-md rounded-3"
-                    />
-                  </div>
+               
                   <div className="ms-3 lh-1">
                     <h4 className="mb-0 ">Lindo E. Olson</h4>
                     <span className="fs-6">Car Loan</span>

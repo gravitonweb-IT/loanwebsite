@@ -263,21 +263,14 @@ const BusinessLoan = () => {
                         <div>
                           {/* slider-captions */}
                           <h1 className="display-2 text-white fw-bold">
-                            Hassle free Small Business loan up to $2000.00
+                            Hassle free Small Business loan up to 20000.00
                           </h1>
                           <p className="d-none d-xl-block d-lg-block d-sm-block text-white mb-4">
                             Education Loan From Avanse At An Attractive Rate Of
                             Interest. Apply Now!
                           </p>
-                          <a
-                            href="loan-listing-image.html"
-                            className="btn btn-primary"
-                          >
-                            View products
-                          </a>
-                          <span className="badge bg-success ms-md-3">
-                            Rate of interest: Up to 16% - 32%
-                          </span>
+                          
+                         
                         </div>
                         {/* /.slider-captions */}
                       </div>
@@ -289,11 +282,7 @@ const BusinessLoan = () => {
               <div className="item">
                 <div
                   className="py-22 businessloan-banner-two "
-                  // style={{
-                  //   background:
-                  //     "url(../assets/images/slider/business-slider-2.jpg)no-repeat",
-                  //   "background-size": "cover",
-                  // }}
+              
                 >
                   <div className="container">
                     <div className="row">
@@ -305,17 +294,9 @@ const BusinessLoan = () => {
                           </h1>
                           <p className=" d-none d-xl-block d-lg-block d-sm-block text-white mb-4">
                             The low rate you need for the need you want! Call
-                            <strong>(555) 123-4567</strong>
+                            <strong>02269620449</strong>
                           </p>
-                          <a
-                            href="loan-listing-image.html"
-                            className="btn btn-primary "
-                          >
-                            Get started today
-                          </a>
-                          <span className="badge bg-success ms-md-3">
-                            Rate of interest: Up to 16% - 32%
-                          </span>
+                        
                         </div>
                         {/* /.slider-captions */}
                       </div>
@@ -327,11 +308,7 @@ const BusinessLoan = () => {
               <div className="item">
                 <div
                   className="py-22 businessloan-banner-three"
-                  // style={{
-                  //   background:
-                  //     "url(../assets/images/slider/business-slider-3.jpg)no-repeat",
-                  //   "background-size": "cover",
-                  // }}
+               
                 >
                   <div className="container">
                     <div className="row">
@@ -346,15 +323,7 @@ const BusinessLoan = () => {
                             Award winning car loans with low fixed rates and no
                             ongoing fees.
                           </p>
-                          <a
-                            href="loan-listing-image.html"
-                            className="btn btn-primary "
-                          >
-                            View Products
-                          </a>
-                          <span className="badge bg-success ms-md-3">
-                            Rate of interest: Up to 16% - 32%
-                          </span>
+                         
                         </div>
                         {/* /.slider-captions */}
                       </div>
