@@ -1,4 +1,5 @@
 import React, { useEffect,useRef, useState } from "react";
+
 import { tns } from "tiny-slider/src/tiny-slider";
 import "../../assets/css/theme.min.css";
 import "../../assets/fonts/flat-font-icons/css/flaticon.css";
@@ -185,7 +186,7 @@ useEffect(()=>{
                           <h1 className="display-3 text-white fw-bold mb-3">
                             {"                          "}Lowest Car Loan Rate
                             {"                          "}
-                            <strong className="text-warning">9.60%</strong>
+                         
                             {"                        "}
                           </h1>
                           {"                        "}
@@ -220,7 +221,7 @@ useEffect(()=>{
                           {"                                                "}
                           <h1 className="display-3 text-white fw-bold mb-3">
                             {"                          "}Loan with Great Rates.
-                            <strong className="text-warning">11.00%</strong>
+                        
                             {"                        "}
                           </h1>
                           {"                        "}
