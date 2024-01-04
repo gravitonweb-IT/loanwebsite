@@ -1,3 +1,8 @@
+// const config = {
+//   BASE_API_URL: process.env.BASE_URL,
+// };
+
+// export default config;
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';

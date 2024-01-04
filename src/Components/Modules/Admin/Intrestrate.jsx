@@ -49,10 +49,7 @@ const Intrestrate = () => {
     <>
       <section className="py-lg-20 py-10">
         <div className="container">
-        <h3 className=" py-4">
-               
-                 Dyanmic Interest Rate Changes 
-                  </h3>
+          <h3 className=" py-4">Dyanmic Interest Rate Changes</h3>
           <form onSubmit={handleSubmit}>
             <div className="row">
               {/* Home Loan */}
@@ -149,29 +146,31 @@ const Intrestrate = () => {
           </form>
         </div>
 
-       
-      <div className="container max-auto">
-        <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
-        <div className="card bg-light mb-4">
-          <div className="card-body">
-           
-            <h3>Image Upload in Home Page PopUp </h3>
-            <input type="file" accept="image/*" onChange={handleImageChange} />
-            <button onClick={handleUpload}>Upload Image</button>
-
-            {selectedImage && (
-              <div>
-                <h3>Selected Image Preview:</h3>
-                <img
-                  src={URL.createObjectURL(selectedImage)}
-                  alt="Selected"
-                  style={{ maxWidth: "300px", maxHeight: "300px" }}
+        <div className="container max-auto">
+          <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
+            <div className="card bg-light mb-4">
+              <div className="card-body">
+                <h3>Image Upload in Home Page PopUp </h3>
+                <input
+                  type="file"
+                  accept="image/*"
+                  onChange={handleImageChange}
                 />
-              </div>
-            )}
-          </div>{" "}
-        </div>
-        </div>
+                <button onClick={handleUpload}>Upload Image</button>
+
+                {selectedImage && (
+                  <div>
+                    <h3>Selected Image Preview:</h3>
+                    <img
+                      src={URL.createObjectURL(selectedImage)}
+                      alt="Selected"
+                      style={{ maxWidth: "300px", maxHeight: "300px" }}
+                    />
+                  </div>
+                )}
+              </div>{" "}
+            </div>
+          </div>
         </div>
       </section>
     </>

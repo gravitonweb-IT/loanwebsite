@@ -13,14 +13,7 @@ const Navbar = () => {
 
   return (
     <>
-    
-
-
-
-
-
-
-
+  
 <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
   <div class="container-fluid">
   <Link class="navbar-brand " to="/">
@@ -47,10 +40,13 @@ const Navbar = () => {
             <li><a class="dropdown-item" href="/homeloan">Home Loan</a></li>
             <li><a class="dropdown-item" href="/studentloan">Student Loan</a></li>
             <li><a class="dropdown-item" href="/carloan">Car Loan</a></li>
-            <li><a class="dropdown-item" href="/educationloan">Education Loan</a></li>
             <li><a class="dropdown-item" href="/businessloan">Business Loan</a></li>
             <li><a class="dropdown-item" href="/personalloan">Personal Loan</a></li>
-            <li><a class="dropdown-item" href="/refinanceloan">Refinance Loan</a></li>
+            <li><a class="dropdown-item" href="/professionalloan">Professional Loan</a></li>
+            <li><a class="dropdown-item" href="/goldloan1"> Gold Loan</a></li>
+
+            
+
 
           </ul>
         </li>
@@ -75,8 +71,6 @@ const Navbar = () => {
     </div>
   </div>
 </nav>
-
-
     </>
   );
 };

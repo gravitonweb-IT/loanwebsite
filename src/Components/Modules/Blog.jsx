@@ -1,21 +1,18 @@
 import React from "react";
-import "./Blog.css"
+import "./Blog.css";
 
 import Blogimg1 from "../../assets/images/blog/blog-post-1.jpg";
 import Blogimg2 from "../../assets/images/blog/blog-post-2.jpg";
 import Blogimg3 from "../../assets/images/blog/blog-post-3.jpg";
-import Blogimg4 from "../../assets/images/blog/blog-post-4.jpg"
-import Recentimg1 from "../../assets/images/blog/recent-img-1.jpg"
-import Recentimg2 from "../../assets/images/blog/recent-img-2.jpg"
-import  Recentimg3 from "../../assets/images/blog/recent-img-3.jpg"
+import Blogimg4 from "../../assets/images/blog/blog-post-4.jpg";
+import Recentimg1 from "../../assets/images/blog/recent-img-1.jpg";
+import Recentimg2 from "../../assets/images/blog/recent-img-2.jpg";
+import Recentimg3 from "../../assets/images/blog/recent-img-3.jpg";
 const Blog = () => {
   return (
     <>
       <main>
-        <section
-          className="pt-18 pb-10 blog-banner-img"
-       
-        >
+        <section className="pt-18 pb-10 blog-banner-img">
           <div className="container">
             <div className="row">
               <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
@@ -33,7 +30,6 @@ const Blog = () => {
                     </div>
                   </div>
                 </div>
-              
               </div>
             </div>
           </div>
@@ -408,7 +404,6 @@ const Blog = () => {
                             Business Loan
                           </a>
                         </li>
-                      
                       </ul>
                     </div>
                   </div>
@@ -532,7 +527,7 @@ const Blog = () => {
                     </div>
                   </div>
                   {/*  tags */}
-                 
+
                   {/* /.widget well bg */}
                 </div>
               </div>

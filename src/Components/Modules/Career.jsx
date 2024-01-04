@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import Featureimg from "../../assets/images/background/lp-feature-img.jpg";
+import { getDataCareerApplications } from "../../Services/com_service";
+import { toast } from "react-toastify";
 const Career = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -23,10 +25,7 @@ const Career = () => {
     setErrors({ ...errors, [name]: "" }); // Clear error when user starts typing
   };
 
-
- 
-
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     // Perform validation
@@ -62,8 +61,23 @@ const Career = () => {
       return;
     }
 
-    // Your form submission logic goes here
-    console.log("Form submitted:", formData);
+    try {
+      // Perform your API call here for form submission
+      const response = await getDataCareerApplications(formData);
+
+      if (response.status) {
+        // Handle success scenario here
+        toast("success", "success");
+        console.log("Form submitted successfully:", response);
+      } else {
+        toast("error", "error");
+        // Handle API error cases
+        console.error("Submission failed:", response.error);
+      }
+    } catch (error) {
+      // Handle network or unforeseen errors
+      console.error("Error:", error);
+    }
   };
 
   // Helper functions for validation
@@ -103,38 +117,40 @@ const Career = () => {
         </div>
       </section>
       <section className="py-lg-8 py-10 ">
-      <div className="container">
-     <h1>Job :</h1> <span className=" ml-4">As a dynamic financial service provider, our company is committed to
-      fostering a culture of excellence, innovation, and client-centricity.
-      Joining our team means being part of an organization that values
-      integrity, professionalism, and a passion for financial well-being. We
-      offer a collaborative and growth-oriented work environment where each team
-      member contributes to the success of our clients and the company as a
-      whole. Whether you're an experienced professional or someone looking to
-      embark on a fulfilling career in the financial sector, our company
-      provides opportunities for learning, career development, and making a
-      meaningful impact in the lives of those we serve. Come be a part of our
-      dedicated team as we navigate the complexities of the financial landscape
-      together, shaping a future of prosperity for both our clients and our
-      employees.</span>  
-   
-      
-      <h1>Become A Partner:</h1>  Becoming a partner with our esteemed financial
-      service provider company opens the door to a collaborative journey towards
-      mutual success. We value strategic alliances that bring together
-      expertise, innovation, and shared commitment to client satisfaction. As a
-      partner, you'll have access to a suite of cutting-edge financial
-      solutions, collaborative resources, and a network of professionals
-      dedicated to excellence. Whether you're an established institution, an
-      independent financial advisor, or an aspiring entrepreneur, we invite you
-      to join hands with us in shaping the future of financial services.
-      Together, we can leverage our collective strengths to provide unparalleled
-      value to clients and build lasting relationships. Partner with us and
-      embark on a transformative.
-      </div>
-
+        <div className="container">
+          <h1>Job :</h1>{" "}
+          <span className=" ml-4">
+            As a dynamic financial service provider, our company is committed to
+            fostering a culture of excellence, innovation, and
+            client-centricity. Joining our team means being part of an
+            organization that values integrity, professionalism, and a passion
+            for financial well-being. We offer a collaborative and
+            growth-oriented work environment where each team member contributes
+            to the success of our clients and the company as a whole. Whether
+            you're an experienced professional or someone looking to embark on a
+            fulfilling career in the financial sector, our company provides
+            opportunities for learning, career development, and making a
+            meaningful impact in the lives of those we serve. Come be a part of
+            our dedicated team as we navigate the complexities of the financial
+            landscape together, shaping a future of prosperity for both our
+            clients and our employees.
+          </span>
+          <h1>Become A Partner:</h1> Becoming a partner with our esteemed
+          financial service provider company opens the door to a collaborative
+          journey towards mutual success. We value strategic alliances that
+          bring together expertise, innovation, and shared commitment to client
+          satisfaction. As a partner, you'll have access to a suite of
+          cutting-edge financial solutions, collaborative resources, and a
+          network of professionals dedicated to excellence. Whether you're an
+          established institution, an independent financial advisor, or an
+          aspiring entrepreneur, we invite you to join hands with us in shaping
+          the future of financial services. Together, we can leverage our
+          collective strengths to provide unparalleled value to clients and
+          build lasting relationships. Partner with us and embark on a
+          transformative.
+        </div>
       </section>
-       <section className="py-lg-2 py-4 ">
+      <section className="py-lg-2 py-4 ">
         <div className="container">
           <div className="row ">
             <div className="col-xl-6 col-lg-5 col-md-6 col-sm-12 col-12">

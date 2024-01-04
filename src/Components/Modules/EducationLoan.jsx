@@ -1,17 +1,14 @@
 import React, { useState } from "react";
-import './About.css'
+import "./About.css";
 
 const EducationLoan = () => {
-
-
   const [selectedLanguage, setSelectedLanguage] = useState("");
 
   const handleLanguageChange = (event) => {
     setSelectedLanguage(event.target.value);
   };
 
-  const [formData, setFormData] = useState(
-    {
+  const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
@@ -19,7 +16,7 @@ const EducationLoan = () => {
     application_no: "",
     salary: "",
     loan_type: "",
-    user_loan_type:'',
+    user_loan_type: "",
     employment_type: "",
     address: "",
     business_address: "",
@@ -51,8 +48,6 @@ const EducationLoan = () => {
     setErrors({ ...errors, [name]: null }); // Clear errors for the changed field
   };
 
-
-
   const handleFileChange = (e, fieldName) => {
     const file = e.target.files[0];
 
@@ -69,8 +64,7 @@ const EducationLoan = () => {
       e.target.value = null; // Clear the input field
     }
   };
- 
-  
+
   const validateForm = () => {
     const newErrors = {};
 
@@ -92,7 +86,7 @@ const EducationLoan = () => {
     if (!formData.password) {
       newErrors.password = "Password is Requried";
     }
-  
+
     if (!formData.loan_type) {
       newErrors.loan_type = "Select Loan Types is Requried";
     }
@@ -103,7 +97,7 @@ const EducationLoan = () => {
     if (!formData.address) {
       newErrors.address = "Address is Requried";
     }
-    
+
     if (!formData.business_address) {
       newErrors.business_address = "Business_Address is Requried";
     }
@@ -114,7 +108,7 @@ const EducationLoan = () => {
       newErrors.account_type = "account type  is Requried";
     }
     if (!formData.user_loan_type) {
-      newErrors.user_loan_type= "Loan Type  is Requried";
+      newErrors.user_loan_type = "Loan Type  is Requried";
     }
     if (!formData.account_number) {
       newErrors.account_number = "Account Number is Requried";
@@ -172,10 +166,9 @@ const EducationLoan = () => {
 
   const handleClick = (e) => {
     e.preventDefault();
-    console.log(formData)
+    console.log(formData);
 
-    setFormData(
-      {
+    setFormData({
       name: "",
       email: "",
       phone: "",
@@ -183,7 +176,7 @@ const EducationLoan = () => {
       application_no: "",
       salary: "",
       loan_type: "",
-      user_loan_type:'',
+      user_loan_type: "",
       employment_type: null,
       address: "",
       business_address: "",
@@ -205,21 +198,17 @@ const EducationLoan = () => {
       bank_nbfc: "",
       emi: "",
       pandding: "",
-    })
+    });
     if (validateForm()) {
-     console.log(formData)
+      console.log(formData);
       // If form validation fails, do not submit
       return;
     }
-
-  }
+  };
   return (
     <>
       <main>
-        <section
-          className="pt-18 pb-10 education-header-page"
-        
-        >
+        <section className="pt-18 pb-10 education-header-page">
           <div className="container">
             <div className="row">
               <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
@@ -230,7 +219,6 @@ const EducationLoan = () => {
                     </div>
                     <div className="col-xl-4 col-md-6 col-12">
                       <div className="text-md-end mt-3 mt-lg-0">
-                        
                         <a href="/contact" className="btn btn-secondary">
                           How To Apply
                         </a>
@@ -327,7 +315,6 @@ const EducationLoan = () => {
                       nequeuisque lacus mi tesimly diummy cintenbt mpus nec
                       purus vitae tempor placerat leo.{" "}
                     </p>
-                  
                   </div>
                   <div className="section-scroll" id="section-typeloan">
                     <div className="bg-light p-lg-10 p-5">
@@ -588,7 +575,6 @@ const EducationLoan = () => {
                       </div>
                     </div>
                   </div>
-                
 
                   <section className="" id="section-apply">
                     <div className="container">
@@ -626,7 +612,11 @@ const EducationLoan = () => {
                                     placeholder="Name"
                                     className="form-control"
                                   />
-                                     {errors.name && <div className="text-danger">{errors.name}</div>}
+                                  {errors.name && (
+                                    <div className="text-danger">
+                                      {errors.name}
+                                    </div>
+                                  )}
                                 </div>
                               </div>
                               {/* Text input*/}
@@ -647,7 +637,11 @@ const EducationLoan = () => {
                                     placeholder="Email"
                                     className="form-control"
                                   />
-                                   {errors.email && <div className="text-danger">{errors.email}</div>}
+                                  {errors.email && (
+                                    <div className="text-danger">
+                                      {errors.email}
+                                    </div>
+                                  )}
                                 </div>
                               </div>
                               {/* Text input*/}
@@ -668,7 +662,11 @@ const EducationLoan = () => {
                                     placeholder="Phone"
                                     className="form-control"
                                   />
-                                    {errors.phone && <div className="text-danger">{errors.phone}</div>}
+                                  {errors.phone && (
+                                    <div className="text-danger">
+                                      {errors.phone}
+                                    </div>
+                                  )}
                                 </div>
                               </div>
                               <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
@@ -686,7 +684,11 @@ const EducationLoan = () => {
                                     placeholder="Application No"
                                     className="form-control"
                                   />
-                                    {errors.application_no && <div className="text-danger">{errors.application_no}</div>}
+                                  {errors.application_no && (
+                                    <div className="text-danger">
+                                      {errors.application_no}
+                                    </div>
+                                  )}
                                 </div>
                               </div>
                               {/* Text input*/}
@@ -707,8 +709,11 @@ const EducationLoan = () => {
                                     placeholder="Password"
                                     className="form-control"
                                   />
-                                    {errors.password && <div className="text-danger">{errors.password}</div>}
-
+                                  {errors.password && (
+                                    <div className="text-danger">
+                                      {errors.password}
+                                    </div>
+                                  )}
                                 </div>
                               </div>
                               {/* Text input*/}
@@ -717,12 +722,10 @@ const EducationLoan = () => {
                                   <select
                                     id="user_loan_type"
                                     name="user_loan_type"
-                                    className="form-select"                               
+                                    className="form-select"
                                     value={formData.user_loan_type}
                                     onChange={handleInputChange}
-
                                   >
-                                   
                                     <option value="" disabled selected>
                                       Select a Type of Loan
                                     </option>
@@ -745,7 +748,11 @@ const EducationLoan = () => {
                                       Refinance Loan
                                     </option>
                                   </select>
-                                  {errors.user_loan_type && <div className="text-danger">{errors.user_loan_type}</div>}
+                                  {errors.user_loan_type && (
+                                    <div className="text-danger">
+                                      {errors.user_loan_type}
+                                    </div>
+                                  )}
                                 </div>
                               </div>
                               {/* <div className="py-2">
@@ -799,8 +806,11 @@ const EducationLoan = () => {
                                     placeholder="Residence Address"
                                     defaultValue={""}
                                   />
-                                  {errors.address && <div className="text-danger">{errors.address}</div>}
-
+                                  {errors.address && (
+                                    <div className="text-danger">
+                                      {errors.address}
+                                    </div>
+                                  )}
                                 </div>
                               </div>
                               <div className="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12">
@@ -819,8 +829,11 @@ const EducationLoan = () => {
                                     placeholder="Business Address"
                                     defaultValue={""}
                                   />
-                                  {errors.business_address && <div className="text-danger">{errors.business_address }</div>}
-
+                                  {errors.business_address && (
+                                    <div className="text-danger">
+                                      {errors.business_address}
+                                    </div>
+                                  )}
                                 </div>
                               </div>
 
@@ -843,8 +856,11 @@ const EducationLoan = () => {
                                     placeholder="Name of Bank"
                                     className="form-control"
                                   />
-                                  {errors.bank_name && <div className="text-danger">{errors.bank_name }</div>}
-
+                                  {errors.bank_name && (
+                                    <div className="text-danger">
+                                      {errors.bank_name}
+                                    </div>
+                                  )}
                                 </div>
                               </div>
                               {/* Text input*/}
@@ -877,8 +893,11 @@ const EducationLoan = () => {
                                     </option>
                                     <option value="Gold">DEMAT Account</option>
                                   </select>
-                                  {errors.account_type && <div className="text-danger">{errors.account_type }</div>}
-
+                                  {errors.account_type && (
+                                    <div className="text-danger">
+                                      {errors.account_type}
+                                    </div>
+                                  )}
                                 </div>
                               </div>
                               {/* Text input*/}
@@ -899,8 +918,11 @@ const EducationLoan = () => {
                                     placeholder="Account Number"
                                     className="form-control"
                                   />
-                                  {errors.account_number && <div className="text-danger">{errors.account_number}</div>}
-
+                                  {errors.account_number && (
+                                    <div className="text-danger">
+                                      {errors.account_number}
+                                    </div>
+                                  )}
                                 </div>
                               </div>
                               <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
@@ -918,8 +940,11 @@ const EducationLoan = () => {
                                     placeholder="IFSC Code"
                                     className="form-control"
                                   />
-                                  {errors.ifsc_code && <div className="text-danger">{errors.ifsc_code}</div>}
-
+                                  {errors.ifsc_code && (
+                                    <div className="text-danger">
+                                      {errors.ifsc_code}
+                                    </div>
+                                  )}
                                 </div>
                               </div>
                               {/* Text input*/}
@@ -940,8 +965,11 @@ const EducationLoan = () => {
                                     placeholder="Branch Name"
                                     className="form-control"
                                   />
-                                  {errors.branch_name && <div className="text-danger">{errors.branch_name}</div>}
-
+                                  {errors.branch_name && (
+                                    <div className="text-danger">
+                                      {errors.branch_name}
+                                    </div>
+                                  )}
                                 </div>
                               </div>
                               {/* Text input*/}
@@ -962,8 +990,11 @@ const EducationLoan = () => {
                                     placeholder="Salary"
                                     className="form-control"
                                   />
-                                  {errors.salary && <div className="text-danger">{errors.salary}</div>}
-
+                                  {errors.salary && (
+                                    <div className="text-danger">
+                                      {errors.salary}
+                                    </div>
+                                  )}
                                 </div>
                               </div>
 
@@ -986,8 +1017,11 @@ const EducationLoan = () => {
                                     placeholder="Name OfBank NBFC"
                                     className="form-control"
                                   />
-                                  {errors.bank_nbfc && <div className="text-danger">{errors.bank_nbfc}</div>}
-
+                                  {errors.bank_nbfc && (
+                                    <div className="text-danger">
+                                      {errors.bank_nbfc}
+                                    </div>
+                                  )}
                                 </div>
                               </div>
                               <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
@@ -1021,8 +1055,11 @@ const EducationLoan = () => {
                                       Refinance Loan
                                     </option>
                                   </select>
-                                  {errors.loan_type && <div className="text-danger">{errors.loan_type}</div>}
-
+                                  {errors.loan_type && (
+                                    <div className="text-danger">
+                                      {errors.loan_type}
+                                    </div>
+                                  )}
                                 </div>
                               </div>
                               <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
@@ -1042,8 +1079,11 @@ const EducationLoan = () => {
                                     placeholder="EMI"
                                     className="form-control"
                                   />
-                                  {errors.emi && <div className="text-danger">{errors.emi}</div>}
-
+                                  {errors.emi && (
+                                    <div className="text-danger">
+                                      {errors.emi}
+                                    </div>
+                                  )}
                                 </div>
                               </div>
                               <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
@@ -1063,8 +1103,11 @@ const EducationLoan = () => {
                                     placeholder="Pending"
                                     className="form-control"
                                   />
-                                  {errors.pandding && <div className="text-danger">{errors.pandding}</div>}
-
+                                  {errors.pandding && (
+                                    <div className="text-danger">
+                                      {errors.pandding}
+                                    </div>
+                                  )}
                                 </div>
                               </div>
 
@@ -1085,8 +1128,11 @@ const EducationLoan = () => {
                                     placeholder="Applicant Pan No."
                                     className="form-control"
                                   />
-                                  {errors.pan_no && <div className="text-danger">{errors.pan_no}</div>}
-
+                                  {errors.pan_no && (
+                                    <div className="text-danger">
+                                      {errors.pan_no}
+                                    </div>
+                                  )}
                                 </div>
                               </div>
                               <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
@@ -1106,8 +1152,11 @@ const EducationLoan = () => {
                                     placeholder="Adhar No."
                                     className="form-control"
                                   />
-                                  {errors.adhar_no && <div className="text-danger">{errors.adhar_no}</div>}
-
+                                  {errors.adhar_no && (
+                                    <div className="text-danger">
+                                      {errors.adhar_no}
+                                    </div>
+                                  )}
                                 </div>
                               </div>
                               <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
@@ -1127,8 +1176,11 @@ const EducationLoan = () => {
                                     placeholder="Applicant DOB"
                                     className="form-control"
                                   />
-                                  {errors.dob && <div className="text-danger">{errors.dob}</div>}
-
+                                  {errors.dob && (
+                                    <div className="text-danger">
+                                      {errors.dob}
+                                    </div>
+                                  )}
                                 </div>
                               </div>
                               <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
@@ -1148,8 +1200,11 @@ const EducationLoan = () => {
                                     placeholder="Voter Id No."
                                     className="form-control"
                                   />
-                                  {errors.voter_id && <div className="text-danger">{errors.voter_id}</div>}
-
+                                  {errors.voter_id && (
+                                    <div className="text-danger">
+                                      {errors.voter_id}
+                                    </div>
+                                  )}
                                 </div>
                               </div>
 
@@ -1164,26 +1219,27 @@ const EducationLoan = () => {
                                     className="sr-only form-label mb-0"
                                     htmlFor="text"
                                   ></label>
-                                 
+
                                   <input
                                     id="three_month_salary"
                                     name="three_month_salary"
                                     type="file"
                                     onChange={(e) =>
-                                      handleFileChange(e,"three_month_salary")
+                                      handleFileChange(e, "three_month_salary")
                                     }
                                     className="form-control"
                                   />
-                                    {errors.three_month_salary && <div className="text-danger">{errors.three_month_salary}</div>}
+                                  {errors.three_month_salary && (
+                                    <div className="text-danger">
+                                      {errors.three_month_salary}
+                                    </div>
+                                  )}
                                   {formData.three_month_salary && (
                                     <p>
                                       Selected File:{" "}
                                       {formData.three_month_salary.name}
                                     </p>
-                                    
                                   )}
-                                
-
                                 </div>
                               </div>
                               <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
@@ -1199,21 +1255,18 @@ const EducationLoan = () => {
                                     id="itr"
                                     name="itr"
                                     type="file"
-                                    onChange={(e) =>
-                                      handleFileChange(e, "itr")
-                                    }
+                                    onChange={(e) => handleFileChange(e, "itr")}
                                     placeholder="Last Three Month Salary Slip."
                                     className="form-control"
                                   />
-                                  {errors.itr && <div className="text-danger">{errors.itr}</div>}
-                                    {formData.itr && (
-                                    <p>
-                                      Selected File:{" "}
-                                      {formData.itr.name}
-                                    </p>
+                                  {errors.itr && (
+                                    <div className="text-danger">
+                                      {errors.itr}
+                                    </div>
                                   )}
-                                  
-
+                                  {formData.itr && (
+                                    <p>Selected File: {formData.itr.name}</p>
+                                  )}
                                 </div>
                               </div>
                               <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
@@ -1235,15 +1288,17 @@ const EducationLoan = () => {
                                     placeholder="Last Three Month Salary Slip."
                                     className="form-control"
                                   />
-                                      {errors.income_proof && <div className="text-danger">{errors.income_proof}</div>}
-                                    {formData.income_proof && (
+                                  {errors.income_proof && (
+                                    <div className="text-danger">
+                                      {errors.income_proof}
+                                    </div>
+                                  )}
+                                  {formData.income_proof && (
                                     <p>
                                       Selected File:{" "}
                                       {formData.income_proof.name}
                                     </p>
                                   )}
-                              
-
                                 </div>
                               </div>
                               <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
@@ -1265,22 +1320,24 @@ const EducationLoan = () => {
                                     placeholder="Last Three Month Salary Slip."
                                     className="form-control"
                                   />
-                                     {errors.registration_proof && <div className="text-danger">{errors.registration_proof}</div>}
-                                   {formData.registration_proof && (
+                                  {errors.registration_proof && (
+                                    <div className="text-danger">
+                                      {errors.registration_proof}
+                                    </div>
+                                  )}
+                                  {formData.registration_proof && (
                                     <p>
                                       Selected File:{" "}
                                       {formData.registration_proof.name}
                                     </p>
                                   )}
-                               
-
                                 </div>
                               </div>
 
                               {/* Button */}
                               <div className=" col-lg-12 col-md-12 col-sm-12 col-12">
                                 <button
-                                 onClick={handleClick}
+                                  onClick={handleClick}
                                   type="submit"
                                   className="btn btn-primary mb-4"
                                 >

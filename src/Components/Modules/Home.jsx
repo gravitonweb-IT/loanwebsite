@@ -1,4 +1,4 @@
-import React, { useEffect,useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 import { tns } from "tiny-slider/src/tiny-slider";
 import "../../assets/css/theme.min.css";
@@ -9,8 +9,7 @@ import "../../assets/libs/jquery-ui/dist/themes/base/jquery-ui.min.css";
 import "../../assets/libs/magnific-popup/dist/magnific-popup.css";
 import "../../assets/libs/nouislider/dist/nouislider.min.css";
 import "../../assets/libs/tiny-slider/dist/tiny-slider.css";
-import '@fortawesome/fontawesome-free/css/all.css';
-
+import "@fortawesome/fontawesome-free/css/all.css";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -39,8 +38,17 @@ import Blogimg1 from "../../assets/images/blog/blog-img.jpg";
 import Blogimg2 from "../../assets/images/blog/blog-img-1.jpg";
 import Blogimg3 from "../../assets/images/blog/blog-img-2.jpg";
 import Ftlogoimg from "../../assets/images/brand/company-logo/ft-logo.png";
+import {
+  getBannerList,
+  getLoansList,
+  getTestimonialsList,
+} from "../../Services/com_service";
 
 const Home = () => {
+  const [bannerData, setBannerData] = useState([]);
+  const [loans, seLoans] = useState([]);
+  const [testimonials, seTestimonials] = useState([]);
+
   useEffect(() => {
     // Initialize the Tiny Slider
     const slider = tns({
@@ -50,7 +58,7 @@ const Home = () => {
       prevButton: ".prev",
       nextButton: ".next",
     });
-    document.querySelector('.tns-nav').style.display = 'none';
+    document.querySelector(".tns-nav").style.display = "none";
     // Clean up on component unmount
     return () => {
       slider.destroy();
@@ -63,36 +71,38 @@ const Home = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://127.0.0.1:8000/loan/api/normalData/', {
-          method: 'GET',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          // If you need to include any query parameters, you can append them to the URL
-          // Example: http://127.0.0.1:8000/loan/api/normalData/?param1=value1&param2=value2
-        });
+        const response = await fetch(
+          "http://127.0.0.1:8000/loan/api/normalData/",
+          {
+            method: "GET",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            // If you need to include any query parameters, you can append them to the URL
+            // Example: http://127.0.0.1:8000/loan/api/normalData/?param1=value1&param2=value2
+          }
+        );
 
         if (!response.ok) {
-          throw new Error('Network response was not ok');
+          throw new Error("Network response was not ok");
         }
 
         const data = await response.json();
         setApiData(data);
-        console.log('API Data:', data);
+        console.log("API Data:", data);
       } catch (error) {
-        console.error('Error fetching data:', error);
+        console.error("Error fetching data:", error);
       }
     };
 
     fetchData();
   }, []); // Empty dependency array ensures the effect runs once on mount
 
-useEffect(()=>{
-
-  setTimeout(() => {
-    openPopup()
-  }, 2000);
-},[])
+  useEffect(() => {
+    setTimeout(() => {
+      openPopup();
+    }, 2000);
+  }, []);
 
   const openPopup = () => {
     setShowPopup(true);
@@ -102,24 +112,57 @@ useEffect(()=>{
     setShowPopup(false);
   };
 
+  useEffect(() => {
+    getBannerData();
+    getTestimonials();
+    getLoans();
+  }, []);
 
+  async function getBannerData() {
+    const response = await getBannerList();
+    if (response.status) {
+      const data = response.data;
+      console.log(response);
+      setBannerData(data);
+    }
+  }
+
+  async function getLoans() {
+    const response = await getLoansList();
+    if (response.status) {
+      const data = response.data;
+      console.log(response);
+      seLoans(data);
+    }
+  }
+
+  async function getTestimonials() {
+    const response = await getTestimonialsList();
+    if (response.status) {
+      const data = response.data;
+      console.log(response);
+      seTestimonials(data);
+    }
+  }
+  console.log("datasdsa", testimonials);
   return (
     <>
-
-{showPopup && (
+      {showPopup && (
         <div className="">
-        <div className="popup " onClick={closePopup}>
-          <div className="popup-content container h-50" onClick={(e) => e.stopPropagation()}>
-            <span className="close" onClick={closePopup}>&times;</span>
-            <h2>API Data</h2>
-            <pre>{JSON.stringify(apiData, null, 2)}</pre>
+          <div className="popup " onClick={closePopup}>
+            <div
+              className="popup-content container h-50"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <span className="close" onClick={closePopup}>
+                &times;
+              </span>
+              <h2>API Data</h2>
+              <pre>{JSON.stringify(apiData, null, 2)}</pre>
+            </div>
           </div>
         </div>
-        </div>
       )}
- 
-     
-
 
       <main>
         <section>
@@ -135,105 +178,70 @@ useEffect(()=>{
             </ul>
 
             <div className="sliderFirst">
-              <div className="item">
-                <div className="py-20 home-banner-one">
-                  <div className="container">
-               
-                    <div className="row">
-                
-                      <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-                    
-                        <div>
-                       
-                          <h1 className="display-3 text-white fw-bold mb-3">
-                            {"                          "}Personal Loan to Suit
-                            Your Needs.{"                        "}
-                          </h1>
-                      
-                          <p className="text-white d-none d-xl-block d-lg-block d-sm-block">
-                            {"                          "}The low rate you need
-                            for the need you want! Call
-                            {"                          "}
-                            <br />
-                            {"                          "}
-                            <strong>02269620449</strong>
-                            {"                        "}
-                          </p>
-                          {"                        "}
-                      
-                          {"                      "}
+              {bannerData &&
+                bannerData.map((item) => {
+                  <div className="item" key={item._id}>
+                    <div className="py-20 home-banner-one">
+                      <div className="container">
+                        <div className="row">
+                          <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                            <div>
+                              <h1 className="display-3 text-white fw-bold mb-3">
+                                {item._id}
+                                Personal Loan to Suit Your Needs.
+                              </h1>
+                              <p className="text-white d-none d-xl-block d-lg-block d-sm-block">
+                                The low rate you need for the need you want!
+                                Call
+                                <br />
+                                <strong>02269620449</strong>
+                              </p>
+                            </div>
+                          </div>
                         </div>
-                        {"                                          "}
                       </div>
-                      {"                  "}
                     </div>
-                  </div>
-                  {"              "}
-                </div>
-              </div>
+                  </div>;
+                })}
 
               <div className="item">
-                {"              "}
                 <div className="py-20 home-banner-two">
                   <div className="container">
-                    {"                  "}
                     <div className="row">
-                      {"                    "}
                       <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-                        {"                      "}
                         <div>
-                          {"                                                "}
                           <h1 className="display-3 text-white fw-bold mb-3">
-                            {"                          "}Lowest Car Loan Rate
-                            {"                          "}
-                         
-                            {"                        "}
+                            Lowest Car Loan Rate
                           </h1>
-                          {"                        "}
                           <p className="text-white d-none d-xl-block d-lg-block d-sm-block">
-                            {"                          "}We provide an
-                            excellent service Loan company. Lorem ipsum simple
-                            dummy content goes here.{"                        "}
+                            We provide an excellent service Loan company. Lorem
+                            ipsum simple dummy content goes here.
                           </p>
-                          {"                        "}
-                      
-                          {"                      "}
                         </div>
-                        {"                                          "}
                       </div>
-                      {"                  "}
                     </div>
                   </div>
-                  {"              "}
                 </div>
               </div>
 
               <div className="item">
-                {"              "}
                 <div className="py-20 home-banner-three">
                   <div className="container">
-                    {"                  "}
                     <div className="row">
-                      {"                    "}
                       <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-                        {"                      "}
                         <div>
-                          {"                                                "}
                           <h1 className="display-3 text-white fw-bold mb-3">
-                            {"                          "}Loan with Great Rates.
-                        
-                            {"                        "}
+                            Loan with Great Rates.
                           </h1>
-                          {"                        "}
                           <p className="text-white d-none d-xl-block d-lg-block d-sm-block">
-                            {"                          "}We provide an
-                            excellent service for all types of loans in <br />
+                            We provide an excellent service for all types of
+                            loans in <br />
                             {"                          "}ahmedabad and offer
                             service, advice and direction.
                             {"                        "}
                           </p>
                           {"                        "}
-                         
+
                           {"                      "}
                         </div>
                         {"                                          "}
@@ -262,20 +270,16 @@ useEffect(()=>{
                   </div>
 
                   <div className="ms-4 lh-1">
-                    {"                  "}
-                    <h2 className="mb-0 fw-bold">3.74%</h2>
-                    {"                  "}
-                    <p className="mb-0">Home Loans</p>
+                    <h2 className="mb-0 fw-bold">
+                      {loans[0]?.loan_percentage}
+                    </h2>
+                    <p className="mb-0">{loans[0]?.title}</p>
                   </div>
-                  {"              "}
                 </div>
               </div>
-
               <div className="col-xl-3 col-lg-3 col-md-6 col-6 border-start-lg">
-                {"              "}
                 <div className="d-flex align-items-center justify-content-center py-4">
                   <div>
-                    {"                  "}
                     <img
                       alt="Borrow - Loan Company Website Template"
                       className="icon-svg-1x"
@@ -284,20 +288,16 @@ useEffect(()=>{
                   </div>
 
                   <div className="ms-4 lh-1">
-                    {"                  "}
-                    <h2 className="mb-0 fw-bold">8.96%</h2>
-                    {"                  "}
-                    <p className="mb-0">Personal Loans</p>
+                    <h2 className="mb-0 fw-bold">
+                      {loans[1]?.loan_percentage}
+                    </h2>
+                    <p className="mb-0">{loans[1]?.title}</p>
                   </div>
-                  {"              "}
                 </div>
               </div>
-
               <div className="col-xl-3 col-lg-3 col-md-6 col-6 border-start-lg">
-                {"              "}
                 <div className="d-flex align-items-center justify-content-center py-4">
                   <div>
-                    {"                  "}
                     <img
                       alt="Borrow - Loan Company Website Template"
                       className="icon-svg-1x"
@@ -306,20 +306,16 @@ useEffect(()=>{
                   </div>
 
                   <div className="ms-4 lh-1">
-                    {"                  "}
-                    <h2 className="mb-0 fw-bold">6.70%</h2>
-                    {"                  "}
-                    <p className="mb-0">Car Loans</p>
+                    <h2 className="mb-0 fw-bold">
+                      {loans[2]?.loan_percentage}
+                    </h2>
+                    <p className="mb-0">{loans[2]?.title}</p>
                   </div>
-                  {"              "}
                 </div>
               </div>
-
               <div className="col-xl-3 col-lg-3 col-md-6 col-6 border-start-lg">
-                {"              "}
                 <div className="d-flex align-items-center justify-content-center py-4">
                   <div>
-                    {"                  "}
                     <img
                       alt="Borrow - Loan Company Website Template"
                       className="icon-svg-1x"
@@ -328,46 +324,34 @@ useEffect(()=>{
                   </div>
 
                   <div className="ms-4 lh-1">
-                    {"                  "}
-                    <h2 className="mb-0 fw-bold">9.00%</h2>
-                    {"                  "}
-                    <p className="mb-0">Business Loan</p>
+                    <h2 className="mb-0 fw-bold">
+                      {loans[3]?.loan_percentage}
+                    </h2>
+                    <p className="mb-0">{loans[3]?.title}</p>
                   </div>
-                  {"              "}
                 </div>
               </div>
             </div>
-            {"        "}
           </div>
-          {"      "}
         </section>
 
         <section className="py-lg-0 py-0">
           <div className="container">
-            <div className="row">
-            
-            </div>
-        
-      
+            <div className="row"></div>
           </div>
         </section>
-
         <section className="py-lg-7 py-10 bg-white border-bottom border-top">
           <div className="container">
             <div className="row">
               <div className="offset-xl-2 col-xl-8 col-md-12 col-12">
-                {"              "}
                 <div className="mb-10 text-center">
-                  {"                                "}
                   <h1>Fast & Easy Application Process.</h1>
-
                   <p>
-                  "Effortless start: Begin your application with a quick and user-friendly online form."
-                  "Minimal paperwork: Enjoy a hassle-free experience with straightforward documentation."
+                    "Effortless start: Begin your application with a quick and
+                    user-friendly online form." "Minimal paperwork: Enjoy a
+                    hassle-free experience with straightforward documentation."
                   </p>
-                  {"              "}
                 </div>
-                {"                          "}
               </div>
             </div>
 
@@ -385,7 +369,8 @@ useEffect(()=>{
                     <h3 className="mb-2">Choose Loan Amount</h3>
                     {"                  "}
                     <p className="mb-0">
-                    Select the loan amount that suits your financial needs and goals 
+                      Select the loan amount that suits your financial needs and
+                      goals
                     </p>
                   </div>
                   {"              "}
@@ -405,7 +390,8 @@ useEffect(()=>{
                     <h3 className="mb-2">Approved Your Loan</h3>
                     {"                  "}
                     <p className="mb-0">
-                    Approval confirmed! You're now set to access the funds you require with your approved loan
+                      Approval confirmed! You're now set to access the fund
+                    approved loan
                     </p>
                   </div>
                   {"              "}
@@ -425,22 +411,17 @@ useEffect(()=>{
                     <h3 className="mb-2">Get Your Cash</h3>
                     {"                  "}
                     <p className="mb-0">
-                    Your wait is over – the funds you need are now at your fingertips. 
+                      Your wait is over – the funds you need are now at your
+                      fingertips.
                     </p>
                   </div>
                   {"              "}
                 </div>
               </div>
             </div>
-
-          
-         
           </div>
-        
         </section>
-     
         <section className="py-lg- py-8 ">
-         
           <div className="container">
             <div className="row">
               <div className="">
@@ -450,11 +431,21 @@ useEffect(()=>{
                   <h1 className="mb-4 text-center">Why People Choose Us</h1>
 
                   <p className="text-center">
-                  People choose us because we prioritize their financial well-being with a 
-                  commitment to excellence that sets us apart. Our reputation for transparency, reliability, and customer satisfaction 
-                  precedes us, instilling confidence in those seeking financial solutions. What distinguishes us is not just our competitive 
-                  offerings, but our unwavering dedication to understanding the unique needs of each individual. Our streamlined processes make the journey from application to approval seamless and stress-free, and our team is committed to providing personalized support at every step. Whether it's the trust we've earned through consistent service or the tailored assistance we provide, people choose us as their financial partner because we 
-                  go beyond transactions to build lasting relationships based on integrity and customer-centric values.
+                    People choose us because we prioritize their financial
+                    well-being with a commitment to excellence that sets us
+                    apart. Our reputation for transparency, reliability, and
+                    customer satisfaction precedes us, instilling confidence in
+                    those seeking financial solutions. What distinguishes us is
+                    not just our competitive offerings, but our unwavering
+                    dedication to understanding the unique needs of each
+                    individual. Our streamlined processes make the journey from
+                    application to approval seamless and stress-free, and our
+                    team is committed to providing personalized support at every
+                    step. Whether it's the trust we've earned through consistent
+                    service or the tailored assistance we provide, people choose
+                    us as their financial partner because we go beyond
+                    transactions to build lasting relationships based on
+                    integrity and customer-centric values.
                   </p>
                   {"              "}
                 </div>
@@ -488,11 +479,12 @@ useEffect(()=>{
                     <h3>Dedicated Specialists</h3>
                     {"                  "}
                     <p className="mb-4 ">
-                    Our dedicated specialists are the cornerstone of our commitment to providing exceptional service. Trained to understand the 
-                    diverse needs of our clients, these experts go beyond the ordinary to offer personalized solutions
+                      Our dedicated specialists are the cornerstone of our
+                      commitment to providing exceptional service. Trained to
+                      understand the diverse needs of our clients, these experts
+                      go beyond the ordinary to offer personalized solutions
                     </p>
                     {"                  "}
-             
                   </div>
                   {"              "}
                 </div>
@@ -523,11 +515,12 @@ useEffect(()=>{
                     <h3>Success Stories Rating</h3>
                     {"                  "}
                     <p className="mb-4">
-                    Our success stories are not just narratives; they are testimonials that reflect the satisfaction and triumphs of our clients. 
-                    Their success is our success, in consistently earning high ratings for our services.                
+                      Our success stories are not just narratives; they are
+                      testimonials that reflect the satisfaction and triumphs of
+                      our clients. Their success is our success, in consistently
+                      earning high ratings for our services.
                     </p>
                     {"                  "}
-                 
                   </div>
                   {"              "}
                 </div>
@@ -560,19 +553,18 @@ useEffect(()=>{
                     <h3>No front Appraisal Fees!</h3>
                     {"                  "}
                     <p className="mb-4">
-                    At our institution, we believe in transparency and fairness. That's why we proudly declare: no upfront appraisal fees! We understand that navigating
-                     financial decisions can be challenging.. 
+                      At our institution, we believe in transparency and
+                      fairness. That's why we proudly declare: no upfront
+                      appraisal fees! We understand that navigating financial
+                      decisions can be challenging..
                     </p>
                     {"                  "}
-                 
                   </div>
                   {"              "}
                 </div>
               </div>
             </div>
-         
           </div>
-      
         </section>
         {"      "}
         <section className="bg-dark py-lg-10 py-10">
@@ -584,7 +576,8 @@ useEffect(()=>{
                 <div className="mb-10 text-center">
                   {"                                "}
                   <h1 className="text-white mb-2">
-                    {"                  "}Some of our Awesome Testimonials & Success Stories
+                    {"                  "}Some of our Awesome Testimonials &
+                    Success Stories
                     {"                "}
                   </h1>
 
@@ -603,34 +596,24 @@ useEffect(()=>{
                 {"              "}
                 <div className="card border-0">
                   <div className="card-body p-5">
-                    {"                  "}
                     <p className="mb-0 fs-4 fst-italic fw-semi-bold text-dark">
-                      {"                    "}“I loved the customer service you
-                      guys provided me. That was very nice and patient with
-                      questions I had. I would really like definitely come back
-                      here”{"                  "}
+                      “I loved the customer service you guys provided me. That
+                      was very nice and patient with questions I had. I would
+                      really like definitely come back here”
                     </p>
                   </div>
-                  {"              "}
                 </div>
-                {"              "}
                 <div className="d-flex align-items-center mt-4">
-               
-
                   <div className="ms-3 lh-1">
-                    {"                  "}
                     <h4 className="mb-0 text-white">Donny J. Griffin</h4>
-                    {"                  "}
                     <span className="fs-6 text-white-50 fw-bold">
                       Personal Loan
                     </span>
                   </div>
-                  {"              "}
                 </div>
               </div>
 
               <div className="col-md-4 col-12 mb-6 mb-lg-0">
-                {"              "}
                 <div className="card border-0">
                   <div className="card-body p-5">
                     {"                  "}
@@ -645,8 +628,6 @@ useEffect(()=>{
                 </div>
                 {"              "}
                 <div className="d-flex align-items-center mt-4">
-              
-
                   <div className="ms-3 lh-1">
                     {"                  "}
                     <h4 className="mb-0 text-white">Mary O. Randle</h4>
@@ -675,8 +656,6 @@ useEffect(()=>{
                 </div>
                 {"              "}
                 <div className="d-flex align-items-center mt-4">
-                
-
                   <div className="ms-3 lh-1">
                     {"                  "}
                     <h4 className="mb-0 text-white">Lindo E. Olson</h4>
@@ -951,8 +930,12 @@ useEffect(()=>{
                   <h1 className="mb-1">We are Here to Help You</h1>
 
                   <p>
-                  We are here to help you navigate your financial journey with confidence and ease. Our dedicated team is committed to providing the support and
-                   assistance you need, whether you have questions, require guidance, or are ready to explore our services. Whatever your financial aspirations may be, we're here to help you every step of the way.
+                    We are here to help you navigate your financial journey with
+                    confidence and ease. Our dedicated team is committed to
+                    providing the support and assistance you need, whether you
+                    have questions, require guidance, or are ready to explore
+                    our services. Whatever your financial aspirations may be,
+                    we're here to help you every step of the way.
                   </p>
                   {"              "}
                 </div>
@@ -991,8 +974,8 @@ useEffect(()=>{
                     </h4>
                     {"                  "}
                     <p className="mb-4">
-                      {"                    "}Looking to loan?
-                      then apply for loan now.{"                  "}
+                      {"                    "}Looking to loan? then apply for
+                      loan now.{"                  "}
                     </p>
                     {"                  "}
                     <a
@@ -1036,7 +1019,7 @@ useEffect(()=>{
                     {"                  "}
                     <p>
                       <a className="fs-5" href="#">
-                      Info@joyoglobe.com
+                        Info@joyoglobe.com
                       </a>
                     </p>
                     {"                  "}
@@ -1100,8 +1083,6 @@ useEffect(()=>{
         </section>
         {"    "}
       </main>
-
-      
     </>
   );
 };

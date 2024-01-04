@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "./About.css";
+import { getDataContactUs } from "../../Services/com_service";
+import { toast } from "react-toastify";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -22,20 +24,20 @@ const Contact = () => {
     setErrors({ ...errors, [name]: "" }); // Clear the error when the user starts typing
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     let hasErrors = false;
 
     // Validation logic for each field
     if (formData.name === "") {
-      setErrors((prevErrors) => ({ ...prevErrors, name: "Name is " }));
+      setErrors((prevErrors) => ({ ...prevErrors, name: "Name is required" }));
       hasErrors = true;
     }
 
     if (formData.email === "") {
       setErrors((prevErrors) => ({
         ...prevErrors,
-        email: "Email is ",
+        email: "Email is required",
       }));
       hasErrors = true;
     }
@@ -43,7 +45,7 @@ const Contact = () => {
     if (formData.phone === "") {
       setErrors((prevErrors) => ({
         ...prevErrors,
-        phone: "Phone is ",
+        phone: "Phone is required",
       }));
       hasErrors = true;
     }
@@ -51,17 +53,32 @@ const Contact = () => {
     if (formData.message === "") {
       setErrors((prevErrors) => ({
         ...prevErrors,
-        message: "Message is ",
+        message: "Message is required",
       }));
       hasErrors = true;
     }
 
-    // Add more validation rules as needed for other fields
-
     if (!hasErrors) {
-      // Submit the form data
-      console.log("Form submitted:", formData);
-      // You can add your form submission logic here
+      try {
+        // Make a POST request to submit the form data
+        const response = await getDataContactUs(formData);
+
+        if (response.status) {
+          // Successful submission
+          console.log("Form submitted:", formData);
+          toast("Success", "success");
+
+          // Handle success scenario here
+        } else {
+          // Handle error cases
+          toast("error", "success");
+          console.error("Submission failed");
+          // Handle error scenario here
+        }
+      } catch (error) {
+        console.error("Error:", error);
+        // Handle network or other unforeseen errors
+      }
     }
   };
 

@@ -1,20 +1,35 @@
-import React from "react";
-import './About.css'
-import Mansonryimg1 from "../../assets/images/background/masonry-1.jpg"
-import Mansonryimg2 from "../../assets/images/background/masonry-2.jpg"
-import Mansonryimg3 from "../../assets/images/background/masonry-3.jpg"
-import Mansonryimg4 from "../../assets/images/background/masonry-4.jpg"
-import Mansonryimg5 from "../../assets/images/background/masonry-5.jpg"
-import Mansonryimg6 from "../../assets/images/background/masonry-6.jpg"
+import React, { useEffect, useState } from "react";
+import "./About.css";
+import Mansonryimg1 from "../../assets/images/background/masonry-1.jpg";
+import Mansonryimg2 from "../../assets/images/background/masonry-2.jpg";
+import Mansonryimg3 from "../../assets/images/background/masonry-3.jpg";
+import Mansonryimg4 from "../../assets/images/background/masonry-4.jpg";
+import Mansonryimg5 from "../../assets/images/background/masonry-5.jpg";
+import Mansonryimg6 from "../../assets/images/background/masonry-6.jpg";
+import { getGalleryData } from "../../Services/com_service";
 
 const Gallery = () => {
+  const [gallery, setGallery] = useState([]);
+
+  useEffect(() => {
+    getTestimonials();
+  }, []);
+
+  async function getTestimonials() {
+    const response = await getGalleryData();
+    if (response.status) {
+      const data = response.data;
+      console.log(response);
+      setGallery(data);
+    }
+  }
+
+  console.log("gallery", gallery);
+
   return (
     <>
       <main>
-        <section
-          className="pt-18 pb-10 galary-header-page"
-         
-        >
+        <section className="pt-18 pb-10 galary-header-page">
           <div className="container">
             <div className="row">
               <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
@@ -32,7 +47,6 @@ const Gallery = () => {
                     </div>
                   </div>
                 </div>
-             
               </div>
             </div>
           </div>
@@ -54,7 +68,7 @@ const Gallery = () => {
                 <div className="col-lg-4 col-md-4 col-12 mb-4">
                   <a href="#!">
                     <img
-                     src={Mansonryimg2}
+                      src={Mansonryimg2}
                       alt="..."
                       className="img-fluid rounded-3"
                     />
@@ -63,7 +77,7 @@ const Gallery = () => {
                 <div className="col-lg-4 col-md-4 col-12 mb-4">
                   <a href="#!">
                     <img
-                   src={Mansonryimg3}
+                      src={Mansonryimg3}
                       alt="..."
                       className="img-fluid rounded-3"
                     />
@@ -72,7 +86,7 @@ const Gallery = () => {
                 <div className="col-lg-4 col-md-4 col-12 mb-4">
                   <a href="#!">
                     <img
-                     src={Mansonryimg4}
+                      src={Mansonryimg4}
                       alt="..."
                       className="img-fluid rounded-3"
                     />
@@ -90,7 +104,7 @@ const Gallery = () => {
                 <div className="col-lg-4 col-md-4 col-12 mb-4">
                   <a href="#!">
                     <img
-              src={Mansonryimg6}
+                      src={Mansonryimg6}
                       alt="..."
                       className="img-fluid rounded-3"
                     />
@@ -99,7 +113,7 @@ const Gallery = () => {
                 <div className="col-lg-4 col-md-4 col-12 mb-4">
                   <a href="#!">
                     <img
-                         src={Mansonryimg2}
+                      src={Mansonryimg2}
                       alt="..."
                       className="img-fluid rounded-3"
                     />
@@ -108,7 +122,7 @@ const Gallery = () => {
                 <div className="col-lg-4 col-md-4 col-12 mb-4">
                   <a href="#!">
                     <img
-                       src={Mansonryimg6}
+                      src={Mansonryimg6}
                       alt="..."
                       className="img-fluid rounded-3"
                     />
@@ -117,7 +131,7 @@ const Gallery = () => {
                 <div className="col-lg-4 col-md-4 col-12 mb-4">
                   <a href="#!">
                     <img
-                       src={Mansonryimg1}
+                      src={Mansonryimg1}
                       alt="..."
                       className="img-fluid rounded-3"
                     />

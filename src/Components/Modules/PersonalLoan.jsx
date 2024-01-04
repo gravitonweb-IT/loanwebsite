@@ -12,19 +12,18 @@ const PersonalLoan = () => {
     name: "",
     email: "",
     phone: "",
-    password: "",
     application_no: "",
     salary: "",
     loan_type: "",
     user_loan_type: "",
-    employment_type: null,
+    spouse_name: "",
+    spouse_dob: "",
     address: "",
     business_address: "",
     bank_name: "",
     account_type: "",
     account_number: "",
-    ifsc_code: "",
-    branch_name: "",
+    remark: "",
     pan_no: "",
     adhar_no: "",
     dob: "",
@@ -33,11 +32,32 @@ const PersonalLoan = () => {
     itr: null,
     income_proof: null,
     registration_proof: null,
-    reference_name: "",
-    // need to this data add
     bank_nbfc: "",
     emi: "",
     pandding: "",
+    //Co_Application
+    co_name: "",
+    co_email: "",
+    co_phone: "",
+    co_application_no: "",
+    co_salary: "",
+    co_loan_type: "",
+    co_user_loan_type: "",
+    co_spouse_name: "",
+    co_address: "",
+    co_business_address: "",
+    co_bank_name: "",
+    co_account_type: "",
+    co_account_number: "",
+    co_remark: "",
+    co_pan_no: "",
+    co_adhar_no: "",
+    co_dob: "",
+    co_voter_id: "",
+    co_bank_nbfc: "",
+    co_emi: "",
+    co_pandding: "",
+    co_spouse_dob: "",
   });
 
   const [errors, setErrors] = useState({});
@@ -113,14 +133,14 @@ const PersonalLoan = () => {
     if (!formData.account_number) {
       newErrors.account_number = "Account Number is Requried";
     }
-    if (!formData.ifsc_code) {
-      newErrors.ifsc_code = "Ifsc_code is Requried";
+    if (!formData.spouse_dob) {
+      newErrors.spouse_dob = "Spouse DOB is Requried";
     }
-    if (!formData.branch_name) {
-      newErrors.branch_name = "Branch_name is Requried";
+    if (!formData.spouse_name) {
+      newErrors.spouse_name = "Spouse Name is Requried";
     }
-    if (!formData.salary) {
-      newErrors.salary = "Salary is Requried";
+    if (!formData.remark) {
+      newErrors.remark = "Remark is Requried";
     }
     if (!formData.bank_nbfc) {
       newErrors.bank_nbfc = "Bank_nbfc is Requried";
@@ -143,6 +163,79 @@ const PersonalLoan = () => {
     if (!formData.voter_id) {
       newErrors.voter_id = "VoterId is Requried";
     }
+
+      // Co- Application
+      if (!formData.co_name) {
+        newErrors.co_name = "Name is Requried";
+      }
+      if (!formData.co_email) {
+        newErrors.co_email = "Email is Requried";
+      }
+  
+      if (!formData.co_phone) {
+        newErrors.co_phone = "Phone is Requried";
+      }
+      if (!formData.co_application_no) {
+        newErrors.co_application_no = "Application is Requried";
+      }
+  
+      if (!formData.co_password) {
+        newErrors.co_password = "Password is Requried";
+      }
+  
+      if (!formData.co_loan_type) {
+        newErrors.co_loan_type = "Select Loan Types is Requried";
+      }
+  
+      if (!formData.co_address) {
+        newErrors.co_address = "Address is Requried";
+      }
+  
+      if (!formData.co_business_address) {
+        newErrors.co_business_address = "Business_Address is Requried";
+      }
+      if (!formData.co_bank_name) {
+        newErrors.co_bank_name = " Bank name is Requried";
+      }
+      if (!formData.co_account_type) {
+        newErrors.co_account_type = "account type  is Requried";
+      }
+      if (!formData.co_user_loan_type) {
+        newErrors.co_user_loan_type = "Loan Type  is Requried";
+      }
+      if (!formData.co_account_number) {
+        newErrors.co_account_number = "Account Number is Requried";
+      }
+      if (!formData.co_spouse_dob) {
+        newErrors.co_spouse_dob = "Spouse DOB is Requried";
+      }
+      if (!formData._cospouse_name) {
+        newErrors.co_spouse_name = "Sopouse Name is Requried";
+      }
+      if (!formData.co_remark) {
+        newErrors.co_remark = "Remark is Requried";
+      }
+      if (!formData.co_bank_nbfc) {
+        newErrors.co_bank_nbfc = "Bank_nbfc is Requried";
+      }
+      if (!formData.co_emi) {
+        newErrors.co_emi = "EMI is Requried";
+      }
+      if (!formData.co_pandding) {
+        newErrors.co_pandding = "Pending is Requried";
+      }
+      if (!formData.co_pan_no) {
+        newErrors.co_pan_no = "Pancard is Requried";
+      }
+      if (!formData.co_adhar_no) {
+        newErrors.co_adhar_no = "Adhar_no is Requried";
+      }
+      if (!formData.co_dob) {
+        newErrors.co_dob = "dob is Requried";
+      }
+      if (!formData.co_voter_id) {
+        newErrors.co_voter_id = "VoterId is Requried";
+      }
     if (!formData.three_month_salary) {
       newErrors.three_month_salary = "Files is Requried";
     }
@@ -172,19 +265,17 @@ const PersonalLoan = () => {
       name: "",
       email: "",
       phone: "",
-      password: "",
       application_no: "",
       salary: "",
       loan_type: "",
       user_loan_type: "",
-      employment_type: "",
+      spouse_name: "",
+      spouse_dob: "",
       address: "",
       business_address: "",
       bank_name: "",
       account_type: "",
       account_number: "",
-      ifsc_code: "",
-      branch_name: "",
       remark: "",
       pan_no: "",
       adhar_no: "",
@@ -198,6 +289,28 @@ const PersonalLoan = () => {
       bank_nbfc: "",
       emi: "",
       pandding: "",
+       //Co_Application
+    co_name: "",
+    co_email: "",
+    co_phone: "",
+    co_application_no: "",
+    co_salary: "",
+    co_loan_type: "",
+    co_user_loan_type: "",
+    co_spouse_name: "",
+    co_address: "",
+    co_business_address: "",
+    co_bank_name: "",
+    co_account_type: "",
+    co_account_number: "",
+    co_remark: "",
+    co_pan_no: "",
+    co_adhar_no: "",
+    co_dob: "",
+    co_voter_id: "",
+    co_bank_nbfc: "",
+    co_emi: "",
+    co_pandding: "",
     });
     if (validateForm()) {
       console.log(formData);
@@ -205,6 +318,7 @@ const PersonalLoan = () => {
       return;
     }
   };
+
 
   return (
     <>
@@ -220,7 +334,6 @@ const PersonalLoan = () => {
                     </div>
                     <div className="col-xl-4 col-md-6 col-sm-12 col-12">
                       <div className="text-md-end mt-3 mt-md-0">
-                       
                         <a href="/contact" className="btn btn-secondary">
                           How To Apply
                         </a>
@@ -314,7 +427,6 @@ const PersonalLoan = () => {
                     cintenbt mpus nec purus vitae tempor placerat leo.tesimly
                     diummy cintenbt mpus nec purus vitae tempor placerat leo.{" "}
                   </p>
-                 
                 </div>
                 <div className="section-scroll" id="section-typeloan">
                   <div className="bg-light p-lg-10 p-5">
@@ -554,752 +666,1040 @@ const PersonalLoan = () => {
                         </div>
                       </div>
                       <form>
-                        <div>
-                          {/* Text input*/}
-                          <div className="row">
-                            <h3> User Details </h3>
+                <div>
+                  {/* Text input*/}
+                  <div className="row">
+                    <h3> User Details </h3>
 
-                            <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
-                              <div className="mb-3">
-                                <label
-                                  className="sr-only form-label mb-0"
-                                  htmlFor="name"
-                                >
-                                  name
-                                </label>
-                                <input
-                                  id="name"
-                                  name="name"
-                                  type="text"
-                                  value={formData.name}
-                                  onChange={handleInputChange}
-                                  placeholder="Name"
-                                  className="form-control"
-                                />
-                                {errors.name && (
-                                  <div className="text-danger">
-                                    {errors.name}
-                                  </div>
-                                )}
-                              </div>
-                            </div>
-                            {/* Text input*/}
-                            <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
-                              <div className="mb-3">
-                                <label
-                                  className="sr-only form-label mb-0"
-                                  htmlFor="email"
-                                >
-                                  Email
-                                </label>
-                                <input
-                                  id="email"
-                                  name="email"
-                                  type="email"
-                                  value={formData.email}
-                                  onChange={handleInputChange}
-                                  placeholder="Email"
-                                  className="form-control"
-                                />
-                                {errors.email && (
-                                  <div className="text-danger">
-                                    {errors.email}
-                                  </div>
-                                )}
-                              </div>
-                            </div>
-                            {/* Text input*/}
-                            <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
-                              <div className="mb-3">
-                                <label
-                                  className="sr-only form-label mb-0"
-                                  htmlFor="phone"
-                                >
-                                  Phone
-                                </label>
-                                <input
-                                  id="phone"
-                                  name="phone"
-                                  type="text"
-                                  value={formData.phone}
-                                  onChange={handleInputChange}
-                                  placeholder="Phone"
-                                  className="form-control"
-                                />
-                                {errors.phone && (
-                                  <div className="text-danger">
-                                    {errors.phone}
-                                  </div>
-                                )}
-                              </div>
-                            </div>
-                            <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
-                              <div className="mb-3">
-                                <label
-                                  className="sr-only form-label mb-0"
-                                  htmlFor="name"
-                                ></label>
-                                <input
-                                  id="application_no"
-                                  name="application_no"
-                                  type="text"
-                                  value={formData.application_no}
-                                  onChange={handleInputChange}
-                                  placeholder="Application No"
-                                  className="form-control"
-                                />
-                                {errors.application_no && (
-                                  <div className="text-danger">
-                                    {errors.application_no}
-                                  </div>
-                                )}
-                              </div>
-                            </div>
-                            {/* Text input*/}
-                            <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
-                              <div className="mb-3">
-                                <label
-                                  className="sr-only form-label mb-0"
-                                  htmlFor="text"
-                                >
-                                  Pasword
-                                </label>
-                                <input
-                                  id="password"
-                                  name="password"
-                                  type="password"
-                                  value={formData.password}
-                                  onChange={handleInputChange}
-                                  placeholder="Password"
-                                  className="form-control"
-                                />
-                                {errors.password && (
-                                  <div className="text-danger">
-                                    {errors.password}
-                                  </div>
-                                )}
-                              </div>
-                            </div>
-                            {/* Text input*/}
-                            <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
-                              <div className="mb-3">
-                                <select
-                                  id="user_loan_type"
-                                  name="user_loan_type"
-                                  className="form-select"
-                                  value={formData.user_loan_type}
-                                  onChange={handleInputChange}
-                                >
-                                  <option value="" disabled selected>
-                                    Select a Type of Loan
-                                  </option>
-                                  <option value="home">Home Loan</option>
-                                  <option value="student">Student Loan</option>
-                                  <option value="personal">
-                                    Personal Loan
-                                  </option>
-                                  <option value="Car">Car Loan</option>
-                                  <option value="Education">
-                                    Education Loan
-                                  </option>
-                                  <option value="Gold">Gold Loan</option>
-                                  <option value="Business">
-                                    Business Loan
-                                  </option>
-                                  <option value="Refinance">
-                                    Refinance Loan
-                                  </option>
-                                </select>
-                                {errors.user_loan_type && (
-                                  <div className="text-danger">
-                                    {errors.user_loan_type}
-                                  </div>
-                                )}
-                              </div>
-                            </div>
-                            {/* <div className="py-2">
-                              <span className="mx-4">
-                                Are you Salaried or Self Employed?
-                                <span className="mx-2">
-                                  <input
-                                    type="radio"
-                                    id=""
-                                    name=""
-                                    className="m-2"
-                                    value="Yes"
-                                    checked={selectedLanguage === "Yes"}
-                                    onChange={handleLanguageChange}
-                                  />
-                                  <label htmlFor="html">Yes</label>
-                                </span>
-                                <span className="mx-2">
-                                  <input
-                                    type="radio"
-                                    id="chexk"
-                                    name=""
-                                    className="m-2"
-                                    value="No"
-                                    checked={selectedLanguage === "No"}
-                                    onChange={handleLanguageChange}
-                                  />
-                                  <label htmlFor="css">No</label>
-                                </span>
-                                <br />
-                              </span>
-                            </div> */}
+                    <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
+                      <div className="mb-3">
+                        <label
+                          className="sr-only form-label mb-0"
+                          htmlFor="name"
+                        >
+                          name
+                        </label>
+                        <input
+                          id="name"
+                          name="name"
+                          type="text"
+                          value={formData.name}
+                          onChange={handleInputChange}
+                          placeholder="Name"
+                          className="form-control"
+                        />
+                        {errors.name && (
+                          <div className="text-danger">{errors.name}</div>
+                        )}
+                      </div>
+                    </div>
+                    {/* Text input*/}
+                    <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
+                      <div className="mb-3">
+                        <label
+                          className="sr-only form-label mb-0"
+                          htmlFor="email"
+                        >
+                          Email
+                        </label>
+                        <input
+                          id="email"
+                          name="email"
+                          type="email"
+                          value={formData.email}
+                          onChange={handleInputChange}
+                          placeholder="Email"
+                          className="form-control"
+                        />
+                        {errors.email && (
+                          <div className="text-danger">{errors.email}</div>
+                        )}
+                      </div>
+                    </div>
+                    {/* Text input*/}
+                    <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
+                      <div className="mb-3">
+                        <label
+                          className="sr-only form-label mb-0"
+                          htmlFor="phone"
+                        >
+                          Phone
+                        </label>
+                        <input
+                          id="phone"
+                          name="phone"
+                          type="text"
+                          value={formData.phone}
+                          onChange={handleInputChange}
+                          placeholder="Phone"
+                          className="form-control"
+                        />
+                        {errors.phone && (
+                          <div className="text-danger">{errors.phone}</div>
+                        )}
+                      </div>
+                    </div>
 
-                            {/* Select Basic */}
+                    {/* Select Basic */}
 
-                            <div className="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12">
-                              <div className="mb-3">
-                                <label
-                                  className="sr-only form-label mb-0"
-                                  htmlFor="message"
-                                ></label>
-                                <textarea
-                                  className="form-control"
-                                  id="address"
-                                  rows={3}
-                                  name="address"
-                                  value={formData.address}
-                                  onChange={handleInputChange}
-                                  placeholder="Residence Address"
-                                  defaultValue={""}
-                                />
-                                {errors.address && (
-                                  <div className="text-danger">
-                                    {errors.address}
-                                  </div>
-                                )}
-                              </div>
-                            </div>
-                            <div className="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12">
-                              <div className="mb-3">
-                                <label
-                                  className="sr-only form-label mb-0"
-                                  htmlFor="message"
-                                ></label>
-                                <textarea
-                                  className="form-control"
-                                  id="business_address"
-                                  rows={3}
-                                  name="business_address"
-                                  value={formData.business_address}
-                                  onChange={handleInputChange}
-                                  placeholder="Business Address"
-                                  defaultValue={""}
-                                />
-                                {errors.business_address && (
-                                  <div className="text-danger">
-                                    {errors.business_address}
-                                  </div>
-                                )}
-                              </div>
-                            </div>
-
-                            <h3> Banking Details </h3>
-
-                            <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
-                              <div className="mb-3">
-                                <label
-                                  className="sr-only form-label mb-0"
-                                  htmlFor="name"
-                                >
-                                  Name of Bank
-                                </label>
-                                <input
-                                  id="bank_name"
-                                  name="bank_name"
-                                  type="text"
-                                  value={formData.bank_name}
-                                  onChange={handleInputChange}
-                                  placeholder="Name of Bank"
-                                  className="form-control"
-                                />
-                                {errors.bank_name && (
-                                  <div className="text-danger">
-                                    {errors.bank_name}
-                                  </div>
-                                )}
-                              </div>
-                            </div>
-                            {/* Text input*/}
-                            <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
-                              <div className="mb-3">
-                                <select
-                                  id="account_type"
-                                  name="account_type"
-                                  className="form-select"
-                                  value={formData.account_type}
-                                  onChange={handleInputChange}
-                                >
-                                  <option value="" disabled selected>
-                                    Types of Account
-                                  </option>
-                                  <option value="home">Current Account</option>
-                                  <option value="student">
-                                    Saving Account
-                                  </option>
-                                  <option value="personal">
-                                    Salary Account
-                                  </option>
-                                  <option value="Car">
-                                    Fixed Deposit Account
-                                  </option>
-                                  <option value="Education">NRI Account</option>
-                                  <option value="Gold">DEMAT Account</option>
-                                </select>
-                                {errors.account_type && (
-                                  <div className="text-danger">
-                                    {errors.account_type}
-                                  </div>
-                                )}
-                              </div>
-                            </div>
-                            {/* Text input*/}
-                            <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
-                              <div className="mb-3">
-                                <label
-                                  className="sr-only form-label mb-0"
-                                  htmlFor="phone"
-                                >
-                                  Account Number
-                                </label>
-                                <input
-                                  id="account_number"
-                                  name="account_number"
-                                  type="text"
-                                  value={formData.account_number}
-                                  onChange={handleInputChange}
-                                  placeholder="Account Number"
-                                  className="form-control"
-                                />
-                                {errors.account_number && (
-                                  <div className="text-danger">
-                                    {errors.account_number}
-                                  </div>
-                                )}
-                              </div>
-                            </div>
-                            <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
-                              <div className="mb-3">
-                                <label
-                                  className="sr-only form-label mb-0"
-                                  htmlFor="name"
-                                ></label>
-                                <input
-                                  id="ifsc_code"
-                                  name="ifsc_code"
-                                  type="text"
-                                  value={formData.ifsc_code}
-                                  onChange={handleInputChange}
-                                  placeholder="IFSC Code"
-                                  className="form-control"
-                                />
-                                {errors.ifsc_code && (
-                                  <div className="text-danger">
-                                    {errors.ifsc_code}
-                                  </div>
-                                )}
-                              </div>
-                            </div>
-                            {/* Text input*/}
-                            <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
-                              <div className="mb-3">
-                                <label
-                                  className="sr-only form-label mb-0"
-                                  htmlFor="text"
-                                >
-                                  Branch Name
-                                </label>
-                                <input
-                                  id="branch_name"
-                                  name="branch_name"
-                                  type="text"
-                                  value={formData.branch_name}
-                                  onChange={handleInputChange}
-                                  placeholder="Branch Name"
-                                  className="form-control"
-                                />
-                                {errors.branch_name && (
-                                  <div className="text-danger">
-                                    {errors.branch_name}
-                                  </div>
-                                )}
-                              </div>
-                            </div>
-                            {/* Text input*/}
-                            <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
-                              <div className="mb-3">
-                                <label
-                                  className="sr-only form-label mb-0"
-                                  htmlFor="text"
-                                >
-                                  Salary
-                                </label>
-                                <input
-                                  id="salary"
-                                  name="salary"
-                                  type="text"
-                                  value={formData.salary}
-                                  onChange={handleInputChange}
-                                  placeholder="Salary"
-                                  className="form-control"
-                                />
-                                {errors.salary && (
-                                  <div className="text-danger">
-                                    {errors.salary}
-                                  </div>
-                                )}
-                              </div>
-                            </div>
-
-                            <h3>Loan Repyment Details </h3>
-
-                            <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
-                              <div className="mb-3">
-                                <label
-                                  className="sr-only form-label mb-0"
-                                  htmlFor="text"
-                                >
-                                  Name Of Bank NBFC
-                                </label>
-                                <input
-                                  id="bank_nbfc"
-                                  name="bank_nbfc"
-                                  type="text"
-                                  value={formData.bank_nbfc}
-                                  onChange={handleInputChange}
-                                  placeholder="Name OfBank NBFC"
-                                  className="form-control"
-                                />
-                                {errors.bank_nbfc && (
-                                  <div className="text-danger">
-                                    {errors.bank_nbfc}
-                                  </div>
-                                )}
-                              </div>
-                            </div>
-                            <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
-                              <div className="mb-3">
-                                <select
-                                  id="loan_type"
-                                  name="loan_type"
-                                  className="form-select"
-                                  value={formData.loan_type}
-                                  onChange={handleInputChange}
-                                >
-                                  <option value="" disabled selected>
-                                    Type of Loan
-                                  </option>
-                                  <option value="home">Home Loan</option>
-                                  <option value="student">Student Loan</option>
-                                  <option value="personal">
-                                    Personal Loan
-                                  </option>
-                                  <option value="Car">Car Loan</option>
-                                  <option value="Education">
-                                    Education Loan
-                                  </option>
-                                  <option value="Gold">Gold Loan</option>
-                                  <option value="Business">
-                                    Business Loan
-                                  </option>
-                                  <option value="Refinance">
-                                    Refinance Loan
-                                  </option>
-                                </select>
-                                {errors.loan_type && (
-                                  <div className="text-danger">
-                                    {errors.loan_type}
-                                  </div>
-                                )}
-                              </div>
-                            </div>
-                            <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
-                              <div className="mb-3">
-                                <label
-                                  className="sr-only form-label mb-0"
-                                  htmlFor="text"
-                                >
-                                  EMI
-                                </label>
-                                <input
-                                  id="emi"
-                                  name="emi"
-                                  type="text"
-                                  value={formData.emi}
-                                  onChange={handleInputChange}
-                                  placeholder="EMI"
-                                  className="form-control"
-                                />
-                                {errors.emi && (
-                                  <div className="text-danger">
-                                    {errors.emi}
-                                  </div>
-                                )}
-                              </div>
-                            </div>
-                            <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
-                              <div className="mb-3">
-                                <label
-                                  className="sr-only form-label mb-0"
-                                  htmlFor="text"
-                                >
-                                  Pending
-                                </label>
-                                <input
-                                  id="pandding"
-                                  name="pandding"
-                                  type="text"
-                                  value={formData.pandding}
-                                  onChange={handleInputChange}
-                                  placeholder="Pending"
-                                  className="form-control"
-                                />
-                                {errors.pandding && (
-                                  <div className="text-danger">
-                                    {errors.pandding}
-                                  </div>
-                                )}
-                              </div>
-                            </div>
-
-                            <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
-                              <div className="mb-3">
-                                <label
-                                  className="sr-only form-label mb-0"
-                                  htmlFor="text"
-                                >
-                                  Applicant Pan No.
-                                </label>
-                                <input
-                                  id="pan_no"
-                                  name="pan_no"
-                                  type="text"
-                                  value={formData.pan_no}
-                                  onChange={handleInputChange}
-                                  placeholder="Applicant Pan No."
-                                  className="form-control"
-                                />
-                                {errors.pan_no && (
-                                  <div className="text-danger">
-                                    {errors.pan_no}
-                                  </div>
-                                )}
-                              </div>
-                            </div>
-                            <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
-                              <div className="mb-3">
-                                <label
-                                  className="sr-only form-label mb-0"
-                                  htmlFor="text"
-                                >
-                                  Adhar No.
-                                </label>
-                                <input
-                                  id="adhar_no"
-                                  name="adhar_no"
-                                  type="text"
-                                  value={formData.adhar_no}
-                                  onChange={handleInputChange}
-                                  placeholder="Adhar No."
-                                  className="form-control"
-                                />
-                                {errors.adhar_no && (
-                                  <div className="text-danger">
-                                    {errors.adhar_no}
-                                  </div>
-                                )}
-                              </div>
-                            </div>
-                            <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
-                              <div className="mb-3">
-                                <label
-                                  className="sr-only form-label mb-0"
-                                  htmlFor="text"
-                                >
-                                  Applicant DOB
-                                </label>
-                                <input
-                                  id="dob"
-                                  name="dob"
-                                  type="text"
-                                  value={formData.dob}
-                                  onChange={handleInputChange}
-                                  placeholder="Applicant DOB"
-                                  className="form-control"
-                                />
-                                {errors.dob && (
-                                  <div className="text-danger">
-                                    {errors.dob}
-                                  </div>
-                                )}
-                              </div>
-                            </div>
-                            <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
-                              <div className="mb-3">
-                                <label
-                                  className="sr-only form-label mb-0"
-                                  htmlFor="text"
-                                >
-                                  Voter Id No.
-                                </label>
-                                <input
-                                  id="voter_id"
-                                  name="voter_id"
-                                  type="text"
-                                  value={formData.voter_id}
-                                  onChange={handleInputChange}
-                                  placeholder="Voter Id No."
-                                  className="form-control"
-                                />
-                                {errors.voter_id && (
-                                  <div className="text-danger">
-                                    {errors.voter_id}
-                                  </div>
-                                )}
-                              </div>
-                            </div>
-
-                            <h3>Details of Profession </h3>
-
-                            <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
-                              <div className="mb-3">
-                                <h6 className="text-center">
-                                  Last Three Month Salary Slip
-                                </h6>
-                                <label
-                                  className="sr-only form-label mb-0"
-                                  htmlFor="text"
-                                ></label>
-
-                                <input
-                                  id="three_month_salary"
-                                  name="three_month_salary"
-                                  type="file"
-                                  onChange={(e) =>
-                                    handleFileChange(e, "three_month_salary")
-                                  }
-                                  className="form-control"
-                                />
-                                {errors.three_month_salary && (
-                                  <div className="text-danger">
-                                    {errors.three_month_salary}
-                                  </div>
-                                )}
-                                {formData.three_month_salary && (
-                                  <p>
-                                    Selected File:{" "}
-                                    {formData.three_month_salary.name}
-                                  </p>
-                                )}
-                              </div>
-                            </div>
-                            <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
-                              <div className="mb-3">
-                                <h6 className="text-center">
-                                  Last Two Year ITR
-                                </h6>
-                                <label
-                                  className="sr-only form-label mb-0"
-                                  htmlFor="text"
-                                ></label>
-                                <input
-                                  id="itr"
-                                  name="itr"
-                                  type="file"
-                                  onChange={(e) => handleFileChange(e, "itr")}
-                                  placeholder="Last Three Month Salary Slip."
-                                  className="form-control"
-                                />
-                                {errors.itr && (
-                                  <div className="text-danger">
-                                    {errors.itr}
-                                  </div>
-                                )}
-                                {formData.itr && (
-                                  <p>Selected File: {formData.itr.name}</p>
-                                )}
-                              </div>
-                            </div>
-                            <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
-                              <div className="mb-3">
-                                <h6 className="text-center">
-                                  Other Income Proof
-                                </h6>
-                                <label
-                                  className="sr-only form-label mb-0"
-                                  htmlFor="text"
-                                ></label>
-                                <input
-                                  id="income_proof"
-                                  name="income_proof"
-                                  type="file"
-                                  onChange={(e) =>
-                                    handleFileChange(e, "income_proof")
-                                  }
-                                  placeholder="Last Three Month Salary Slip."
-                                  className="form-control"
-                                />
-                                {errors.income_proof && (
-                                  <div className="text-danger">
-                                    {errors.income_proof}
-                                  </div>
-                                )}
-                                {formData.income_proof && (
-                                  <p>
-                                    Selected File: {formData.income_proof.name}
-                                  </p>
-                                )}
-                              </div>
-                            </div>
-                            <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
-                              <div className="mb-3">
-                                <h6 className="text-center">
-                                  Business Registration Proof
-                                </h6>
-                                <label
-                                  className="sr-only form-label mb-0"
-                                  htmlFor="text"
-                                ></label>
-                                <input
-                                  id="registration_proof"
-                                  name="registration_proof"
-                                  type="file"
-                                  onChange={(e) =>
-                                    handleFileChange(e, "registration_proof")
-                                  }
-                                  placeholder="Last Three Month Salary Slip."
-                                  className="form-control"
-                                />
-                                {errors.registration_proof && (
-                                  <div className="text-danger">
-                                    {errors.registration_proof}
-                                  </div>
-                                )}
-                                {formData.registration_proof && (
-                                  <p>
-                                    Selected File:{" "}
-                                    {formData.registration_proof.name}
-                                  </p>
-                                )}
-                              </div>
-                            </div>
-
-                            {/* Button */}
-                            <div className=" col-lg-12 col-md-12 col-sm-12 col-12">
-                              <button
-                                onClick={handleClick}
-                                type="submit"
-                                className="btn btn-primary mb-4"
-                              >
-                                Submit
-                              </button>
-                            </div>
+                    <div className="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12">
+                      <div className="mb-3">
+                        <label
+                          className="sr-only form-label mb-0"
+                          htmlFor="message"
+                        ></label>
+                        <textarea
+                          className="form-control"
+                          id="address"
+                          rows={3}
+                          name="address"
+                          value={formData.address}
+                          onChange={handleInputChange}
+                          placeholder="Residence Address"
+                          defaultValue={""}
+                        />
+                        {errors.address && (
+                          <div className="text-danger">{errors.address}</div>
+                        )}
+                      </div>
+                    </div>
+                    <div className="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12">
+                      <div className="mb-3">
+                        <label
+                          className="sr-only form-label mb-0"
+                          htmlFor="message"
+                        ></label>
+                        <textarea
+                          className="form-control"
+                          id="business_address"
+                          rows={3}
+                          name="business_address"
+                          value={formData.business_address}
+                          onChange={handleInputChange}
+                          placeholder="Business Address"
+                          defaultValue={""}
+                        />
+                        {errors.business_address && (
+                          <div className="text-danger">
+                            {errors.business_address}
                           </div>
-                        </div>
-                      </form>
+                        )}
+                      </div>
+                    </div>
+
+                    <h3> Banking Details </h3>
+
+                    <div className="col-xl-3 col-lg-4 col-md-12 col-sm-12 col-12">
+                      <div className="mb-3">
+                        <label
+                          className="sr-only form-label mb-0"
+                          htmlFor="name"
+                        >
+                          Name of Bank
+                        </label>
+                        <input
+                          id="bank_name"
+                          name="bank_name"
+                          type="text"
+                          value={formData.bank_name}
+                          onChange={handleInputChange}
+                          placeholder="Name of Bank"
+                          className="form-control"
+                        />
+                        {errors.bank_name && (
+                          <div className="text-danger">{errors.bank_name}</div>
+                        )}
+                      </div>
+                    </div>
+                    {/* Text input*/}
+                    <div className="col-xl-3 col-lg-4 col-md-12 col-sm-12 col-12">
+                      <div className="mb-3">
+                        <select
+                          id="account_type"
+                          name="account_type"
+                          className="form-select"
+                          value={formData.account_type}
+                          onChange={handleInputChange}
+                        >
+                          <option value="" disabled selected>
+                            Types of Account
+                          </option>
+                          <option value="home">Current Account</option>
+                          <option value="student">Saving Account</option>
+                          <option value="personal">Salary Account</option>
+                          <option value="Car">Fixed Deposit Account</option>
+                          <option value="Education">NRI Account</option>
+                          <option value="Gold">DEMAT Account</option>
+                        </select>
+                        {errors.account_type && (
+                          <div className="text-danger">
+                            {errors.account_type}
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                    {/* Text input*/}
+                    <div className="col-xl-3 col-lg-4 col-md-12 col-sm-12 col-12">
+                      <div className="mb-3">
+                        <label
+                          className="sr-only form-label mb-0"
+                          htmlFor="phone"
+                        >
+                          Account Number
+                        </label>
+                        <input
+                          id="account_number"
+                          name="account_number"
+                          type="text"
+                          value={formData.account_number}
+                          onChange={handleInputChange}
+                          placeholder="Account Number"
+                          className="form-control"
+                        />
+                        {errors.account_number && (
+                          <div className="text-danger">
+                            {errors.account_number}
+                          </div>
+                        )}
+                      </div>
+                    </div>
+
+                    {/* Text input*/}
+                    <div className="col-xl-3 col-lg-4 col-md-12 col-sm-12 col-12">
+                      <div className="mb-3">
+                        <label
+                          className="sr-only form-label mb-0"
+                          htmlFor="text"
+                        >
+                          Remarks
+                        </label>
+                        <input
+                          id="remark"
+                          name="remark"
+                          type="text"
+                          value={formData.remark}
+                          onChange={handleInputChange}
+                          placeholder="Remarks"
+                          className="form-control"
+                        />
+                        {errors.remark && (
+                          <div className="text-danger">{errors.remark}</div>
+                        )}
+                      </div>
+                    </div>
+
+                    <h3>Loan Repyment Details </h3>
+
+                    <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
+                      <div className="mb-3">
+                        <label
+                          className="sr-only form-label mb-0"
+                          htmlFor="text"
+                        >
+                          Name Of Bank NBFC
+                        </label>
+                        <input
+                          id="bank_nbfc"
+                          name="bank_nbfc"
+                          type="text"
+                          value={formData.bank_nbfc}
+                          onChange={handleInputChange}
+                          placeholder="Name OfBank NBFC"
+                          className="form-control"
+                        />
+                        {errors.bank_nbfc && (
+                          <div className="text-danger">{errors.bank_nbfc}</div>
+                        )}
+                      </div>
+                    </div>
+                    <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
+                      <div className="mb-3">
+                        <select
+                          id="loan_type"
+                          name="loan_type"
+                          className="form-select"
+                          value={formData.loan_type}
+                          onChange={handleInputChange}
+                        >
+                          <option value="" disabled selected>
+                            Type of Loan
+                          </option>
+                          <option value="home">Home Loan</option>
+                          <option value="student">Student Loan</option>
+                          <option value="personal">Personal Loan</option>
+                          <option value="Car">Car Loan</option>
+                          <option value="Education">Education Loan</option>
+                          <option value="Gold">Gold Loan</option>
+                          <option value="Business">Business Loan</option>
+                          <option value="Refinance">Refinance Loan</option>
+                        </select>
+                        {errors.loan_type && (
+                          <div className="text-danger">{errors.loan_type}</div>
+                        )}
+                      </div>
+                    </div>
+                    <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
+                      <div className="mb-3">
+                        <label
+                          className="sr-only form-label mb-0"
+                          htmlFor="text"
+                        >
+                          EMI
+                        </label>
+                        <input
+                          id="emi"
+                          name="emi"
+                          type="text"
+                          value={formData.emi}
+                          onChange={handleInputChange}
+                          placeholder="EMI"
+                          className="form-control"
+                        />
+                        {errors.emi && (
+                          <div className="text-danger">{errors.emi}</div>
+                        )}
+                      </div>
+                    </div>
+                    <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
+                      <div className="mb-3">
+                        <label
+                          className="sr-only form-label mb-0"
+                          htmlFor="text"
+                        >
+                          Pending
+                        </label>
+                        <input
+                          id="pandding"
+                          name="pandding"
+                          type="text"
+                          value={formData.pandding}
+                          onChange={handleInputChange}
+                          placeholder="Pending"
+                          className="form-control"
+                        />
+                        {errors.pandding && (
+                          <div className="text-danger">{errors.pandding}</div>
+                        )}
+                      </div>
+                    </div>
+
+                    <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
+                      <div className="mb-3">
+                        <label
+                          className="sr-only form-label mb-0"
+                          htmlFor="text"
+                        >
+                          Applicant Pan No.
+                        </label>
+                        <input
+                          id="pan_no"
+                          name="pan_no"
+                          type="text"
+                          value={formData.pan_no}
+                          onChange={handleInputChange}
+                          placeholder="Applicant Pan No."
+                          className="form-control"
+                        />
+                        {errors.pan_no && (
+                          <div className="text-danger">{errors.pan_no}</div>
+                        )}
+                      </div>
+                    </div>
+                    <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
+                      <div className="mb-3">
+                        <label
+                          className="sr-only form-label mb-0"
+                          htmlFor="text"
+                        >
+                          Adhar No.
+                        </label>
+                        <input
+                          id="adhar_no"
+                          name="adhar_no"
+                          type="text"
+                          value={formData.adhar_no}
+                          onChange={handleInputChange}
+                          placeholder="Adhar No."
+                          className="form-control"
+                        />
+                        {errors.adhar_no && (
+                          <div className="text-danger">{errors.adhar_no}</div>
+                        )}
+                      </div>
+                    </div>
+                    <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
+                      <div className="mb-3">
+                        <label
+                          className="sr-only form-label mb-0"
+                          htmlFor="text"
+                        >
+                          Applicant DOB
+                        </label>
+                        <input
+                          id="dob"
+                          name="dob"
+                          type="text"
+                          value={formData.dob}
+                          onChange={handleInputChange}
+                          placeholder="Applicant DOB"
+                          className="form-control"
+                        />
+                        {errors.dob && (
+                          <div className="text-danger">{errors.dob}</div>
+                        )}
+                      </div>
+                    </div>
+                    <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
+                      <div className="mb-3">
+                        <label
+                          className="sr-only form-label mb-0"
+                          htmlFor="text"
+                        >
+                          Voter Id No.
+                        </label>
+                        <input
+                          id="voter_id"
+                          name="voter_id"
+                          type="text"
+                          value={formData.voter_id}
+                          onChange={handleInputChange}
+                          placeholder="Voter Id No."
+                          className="form-control"
+                        />
+                        {errors.voter_id && (
+                          <div className="text-danger">{errors.voter_id}</div>
+                        )}
+                      </div>
+                    </div>
+
+                    <div className="col-xl-6 col-lg-2 col-md-12 col-sm-12 col-12">
+                      <div className="mb-3">
+                        <label
+                          className="sr-only form-label mb-0"
+                          htmlFor="text"
+                        >
+                          Spouse Name
+                        </label>
+                        <input
+                          id="spouse_name "
+                          name="spouse_name"
+                          type="text"
+                          value={formData.spouse_name}
+                          onChange={handleInputChange}
+                          placeholder="Spose Name."
+                          className="form-control"
+                        />
+                        {errors.spouse_name && (
+                          <div className="text-danger">
+                            {errors.spouse_name}
+                          </div>
+                        )}
+                      </div>
+                    </div>
+
+                    <div className="col-xl-6 col-lg-2 col-md-12 col-sm-12 col-12">
+                      <div className="mb-3">
+                        <label
+                          className="sr-only form-label mb-0"
+                          htmlFor="text"
+                        >
+                          Spouse DOB
+                        </label>
+                        <input
+                          id="spouse_dob"
+                          name="spouse_dob"
+                          type="text"
+                          value={formData.spouse_dob}
+                          onChange={handleInputChange}
+                          placeholder="Spouse DOB."
+                          className="form-control"
+                        />
+                        {errors.spouse_dob && (
+                          <div className="text-danger">{errors.spouse_dob}</div>
+                        )}
+                      </div>
+                    </div>
+
+                    <h3>Co-Applicant Details </h3>
+
+
+                    <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
+                      <div className="mb-3">
+                        <label
+                          className="sr-only form-label mb-0"
+                          htmlFor="name"
+                        >
+                          name
+                        </label>
+                        <input
+                          id="co_name"
+                          name="co_name"
+                          type="text"
+                          value={formData.co_name}
+                          onChange={handleInputChange}
+                          placeholder="Name"
+                          className="form-control"
+                        />
+                        {errors.co_name && (
+                          <div className="text-danger">{errors.co_name}</div>
+                        )}
+                      </div>
+                    </div>
+                    {/* Text input*/}
+                    <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
+                      <div className="mb-3">
+                        <label
+                          className="sr-only form-label mb-0"
+                          htmlFor="email"
+                        >
+                          Email
+                        </label>
+                        <input
+                          id="co_email"
+                          name="co_email"
+                          type="email"
+                          value={formData.co_email}
+                          onChange={handleInputChange}
+                          placeholder="Email"
+                          className="form-control"
+                        />
+                        {errors.co_email && (
+                          <div className="text-danger">{errors.co_email}</div>
+                        )}
+                      </div>
+                    </div>
+                    {/* Text input*/}
+                    <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
+                      <div className="mb-3">
+                        <label
+                          className="sr-only form-label mb-0"
+                          htmlFor="phone"
+                        >
+                          Phone
+                        </label>
+                        <input
+                          id="co_phone"
+                          name="co_phone"
+                          type="text"
+                          value={formData.co_phone}
+                          onChange={handleInputChange}
+                          placeholder="Phone"
+                          className="form-control"
+                        />
+                        {errors.co_phone && (
+                          <div className="text-danger">{errors.co_phone}</div>
+                        )}
+                      </div>
+                    </div>
+
+                    {/* Select Basic */}
+
+                    <div className="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12">
+                      <div className="mb-3">
+                        <label
+                          className="sr-only form-label mb-0"
+                          htmlFor="message"
+                        ></label>
+                        <textarea
+                          className="form-control"
+                          id="co_address"
+                          rows={3}
+                          name="co_address"
+                          value={formData.co_address}
+                          onChange={handleInputChange}
+                          placeholder="Residence Address"
+                          defaultValue={""}
+                        />
+                        {errors.co_address && (
+                          <div className="text-danger">{errors.co_address}</div>
+                        )}
+                      </div>
+                    </div>
+                    <div className="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12">
+                      <div className="mb-3">
+                        <label
+                          className="sr-only form-label mb-0"
+                          htmlFor="message"
+                        ></label>
+                        <textarea
+                          className="form-control"
+                          id="co_business_address"
+                          rows={3}
+                          name="co_business_address"
+                          value={formData.co_business_address}
+                          onChange={handleInputChange}
+                          placeholder="Business Address"
+                          defaultValue={""}
+                        />
+                        {errors.co_business_address && (
+                          <div className="text-danger">
+                            {errors.co_business_address}
+                          </div>
+                        )}
+                      </div>
+                    </div>
+
+                    <h3> Banking Details </h3>
+
+                    <div className="col-xl-3 col-lg-4 col-md-12 col-sm-12 col-12">
+                      <div className="mb-3">
+                        <label
+                          className="sr-only form-label mb-0"
+                          htmlFor="name"
+                        >
+                          Name of Bank
+                        </label>
+                        <input
+                          id="co_bank_name"
+                          name="co_bank_name"
+                          type="text"
+                          value={formData.co_bank_name}
+                          onChange={handleInputChange}
+                          placeholder="Name of Bank"
+                          className="form-control"
+                        />
+                        {errors.co_bank_name && (
+                          <div className="text-danger">{errors.co_bank_name}</div>
+                        )}
+                      </div>
+                    </div>
+                    {/* Text input*/}
+                    <div className="col-xl-3 col-lg-4 col-md-12 col-sm-12 col-12">
+                      <div className="mb-3">
+                        <select
+                          id="co_account_type"
+                          name="co_account_type"
+                          className="form-select"
+                          value={formData.co_account_type}
+                          onChange={handleInputChange}
+                        >
+                          <option value="" disabled selected>
+                            Types of Account
+                          </option>
+                          <option value="home">Current Account</option>
+                          <option value="student">Saving Account</option>
+                          <option value="personal">Salary Account</option>
+                          <option value="Car">Fixed Deposit Account</option>
+                          <option value="Education">NRI Account</option>
+                          <option value="Gold">DEMAT Account</option>
+                        </select>
+                        {errors.account_type && (
+                          <div className="text-danger">
+                            {errors.account_type}
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                    {/* Text input*/}
+                    <div className="col-xl-3 col-lg-4 col-md-12 col-sm-12 col-12">
+                      <div className="mb-3">
+                        <label
+                          className="sr-only form-label mb-0"
+                          htmlFor="phone"
+                        >
+                          Account Number
+                        </label>
+                        <input
+                          id="co_account_number"
+                          name="co_account_number"
+                          type="text"
+                          value={formData.co_account_number}
+                          onChange={handleInputChange}
+                          placeholder="Account Number"
+                          className="form-control"
+                        />
+                        {errors.co_account_number && (
+                          <div className="text-danger">
+                            {errors.co_account_number}
+                          </div>
+                        )}
+                      </div>
+                    </div>
+
+                    {/* Text input*/}
+                    <div className="col-xl-3 col-lg-4 col-md-12 col-sm-12 col-12">
+                      <div className="mb-3">
+                        <label
+                          className="sr-only form-label mb-0"
+                          htmlFor="text"
+                        >
+                          Remarks
+                        </label>
+                        <input
+                          id="co_remark"
+                          name="co_remark"
+                          type="text"
+                          value={formData.co_remark}
+                          onChange={handleInputChange}
+                          placeholder="Remarks"
+                          className="form-control"
+                        />
+                        {errors.co_remark && (
+                          <div className="text-danger">{errors.co_remark}</div>
+                        )}
+                      </div>
+                    </div>
+
+                    <h3>Loan Repyment Details </h3>
+
+                    <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
+                      <div className="mb-3">
+                        <label
+                          className="sr-only form-label mb-0"
+                          htmlFor="text"
+                        >
+                          Name Of Bank NBFC
+                        </label>
+                        <input
+                          id="co_bank_nbfc"
+                          name="co_bank_nbfc"
+                          type="text"
+                          value={formData.co_bank_nbfc}
+                          onChange={handleInputChange}
+                          placeholder="Name OfBank NBFC"
+                          className="form-control"
+                        />
+                        {errors.co_bank_nbfc && (
+                          <div className="text-danger">{errors.co_bank_nbfc}</div>
+                        )}
+                      </div>
+                    </div>
+                    <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
+                      <div className="mb-3">
+                        <select
+                          id="co_loan_type"
+                          name="co_loan_type"
+                          className="form-select"
+                          value={formData.co_loan_type}
+                          onChange={handleInputChange}
+                        >
+                          <option value="" disabled selected>
+                            Type of Loan
+                          </option>
+                          <option value="home">Home Loan</option>
+                          <option value="student">Student Loan</option>
+                          <option value="personal">Personal Loan</option>
+                          <option value="Car">Car Loan</option>
+                          <option value="Education">Education Loan</option>
+                          <option value="Gold">Gold Loan</option>
+                          <option value="Business">Business Loan</option>
+                          <option value="Refinance">Refinance Loan</option>
+                        </select>
+                        {errors.co_loan_type && (
+                          <div className="text-danger">{errors.co_loan_type}</div>
+                        )}
+                      </div>
+                    </div>
+                    <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
+                      <div className="mb-3">
+                        <label
+                          className="sr-only form-label mb-0"
+                          htmlFor="text"
+                        >
+                          EMI
+                        </label>
+                        <input
+                          id="co_emi"
+                          name="co_emi"
+                          type="text"
+                          value={formData.co_emi}
+                          onChange={handleInputChange}
+                          placeholder="EMI"
+                          className="form-control"
+                        />
+                        {errors.co_emi && (
+                          <div className="text-danger">{errors.co_emi}</div>
+                        )}
+                      </div>
+                    </div>
+                    <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
+                      <div className="mb-3">
+                        <label
+                          className="sr-only form-label mb-0"
+                          htmlFor="text"
+                        >
+                          Pending
+                        </label>
+                        <input
+                          id="co_pandding"
+                          name="co_pandding"
+                          type="text"
+                          value={formData.co_pandding}
+                          onChange={handleInputChange}
+                          placeholder="Pending"
+                          className="form-control"
+                        />
+                        {errors.co_pandding && (
+                          <div className="text-danger">{errors.co_pandding}</div>
+                        )}
+                      </div>
+                    </div>
+
+                    <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
+                      <div className="mb-3">
+                        <label
+                          className="sr-only form-label mb-0"
+                          htmlFor="text"
+                        >
+                          Applicant Pan No.
+                        </label>
+                        <input
+                          id="co_pan_no"
+                          name="co_pan_no"
+                          type="text"
+                          value={formData.co_pan_no}
+                          onChange={handleInputChange}
+                          placeholder="Applicant Pan No."
+                          className="form-control"
+                        />
+                        {errors.co_pan_no && (
+                          <div className="text-danger">{errors.co_pan_no}</div>
+                        )}
+                      </div>
+                    </div>
+                    <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
+                      <div className="mb-3">
+                        <label
+                          className="sr-only form-label mb-0"
+                          htmlFor="text"
+                        >
+                          Adhar No.
+                        </label>
+                        <input
+                          id="co_adhar_no"
+                          name="co_adhar_no"
+                          type="text"
+                          value={formData.co_adhar_no}
+                          onChange={handleInputChange}
+                          placeholder="Adhar No."
+                          className="form-control"
+                        />
+                        {errors.co_adhar_no && (
+                          <div className="text-danger">{errors.co_adhar_no}</div>
+                        )}
+                      </div>
+                    </div>
+                    <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
+                      <div className="mb-3">
+                        <label
+                          className="sr-only form-label mb-0"
+                          htmlFor="text"
+                        >
+                          Applicant DOB
+                        </label>
+                        <input
+                          id="co_dob"
+                          name="co_dob"
+                          type="text"
+                          value={formData.co_dob}
+                          onChange={handleInputChange}
+                          placeholder="Applicant DOB"
+                          className="form-control"
+                        />
+                        {errors.co_dob && (
+                          <div className="text-danger">{errors.co_dob}</div>
+                        )}
+                      </div>
+                    </div>
+                    <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
+                      <div className="mb-3">
+                        <label
+                          className="sr-only form-label mb-0"
+                          htmlFor="text"
+                        >
+                          Voter Id No.
+                        </label>
+                        <input
+                          id="co_voter_id"
+                          name="co_voter_id"
+                          type="text"
+                          value={formData.co_voter_id}
+                          onChange={handleInputChange}
+                          placeholder="Voter Id No."
+                          className="form-control"
+                        />
+                        {errors.co_voter_id && (
+                          <div className="text-danger">{errors.co_voter_id}</div>
+                        )}
+                      </div>
+                    </div>
+
+                    <div className="col-xl-6 col-lg-2 col-md-12 col-sm-12 col-12">
+                      <div className="mb-3">
+                        <label
+                          className="sr-only form-label mb-0"
+                          htmlFor="text"
+                        >
+                          Spouse Name
+                        </label>
+                        <input
+                          id="co_spouse_name "
+                          name="co_spouse_name"
+                          type="text"
+                          value={formData.co_spouse_name}
+                          onChange={handleInputChange}
+                          placeholder="Spouse Name."
+                          className="form-control"
+                        />
+                        {errors.co_spouse_name && (
+                          <div className="text-danger">
+                            {errors.co_spouse_name}
+                          </div>
+                        )}
+                      </div>
+                    </div>
+
+                    <div className="col-xl-6 col-lg-2 col-md-12 col-sm-12 col-12">
+                      <div className="mb-3">
+                        <label
+                          className="sr-only form-label mb-0"
+                          htmlFor="text"
+                        >
+                          Spouse DOB
+                        </label>
+                        <input
+                          id="co_spouse_dob"
+                          name="co_spouse_dob"
+                          type="text"
+                          value={formData.co_spouse_dob}
+                          onChange={handleInputChange}
+                          placeholder="Spouse DOB."
+                          className="form-control"
+                        />
+                        {errors.co_spouse_dob && (
+                          <div className="text-danger">{errors.co_spouse_dob}</div>
+                        )}
+                      </div>
+                    </div>
+
+                    <h3>Details of Profession </h3>
+
+                    <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
+                      <div className="mb-3">
+                        <h6 className="text-center">
+                          Last Three Month Salary Slip
+                        </h6>
+                        <label
+                          className="sr-only form-label mb-0"
+                          htmlFor="text"
+                        ></label>
+
+                        <input
+                          id="three_month_salary"
+                          name="three_month_salary"
+                          type="file"
+                          onChange={(e) =>
+                            handleFileChange(e, "three_month_salary")
+                          }
+                          className="form-control"
+                        />
+                        {errors.three_month_salary && (
+                          <div className="text-danger">
+                            {errors.three_month_salary}
+                          </div>
+                        )}
+                        {formData.three_month_salary && (
+                          <p>
+                            Selected File: {formData.three_month_salary.name}
+                          </p>
+                        )}
+                      </div>
+                    </div>
+                    <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
+                      <div className="mb-3">
+                        <h6 className="text-center">Last Two Year ITR</h6>
+                        <label
+                          className="sr-only form-label mb-0"
+                          htmlFor="text"
+                        ></label>
+                        <input
+                          id="itr"
+                          name="itr"
+                          type="file"
+                          onChange={(e) => handleFileChange(e, "itr")}
+                          placeholder="Last Three Month Salary Slip."
+                          className="form-control"
+                        />
+                        {errors.itr && (
+                          <div className="text-danger">{errors.itr}</div>
+                        )}
+                        {formData.itr && (
+                          <p>Selected File: {formData.itr.name}</p>
+                        )}
+                      </div>
+                    </div>
+                    <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
+                      <div className="mb-3">
+                        <h6 className="text-center">Other Income Proof</h6>
+                        <label
+                          className="sr-only form-label mb-0"
+                          htmlFor="text"
+                        ></label>
+                        <input
+                          id="income_proof"
+                          name="income_proof"
+                          type="file"
+                          onChange={(e) => handleFileChange(e, "income_proof")}
+                          placeholder="Last Three Month Salary Slip."
+                          className="form-control"
+                        />
+                        {errors.income_proof && (
+                          <div className="text-danger">
+                            {errors.income_proof}
+                          </div>
+                        )}
+                        {formData.income_proof && (
+                          <p>Selected File: {formData.income_proof.name}</p>
+                        )}
+                      </div>
+                    </div>
+                    <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
+                      <div className="mb-3">
+                        <h6 className="text-center">
+                          Business Registration Proof
+                        </h6>
+                        <label
+                          className="sr-only form-label mb-0"
+                          htmlFor="text"
+                        ></label>
+                        <input
+                          id="registration_proof"
+                          name="registration_proof"
+                          type="file"
+                          onChange={(e) =>
+                            handleFileChange(e, "registration_proof")
+                          }
+                          placeholder="Last Three Month Salary Slip."
+                          className="form-control"
+                        />
+                        {errors.registration_proof && (
+                          <div className="text-danger">
+                            {errors.registration_proof}
+                          </div>
+                        )}
+                        {formData.registration_proof && (
+                          <p>
+                            Selected File: {formData.registration_proof.name}
+                          </p>
+                        )}
+                      </div>
+                    </div>
+
+                    {/* Button */}
+
+
+                    <div className=" col-lg-12 col-md-12 col-sm-12 col-12">
+                      <button
+                        onClick={handleClick}
+                        type="submit"
+                        className="btn btn-primary mb-4"
+                      >
+                        Submit
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </form>
                     </div>
                   </div>
                 </section>

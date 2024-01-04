@@ -1,13 +1,13 @@
 import React, { useState } from "react";
-import "./About.jsx";
-import Featureimg from "../../assets/images/background/lp-feature-img.jpg";
-
-const CarLone = () => {
-  const [selectedLanguage, setSelectedLanguage] = useState("");
-
-  const handleLanguageChange = (event) => {
-    setSelectedLanguage(event.target.value);
-  };
+import './About.css'
+ import Blogimg1 from "../../assets/images/blog/blog-img.jpg";
+ import Blogimg2 from "../../assets/images/blog/blog-img-1.jpg";
+ import Blogimg3 from "../../assets/images/blog/blog-img-2.jpg";
+ import Blogimg4 from "../../assets/images/blog/blog-img-3.jpg";
+ import Blogimg5 from "../../assets/images/blog/blog-img-4.jpg";
+ import Blogimg6  from  "../../assets/images/blog/blog-img-5.jpg";
+const ProfessionalLoan = () => {
+ 
 
   const [formData, setFormData] = useState({
     name: "",
@@ -36,6 +36,7 @@ const CarLone = () => {
     bank_nbfc: "",
     emi: "",
     pandding: "",
+    degree:'',
     //Co_Application
     co_name: "",
     co_email: "",
@@ -249,7 +250,9 @@ const CarLone = () => {
     if (!formData.registration_proof) {
       newErrors.registration_proof = "Regproof is Requried";
     }
-
+    if (!formData.degree) {
+      newErrors.degree = "Degree is Requried";
+    }
     // Add more validations for other fields
 
     setErrors(newErrors);
@@ -320,91 +323,174 @@ const CarLone = () => {
     }
   };
 
+  
+
   return (
     <>
       <main>
-        <section className="py-12 Car-header-page">
+        <section
+          className="pt-18 pb-10 Loan-header-page" >
           <div className="container">
-            <div className="row d-flex align-items-center">
-              <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 mb-4 mb-lg-0">
-                <div>
-                  <h2 className="display-2 text-white fw-bold mb-3">
-                    Instant Approval For Car Loan{" "}
-                  </h2>
-                  <p className="text-white mb-5 lead ">
-                    Lowest Interest Rates - Calculate EMI - Check Eligibility -
-                    Instant e-Approval - Special Offers{" "}
-                  </p>
+            <div className="row">
+              <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <div className="bg-white p-5 rounded-top-md">
+                  <div className="row align-items-center">
+                    <div className="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12">
+                      <h1 className="mb-0"> Professional Loan </h1>
+                    </div>
+                    <div className="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+                      <div className="text-md-end mt-3 mt-md-0">
+                        <a href="/contact" className="btn btn-primary">
+                          How To Apply
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            
+              </div>
+            </div>
+            
+          </div>
+        </section>
+        {/* content start */}
+
+        <div className="container">
+            <div className="row">
+              <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <div className="mt-n6 bg-white mb-2 rounded-3 shadow-sm position-relative">
+                  <div
+                    className="section-scroll p-lg-10 p-5"
+                    id="section-about"
+                  >
+                 <h2>About Professional Loan</h2>
+                    <p className="lead">
+                      To make your Professional Loan journey a smooth sail, in this
+                      article we will help you to know eligibility criteria,
+                      rates of interest, process, necessary documents,
+                      comparison and transfer for lowest rates.
+                    </p>
+                    <div className="row">
+                      <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                        <p>
+                          Vestibulum accumsan, diam vitae consectetur sodales
+                          sapien felis vestibulum purus,ac porttitor elit dolor
+                          venenatis Cras condimacilicelerisque orci nisi sit
+                          amet neque.{" "}
+                        </p>
+                      </div>
+                      <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                        <p>
+                          Pellentesque mollis, diam a viverra luctus, nisl dui
+                          vehicula erat, id congue ante justo nec ante. Nullam
+                          vehicula tellus sit amet dolor tristique, faucibus
+                          rhoncus velit elementum.
+                        </p>
+                      </div>
+                    </div>
+                    <hr />
+                    <p>
+                      Phasellus tellus nunc, sollicitudin quist amet it simple
+                      nequeuisque lacus mi tesimly diummy cintenbt mpus nec
+                      purus vitae tempor placerat leo.{" "}
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </section>
-        <section className="py-lg-4 py-10">
+        <section className="py-lg-8 py-8 bg-white border-bottom border-top ">
           <div className="container">
-            <div className="row d-flex align-items-center">
-              <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 mb-4 mb-lg-0">
-                <img
-                  src={Featureimg}
-                  alt="Borrow - Loan Company Responsive Website Templates"
-                  className="img-fluid rounded-3 w-100 mb-2 mb-lg-0"
-                />
-              </div>
-              <div className="offset-lg-1 col-lg-5 col-md-12">
-                <div className="mb-8">
-                  <h1>Reason to Choose us</h1>
-                  <p>
-                    We offer award-winning, low-rate car loans with no ongoing
-                    fees,saving our customers thousands of dollars.
+            <div className="row">
+              <div className="offset-xl-2 col-xl-8  col-md-12 col-12">
+                <div className="mb-10 text-center">
+                  {/* section title start*/}
+                  <h1>Features of Professional Loan</h1>
+                  <p className="lead">
+                    Here is an exhaustive list of all the fees and charges to be
+                    paid for the Professional Loan.
                   </p>
                 </div>
-                <div className="d-flex mb-3">
-                  <div className="fs-3 text-primary">
-                    <i className="bi bi-check-circle-fill" />
-                  </div>
-                  <div className="ms-3">
-                    <h3>Easy Loan Approvals</h3>
-                    <p>
-                      {" "}
-                      Cum sociis natoque penatibus et nis dis parturgnis dis
-                      parturient montes, nascetur ridiculus mus.
-                    </p>
-                  </div>
-                </div>
-                <div className="d-flex mb-3">
-                  <div className="fs-3 text-primary">
-                    <i className="bi bi-check-circle-fill" />
-                  </div>
-                  <div className="ms-3">
-                    <h3>Lowest Possible Prices</h3>
-                    <p>
-                      Lorem ipsum dolor sit amet, consng elit estibulum
-                      scelerisque imperdiet lacus.
-                    </p>
-                  </div>
-                </div>
-                <div className="d-flex mb-3">
-                  <div className="fs-3 text-primary">
-                    <i className="bi bi-check-circle-fill" />
-                  </div>
-                  <div className="ms-3">
-                    <h3>Hassle free</h3>
-                    <p>
-                      Suspendisse potenti. Nunc ut tellus iquam imperdiet lacus
-                      s aliquam felis tincidunt.{" "}
-                    </p>
+                {/* /.section title start*/}
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+                <div className="card text-center mb-4 mb-lg-0">
+                  <div className="card-body py-6">
+                    <div className="icon-shape icon-xxxl bg-light-primary rounded-circle mb-4 ">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width={32}
+                        height={32}
+                        fill="currentColor"
+                        className="bi bi-lightning-fill text-dark-primary"
+                        viewBox="0 0 16 16"
+                      >
+                        <path d="M5.52.359A.5.5 0 0 1 6 0h4a.5.5 0 0 1 .474.658L8.694 6H12.5a.5.5 0 0 1 .395.807l-7 9a.5.5 0 0 1-.873-.454L6.823 9.5H3.5a.5.5 0 0 1-.48-.641l2.5-8.5z" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h3>Quick approval </h3>
+                      <p className="mb-0">
+                        Duis massa duilobortis vitae elitet acurusa felis sed
+                        arcu sagittis commodo.
+                      </p>
+                    </div>
                   </div>
                 </div>
-                <div className="d-flex">
-                  <div className="fs-3 text-primary">
-                    <i className="bi bi-check-circle-fill" />
+              </div>
+              <div className="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+                <div className="card text-center mb-4 mb-lg-0">
+                  <div className="card-body py-6">
+                    <div className="icon-shape icon-xxxl bg-light-success rounded-circle mb-4 ">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width={32}
+                        height={32}
+                        fill="currentColor"
+                        className="bi bi-arrow-clockwise text-dark-success"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"
+                        />
+                        <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h3>Easy Loan Repayment</h3>
+                      <p className="mb-0">
+                        Pelle ntesque habitant morbi trist ique ses uada fa mes
+                        lacust lorem ispum feugiat metus.{" "}
+                      </p>
+                    </div>
                   </div>
-                  <div className="ms-3">
-                    <h3>Secure Loan Processs</h3>
-                    <p>
-                      Nulla ornare bibendum laoreteger tempus alesuada libero
-                      imperdie fermentum senc a ornare risus.
-                    </p>
+                </div>
+              </div>
+              <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
+                <div className="card text-center mb-4 mb-lg-0">
+                  <div className="card-body py-6">
+                    <div className="icon-shape icon-xxxl bg-light-warning rounded-circle mb-4 ">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width={32}
+                        height={32}
+                        fill="currentColor"
+                        className="bi bi-cup-straw text-dark-warning"
+                        viewBox="0 0 16 16"
+                      >
+                        <path d="M13.902.334a.5.5 0 0 1-.28.65l-2.254.902-.4 1.927c.376.095.715.215.972.367.228.135.56.396.56.82 0 .046-.004.09-.011.132l-.962 9.068a1.28 1.28 0 0 1-.524.93c-.488.34-1.494.87-3.01.87-1.516 0-2.522-.53-3.01-.87a1.28 1.28 0 0 1-.524-.93L3.51 5.132A.78.78 0 0 1 3.5 5c0-.424.332-.685.56-.82.262-.154.607-.276.99-.372C5.824 3.614 6.867 3.5 8 3.5c.712 0 1.389.045 1.985.127l.464-2.215a.5.5 0 0 1 .303-.356l2.5-1a.5.5 0 0 1 .65.278zM9.768 4.607A13.991 13.991 0 0 0 8 4.5c-1.076 0-2.033.11-2.707.278A3.284 3.284 0 0 0 4.645 5c.146.073.362.15.648.222C5.967 5.39 6.924 5.5 8 5.5c.571 0 1.109-.03 1.588-.085l.18-.808zm.292 1.756C9.445 6.45 8.742 6.5 8 6.5c-1.133 0-2.176-.114-2.95-.308a5.514 5.514 0 0 1-.435-.127l.838 8.03c.013.121.06.186.102.215.357.249 1.168.69 2.438.69 1.27 0 2.081-.441 2.438-.69.042-.029.09-.094.102-.215l.852-8.03a5.517 5.517 0 0 1-.435.127 8.88 8.88 0 0 1-.89.17zM4.467 4.884s.003.002.005.006l-.005-.006zm7.066 0-.005.006c.002-.004.005-.006.005-.006zM11.354 5a3.174 3.174 0 0 0-.604-.21l-.099.445.055-.013c.286-.072.502-.149.648-.222z" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h3>100% Transparency</h3>
+                      <p className="mb-0">
+                        Aenean quis neque ac enim ferm entum feugiaro masla ndit
+                        tellus non cursus varius.
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -412,101 +498,6 @@ const CarLone = () => {
           </div>
         </section>
 
-        <section className="py-lg-4 py-10 bg-white border-bottom border-top">
-          <div className="container">
-            <div className="row">
-              <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                <div className="mb-8 text-center">
-                  <h1>Customer Reviews</h1>
-                  <p>
-                    Porttitor aceseu efficitur non lorem acese its do
-                    remmselorem ipusm dolro sit commodo.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="row">
-              <div className="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
-                {/* testimonial simple start */}
-                <div className="mb-8 mb-lg-0 text-center">
-                  <p className="lead fst-italic mb-0">
-                    “I loved the customer service you guys provided me. That was
-                    very nice and patient with questions I had. I would really
-                    like definitely come back here”
-                  </p>
-                  <div>
-                    <div className="mt-5">
-                      <i className="bi bi-star-fill text-warning" />{" "}
-                      <i className="bi bi-star-fill text-warning" />{" "}
-                      <i className="bi bi-star-fill text-warning" />{" "}
-                      <i className="bi bi-star-fill text-warning" />{" "}
-                      <i
-                        className="bi bi-star-half text-warning
-"
-                      />
-                    </div>
-                    <span className="text-dark fw-semi-bold fs-5">
-                      Donny J. Griffin (baroda)
-                    </span>
-                  </div>
-                </div>
-              </div>
-              {/* /.testimonial simple start */}
-              <div className="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
-                {/* testimonial simple start */}
-                <div className="mb-8 mb-lg-0 text-center">
-                  <p className="lead fst-italic mb-0">
-                    “We came out of their offices very happy with their service.
-                    They treated us very kind. Definite will come back. The
-                    waiting time was very appropriate.”
-                  </p>
-                  <div>
-                    <div className="mt-5">
-                      <i className="bi bi-star-fill text-warning" />{" "}
-                      <i className="bi bi-star-fill text-warning" />{" "}
-                      <i className="bi bi-star-fill text-warning" />{" "}
-                      <i className="bi bi-star-fill text-warning" />{" "}
-                      <i
-                        className="bi bi-star-fill text-warning
-"
-                      />
-                    </div>
-                    <span className="text-dark fw-semi-bold fs-5">
-                      Ryder Lothian (A’bad)
-                    </span>
-                  </div>
-                </div>
-              </div>
-              {/* /.testimonial simple start */}
-              <div className="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
-                {/* testimonial simple start */}
-                <div className="mb-8 mb-lg-0 text-center">
-                  <p className="lead fst-italic mb-0">
-                    "I want to express my appreciation for assistance that you
-                    provided over several years to help resolve a difficult
-                    financial situation when my debt was out of control”
-                  </p>
-                  <div>
-                    <div className="mt-5">
-                      <i className="bi bi-star-fill text-warning" />{" "}
-                      <i className="bi bi-star-fill text-warning" />{" "}
-                      <i className="bi bi-star-fill text-warning" />{" "}
-                      <i className="bi bi-star text-warning" />{" "}
-                      <i
-                        className="bi bi-star text-warning
-"
-                      />
-                    </div>
-                    <span className="text-dark fw-semi-bold fs-5">
-                      Brock Lambrick (surat)
-                    </span>
-                  </div>
-                </div>
-              </div>
-              {/* /.testimonial simple start */}
-            </div>
-          </div>
-        </section>
         <section className="" id="section-apply">
           <div className="container">
             <div className="my-2">
@@ -515,18 +506,19 @@ const CarLone = () => {
                   {/* section title start*/}
                   <h1 className="mb-0">Loan Application Form </h1>
                   <p>
-                    Now apply for a Car Loan online, All you need to do is
+                    Now apply for a Professional Loan online, All you need to do is
                     provide your details below application form.
                   </p>
                 </div>
               </div>
+           
               <form>
                 <div>
                   {/* Text input*/}
                   <div className="row">
                     <h3> User Details </h3>
 
-                    <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
+                    <div className="col-xl-3 col-lg-4 col-md-12 col-sm-12 col-12">
                       <div className="mb-3">
                         <label
                           className="sr-only form-label mb-0"
@@ -549,7 +541,7 @@ const CarLone = () => {
                       </div>
                     </div>
                     {/* Text input*/}
-                    <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
+                    <div className="col-xl-3 col-lg-4 col-md-12 col-sm-12 col-12">
                       <div className="mb-3">
                         <label
                           className="sr-only form-label mb-0"
@@ -572,7 +564,7 @@ const CarLone = () => {
                       </div>
                     </div>
                     {/* Text input*/}
-                    <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
+                    <div className="col-xl-3 col-lg-4 col-md-12 col-sm-12 col-12">
                       <div className="mb-3">
                         <label
                           className="sr-only form-label mb-0"
@@ -594,7 +586,42 @@ const CarLone = () => {
                         )}
                       </div>
                     </div>
+                    <div className="col-xl-3 col-lg-4 col-md-12 col-sm-12 col-12">
+                      <div className="mb-3">
+                        <select
+                          id="degree"
+                          name="degree"
+                          className="form-select"
+                          value={formData.degree}
+                          onChange={handleInputChange}
+                        >
+                          <option value="" disabled selected>
+                            Types of Degree
+                          </option>
+                          <option value="dpharma">D.PHARMA </option>
+                          <option value="bpharma"> B.PHARMA</option>
+                          <option value="mpharma"> M.PHARMA</option>
+                          <option value="dhms">DHMS  </option>
+                          <option value="bhms">BHMS </option>
+                          <option value="bams">BASM </option>
+                          <option value="mbbs">MBBS </option>
+                          <option value="barch">B.ARCH </option>
+                          <option value="march">M.ARCH </option>
+                          <option value="bds">BDS </option>
+                          <option value="md">MD </option>
+                          <option value="ms">MS </option>
+                          <option value="charteredaccountant">CA  (Chartered Accountant)</option>
+                          <option value="companysecretary">CS (Company Secretary) </option>
 
+
+                        </select>
+                        {errors.degree && (
+                          <div className="text-danger">
+                            {errors.degree}
+                          </div>
+                        )}
+                      </div>
+                    </div>
                     {/* Select Basic */}
 
                     <div className="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12">
@@ -1555,132 +1582,15 @@ const CarLone = () => {
                   </div>
                 </div>
               </form>
+           
             </div>
           </div>
         </section>
 
 
-
-        <section className="py-lg-16 py-10">
-          <div className="container">
-            <div className="row">
-              <div className="offset-xl-3 col-xl-6 offset-md-2 col-md-8 offset-md-2 col-md-8 col-sm-12 col-12">
-                <div className="mb-8 text-center">
-                  {/* section title*/}
-                  <h1 className="mb-2">We are Here to Help You</h1>
-                  <p className="lead">
-                    Nulla rutrum tellus vel mauris tristique gravida in
-                    vulputate lla dictum porttitor diam
-                    mattis.
-                  </p>
-                </div>
-                {/* /.section title*/}
-              </div>
-            </div>
-            <div className="row">
-              <div className="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
-                <div className="card mb-3 mb-lg-0 text-center smooth-shadow-sm">
-                  <div className="card-body p-9 ">
-                    <div className="mb-6">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width={32}
-                        height={32}
-                        fill="currentColor"
-                        className="bi bi-calendar3 text-primary"
-                        viewBox="0 0 16 16"
-                      >
-                        <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z" />
-                        <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
-                      </svg>
-                    </div>
-                    <h4 className="mb-3 text-uppercase fw-semi-bold">
-                      Apply For Loan
-                    </h4>
-                    <p className="mb-4">
-                      Looking to buy a car Loan then apply for loan
-                      now.
-                    </p>
-                    <a
-                      href="#!"
-                      className="btn-link border-bottom border-primary border-2 fw-bold fs-5"
-                    >
-                      Get Appointment
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div className="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
-                <div className="card mb-3 mb-lg-0 text-center smooth-shadow-sm">
-                  <div className="card-body p-9">
-                    <div className="mb-6">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width={32}
-                        height={32}
-                        fill="currentColor"
-                        className="bi bi-telephone text-primary"
-                        viewBox="0 0 16 16"
-                      >
-                        <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
-                      </svg>
-                    </div>
-                    <h4 className="mb-3 text-uppercase fw-semi-bold">
-                      Call us at{" "}
-                    </h4>
-                    <h1 className="fs-3 mb-0">800-123-456 / 789 </h1>
-                    <p>
-                      {" "}
-                      <a href="#" className="fs-5">
-                        lnfo@loanadvisor.com
-                      </a>
-                    </p>
-                    <a
-                      href="#!"
-                      className="btn-link border-bottom border-primary border-2 fw-bold fs-5"
-                    >
-                      Contact us
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div className="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
-                <div className="card mb-3 mb-lg-0  text-center smooth-shadow-sm">
-                  <div className="card-body p-9">
-                    <div className="mb-6">
-                      {" "}
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width={32}
-                        height={32}
-                        fill="currentColor"
-                        className="bi bi-people text-primary"
-                        viewBox="0 0 16 16"
-                      >
-                        <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816zM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275zM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z" />
-                      </svg>
-                    </div>
-                    <h4 className="mb-3 text-uppercase fw-semi-bold">
-                      Talk to Advisor
-                    </h4>
-                    <p className="mb-4">
-                      Need to loan advise? Talk to our Loan advisors.
-                    </p>
-                    <a
-                      href="#!"
-                      className="btn-link border-bottom border-primary border-2 fw-bold fs-5"
-                    >
-                      Meet The Advisor
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
       </main>
     </>
   );
 };
 
-export default CarLone;
+export default ProfessionalLoan;
