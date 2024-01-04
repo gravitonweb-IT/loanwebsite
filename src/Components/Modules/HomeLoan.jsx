@@ -33,19 +33,24 @@ const HomeLoan = () => {
     draggable: true,
     progress: undefined,
   };
+
+
   const [dividendArr, setDividendArr] = useState([
     {
       bank_name: "",
       account_type: "",
       account_number: "",
       fast_remark: " ",
+      co_bank_name: "",
+      co_account_type: "",
+      co_account_number: "",
+      co_remark: "",
     },
   ]);
 
   const [textDisabld, setTextDisabld] = useState(false); // Assuming textDisabld is a state variable
   const [buyPrice, setBuyPrice] = useState(0); // Assuming buyPrice is a state variable
-  const [error, setError] = useState(false); // Assuming error is a state variable
-  const [errorMessage, setErrorMessage] = useState({}); // Assuming errorMessage is a state variable
+// Assuming errorMessage is a state variable
 
   const handleAdd = () => {
     setDividendArr([
@@ -55,6 +60,10 @@ const HomeLoan = () => {
         account_type: "",
         account_number: "",
         fast_remark: " ",
+        co_bank_name: "",
+        co_account_type: "",
+        co_account_number: "",
+        co_remark: "",
       },
     ]);
   };
@@ -1384,18 +1393,21 @@ const HomeLoan = () => {
                                   {" "}
                                 { index === 0 && "Banking Details" }   <span>  <button
                                           type="button"
-                                          className={`add-button btn btn-primary ${
+                                          className={`add-button  ${
                                             (index === 0 && "d-none") || ""
                                           }`}
                                           onClick={() => handleRemove(index)}
+                                          style={{ backgroundColor: 'blue' }}
+                                          
                                         >
                                           -
                                         </button>
                                         {index === 0 && (
                                           <button
                                             type="button"
-                                            className="btn btn-primary"
+                                            className=""
                                             onClick={handleAdd}
+                                            style={{ backgroundColor: 'blue' }}
                                           >
                                             +
                                           </button>
@@ -1552,7 +1564,9 @@ const HomeLoan = () => {
                               <h3>
                                 Loan Repyment Details{" "}
                                 <span>
-                                  <button className="pl-10">+</button>
+                                <button style={{ backgroundColor: 'blue' }} className="pl-10">+</button>
+
+
                                 </span>{" "}
                               </h3>
 
@@ -2045,7 +2059,7 @@ const HomeLoan = () => {
                               <h3>
                                 Co-Applicant Details{" "}
                                 <span>
-                                  <button className="pl-10">+</button>
+                                <button style={{ backgroundColor: 'blue' }} className="pl-10">+</button>
                                 </span>
                               </h3>
 
@@ -2221,131 +2235,185 @@ const HomeLoan = () => {
                                 </div>
                               </div>
 
-                              <h3>
-                                {" "}
-                                Banking Details{" "}
-                                <span>
-                                  <button className="pl-10">+</button>
-                                </span>
-                              </h3>
+                              {dividendArr.map((item, index) => (
+                              <div className="" key={index}>
 
-                              <div className="col-xl-3 col-lg-4 col-md-12 col-sm-12 col-12">
-                                <div className="mb-3">
-                                  <label
-                                    className="sr-only form-label mb-0"
-                                    htmlFor="name"
-                                  >
-                                    Name of Bank
-                                  </label>
-                                  <input
-                                    id="co_bank_name"
-                                    name="co_bank_name"
-                                    type="text"
-                                    value={formData.co_bank_name}
-                                    onChange={handleInputChange}
-                                    placeholder="Name of Bank"
-                                    className="form-control"
-                                  />
-                                  {errors.co_bank_name && (
-                                    <div className="text-danger">
-                                      {errors.co_bank_name}
+                                <h3>
+                                  {" "}
+                                { index === 0 && "Banking Details" }   <span>  <button
+                                          type="button"
+                                          className={`add-button  ${
+                                            (index === 0 && "d-none") || ""
+                                          }`}
+                                          onClick={() => handleRemove(index)}
+                                          style={{ backgroundColor: 'blue' }}
+                                          
+                                        >
+                                          -
+                                        </button>
+                                        {index === 0 && (
+                                          <button
+                                            type="button"
+                                            className=""
+                                            onClick={handleAdd}
+                                            style={{ backgroundColor: 'blue' }}
+                                          >
+                                            +
+                                          </button>
+                                        )}</span>
+                                        
+                                </h3>
+                               
+                                  <div className="row" >
+                                    
+                                    <div className="col-xl-3 col-lg-4 col-md-12 col-sm-12 col-12">
+                                      <div className="mb-3">
+                                        <label
+                                          className="sr-only form-label mb-0"
+                                          htmlFor="name"
+                                        >
+                                          Name of Bank
+                                        </label>
+                                        <input
+                                          // id={`dividend_stock_amount${index}`}
+                                          id={`co_bank_name ${index}`}
+                                          name="co_bank_name"
+                                          type="text"
+                                          disabled={textDisabld}
+                                          value={item.co_bank_name}
+                                          onChange={(e) =>
+                                            handleInputChange1(e, index)
+                                          }
+                                          // onChange={handleInputChange}
+                                          placeholder="Name of Bank"
+                                          className="form-control"
+                                          required
+                                        />
+                                        {errors.co_bank_name && (
+                                          <div className="text-danger">
+                                            {errors.co_bank_name}
+                                          </div>
+                                        )}
+                                      
+                                      </div>
                                     </div>
-                                  )}
-                                </div>
-                              </div>
 
-                              <div className="col-xl-3 col-lg-4 col-md-12 col-sm-12 col-12">
-                                <div className="mb-3">
-                                  <select
-                                    id="co_account_type"
-                                    name="co_account_type"
-                                    className="form-select"
-                                    value={formData.co_account_type}
-                                    onChange={handleInputChange}
-                                  >
-                                    <option value="" disabled selected>
-                                      Types of Account
-                                    </option>
-                                    <option value="home">
-                                      Current Account
-                                    </option>
-                                    <option value="student">
-                                      Saving Account
-                                    </option>
-                                    <option value="personal">
-                                      Salary Account
-                                    </option>
-                                    <option value="Car">
-                                      Fixed Deposit Account
-                                    </option>
-                                    <option value="Education">
-                                      NRI Account
-                                    </option>
-                                    <option value="Gold">DEMAT Account</option>
-                                  </select>
-                                  {errors.co_account_type && (
-                                    <div className="text-danger">
-                                      {errors.co_account_type}
+                                    <div className="col-xl-3 col-lg-4 col-md-12 col-sm-12 col-12">
+                                      <div className="mb-3">
+                                        <select
+                                           id={`co_account_type ${index}`}
+                                          // id="account_type"
+                                          name="co_account_type"
+                                          className="form-select"
+                                          disabled={textDisabld}
+                                          value={item.co_account_type}
+                                          onChange={(e) =>
+                                            handleInputChange1(e, index)
+                                          }
+                                          // onChange={handleInputChange}
+                                        >
+                                          <option value="" disabled selected>
+                                            Types of Account
+                                          </option>
+                                          <option value="home">
+                                            Current Account
+                                          </option>
+                                          <option value="student">
+                                            Saving Account
+                                          </option>
+                                          <option value="personal">
+                                            Salary Account
+                                          </option>
+                                          <option value="Car">
+                                            Fixed Deposit Account
+                                          </option>
+                                          <option value="Education">
+                                            NRI Account
+                                          </option>
+                                          <option value="Gold">
+                                            DEMAT Account
+                                          </option>
+                                        </select>
+                                        {errors.co_account_type && (
+                                          <div className="text-danger">
+                                            {errors.co_account_type}
+                                          </div>
+                                        )}
+                                      </div>
                                     </div>
-                                  )}
-                                </div>
-                              </div>
 
-                              <div className="col-xl-3 col-lg-4 col-md-12 col-sm-12 col-12">
-                                <div className="mb-3">
-                                  <label
-                                    className="sr-only form-label mb-0"
-                                    htmlFor="phone"
-                                  >
-                                    Account Number
-                                  </label>
-                                  <input
-                                    id="co_account_number"
-                                    name="co_account_number"
-                                    type="text"
-                                    value={formData.co_account_number}
-                                    onChange={handleInputChange}
-                                    placeholder="Account Number"
-                                    className="form-control"
-                                  />
-                                  {errors.co_account_number && (
-                                    <div className="text-danger">
-                                      {errors.co_account_number}
+                                    <div className="col-xl-3 col-lg-4 col-md-12 col-sm-12 col-12">
+                                      <div className="mb-3">
+                                        <label
+                                          className="sr-only form-label mb-0"
+                                          htmlFor="phone"
+                                        >
+                                          Account Number
+                                        </label>
+                                        <input
+                                          id={`co_account_number ${index}`}
+                                          // id="account_number"
+                                          name="co_account_number"
+                                          disabled={textDisabld}
+                                          type="text"
+                                          value={item.co_account_number}
+                                          onChange={(e) =>
+                                            handleInputChange1(e, index)
+                                          }
+                                          // onChange={handleInputChange}
+                                          placeholder="Account Number"
+                                          className="form-control"
+                                        />
+                                        {errors.co_account_number && (
+                                          <div className="text-danger">
+                                            {errors.co_account_number}
+                                          </div>
+                                        )}
+                                      </div>
                                     </div>
-                                  )}
-                                </div>
-                              </div>
 
-                              <div className="col-xl-3 col-lg-4 col-md-12 col-sm-12 col-12">
-                                <div className="mb-3">
-                                  <label
-                                    className="sr-only form-label mb-0"
-                                    htmlFor="name"
-                                  >
-                                    Remark
-                                  </label>
-                                  <input
-                                    id="co_remark"
-                                    name="co_remark"
-                                    type="text"
-                                    value={formData.co_remark}
-                                    onChange={handleInputChange}
-                                    placeholder="Remark"
-                                    className="form-control"
-                                  />
-                                  {errors.co_remark && (
-                                    <div className="text-danger">
-                                      {errors.co_remark}
+                                    <div className="col-xl-3 col-lg-4 col-md-12 col-sm-12 col-12">
+                                      <div className="mb-3">
+                                        <label
+                                          className="sr-only form-label mb-0"
+                                          htmlFor="text"
+                                        >
+                                          Remarks
+                                        </label>
+                                        <input
+                                         id={`co_remark ${index}`}
+                                          // id="fast_remark"
+                                          name="co_remark"
+                                          disabled={textDisabld}
+                                          type="text"
+                                          value={item.co_remark}
+                                          onChange={(e) =>
+                                            handleInputChange1(e, index)
+                                          }
+                                          // onChange={handleInputChange}
+                                          placeholder="Remarks holder"
+                                          className="form-control"
+                                        />
+                                        {errors.co_remark && (
+                                          <div className="text-danger">
+                                            {errors.co_remark}
+                                          </div>
+                                        )}
+                                      </div>
+                                   
                                     </div>
-                                  )}
-                                </div>
+
+                                  
+                                  </div>
+                              
                               </div>
+                                ))}
 
                               <h3>
                                 {" "}
                                 Loan Repyment Details
                                 <span>
-                                  <button className="pl-10">+</button>
+                                <button style={{ backgroundColor: 'blue' }} className="pl-10">+</button>
                                 </span>{" "}
                               </h3>
 
@@ -2843,7 +2911,7 @@ const HomeLoan = () => {
                               <h3>
                                 Guarantor Details{" "}
                                 <span>
-                                  <button className="pl-10">+</button>
+                                <button style={{ backgroundColor: 'blue' }} className="pl-10">+</button>
                                 </span>
                               </h3>
 
@@ -3023,7 +3091,7 @@ const HomeLoan = () => {
                                 {" "}
                                 Banking Details{" "}
                                 <span>
-                                  <button className="pl-10">+</button>
+                                <button style={{ backgroundColor: 'blue' }} className="pl-10">+</button>
                                 </span>{" "}
                               </h3>
 
@@ -3143,7 +3211,7 @@ const HomeLoan = () => {
                                 {" "}
                                 Loan Repyment Details{" "}
                                 <span>
-                                  <button className="pl-10">+</button>
+                                <button style={{ backgroundColor: 'blue' }} className="pl-10">+</button>
                                 </span>
                               </h3>
 

@@ -3,6 +3,50 @@ import "./About.css";
 
 const PersonalLoan = () => {
   const [selectedLanguage, setSelectedLanguage] = useState("");
+  const [dividendArr, setDividendArr] = useState([
+    {
+      bank_name: "",
+      account_type: "",
+      account_number: "",
+      fast_remark: " ",
+    },
+  ]);
+
+  const [textDisabld, setTextDisabld] = useState(false); // Assuming textDisabld is a state variable
+  const [buyPrice, setBuyPrice] = useState(0); // Assuming buyPrice is a state variable
+  const [error, setError] = useState(false); // Assuming error is a state variable
+  const [errorMessage, setErrorMessage] = useState({}); // Assuming errorMessage is a state variable
+
+  const handleAdd = () => {
+    setDividendArr([
+      ...dividendArr,
+      {
+        bank_name: "",
+        account_type: "",
+        account_number: "",
+        fast_remark: " ",
+      },
+    ]);
+  };
+  const handleInputChange1 = (e, index) => {
+    const { name, value } = e.target;
+    console.log("value", e.target.value);
+    const list = [...dividendArr];
+    list[index][name] = value;
+    setDividendArr(list);
+  };
+
+  const handleRemove = (index) => {
+    if (dividendArr.length > 0) {
+      const listArr = [...dividendArr];
+      listArr.splice(index, 1);
+      setDividendArr(listArr);
+    }
+  };
+
+
+
+
 
   const handleLanguageChange = (event) => {
     setSelectedLanguage(event.target.value);
@@ -318,6 +362,7 @@ const PersonalLoan = () => {
       return;
     }
   };
+
 
 
   return (
@@ -787,108 +832,186 @@ const PersonalLoan = () => {
                       </div>
                     </div>
 
-                    <h3> Banking Details </h3>
+                    {dividendArr.map((item, index) => (
+                              <div className="" key={index}>
 
-                    <div className="col-xl-3 col-lg-4 col-md-12 col-sm-12 col-12">
-                      <div className="mb-3">
-                        <label
-                          className="sr-only form-label mb-0"
-                          htmlFor="name"
-                        >
-                          Name of Bank
-                        </label>
-                        <input
-                          id="bank_name"
-                          name="bank_name"
-                          type="text"
-                          value={formData.bank_name}
-                          onChange={handleInputChange}
-                          placeholder="Name of Bank"
-                          className="form-control"
-                        />
-                        {errors.bank_name && (
-                          <div className="text-danger">{errors.bank_name}</div>
-                        )}
-                      </div>
-                    </div>
-                    {/* Text input*/}
-                    <div className="col-xl-3 col-lg-4 col-md-12 col-sm-12 col-12">
-                      <div className="mb-3">
-                        <select
-                          id="account_type"
-                          name="account_type"
-                          className="form-select"
-                          value={formData.account_type}
-                          onChange={handleInputChange}
-                        >
-                          <option value="" disabled selected>
-                            Types of Account
-                          </option>
-                          <option value="home">Current Account</option>
-                          <option value="student">Saving Account</option>
-                          <option value="personal">Salary Account</option>
-                          <option value="Car">Fixed Deposit Account</option>
-                          <option value="Education">NRI Account</option>
-                          <option value="Gold">DEMAT Account</option>
-                        </select>
-                        {errors.account_type && (
-                          <div className="text-danger">
-                            {errors.account_type}
-                          </div>
-                        )}
-                      </div>
-                    </div>
-                    {/* Text input*/}
-                    <div className="col-xl-3 col-lg-4 col-md-12 col-sm-12 col-12">
-                      <div className="mb-3">
-                        <label
-                          className="sr-only form-label mb-0"
-                          htmlFor="phone"
-                        >
-                          Account Number
-                        </label>
-                        <input
-                          id="account_number"
-                          name="account_number"
-                          type="text"
-                          value={formData.account_number}
-                          onChange={handleInputChange}
-                          placeholder="Account Number"
-                          className="form-control"
-                        />
-                        {errors.account_number && (
-                          <div className="text-danger">
-                            {errors.account_number}
-                          </div>
-                        )}
-                      </div>
-                    </div>
+                                <h3>
+                                  {" "}
+                                { index === 0 && "Banking Details" }   <span>  <button
+                                          type="button"
+                                          className={`add-button  ${
+                                            (index === 0 && "d-none") || ""
+                                          }`}
+                                          onClick={() => handleRemove(index)}
+                                          style={{ backgroundColor: 'blue' }}
+                                          
+                                        >
+                                          -
+                                        </button>
+                                        {index === 0 && (
+                                          <button
+                                            type="button"
+                                            className=""
+                                            onClick={handleAdd}
+                                            style={{ backgroundColor: 'blue' }}
+                                          >
+                                            +
+                                          </button>
+                                        )}</span>
+                                        
+                                </h3>
+                               
+                                  <div className="row" >
+                                    
+                                    <div className="col-xl-3 col-lg-4 col-md-12 col-sm-12 col-12">
+                                      <div className="mb-3">
+                                        <label
+                                          className="sr-only form-label mb-0"
+                                          htmlFor="name"
+                                        >
+                                          Name of Bank
+                                        </label>
+                                        <input
+                                          // id={`dividend_stock_amount${index}`}
+                                          id={`bank_name ${index}`}
+                                          name="bank_name"
+                                          type="text"
+                                          disabled={textDisabld}
+                                          value={item.bank_name}
+                                          onChange={(e) =>
+                                            handleInputChange1(e, index)
+                                          }
+                                          // onChange={handleInputChange}
+                                          placeholder="Name of Bank"
+                                          className="form-control"
+                                          required
+                                        />
+                                        {errors.bank_name && (
+                                          <div className="text-danger">
+                                            {errors.bank_name}
+                                          </div>
+                                        )}
+                                      
+                                      </div>
+                                    </div>
 
-                    {/* Text input*/}
-                    <div className="col-xl-3 col-lg-4 col-md-12 col-sm-12 col-12">
-                      <div className="mb-3">
-                        <label
-                          className="sr-only form-label mb-0"
-                          htmlFor="text"
-                        >
-                          Remarks
-                        </label>
-                        <input
-                          id="remark"
-                          name="remark"
-                          type="text"
-                          value={formData.remark}
-                          onChange={handleInputChange}
-                          placeholder="Remarks"
-                          className="form-control"
-                        />
-                        {errors.remark && (
-                          <div className="text-danger">{errors.remark}</div>
-                        )}
-                      </div>
-                    </div>
+                                    <div className="col-xl-3 col-lg-4 col-md-12 col-sm-12 col-12">
+                                      <div className="mb-3">
+                                        <select
+                                           id={`account_type ${index}`}
+                                          // id="account_type"
+                                          name="account_type"
+                                          className="form-select"
+                                          disabled={textDisabld}
+                                          value={item.account_type}
+                                          onChange={(e) =>
+                                            handleInputChange1(e, index)
+                                          }
+                                          // onChange={handleInputChange}
+                                        >
+                                          <option value="" disabled selected>
+                                            Types of Account
+                                          </option>
+                                          <option value="home">
+                                            Current Account
+                                          </option>
+                                          <option value="student">
+                                            Saving Account
+                                          </option>
+                                          <option value="personal">
+                                            Salary Account
+                                          </option>
+                                          <option value="Car">
+                                            Fixed Deposit Account
+                                          </option>
+                                          <option value="Education">
+                                            NRI Account
+                                          </option>
+                                          <option value="Gold">
+                                            DEMAT Account
+                                          </option>
+                                        </select>
+                                        {errors.account_type && (
+                                          <div className="text-danger">
+                                            {errors.account_type}
+                                          </div>
+                                        )}
+                                      </div>
+                                    </div>
 
-                    <h3>Loan Repyment Details </h3>
+                                    <div className="col-xl-3 col-lg-4 col-md-12 col-sm-12 col-12">
+                                      <div className="mb-3">
+                                        <label
+                                          className="sr-only form-label mb-0"
+                                          htmlFor="phone"
+                                        >
+                                          Account Number
+                                        </label>
+                                        <input
+                                          id={`account_number ${index}`}
+                                          // id="account_number"
+                                          name="account_number"
+                                          disabled={textDisabld}
+                                          type="text"
+                                          value={item.account_number}
+                                          onChange={(e) =>
+                                            handleInputChange1(e, index)
+                                          }
+                                          // onChange={handleInputChange}
+                                          placeholder="Account Number"
+                                          className="form-control"
+                                        />
+                                        {errors.account_number && (
+                                          <div className="text-danger">
+                                            {errors.account_number}
+                                          </div>
+                                        )}
+                                      </div>
+                                    </div>
+
+                                    <div className="col-xl-3 col-lg-4 col-md-12 col-sm-12 col-12">
+                                      <div className="mb-3">
+                                        <label
+                                          className="sr-only form-label mb-0"
+                                          htmlFor="text"
+                                        >
+                                          Remarks
+                                        </label>
+                                        <input
+                                         id={`fast_remark ${index}`}
+                                          // id="fast_remark"
+                                          name="fast_remark"
+                                          disabled={textDisabld}
+                                          type="text"
+                                          value={item.fast_remark}
+                                          onChange={(e) =>
+                                            handleInputChange1(e, index)
+                                          }
+                                          // onChange={handleInputChange}
+                                          placeholder="Remarks holder"
+                                          className="form-control"
+                                        />
+                                        {errors.fast_remark && (
+                                          <div className="text-danger">
+                                            {errors.fast_remark}
+                                          </div>
+                                        )}
+                                      </div>
+                                   
+                                    </div>
+
+                                  
+                                  </div>
+                              
+                              </div>
+                                ))}
+
+                    <h3>Loan Repyment Details 
+
+                    <span>
+                                <button style={{ backgroundColor: 'blue' }} className="m-2">+</button>
+                                </span>
+                    </h3>
 
                     <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
                       <div className="mb-3">
@@ -1239,7 +1362,12 @@ const PersonalLoan = () => {
                       </div>
                     </div>
 
-                    <h3> Banking Details </h3>
+                    <h3> Banking Details
+                    <span>
+                                <button style={{ backgroundColor: 'blue' }} className="m-2">+</button>
+                                </span>
+                      
+                       </h3>
 
                     <div className="col-xl-3 col-lg-4 col-md-12 col-sm-12 col-12">
                       <div className="mb-3">
@@ -1340,7 +1468,13 @@ const PersonalLoan = () => {
                       </div>
                     </div>
 
-                    <h3>Loan Repyment Details </h3>
+                    <h3>Loan Repyment Details 
+
+                    <span>
+                                <button style={{ backgroundColor: 'blue' }} className="m-2">+</button>
+                                </span>
+
+                    </h3>
 
                     <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
                       <div className="mb-3">

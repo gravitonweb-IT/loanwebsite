@@ -877,7 +877,13 @@ const StudentLoan = () => {
                       </div>
                     </div>
 
-                    <h3> Details Of Trustee</h3>
+                    <h3> Details Of Trustee
+                    <span>
+                                <button style={{ backgroundColor: 'blue' }} className="m-2">+</button>
+                                </span>
+
+
+                    </h3>
 
                     <div className="col-xl-3 col-lg-4 col-md-12 col-sm-12 col-12">
                       <div className="mb-3">
@@ -977,7 +983,13 @@ const StudentLoan = () => {
                       </div>
                     </div>
                     
-                    <h3> Details Of Intitutes </h3>
+                    <h3> Details Of Intitutes 
+                    <span>
+                                <button style={{ backgroundColor: 'blue' }} className="m-2">+</button>
+                                </span>
+
+
+                    </h3>
 
                     <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
                       <div className="mb-3">
@@ -1097,7 +1109,12 @@ const StudentLoan = () => {
                     </div>
                     {/* Text input*/}
                   
-                    <h3>Details Of Student </h3>
+                    <h3>Details Of Student 
+                    <span>
+                                <button style={{ backgroundColor: 'blue' }} className="m-2">+</button>
+                                </span>
+
+                    </h3>
 
                     <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
                       <div className="mb-3">
@@ -1218,7 +1235,11 @@ const StudentLoan = () => {
                     {/* Text input*/}
 
 
-                    <h3> Details Of Student in Hostel </h3>
+                    <h3> Details Of Student in Hostel
+                    <span>
+                                <button style={{ backgroundColor: 'blue' }} className="m-2">+</button>
+                                </span>
+                       </h3>
 
                     <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
                       <div className="mb-3">

@@ -1080,7 +1080,11 @@ const BusinessLoan = () => {
                                 </span>
                               </div>
 
-                              <h3> Banking Details </h3>
+                              <h3> Banking Details 
+                              <span>
+                                <button style={{ backgroundColor: 'blue' }} className="m-2">+</button>
+                                </span>
+                              </h3>
 
                               <div className="col-xl-3 col-lg-4 col-md-12 col-sm-12 col-12">
                                 <div className="mb-3">
@@ -1194,7 +1198,12 @@ const BusinessLoan = () => {
                                 </div>
                               </div>
 
-                              <h3>Loan Repyment Details </h3>
+                              <h3>Loan Repyment Details 
+
+                              <span>
+                                <button style={{ backgroundColor: 'blue' }} className="m-2">+</button>
+                                </span>
+                              </h3>
 
                               <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
                                 <div className="mb-3">
@@ -1680,7 +1689,11 @@ const BusinessLoan = () => {
                                 </div>
                               </div>
 
-                              <h3>Co-Applicant Details</h3>
+                              <h3>Co-Applicant Details
+                              <span>
+                                <button style={{ backgroundColor: 'blue' }} className="m-2">+</button>
+                                </span>
+                              </h3>
 
                               <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
                                 <div className="mb-3">
@@ -1854,7 +1867,11 @@ const BusinessLoan = () => {
                                 </div>
                               </div>
 
-                              <h3> Banking Details </h3>
+                              <h3> Banking Details
+                              <span>
+                                <button style={{ backgroundColor: 'blue' }} className="m-2">+</button>
+                                </span>
+                                 </h3>
 
                               <div className="col-xl-3 col-lg-4 col-md-12 col-sm-12 col-12">
                                 <div className="mb-3">
@@ -1968,7 +1985,11 @@ const BusinessLoan = () => {
                                 </div>
                               </div>
 
-                              <h3> Loan Repyment Details </h3>
+                              <h3> Loan Repyment Details 
+                              <span>
+                                <button style={{ backgroundColor: 'blue' }} className="m-2">+</button>
+                                </span>
+                              </h3>
 
                               <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
                                 <div className="mb-3">
@@ -2461,7 +2482,11 @@ const BusinessLoan = () => {
                                 </div>
                               </div>
 
-                              <h3>Guarantor Details</h3>
+                              <h3>Guarantor Details
+                              <span>
+                                <button style={{ backgroundColor: 'blue' }} className="m-2">+</button>
+                                </span>
+                              </h3>
 
 
 
@@ -2637,7 +2662,10 @@ const BusinessLoan = () => {
                                 </div>
                               </div>
 
-                              <h3> Banking Details </h3>
+                              <h3> Banking Details
+                              <span>
+                                <button style={{ backgroundColor: 'blue' }} className="m-2">+</button>
+                                </span> </h3>
 
                               <div className="col-xl-3 col-lg-4 col-md-12 col-sm-12 col-12">
                                 <div className="mb-3">
@@ -2751,7 +2779,11 @@ const BusinessLoan = () => {
                                 </div>
                               </div>
 
-                              <h3> Loan Repyment Details </h3>
+                              <h3> Loan Repyment Details 
+                              <span>
+                                <button style={{ backgroundColor: 'blue' }} className="m-2">+</button>
+                                </span>
+                              </h3>
 
                               <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
                                 <div className="mb-3">
