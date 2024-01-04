@@ -1421,7 +1421,181 @@ const ProfessionalLoan = () => {
                         )}
                       </div>
                     </div>                    
-                            {/* Bank Details  */}
+                            
+
+      {/* Bank Details start  */}
+                    {dividendArr2.map((item, index) => (
+                              <div className="" key={index}>
+
+                                <h3>
+                                  {" "}
+                                { index === 0 && "Banking Details" }   <span>  <button
+                                          type="button"
+                                          className={`add-button  ${
+                                            (index === 0 && "d-none") || ""
+                                          }`}
+                                          onClick={() => handleRemove2(index)}
+                                          style={{ backgroundColor: 'blue' }}
+                                          
+                                        >
+                                          -
+                                        </button>
+                                        {index === 0 && (
+                                          <button
+                                            type="button"
+                                            className=""
+                                            onClick={handleAdd2}
+                                            style={{ backgroundColor: 'blue' }}
+                                          >
+                                            +
+                                          </button>
+                                        )}</span>
+                                        
+                                </h3>
+                               
+                                  <div className="row" >
+                                    
+                                    <div className="col-xl-3 col-lg-4 col-md-12 col-sm-12 col-12">
+                                      <div className="mb-3">
+                                        <label
+                                          className="sr-only form-label mb-0"
+                                          htmlFor="name"
+                                        >
+                                          Name of Bank
+                                        </label>
+                                        <input
+                                          // id={`dividend_stock_amount${index}`}
+                                          id={`co_bank_name ${index}`}
+                                          name="co_bank_name"
+                                          type="text"
+                                          disabled={textDisabld}
+                                          value={item.co_bank_name}
+                                          onChange={(e) =>
+                                            handleInputChange3(e, index)
+                                          }
+                                          // onChange={handleInputChange}
+                                          placeholder="Name of Bank"
+                                          className="form-control"
+                                          required
+                                        />
+                                        {/* {errors.bank_name && (
+                                          <div className="text-danger">
+                                            {errors.bank_name}
+                                          </div>
+                                        )} */}
+                                      
+                                      </div>
+                                    </div>
+
+                                    <div className="col-xl-3 col-lg-4 col-md-12 col-sm-12 col-12">
+                                      <div className="mb-3">
+                                        <select
+                                           id={`co_account_type ${index}`}
+                                          // id="account_type"
+                                          name="co_account_type"
+                                          className="form-select"
+                                          disabled={textDisabld}
+                                          value={item.co_account_type}
+                                          onChange={(e) =>
+                                            handleInputChange3(e, index)
+                                          }
+                                          // onChange={handleInputChange}
+                                        >
+                                          <option value="" disabled selected>
+                                            Types of Account
+                                          </option>
+                                          <option value="home">
+                                            Current Account
+                                          </option>
+                                          <option value="student">
+                                            Saving Account
+                                          </option>
+                                          <option value="personal">
+                                            Salary Account
+                                          </option>
+                                          <option value="Car">
+                                            Fixed Deposit Account
+                                          </option>
+                                          <option value="Education">
+                                            NRI Account
+                                          </option>
+                                          <option value="Gold">
+                                            DEMAT Account
+                                          </option>
+                                        </select>
+                                        {/* {errors.account_type && (
+                                          <div className="text-danger">
+                                            {errors.account_type}
+                                          </div>
+                                        )} */}
+                                      </div>
+                                    </div>
+
+                                    <div className="col-xl-3 col-lg-4 col-md-12 col-sm-12 col-12">
+                                      <div className="mb-3">
+                                        <label
+                                          className="sr-only form-label mb-0"
+                                          htmlFor="phone"
+                                        >
+                                          Account Number
+                                        </label>
+                                        <input
+                                          id={`co_account_number ${index}`}
+                                          // id="account_number"
+                                          name="co_account_number"
+                                          disabled={textDisabld}
+                                          type="text"
+                                          value={item.co_account_number}
+                                          onChange={(e) =>
+                                            handleInputChange3(e, index)
+                                          }
+                                          // onChange={handleInputChange}
+                                          placeholder="Account Number"
+                                          className="form-control"
+                                        />
+                                        {/* {errors.account_number && (
+                                          <div className="text-danger">
+                                            {errors.account_number}
+                                          </div>
+                                        )} */}
+                                      </div>
+                                    </div>
+
+                                    <div className="col-xl-3 col-lg-4 col-md-12 col-sm-12 col-12">
+                      <div className="mb-3">
+                        <label
+                          className="sr-only form-label mb-0"
+                          htmlFor="text"
+                        >
+                          Remarks
+                        </label>
+                        <input
+                         id={`co_remark ${index}`}
+                          name="co_remark"
+                          type="text"
+                          value={item.co_remark}
+                          onChange={(e) =>
+                            handleInputChange3(e, index)
+                          }
+                          placeholder="Remarks"
+                          className="form-control"
+                        />
+                        {/* {errors.remark && (
+                          <div className="text-danger">{errors.remark}</div>
+                        )} */}
+                      </div>
+                    </div>
+                                  </div>           
+                              </div>
+                                ))}
+                      {/* Bank Details End  */}
+
+
+
+
+
+
+                    {/* Loan Repyment Details stat */}
                           
                            {dividendArr3.map((item, index) => (
                               <div className="" key={index}>
@@ -1724,7 +1898,7 @@ const ProfessionalLoan = () => {
                               </div>
                                 ))}
                                  
-
+                     {/* Loan Repyment Details End */}
                            
 
 
