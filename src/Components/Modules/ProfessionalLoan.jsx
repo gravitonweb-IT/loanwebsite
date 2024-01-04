@@ -902,11 +902,11 @@ const ProfessionalLoan = () => {
                                           className="form-control"
                                           required
                                         />
-                                        {errors.bank_name && (
+                                        {/* {errors.bank_name && (
                                           <div className="text-danger">
                                             {errors.bank_name}
                                           </div>
-                                        )}
+                                        )} */}
                                       
                                       </div>
                                     </div>
@@ -947,11 +947,11 @@ const ProfessionalLoan = () => {
                                             DEMAT Account
                                           </option>
                                         </select>
-                                        {errors.account_type && (
+                                        {/* {errors.account_type && (
                                           <div className="text-danger">
                                             {errors.account_type}
                                           </div>
-                                        )}
+                                        )} */}
                                       </div>
                                     </div>
 
@@ -977,11 +977,11 @@ const ProfessionalLoan = () => {
                                           placeholder="Account Number"
                                           className="form-control"
                                         />
-                                        {errors.account_number && (
+                                        {/* {errors.account_number && (
                                           <div className="text-danger">
                                             {errors.account_number}
                                           </div>
-                                        )}
+                                        )} */}
                                       </div>
                                     </div>
 
@@ -994,17 +994,19 @@ const ProfessionalLoan = () => {
                           Remarks
                         </label>
                         <input
-                          id="remark"
+                         id={`remark ${index}`}
                           name="remark"
                           type="text"
                           value={item.remark}
-                          onChange={handleInputChange}
+                          onChange={(e) =>
+                            handleInputChange1(e, index)
+                          }
                           placeholder="Remarks"
                           className="form-control"
                         />
-                        {errors.remark && (
+                        {/* {errors.remark && (
                           <div className="text-danger">{errors.remark}</div>
-                        )}
+                        )} */}
                       </div>
                     </div>
                                   </div>           
@@ -1013,7 +1015,7 @@ const ProfessionalLoan = () => {
                       {/* Bank Details End  */}
                 
                   
-                  {/* Loan  start  */}
+                  {/*Loan Repyment Details start  */}
                           {dividendArr1.map((item, index) =>(
                             <div className="" key={index} > 
                           <h3>
@@ -1057,14 +1059,14 @@ const ProfessionalLoan = () => {
                           disabled={textDisabld}
                           value={item.bank_nbfc}
                           onChange={(e) =>
-                            handleInputChange3(e, index)
+                            handleInputChange2(e, index)
                           }
                           placeholder="Name OfBank NBFC"
                           className="form-control"
                         />
-                        {errors.bank_nbfc && (
+                        {/* {errors.bank_nbfc && (
                           <div className="text-danger">{errors.bank_nbfc}</div>
-                        )}
+                        )} */}
                       </div>
                     </div>
                     <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
@@ -1076,7 +1078,7 @@ const ProfessionalLoan = () => {
                           className="form-select"
                           value={item.loan_type}
                           onChange={(e) =>
-                            handleInputChange3(e, index)
+                            handleInputChange2(e, index)
                           }
                         >
                           <option value="" disabled selected>
@@ -1091,9 +1093,9 @@ const ProfessionalLoan = () => {
                           <option value="Business">Business Loan</option>
                           <option value="Refinance">Refinance Loan</option>
                         </select>
-                        {errors.loan_type && (
+                        {/* {errors.loan_type && (
                           <div className="text-danger">{errors.loan_type}</div>
-                        )}
+                        )} */}
                       </div>
                     </div>
                     <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
@@ -1111,14 +1113,14 @@ const ProfessionalLoan = () => {
                           type="text"
                           value={item.emi}
                           onChange={(e) =>
-                            handleInputChange3(e, index)
+                            handleInputChange2(e, index)
                           }
                           placeholder="EMI"
                           className="form-control"
                         />
-                        {errors.emi && (
+                        {/* {errors.emi && (
                           <div className="text-danger">{errors.emi}</div>
-                        )}
+                        )} */}
                       </div>
                     </div>
                     <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
@@ -1136,14 +1138,14 @@ const ProfessionalLoan = () => {
                           type="text"
                           value={item.pandding}
                           onChange={(e) =>
-                            handleInputChange3(e, index)
+                            handleInputChange2(e, index)
                           }
                           placeholder="Pending"
                           className="form-control"
                         />
-                        {errors.pandding && (
+                        {/* {errors.pandding && (
                           <div className="text-danger">{errors.pandding}</div>
-                        )}
+                        )} */}
                       </div>
                     </div>
 
@@ -1162,14 +1164,14 @@ const ProfessionalLoan = () => {
                           type="text"
                           value={item.pan_no}
                           onChange={(e) =>
-                            handleInputChange3(e, index)
+                            handleInputChange2(e, index)
                           }
                           placeholder="Applicant Pan No."
                           className="form-control"
                         />
-                        {errors.pan_no && (
+                        {/* {errors.pan_no && (
                           <div className="text-danger">{errors.pan_no}</div>
-                        )}
+                        )} */}
                       </div>
                     </div>
                     <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
@@ -1187,14 +1189,14 @@ const ProfessionalLoan = () => {
                           type="text"
                           value={item.adhar_no}
                           onChange={(e) =>
-                            handleInputChange3(e, index)
+                            handleInputChange2(e, index)
                           }
                           placeholder="Adhar No."
                           className="form-control"
                         />
-                        {errors.adhar_no && (
+                        {/* {errors.adhar_no && (
                           <div className="text-danger">{errors.adhar_no}</div>
-                        )}
+                        )} */}
                       </div>
                     </div>
                     <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
@@ -1212,14 +1214,14 @@ const ProfessionalLoan = () => {
                           type="text"
                           value={item.dob}
                           onChange={(e) =>
-                            handleInputChange3(e, index)
+                            handleInputChange2(e, index)
                           }
                           placeholder="Applicant DOB"
                           className="form-control"
                         />
-                        {errors.dob && (
+                        {/* {errors.dob && (
                           <div className="text-danger">{errors.dob}</div>
-                        )}
+                        )} */}
                       </div>
                     </div>
                     <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
@@ -1237,14 +1239,14 @@ const ProfessionalLoan = () => {
                           type="text"
                           value={item.voter_id}
                           onChange={(e) =>
-                            handleInputChange3(e, index)
+                            handleInputChange2(e, index)
                           }
                           placeholder="Voter Id No."
                           className="form-control"
                         />
-                        {errors.voter_id && (
+                        {/* {errors.voter_id && (
                           <div className="text-danger">{errors.voter_id}</div>
-                        )}
+                        )} */}
                       </div>
                     </div>
 
@@ -1263,16 +1265,16 @@ const ProfessionalLoan = () => {
                           type="text"
                           value={item.spouse_name}
                           onChange={(e) =>
-                            handleInputChange3(e, index)
+                            handleInputChange2(e, index)
                           }
                           placeholder="Spose Name."
                           className="form-control"
                         />
-                        {errors.spouse_name && (
+                        {/* {errors.spouse_name && (
                           <div className="text-danger">
                             {errors.spouse_name}
                           </div>
-                        )}
+                        )} */}
                       </div>
                     </div>
 
@@ -1288,7 +1290,7 @@ const ProfessionalLoan = () => {
                            id={`spouse_dob ${index}`}
                            disabled={textDisabld}
                            onChange={(e) =>
-                            handleInputChange3(e, index)
+                            handleInputChange2(e, index)
                           }
                           name="spouse_dob"
                           type="text"
@@ -1296,9 +1298,9 @@ const ProfessionalLoan = () => {
                           placeholder="Spouse DOB."
                           className="form-control"
                         />
-                        {errors.spouse_dob && (
+                        {/* {errors.spouse_dob && (
                           <div className="text-danger">{errors.spouse_dob}</div>
-                        )}
+                        )} */}
                       </div>
                     </div>
                         </div>
@@ -1468,9 +1470,9 @@ const ProfessionalLoan = () => {
                           placeholder="Name OfBank NBFC"
                           className="form-control"
                         />
-                        {errors.co_bank_nbfc && (
+                        {/* {errors.co_bank_nbfc && (
                           <div className="text-danger">{errors.co_bank_nbfc}</div>
-                        )}
+                        )} */}
                       </div>
                     </div>
                     <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
@@ -1498,9 +1500,9 @@ const ProfessionalLoan = () => {
                           <option value="Business">Business Loan</option>
                           <option value="Refinance">Refinance Loan</option>
                         </select>
-                        {errors.co_loan_type && (
+                        {/* {errors.co_loan_type && (
                           <div className="text-danger">{errors.co_loan_type}</div>
-                        )}
+                        )} */}
                       </div>
                     </div>
                     <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
@@ -1524,9 +1526,9 @@ const ProfessionalLoan = () => {
                           placeholder="EMI"
                           className="form-control"
                         />
-                        {errors.co_emi && (
+                        {/* {errors.co_emi && (
                           <div className="text-danger">{errors.co_emi}</div>
-                        )}
+                        )} */}
                       </div>
                     </div>
                     <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
@@ -1550,9 +1552,9 @@ const ProfessionalLoan = () => {
                           placeholder="Pending"
                           className="form-control"
                         />
-                        {errors.co_pandding && (
+                        {/* {errors.co_pandding && (
                           <div className="text-danger">{errors.co_pandding}</div>
-                        )}
+                        )} */}
                       </div>
                     </div>
 
@@ -1577,9 +1579,9 @@ const ProfessionalLoan = () => {
                           placeholder="Applicant Pan No."
                           className="form-control"
                         />
-                        {errors.co_pan_no && (
+                        {/* {errors.co_pan_no && (
                           <div className="text-danger">{errors.co_pan_no}</div>
-                        )}
+                        )} */}
                       </div>
                     </div>
                     <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
@@ -1603,9 +1605,9 @@ const ProfessionalLoan = () => {
                           placeholder="Adhar No."
                           className="form-control"
                         />
-                        {errors.co_adhar_no && (
+                        {/* {errors.co_adhar_no && (
                           <div className="text-danger">{errors.co_adhar_no}</div>
-                        )}
+                        )} */}
                       </div>
                     </div>
                     <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
@@ -1629,9 +1631,9 @@ const ProfessionalLoan = () => {
                           placeholder="Applicant DOB"
                           className="form-control"
                         />
-                        {errors.co_dob && (
+                        {/* {errors.co_dob && (
                           <div className="text-danger">{errors.co_dob}</div>
-                        )}
+                        )} */}
                       </div>
                     </div>
                     <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
@@ -1655,9 +1657,9 @@ const ProfessionalLoan = () => {
                           placeholder="Voter Id No."
                           className="form-control"
                         />
-                        {errors.co_voter_id && (
+                        {/* {errors.co_voter_id && (
                           <div className="text-danger">{errors.co_voter_id}</div>
-                        )}
+                        )} */}
                       </div>
                     </div>
 
@@ -1682,11 +1684,11 @@ const ProfessionalLoan = () => {
                           placeholder="Spouse Name."
                           className="form-control"
                         />
-                        {errors.co_spouse_name && (
+                        {/* {errors.co_spouse_name && (
                           <div className="text-danger">
                             {errors.co_spouse_name}
                           </div>
-                        )}
+                        )} */}
                       </div>
                     </div>
 
@@ -1711,9 +1713,9 @@ const ProfessionalLoan = () => {
                           placeholder="Spouse DOB."
                           className="form-control"
                         />
-                        {errors.co_spouse_dob && (
+                        {/* {errors.co_spouse_dob && (
                           <div className="text-danger">{errors.co_spouse_dob}</div>
-                        )}
+                        )} */}
                       </div>
                     </div>
 
