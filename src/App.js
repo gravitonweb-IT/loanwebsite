@@ -41,7 +41,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import ProfessionalLoan from "./Components/Modules/ProfessionalLoan";
 import GoldLoan1 from "./Components/Modules/GoldLoan1";
-import Homeloannew from "./Components/Modules/Homeloannew";
+
 import Buttone from "./Components/Modules/Buttone";
 
 function App() {
@@ -84,7 +84,7 @@ function App() {
       
         <Route path="/professionalloan" element={<ProfessionalLoan/>}/>
         <Route path="/goldloan1" element={<GoldLoan1/>}/>
-        <Route path="/homeloannew" element={<Homeloannew/>}/>
+      
 
         <Route path="/button" element={<Buttone />} />
 

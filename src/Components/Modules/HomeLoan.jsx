@@ -33,7 +33,7 @@ const HomeLoan = () => {
     draggable: true,
     progress: undefined,
   };
-
+  const [textDisabld, setTextDisabld] = useState(false);
 
   const [dividendArr, setDividendArr] = useState([
     {
@@ -41,16 +41,26 @@ const HomeLoan = () => {
       account_type: "",
       account_number: "",
       fast_remark: " ",
-      co_bank_name: "",
-      co_account_type: "",
-      co_account_number: "",
-      co_remark: "",
+    
     },
   ]);
 
-  const [textDisabld, setTextDisabld] = useState(false); // Assuming textDisabld is a state variable
-  const [buyPrice, setBuyPrice] = useState(0); // Assuming buyPrice is a state variable
-// Assuming errorMessage is a state variable
+  const [dividendArr1, setDividendArr1] = useState([
+    {
+      bank_nbfc:'',
+      loan_type:'',
+      emi:'',
+      start_form:'',
+      pandding:'',
+      aaplication_pan_no:'',
+      adhar_no:'',
+      dob:'',
+      voter_id:'',
+      spouse_name:'',
+      spouse_dob:'',
+    
+    },
+  ]);
 
   const handleAdd = () => {
     setDividendArr([
@@ -60,19 +70,42 @@ const HomeLoan = () => {
         account_type: "",
         account_number: "",
         fast_remark: " ",
-        co_bank_name: "",
-        co_account_type: "",
-        co_account_number: "",
-        co_remark: "",
       },
     ]);
   };
+  const handleAdd1 = () => {
+    setDividendArr1([
+      ...dividendArr1,
+      {
+        bank_nbfc:'',
+        loan_type:'',
+        emi:'',
+        start_form:'',
+        pandding:'',
+        aaplication_pan_no:'',
+        adhar_no:'',
+        dob:'',
+        voter_id:'',
+        spouse_name:'',
+        spouse_dob:'',
+      },
+    ]);
+  };
+
   const handleInputChange1 = (e, index) => {
     const { name, value } = e.target;
     console.log("value", e.target.value);
     const list = [...dividendArr];
     list[index][name] = value;
     setDividendArr(list);
+  };
+  
+  const handleInputChange2 = (e, index) => {
+    const { name, value } = e.target;
+    console.log("value", e.target.value);
+    const list = [...dividendArr1];
+    list[index][name] = value;
+    setDividendArr1(list);
   };
 
   const handleRemove = (index) => {
@@ -82,6 +115,16 @@ const HomeLoan = () => {
       setDividendArr(listArr);
     }
   };
+  const handleRemove1 = (index) => {
+    if (dividendArr1.length > 0) {
+      const listArr = [...dividendArr1];
+      listArr.splice(index, 1);
+      setDividendArr1(listArr);
+    }
+  };
+
+
+ 
 
   const [selectedLanguage, setSelectedLanguage] = useState("");
 
@@ -497,6 +540,7 @@ const HomeLoan = () => {
     // Return true if there are no errors
     return Object.keys(newErrors).length === 0;
   };
+
 
   const handleClick = (e) => {
     e.preventDefault();
@@ -1072,7 +1116,6 @@ const HomeLoan = () => {
                           {/* Text input*/}
                           <div className="row">
                             <h3> User Details </h3>
-
                             <div className="col-xl-3 col-lg-4 col-md-12 col-sm-12 col-12">
                               <div className="mb-3">
                                 <label
@@ -1097,7 +1140,6 @@ const HomeLoan = () => {
                                 )}
                               </div>
                             </div>
-
                             <div className="col-xl-3 col-lg-4 col-md-12 col-sm-12 col-12">
                               <div className="mb-3">
                                 <label
@@ -1122,7 +1164,6 @@ const HomeLoan = () => {
                                 )}
                               </div>
                             </div>
-
                             <div className="col-xl-3 col-lg-4 col-md-12 col-sm-12 col-12">
                               <div className="mb-3">
                                 <label
@@ -1147,7 +1188,6 @@ const HomeLoan = () => {
                                 )}
                               </div>
                             </div>
-
                             <div className="col-xl-3 col-lg-4 col-md-12 col-sm-12 col-12">
                               <div className="mb-3">
                                 <select
@@ -1184,7 +1224,6 @@ const HomeLoan = () => {
                                 )}
                               </div>
                             </div>
-
                             <div className="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12">
                               <div className="mb-3">
                                 <label
@@ -1232,7 +1271,7 @@ const HomeLoan = () => {
                               </div>
                             </div>
                             {/* 
-                              // raido button */}
+                                                          // raido button */}
                             <div className="py-2 d-flex">
                               <span className="mx-4 d-flex">
                                 Are you Salaried or Self Employed?
@@ -1263,7 +1302,6 @@ const HomeLoan = () => {
                                 <br />
                               </span>
                             </div>
-
                             <div className="col-xl-6 col-lg-4 col-md-12 col-sm-12 col-12">
                               <div className="mb-3">
                                 <label
@@ -1288,7 +1326,6 @@ const HomeLoan = () => {
                                 )}
                               </div>
                             </div>
-
                             <div className="col-xl-6 col-lg-4 col-md-12 col-sm-12 col-12">
                               <div className="mb-3">
                                 <label
@@ -1314,81 +1351,11 @@ const HomeLoan = () => {
                               </div>
                             </div>
 
-                            {/* Add button funcation  */}
-                     
-                              {/* {dividendArr.map((item, index) => (
-          <div className="row mt-3 align-items-center dividend-box" key={index}>
-            <div className="col-md-5">
-              <div className="mb-3">
-                <div className="form-group mb-3">
-                  <label className="">Calendar</label>
-                  <input
-                    type="date"
-                    placeholder="Some Text..."
-                    className="form-control"
-                    required
-                    min={moment().format("YYYY-MM-DD")}
-                    disabled={textDisabld}
-                    name="dividend_date"
-                    value={item.dividend_date}
-                    id="dividend_date"
-                    onChange={(e) => handleInputChange(e, index)}
-                  />
-                </div>
-                {error && errorMessage["stockDate"] && (
-                  <div className="d-block my-1 ms-1 text-danger text-start">
-                    {errorMessage["stockDate"]}
-                  </div>
-                )}
-              </div>
-            </div>
-            <div className="col-md-6">
-              <div className="mb-3">
-                <div className="form-group mb-3">
-                  <label className="">Price</label>
-                  <input
-                    type="number"
-                    placeholder="Enter Price..."
-                    className="form-control"
-                    required
-                    max={buyPrice}
-                    min={0}
-                    disabled={textDisabld}
-                    name="dividend_stock_amount"
-                    value={item.dividend_stock_amount}
-                    id={`dividend_stock_amount${index}`}
-                    onChange={(e) => handleInputChange(e, index)}
-                  />
-                </div>
-              </div>
-            </div>
-            <div className="text-end col-1 dividend-fund-delete pt-3">
-              <button
-                type="button"
-                className={`add-button btn btn-primary ${(index === 0 && "d-none") || ""}`}
-                onClick={() => handleRemove(index)}
-              >
-                -
-              
-              </button>
-              {index === 0 && (
-                <button
-                  type="button"
-                  className="btn btn-primary"
-                  onClick={handleAdd}
-                >
-                  +
-                </button>
-              )}
-            </div>
-          </div>
-        ))}
-      </div> */}
-                              {/* end funcation */}
-
+                        
+                          
+                                    {/* Bank Deatils start  */}
                               {dividendArr.map((item, index) => (
                               <div className="" key={index}>
-
                                 <h3>
                                   {" "}
                                 { index === 0 && "Banking Details" }   <span>  <button
@@ -1413,10 +1380,8 @@ const HomeLoan = () => {
                                           </button>
                                         )}</span>
                                         
-                                </h3>
-                               
-                                  <div className="row" >
-                                    
+                                </h3>                              
+                                 <div className="row" >                                   
                                     <div className="col-xl-3 col-lg-4 col-md-12 col-sm-12 col-12">
                                       <div className="mb-3">
                                         <label
@@ -1448,7 +1413,6 @@ const HomeLoan = () => {
                                       
                                       </div>
                                     </div>
-
                                     <div className="col-xl-3 col-lg-4 col-md-12 col-sm-12 col-12">
                                       <div className="mb-3">
                                         <select
@@ -1492,7 +1456,6 @@ const HomeLoan = () => {
                                         )}
                                       </div>
                                     </div>
-
                                     <div className="col-xl-3 col-lg-4 col-md-12 col-sm-12 col-12">
                                       <div className="mb-3">
                                         <label
@@ -1522,7 +1485,6 @@ const HomeLoan = () => {
                                         )}
                                       </div>
                                     </div>
-
                                     <div className="col-xl-3 col-lg-4 col-md-12 col-sm-12 col-12">
                                       <div className="mb-3">
                                         <label
@@ -1532,44 +1494,57 @@ const HomeLoan = () => {
                                           Remarks
                                         </label>
                                         <input
-                                         id={`fast_remark ${index}`}
-                                          // id="fast_remark"
+                                         id={`fast_remark ${index}`}                                      
                                           name="fast_remark"
                                           disabled={textDisabld}
                                           type="text"
                                           value={item.fast_remark}
                                           onChange={(e) =>
                                             handleInputChange1(e, index)
-                                          }
-                                          // onChange={handleInputChange}
+                                          }               
                                           placeholder="Remarks holder"
                                           className="form-control"
                                         />
-                                        {errors.fast_remark && (
+                                        {/* {errors.fast_remark && (
                                           <div className="text-danger">
                                             {errors.fast_remark}
                                           </div>
-                                        )}
+                                        )} */}
                                       </div>
                                    
-                                    </div>
-
-                                  
-                                  </div>
-                              
+                                    </div>                                  
+                                  </div>                             
                               </div>
                                 ))}
-
-
+                               {/* Bank Deatils start End  */}                                                        
+                                        {dividendArr1.map((item, index) => (
+                                          <div className="" key={index}>
                               <h3>
-                                Loan Repyment Details{" "}
-                                <span>
-                                <button style={{ backgroundColor: 'blue' }} className="pl-10">+</button>
-
-
-                                </span>{" "}
-                              </h3>
-
+                              
+                                { index === 0 && "  Loan Repyment Details" }   <span>  <button
+                                          type="button"
+                                          className={`add-button  ${
+                                            (index === 0 && "d-none") || ""
+                                          }`}
+                                          onClick={() => handleRemove1(index)}
+                                          style={{ backgroundColor: 'blue' }}
+                                          
+                                        >
+                                          -
+                                        </button>
+                                        {index === 0 && (
+                                          <button
+                                            type="button"
+                                            className=""
+                                            onClick={handleAdd1}
+                                            style={{ backgroundColor: 'blue' }}
+                                          >
+                                            +
+                                          </button>
+                                        )}</span>
+                                        
+                                </h3>                                      
+                                <div className="row">
                               <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
                                 <div className="mb-3">
                                   <label
@@ -1579,29 +1554,36 @@ const HomeLoan = () => {
                                     Name Of Bank NBFC
                                   </label>
                                   <input
-                                    id="bank_nbfc"
                                     name="bank_nbfc"
                                     type="text"
-                                    value={formData.bank_nbfc}
-                                    onChange={handleInputChange}
+                                    value={item.bank_nbfc}
+                                    id={`bank_nbfc ${index}`} 
+                                    onChange={(e) =>
+                                      handleInputChange2(e, index)
+                                    } 
+                                    disabled={textDisabld}
                                     placeholder="Name OfBank NBFC"
                                     className="form-control"
                                   />
-                                  {errors.bank_nbfc && (
+                                  {/* {errors.bank_nbfc && (
                                     <div className="text-danger">
                                       {errors.bank_nbfc}
                                     </div>
-                                  )}
+                                  )} */}
                                 </div>
                               </div>
                               <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
                                 <div className="mb-3">
                                   <select
-                                    id="loan_type"
+                                
                                     name="loan_type"
                                     className="form-select"
-                                    value={formData.loan_type}
-                                    onChange={handleInputChange}
+                                    value={item.loan_type}
+                                    id={`loan_type ${index}`} 
+                                    onChange={(e) =>
+                                      handleInputChange2(e, index)
+                                    } 
+                                    disabled={textDisabld}
                                   >
                                     <option value="" disabled selected>
                                       Type of Loan
@@ -1625,11 +1607,11 @@ const HomeLoan = () => {
                                       Refinance Loan
                                     </option>
                                   </select>
-                                  {errors.loan_type && (
+                                  {/* {errors.loan_type && (
                                     <div className="text-danger">
                                       {errors.loan_type}
                                     </div>
-                                  )}
+                                  )} */}
                                 </div>
                               </div>
                               <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
@@ -1641,22 +1623,25 @@ const HomeLoan = () => {
                                     EMI
                                   </label>
                                   <input
-                                    id="emi"
+                                  
                                     name="emi"
                                     type="text"
-                                    value={formData.emi}
-                                    onChange={handleInputChange}
+                                    value={item.emi}
+                                    id={`emi ${index}`} 
+                                    onChange={(e) =>
+                                      handleInputChange2(e, index)
+                                    } 
+                                    disabled={textDisabld}
                                     placeholder="EMI"
                                     className="form-control"
                                   />
-                                  {errors.emi && (
+                                  {/* {errors.emi && (
                                     <div className="text-danger">
                                       {errors.emi}
                                     </div>
-                                  )}
+                                  )} */}
                                 </div>
                               </div>
-
                               <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
                                 <div className="mb-3">
                                   <label
@@ -1665,23 +1650,25 @@ const HomeLoan = () => {
                                   >
                                     Start Form
                                   </label>
-                                  <input
-                                    id="start_form"
+                                  <input                                 
                                     name="start_form"
                                     type="text"
-                                    value={formData.start_form}
-                                    onChange={handleInputChange}
+                                    value={item.start_form}
+                                    id={`start_form ${index}`} 
+                                    onChange={(e) =>
+                                      handleInputChange2(e, index)
+                                    } 
+                                    disabled={textDisabld}
                                     placeholder="Start Form"
                                     className="form-control"
                                   />
-                                  {errors.start_form && (
+                                  {/* {errors.start_form && (
                                     <div className="text-danger">
                                       {errors.start_form}
                                     </div>
-                                  )}
+                                  )} */}
                                 </div>
                               </div>
-
                               <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
                                 <div className="mb-3">
                                   <label
@@ -1730,7 +1717,6 @@ const HomeLoan = () => {
                                   )}
                                 </div>
                               </div>
-
                               <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
                                 <div className="mb-3">
                                   <label
@@ -1755,7 +1741,6 @@ const HomeLoan = () => {
                                   )}
                                 </div>
                               </div>
-
                               <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
                                 <div className="mb-3">
                                   <label
@@ -1780,7 +1765,6 @@ const HomeLoan = () => {
                                   )}
                                 </div>
                               </div>
-
                               <div className="col-xl-4 col-lg-2 col-md-12 col-sm-12 col-12">
                                 <div className="mb-3">
                                   <label
@@ -1853,6 +1837,11 @@ const HomeLoan = () => {
                                   )}
                                 </div>
                               </div>
+                                  </div>
+                                  </div>
+
+                              ))}
+
 
                               <h3>Details of Profession </h3>
 
