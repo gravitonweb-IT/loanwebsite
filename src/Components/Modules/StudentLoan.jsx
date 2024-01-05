@@ -25,10 +25,6 @@ const StudentLoan = () => {
     };
   }, []);
 
-
-
-
-
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -36,12 +32,13 @@ const StudentLoan = () => {
     password: "",
     application_no: "",
     name_trust: '',
+    dt_email:'',
+    designation: '',
+    contact : '',
     sclclg_managed: "",
     business_address: "",
     conract_person: '',
     website_link : '',
-    designation: '',
-    contact : '',
     name_institue:'',
     course_faculty: '',
     approved_by: '',
@@ -68,6 +65,165 @@ const StudentLoan = () => {
   
   });
 
+  const [textDisabld, setTextDisabld] = useState(false); 
+
+  const [dividendArr, setDividendArr] = useState([
+    {
+      name_trust: '',
+      dt_email:'',
+      designation: '',
+      contact : '',
+
+    },
+  ]);
+
+  const [dividendArr1, setDividendArr1] = useState([
+    {
+      name_institue:'',
+      course_faculty:'',
+      approved_by:'',
+       seats:'',
+      per_year_fess:'',
+    },
+  ]);
+
+
+  const [dividendArr2, setDividendArr2] = useState([
+    {
+      name_of_inst:'',
+      course_faculty_one:'',
+      approved_bye_one:'',
+      seats_one:'',
+      per_year_fee_one:'',
+    },
+  ]);
+
+  const [dividendArr3, setDividendArr3] = useState([
+    {
+      institutes_host:'',
+      course_faculty_two:'',
+      approved_two:'',
+      seats_two:'',
+      per_year_fees_hostel:'',
+    },
+  ]);
+
+
+  const handleAdd = () => {
+    setDividendArr([
+      ...dividendArr,
+      {
+        name_trust: '',
+        dt_email:'',
+        designation: '',
+        contact : '',
+      },
+    ]);
+  };
+
+  const handleAdd1 = () => {
+    setDividendArr1([
+      ...dividendArr1,
+      {
+        name_institue:'',
+        course_faculty:'',
+       approved_by:'',
+        seats:'',
+       per_year_fess:'',
+      },
+    ]);
+  };
+
+  const handleAdd2 = () => {
+    setDividendArr2([
+      ...dividendArr2,
+      {
+        name_of_inst:'',
+        course_faculty_one:'',
+        approved_bye_one:'',
+        seats_one:'',
+        per_year_fee_one:'',
+      },
+    ]);
+  };
+
+  const handleAdd3 = () => {
+    setDividendArr3([
+      ...dividendArr3,
+      {
+        institutes_host:'',
+      course_faculty_two:'',
+      approved_two:'',
+      seats_two:'',
+      per_year_fees_hostel:'',
+      },
+    ]);
+  };
+
+  const handleInputChange1 = (e, index) => {
+    const { name, value } = e.target;
+    console.log("value", e.target.value);
+    const list = [...dividendArr];
+    list[index][name] = value;
+    setDividendArr(list);
+  };
+
+  const handleInputChange2 = (e, index) => {
+    const { name, value } = e.target;
+    console.log("value", e.target.value);
+    const list = [...dividendArr1];
+    list[index][name] = value;
+    setDividendArr1(list);
+  };
+  const handleInputChange3 = (e, index) => {
+    const { name, value } = e.target;
+    console.log("value", e.target.value);
+    const list = [...dividendArr2];
+    list[index][name] = value;
+    setDividendArr2(list);
+  };
+  const handleInputChange4 = (e, index) => {
+    const { name, value } = e.target;
+    console.log("value", e.target.value);
+    const list = [...dividendArr3];
+    list[index][name] = value;
+    setDividendArr3(list);
+  };
+
+
+  const handleRemove = (index) => {
+    if (dividendArr.length > 0) {
+      const listArr = [...dividendArr];
+      listArr.splice(index, 1);
+      setDividendArr(listArr);
+    }
+  }; 
+
+  const handleRemove1 = (index) => {
+    if (dividendArr1.length > 0) {
+      const listArr = [...dividendArr1];
+      listArr.splice(index, 1);
+      setDividendArr1(listArr);
+    }
+  }; 
+
+  const handleRemove2 = (index) => {
+    if (dividendArr2.length > 0) {
+      const listArr = [...dividendArr2];
+      listArr.splice(index, 1);
+      setDividendArr2(listArr);
+    }
+  }; 
+
+  const handleRemove3 = (index) => {
+    if (dividendArr3.length > 0) {
+      const listArr = [...dividendArr3];
+      listArr.splice(index, 1);
+      setDividendArr3(listArr);
+    }
+  }; 
+
+
   const [errors, setErrors] = useState({});
 
   const handleInputChange = (e) => {
@@ -75,8 +231,6 @@ const StudentLoan = () => {
     setFormData({ ...formData, [name]: value });
     setErrors({ ...errors, [name]: null }); // Clear errors for the changed field
   };
-
-
   const handleFileChange = (e, fieldName) => {
     const file = e.target.files[0];
 
@@ -93,8 +247,6 @@ const StudentLoan = () => {
       e.target.value = null; // Clear the input field
     }
   };
-
-
   const validateForm = () => {
     const newErrors = {};
 
@@ -216,7 +368,6 @@ const StudentLoan = () => {
     // Return true if there are no errors
     return Object.keys(newErrors).length === 0;
   };
-
   const handleClick = (e) => {
     e.preventDefault();
     console.log(formData);
@@ -226,6 +377,7 @@ const StudentLoan = () => {
       email: "",
       phone: "",
       password: "",
+      dt_email:'',
       designation: "",
       conract_person: '',
       address: "",
@@ -738,8 +890,7 @@ const StudentLoan = () => {
                           <div className="text-danger">{errors.name}</div>
                         )}
                       </div>
-                    </div>
-                    {/* Text input*/}
+                    </div>              
                     <div className="col-xl-3 col-lg-4 col-md-12 col-sm-12 col-12">
                       <div className="mb-3">
                         <label
@@ -761,8 +912,7 @@ const StudentLoan = () => {
                           <div className="text-danger">{errors.email}</div>
                         )}
                       </div>
-                    </div>
-                    {/* Text input*/}
+                    </div>               
                     <div className="col-xl-3 col-lg-4 col-md-12 col-sm-12 col-12">
                       <div className="mb-3">
                         <label
@@ -806,10 +956,7 @@ const StudentLoan = () => {
                           </div>
                         )}
                       </div>
-                    </div>
-                    {/* Text input*/}
-                  
-                    {/* Text input*/}
+                    </div>           
                     <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
                       <div className="mb-3">
                       <label
@@ -876,16 +1023,36 @@ const StudentLoan = () => {
                         )}
                       </div>
                     </div>
-
-                    <h3> Details Of Trustee
-                    <span>
-                                <button style={{ backgroundColor: 'blue' }} className="m-2">+</button>
-                                </span>
-
-
-                    </h3>
-
-                    <div className="col-xl-3 col-lg-4 col-md-12 col-sm-12 col-12">
+                              {/* Details of Trustee start  */}
+                          {dividendArr.map((item, index)=>(
+                            <div className="" key={index}>
+                                <h3>
+                                  {" "}
+                                { index === 0 && "Details Of Trustee" }   <span>  <button
+                                          type="button"
+                                          className={`add-button  ${
+                                            (index === 0 && "d-none") || ""
+                                          }`}
+                                          onClick={() => handleRemove(index)}
+                                          style={{ backgroundColor: 'blue' }}
+                                          
+                                        >
+                                          -
+                                        </button>
+                                        {index === 0 && (
+                                          <button
+                                            type="button"
+                                            className=""
+                                            onClick={handleAdd}
+                                            style={{ backgroundColor: 'blue' }}
+                                          >
+                                            +
+                                          </button>
+                                        )}</span>
+                                        
+                                </h3>
+                        <div className="row">
+                        <div className="col-xl-3 col-lg-4 col-md-12 col-sm-12 col-12">
                       <div className="mb-3">
                       <label
                           className="sr-only form-label mb-0"
@@ -894,22 +1061,24 @@ const StudentLoan = () => {
                   Name of Trustee
                         </label>
                         <input
-                          id="name_trust"
+                          id={`name_trust ${index}`}                    
                           name="name_trust"
                           type="text"
-                          value={formData.name_trust}
-                          onChange={handleInputChange}
+                          disabled={textDisabld}
+                          value={item.name_trust}
+                          onChange={(e) =>
+                            handleInputChange1(e, index)
+                          }
                           placeholder="Name of Trustee"
                           className="form-control"
                         />
-                        {errors.name_trust && (
+                        {/* {errors.name_trust && (
                           <div className="text-danger">
                             {errors.name_trust}
                           </div>
-                        )}
+                        )} */}
                       </div>
                     </div>
-
                     <div className="col-xl-3 col-lg-4 col-md-12 col-sm-12 col-12">
                       <div className="mb-3">
                       <label
@@ -919,22 +1088,24 @@ const StudentLoan = () => {
                      Designation
                         </label>
                         <input
-                          id="designation"
+                          id={`designation ${index}`}                      
                           name="designation"
                           type="text"
-                          value={formData.designation}
-                          onChange={handleInputChange}
+                          value={item.designation}
+                          onChange={(e) =>
+                            handleInputChange1(e, index)
+                          }
+                          disabled={textDisabld}
                           placeholder="Designation"
                           className="form-control"
                         />
-                        {errors.designation && (
+                        {/* {errors.designation && (
                           <div className="text-danger">
                             {errors.designation}
                           </div>
-                        )}
+                        )} */}
                       </div>
                     </div>
-
                     <div className="col-xl-3 col-lg-4 col-md-12 col-sm-12 col-12">
                       <div className="mb-3">
                       <label
@@ -944,53 +1115,81 @@ const StudentLoan = () => {
                     Contact No.
                         </label>
                         <input
-                          id="contact"
+                            id={`contact ${index}`}  
                           name="contact"
                           type="txet"
-                          value={formData.contact}
-                          onChange={handleInputChange}
+                          disabled={textDisabld}
+                          value={item.contact}
+                          onChange={(e) =>
+                            handleInputChange1(e, index)
+                          }
                           placeholder="Contact No."
                           className="form-control"
                         />
-                        {errors.contact && (
+                        {/* {errors.contact && (
                           <div className="text-danger">
                             {errors.contact}
                           </div>
-                        )}
+                        )} */}
                       </div>
                     </div>
-
                     <div className="col-xl-3 col-lg-4 col-md-12 col-sm-12 col-12">
                       <div className="mb-3">
                         <label
                           className="sr-only form-label mb-0"
-                          htmlFor="email"
+                          htmlFor="dt_email"
                         >
                           Email
                         </label>
                         <input
-                          id="email"
-                          name="email"
-                          type="email"
-                          value={formData.email}
-                          onChange={handleInputChange}
+                             id={`dt_email ${index}`}                         
+                          name="dt_email"
+                          type="dt_email"
+                          value={item.dt_email}
+                          onChange={(e) =>
+                            handleInputChange1(e, index)
+                          }
                           placeholder="Email"
                           className="form-control"
                         />
-                        {errors.email && (
-                          <div className="text-danger">{errors.email}</div>
-                        )}
+                        {/* {errors.dt_email && (
+                          <div className="text-danger">{errors.dt_email}</div>
+                        )} */}
                       </div>
                     </div>
-                    
-                    <h3> Details Of Intitutes 
-                    <span>
-                                <button style={{ backgroundColor: 'blue' }} className="m-2">+</button>
-                                </span>
+                        </div> 
+                        </div>
+                    ))}
+                           {/* Details of Trustee end  */}
 
 
-                    </h3>
-
+                           {/* Details of Institutes start  */}                                                  
+                        {dividendArr1.map((item, index) =>(
+                          <div className="" key={index}> 
+                            <h3>                         
+                                { index === 0 && "Details Of Institutes" }   <span>  <button
+                                          type="button"
+                                          className={`add-button  ${
+                                            (index === 0 && "d-none") || ""
+                                          }`}
+                                          onClick={() => handleRemove1(index)}
+                                          style={{ backgroundColor: 'blue' }}                                          
+                                        >
+                                          -
+                                        </button>
+                                        {index === 0 && (
+                                          <button
+                                            type="button"
+                                            className=""
+                                            onClick={handleAdd1}
+                                            style={{ backgroundColor: 'blue' }}
+                                          >
+                                            +
+                                          </button>
+                                        )}</span>
+                                        
+                                </h3>                     
+                        <div className="row">
                     <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
                       <div className="mb-3">
                         <label
@@ -1000,20 +1199,22 @@ const StudentLoan = () => {
                        Name Of Institutes
                         </label>
                         <input
-                          id="name_institue"
+                             id={`name_institue ${index}`}  
                           name="name_institue"
                           type="text"
-                          value={formData.name_institue}
-                          onChange={handleInputChange}
+                          value={item.name_institue}
+                          onChange={(e) =>
+                            handleInputChange2(e, index)
+                          }
+                          disabled={textDisabld}
                           placeholder="Name Of Institutes"
                           className="form-control"
                         />
-                        {errors.name_institue && (
+                        {/* {errors.name_institue && (
                           <div className="text-danger">{errors.name_institue}</div>
-                        )}
+                        )} */}
                       </div>
-                    </div>
-                    {/* Text input*/}
+                    </div>              
                     <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
                       <div className="mb-3">
                         <label
@@ -1023,20 +1224,22 @@ const StudentLoan = () => {
                     Course / Faculty
                         </label>
                         <input
-                          id="course_faculty"
+                         id={`course_faculty ${index}`} 
                           name="course_faculty"
                           type="text"
-                          value={formData.course_faculty}
-                          onChange={handleInputChange}
+                          value={item.course_faculty}
+                          onChange={(e) =>
+                            handleInputChange2(e, index)
+                          }
+                          disabled={textDisabld}
                           placeholder="  Course and Faculty"
                           className="form-control"
                         />
-                        {errors.course_faculty && (
+                        {/* {errors.course_faculty && (
                           <div className="text-danger">{errors.course_faculty}</div>
-                        )}
+                        )} */}
                       </div>
-                    </div>
-                    {/* Text input*/}
+                    </div>              
                     <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
                       <div className="mb-3">
                         <label
@@ -1046,22 +1249,24 @@ const StudentLoan = () => {
                         Approved By
                         </label>
                         <input
-                          id="approved_by"
+                          id={`approved_by ${index}`} 
                           name="approved_by"
                           type="text"
-                          value={formData.approved_by}
-                          onChange={handleInputChange}
+                          value={item.approved_by}
+                          onChange={(e) =>
+                            handleInputChange2(e, index)
+                          }
+                          disabled={textDisabld}
                           placeholder="Approved By"
                           className="form-control"
                         />
-                        {errors.approved_by && (
+                        {/* {errors.approved_by && (
                           <div className="text-danger">
                             {errors.approved_by}
                           </div>
-                        )}
+                        )} */}
                       </div>
                     </div>
-
                     <div className="col-xl-6 col-lg-4 col-md-12 col-sm-12 col-12">
                       <div className="mb-3">
                         <label
@@ -1071,20 +1276,22 @@ const StudentLoan = () => {
                           Seats
                         </label>
                         <input
-                          id="seats"
+                           id={`seats ${index}`} 
                           name="seats"
                           type="text"
-                          value={formData.seats}
-                          onChange={handleInputChange}
+                          value={item.seats}
+                          onChange={(e) =>
+                            handleInputChange2(e, index)
+                          }
+                          disabled={textDisabld}
                           placeholder="Seats"
                           className="form-control"
                         />
-                        {errors.seats && (
+                        {/* {errors.seats && (
                           <div className="text-danger">{errors.seats}</div>
-                        )}
+                        )} */}
                       </div>
                     </div>
-
                     <div className="col-xl-6 col-lg-4 col-md-12 col-sm-12 col-12">
                       <div className="mb-3">
                         <label
@@ -1094,29 +1301,56 @@ const StudentLoan = () => {
                           Per year Fees
                         </label>
                         <input
-                          id="per_year_fess"
+                          id={`per_year_fess ${index}`} 
                           name="per_year_fess"
                           type="text"
-                          value={formData.per_year_fess}
-                          onChange={handleInputChange}
+                          value={item.per_year_fess}
+                          onChange={(e) =>
+                            handleInputChange2(e, index)
+                          }
+                          disabled={textDisabld}
                           placeholder="  Per year Fees"
                           className="form-control"
                         />
-                        {errors.per_year_fess && (
+                        {/* {errors.per_year_fess && (
                           <div className="text-danger">{errors.per_year_fess}</div>
-                        )}
+                        )} */}
                       </div>
                     </div>
-                    {/* Text input*/}
-                  
-                    <h3>Details Of Student 
-                    <span>
-                                <button style={{ backgroundColor: 'blue' }} className="m-2">+</button>
-                                </span>
+                       </div>
+                       </div>
+                         ))}
+                           {/* Details of Institutes End  */}                            
+                 
 
-                    </h3>
-
-                    <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
+                           {/* Details Of Student start  */}  
+                          {dividendArr2.map((item, index)=>(
+                            <div className="" key={index}>
+                                <h3>                         
+                                { index === 0 && "Details Of Student" }   <span>  <button
+                                          type="button"
+                                          className={`add-button  ${
+                                            (index === 0 && "d-none") || ""
+                                          }`}
+                                          onClick={() => handleRemove2(index)}
+                                          style={{ backgroundColor: 'blue' }}                                          
+                                        >
+                                          -
+                                        </button>
+                                        {index === 0 && (
+                                          <button
+                                            type="button"
+                                            className=""
+                                            onClick={handleAdd2}
+                                            style={{ backgroundColor: 'blue' }}
+                                          >
+                                            +
+                                          </button>
+                                        )}</span>
+                                        
+                                </h3>
+                               <div className="row">    
+                     <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
                       <div className="mb-3">
                         <label
                           className="sr-only form-label mb-0"
@@ -1125,21 +1359,23 @@ const StudentLoan = () => {
                        Name Of Institutes
                         </label>
                         <input
-                          id="name_of_inst"
+                        id={`name_of_inst ${index}`} 
                           name="name_of_inst"
                           type="text"
-                          value={formData.name_of_inst}
-                          onChange={handleInputChange}
+                          value={item.name_of_inst}
+                          onChange={(e) =>
+                            handleInputChange3(e, index)
+                          }
+                          disabled={textDisabld}
                           placeholder="Name Of Institutes"
                           className="form-control"
                         />
-                        {errors.name_of_inst && (
+                        {/* {errors.name_of_inst && (
                           <div className="text-danger">{errors.name_of_inst}</div>
-                        )}
+                        )} */}
                       </div>
-                    </div>
-                    {/* Text input*/}
-                    <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
+                    </div>              
+                     <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
                       <div className="mb-3">
                         <label
                           className="sr-only form-label mb-0"
@@ -1148,20 +1384,22 @@ const StudentLoan = () => {
                     Course / Faculty
                         </label>
                         <input
-                          id="course_faculty_one"
+                        id={`course_faculty_one ${index}`} 
                           name="course_faculty_one"
                           type="text"
-                          value={formData.course_faculty_one}
-                          onChange={handleInputChange}
+                          value={item.course_faculty_one}
+                          onChange={(e) =>
+                            handleInputChange3(e, index)
+                          }
+                          disabled={textDisabld}
                           placeholder="  Course and Faculty"
                           className="form-control"
                         />
-                        {errors.course_faculty_one && (
+                        {/* {errors.course_faculty_one && (
                           <div className="text-danger">{errors.course_faculty_one}</div>
-                        )}
+                        )} */}
                       </div>
-                    </div>
-                    {/* Text input*/}
+                     </div>             
                     <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
                       <div className="mb-3">
                         <label
@@ -1171,22 +1409,24 @@ const StudentLoan = () => {
                         Approved By
                         </label>
                         <input
-                          id="approved_bye_one"
+                       id={`approved_bye_one ${index}`} 
                           name="approved_bye_one"
                           type="text"
-                          value={formData.approved_bye_one}
-                          onChange={handleInputChange}
+                          value={item.approved_bye_one}
+                          onChange={(e) =>
+                            handleInputChange3(e, index)
+                          }
+                          disabled={textDisabld}
                           placeholder="Approved By"
                           className="form-control"
                         />
-                        {errors.approved_bye_one && (
+                        {/* {errors.approved_bye_one && (
                           <div className="text-danger">
                             {errors.approved_bye_one}
                           </div>
-                        )}
+                        )} */}
                       </div>
                     </div>
-
                     <div className="col-xl-6 col-lg-4 col-md-12 col-sm-12 col-12">
                       <div className="mb-3">
                         <label
@@ -1196,20 +1436,22 @@ const StudentLoan = () => {
                           Seats
                         </label>
                         <input
-                          id="seats_one"
+                        id={`seats_one ${index}`} 
                           name="seats_one"
                           type="text"
-                          value={formData.seats_one}
-                          onChange={handleInputChange}
+                          value={item.seats_one}
+                          onChange={(e) =>
+                            handleInputChange3(e, index)
+                          }
+                          disabled={textDisabld}
                           placeholder="Seats"
                           className="form-control"
                         />
-                        {errors.seats_one && (
+                        {/* {errors.seats_one && (
                           <div className="text-danger">{errors.seats_one}</div>
-                        )}
+                        )} */}
                       </div>
                     </div>
-
                     <div className="col-xl-6 col-lg-4 col-md-12 col-sm-12 col-12">
                       <div className="mb-3">
                         <label
@@ -1219,28 +1461,54 @@ const StudentLoan = () => {
                           Per year Fees
                         </label>
                         <input
-                          id="per_year_fee_one"
+                          id={`per_year_fee_one ${index}`}
                           name="per_year_fee_one"
                           type="text"
-                          value={formData.per_year_fee_one}
-                          onChange={handleInputChange}
+                          value={item.per_year_fee_one}
+                          onChange={(e) =>
+                            handleInputChange3(e, index)
+                          }
+                          disabled={textDisabld}
                           placeholder="  Per year Fees"
                           className="form-control"
                         />
-                        {errors.per_year_fee_one && (
+                        {/* {errors.per_year_fee_one && (
                           <div className="text-danger">{errors.per_year_fee_one}</div>
-                        )}
+                        )} */}
                       </div>
                     </div>
-                    {/* Text input*/}
-
-
-                    <h3> Details Of Student in Hostel
-                    <span>
-                                <button style={{ backgroundColor: 'blue' }} className="m-2">+</button>
-                                </span>
-                       </h3>
-
+                             </div> 
+                             </div> 
+                          ))}                    
+                          {/* Details Of Student End  */}  
+                          
+                               {/* Details Of Student  Hotel start   */}                             
+                       {dividendArr3.map((item, index)=>(
+                        <div className="" key={index}>
+                                         <h3>                         
+                                { index === 0 && "Details Of Student  Hotel" }   <span>  <button
+                                          type="button"
+                                          className={`add-button  ${
+                                            (index === 0 && "d-none") || ""
+                                          }`}
+                                          onClick={() => handleRemove3(index)}
+                                          style={{ backgroundColor: 'blue' }}                                          
+                                        >
+                                          -
+                                        </button>
+                                        {index === 0 && (
+                                          <button
+                                            type="button"
+                                            className=""
+                                            onClick={handleAdd3}
+                                            style={{ backgroundColor: 'blue' }}
+                                          >
+                                            +
+                                          </button>
+                                        )}</span>
+                                        
+                                </h3>
+                        <div className="row">
                     <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
                       <div className="mb-3">
                         <label
@@ -1250,20 +1518,22 @@ const StudentLoan = () => {
                        Name Of Institutes
                         </label>
                         <input
-                          id="institutes_host"
+                         id={`institutes_host ${index}`}
                           name="institutes_host"
                           type="text"
-                          value={formData.institutes_host}
-                          onChange={handleInputChange}
+                          value={item.institutes_host}
+                          onChange={(e) =>
+                            handleInputChange4(e, index)
+                          }
+                          disabled={textDisabld}
                           placeholder="Name Of Institutes"
                           className="form-control"
                         />
-                        {errors.institutes_host && (
+                        {/* {errors.institutes_host && (
                           <div className="text-danger">{errors.institutes_host}</div>
-                        )}
+                        )} */}
                       </div>
-                    </div>
-                    {/* Text input*/}
+                    </div>              
                     <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
                       <div className="mb-3">
                         <label
@@ -1273,20 +1543,22 @@ const StudentLoan = () => {
                     Course / Faculty
                         </label>
                         <input
-                          id="course_faculty_two"
+                         id={`course_faculty_two ${index}`}
                           name="course_faculty_two"
                           type="text"
-                          value={formData.course_faculty_two}
-                          onChange={handleInputChange}
+                          value={item.course_faculty_two}
+                          onChange={(e) =>
+                            handleInputChange4(e, index)
+                          }
+                          disabled={textDisabld}
                           placeholder="  Course and Faculty"
                           className="form-control"
                         />
-                        {errors.course_faculty_two && (
+                        {/* {errors.course_faculty_two && (
                           <div className="text-danger">{errors.course_faculty_two}</div>
-                        )}
+                        )} */}
                       </div>
-                    </div>
-                    {/* Text input*/}
+                    </div>              
                     <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
                       <div className="mb-3">
                         <label
@@ -1296,22 +1568,24 @@ const StudentLoan = () => {
                         Approved By
                         </label>
                         <input
-                          id="approved_two"
+                         id={`approved_two ${index}`}
                           name="approved_two"
                           type="text"
-                          value={formData.approved_two}
-                          onChange={handleInputChange}
+                          value={item.approved_two}
+                          onChange={(e) =>
+                            handleInputChange4(e, index)
+                          }
+                          disabled={textDisabld}
                           placeholder="Approved By"
                           className="form-control"
                         />
-                        {errors.approved_two && (
+                        {/* {errors.approved_two && (
                           <div className="text-danger">
                             {errors.approved_two}
                           </div>
-                        )}
+                        )} */}
                       </div>
                     </div>
-
                     <div className="col-xl-6 col-lg-4 col-md-12 col-sm-12 col-12">
                       <div className="mb-3">
                         <label
@@ -1321,20 +1595,22 @@ const StudentLoan = () => {
                           Seats
                         </label>
                         <input
-                          id="seats_two"
+                          id={`seats_two ${index}`}
                           name="seats_two"
                           type="text"
-                          value={formData.seats_two}
-                          onChange={handleInputChange}
+                          value={item.seats_two}
+                          onChange={(e) =>
+                            handleInputChange4(e, index)
+                          }
+                          disabled={textDisabld}
                           placeholder="Seats"
                           className="form-control"
                         />
-                        {errors.seats_two && (
+                        {/* {errors.seats_two && (
                           <div className="text-danger">{errors.seats_two}</div>
-                        )}
+                        )} */}
                       </div>
                     </div>
-
                     <div className="col-xl-6 col-lg-4 col-md-12 col-sm-12 col-12">
                       <div className="mb-3">
                         <label
@@ -1344,20 +1620,28 @@ const StudentLoan = () => {
                           Per year Fees
                         </label>
                         <input
-                          id="per_year_fees_hostel"
+                         id={`per_year_fees_hostel ${index}`}
                           name="per_year_fees_hostel"
                           type="text"
-                          value={formData.per_year_fees_hostel}
-                          onChange={handleInputChange}
+                          value={item.per_year_fees_hostel}
+                          onChange={(e) =>
+                            handleInputChange4(e, index)
+                          }
+                          disabled={textDisabld}
                           placeholder="  Per year Fees"
                           className="form-control"
                         />
-                        {errors.per_year_fees_hostel && (
+                        {/* {errors.per_year_fees_hostel && (
                           <div className="text-danger">{errors.per_year_fees_hostel}</div>
-                        )}
+                        )} */}
                       </div>
                     </div>
-                    {/* Text input*/}
+                    </div>
+                    </div>
+                    ))} 
+
+                        {/* Details Of Student  Hotel End    */}
+
                    <h3>Annual Fees Collection </h3>
 
                     <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">

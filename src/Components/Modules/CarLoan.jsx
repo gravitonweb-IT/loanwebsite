@@ -76,6 +76,9 @@ const CarLone = () => {
       },
     ]);
   };
+
+
+
   const handleAdd1 = () => {
     setDividendArr1([
       ...dividendArr1,
@@ -134,6 +137,7 @@ const CarLone = () => {
     list[index][name] = value;
     setDividendArr(list);
   };
+  
   const handleInputChange2 = (e, index) => {
     const { name, value } = e.target;
     console.log("value", e.target.value);
@@ -1284,11 +1288,7 @@ const CarLone = () => {
                           </div>
                            )) }          
                   {/* Loan  End  */}
-                  
-
                     <h3>Co-Applicant Details </h3>
-
-
                     <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
                       <div className="mb-3">
                         <label
@@ -1572,10 +1572,6 @@ const CarLone = () => {
                               </div>
                                 ))}
                       {/* Bank Details End  */}
-
-
-
-
                     {/* Loan Repyment Details stat */}
                           
                     {dividendArr3.map((item, index) => (
@@ -1877,9 +1873,9 @@ const CarLone = () => {
                            </div>
                               
                               </div>
-                                ))}
-                                 
+                                ))}                                
                      {/* Loan Repyment Details End */}
+
                     <h3>Details of Profession </h3>
 
                     <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
@@ -1992,10 +1988,7 @@ const CarLone = () => {
                         )}
                       </div>
                     </div>
-
                     {/* Button */}
-
-
                     <div className=" col-lg-12 col-md-12 col-sm-12 col-12">
                       <button
                         onClick={handleClick}

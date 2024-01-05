@@ -1589,12 +1589,6 @@ const ProfessionalLoan = () => {
                               </div>
                                 ))}
                       {/* Bank Details End  */}
-
-
-
-
-
-
                     {/* Loan Repyment Details stat */}
                           
                            {dividendArr3.map((item, index) => (
@@ -1898,10 +1892,7 @@ const ProfessionalLoan = () => {
                               </div>
                                 ))}
                                  
-                     {/* Loan Repyment Details End */}
-                           
-
-
+                     {/* Loan Repyment Details End */}                        
                     <h3>Details of Profession </h3>
 
                     <div className="col-xl-3 col-lg-2 col-md-12 col-sm-12 col-12">
@@ -2034,7 +2025,6 @@ const ProfessionalLoan = () => {
             </div>
           </div>
         </section>
-
 
       </main>
     </>
