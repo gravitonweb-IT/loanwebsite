@@ -34,7 +34,7 @@ const HomeLoan = () => {
     progress: undefined,
   };
 
-  
+
   const [textDisabld, setTextDisabld] = useState(false);
 
   const [dividendArr, setDividendArr] = useState([
@@ -349,6 +349,7 @@ const HomeLoan = () => {
       setDividendArr6(listArr);
     }
   };
+
 
   const [selectedLanguage, setSelectedLanguage] = useState("");
 
@@ -913,11 +914,10 @@ const HomeLoan = () => {
                         <div>
                           {/* slider-captions */}
                           <h1 className="display-2 text-white fw-bold">
-                            Hassle free Small Home loan up to &#x20B9;200000.00
+                            Hassle free Small Home loan up to &#x20B9; ₹20,00,000.00
                           </h1>
                           <p className="d-none d-xl-block d-lg-block d-sm-block text-white mb-4">
-                            Education Loan From Avanse At An Attractive Rate Of
-                            Interest. Apply Now!
+                          Home Loan From JoyoMoney Platform At An Attractive Rate Of Interest. Apply Now!
                           </p>
 
                           {/* <span className="badge bg-success ms-md-3">
@@ -938,10 +938,10 @@ const HomeLoan = () => {
                       <div className="col-xl-9 col-md-12 col-sm-12 col-12">
                         <div>
                           <h1 className="display-2 text-white fw-bold">
-                            The key to business growth with Borrow Theme{" "}
+                          The key to business growth with JoyoMoney Theme
                           </h1>
                           <p className=" d-none d-xl-block d-lg-block d-sm-block text-white mb-4">
-                            The low rate you need for the need you want! Call
+                          The flexibility in loan you need for the need you want!
                             <strong>02269620449</strong>
                           </p>
 
@@ -964,12 +964,11 @@ const HomeLoan = () => {
                         <div>
                           {/* slider-captions */}
                           <h1 className="display-2 text-white fw-bold">
-                            Looking to set up or expand your business?{" "}
+                            Looking to set up or expand your business?
                           </h1>
                           <p className=" d-none d-xl-block d-lg-block d-sm-block text-white mb-4">
-                            {" "}
-                            Award winning car loans with low fixed rates and no
-                            ongoing fees.
+                           
+                            Online, Ontime, Onsite Loan for your business growth.
                           </p>
 
                           {/* <span className="badge bg-success ms-md-3">
@@ -1063,10 +1062,10 @@ const HomeLoan = () => {
                   >
                     <h2>About Home Loan</h2>
                     <p className="lead">
-                      To make your home loan journey a smooth sail, in this
-                      article we will help you to know eligibility criteria,
-                      rates of interest, process, necessary documents,
-                      comparison and transfer for lowest rates.
+                    A home loan in India is a financial product provided by banks and financial
+                     institutions to individuals looking to purchase or construct a residential
+                     property. These loans are a popular means for individuals to fulfill their dream of owning a home, as they allow 
+                     borrowers to acquire funds to buy a house and repay the amount over an extended period.
                     </p>
                     <div className="row">
                       <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
@@ -1092,6 +1091,70 @@ const HomeLoan = () => {
                       nequeuisque lacus mi tesimly diummy cintenbt mpus nec
                       purus vitae tempor placerat leo.{" "}
                     </p>
+
+                    
+                    <h2> Here are some key points about home loans in India:</h2>
+                    <h3>1.	Eligibility Criteria:</h3>
+                    <ul className="text-decoration: none;">
+                      <li>	Age: Typically, individuals between 18 and 70 years old are eligible for home loans.</li>
+                      <li>	Income: Lenders assess the borrower's income, employment stability, and repayment capacity.</li>
+                      <li>	Credit Score: A good credit score enhances the chances of loan approval.</li>
+                    </ul>
+                    <h3>2.	Loan Amount:</h3>
+                    <ul className="text-decoration: none;">
+                      <li>		The loan amount depends on factors like the applicant's income, the property's cost, and the loan-to-value (LTV) ratio.</li>
+                      <li>	LTV ratio is the percentage of the property's value that the lender is willing to finance. The borrower needs to fund the remaining amount through their savings</li>
+
+                    </ul>                   
+                    <h3>3.	Interest Rates:</h3>
+                    <ul className="text-decoration: none;">
+                      <li>	Home loan interest rates can be fixed or floating.</li>
+                      <li>	Fixed rates remain constant throughout the loan tenure, while floating rates change based on market conditions.</li>                
+                    </ul>
+                    <h3>4.	Loan Tenure:</h3>
+                    <ul className="text-decoration: none;">
+                      <li>	Home loans have a maximum tenure of up to 30 years, allowing borrowers to repay the amount in equated monthly installments (EMIs).</li>
+                    </ul>
+
+                    <h3>5.	Types of Home Loans:</h3>
+                    <ul className="text-decoration: none;">
+                      <li>	Purchase Loan: For buying a new or resale property.</li>
+                      <li>	Construction Loan: For constructing a new house.</li>
+                      <li>	Home Improvement Loan: For renovating or improving an existing property.</li>
+                      <li>	Balance Transfer: Transferring an existing home loan to another lender for better terms.</li>                
+                    </ul>
+
+                    <h3>6.	Tax Benefits:</h3>
+                    <ul className="text-decoration: none;">
+                      <li>	Borrowers can avail tax benefits on the principal and interest repaid on home loans under sections 80C and 24(b) of the Income Tax Act, respectively</li>
+                    </ul>
+
+                    <h3>7.	Documents Required:</h3>
+                    <ul className="text-decoration: none;">
+                      <li>KYC documents</li>
+                      <li>Income proof</li>
+                      <li>Property documents</li>
+                      <li>	Bank statements</li>
+                      <li>Employment details</li>
+
+                    </ul>
+                    <h3>8.EMI Calculation:</h3>
+                    <ul className="text-decoration: none;">
+                      <li>	Equated Monthly Installments (EMIs) consist of both principal and interest components.</li>
+                      <li>	The EMI amount remains constant, but the interest and principal proportions change over time.</li>                
+                    </ul>
+
+                    <h3>9.	Prepayment and Foreclosure:</h3>
+                    <ul className="text-decoration: none;">
+                      <li>	Borrowers can prepay a part or the entire outstanding loan amount before the tenure ends.</li>
+                      <li>Some lenders may charge prepayment penalties, while others allow it without any charges</li>                
+                    </ul>
+                    <h3>10.	Insurance:</h3>
+                    <ul className="text-decoration: none;">
+                      <li>		Lenders may require borrowers to take home loan insurance to cover the outstanding amount in case of the borrower's demise.</li>
+                    </ul>
+                   
+
                   </div>
                   <div className="section-scroll" id="section-typeloan">
                     <div className="bg-light p-lg-10 p-5">
@@ -1112,7 +1175,7 @@ const HomeLoan = () => {
                             <h4>New Home Loan</h4>
                             <p className="mb-0">
                               New Home Loan at basic interest rates from
-                              Borrow-Loan Company. You can apply online and
+                              JoyoMoney Company. You can apply online and
                               check your eligibility and easy EMI. Fast Approval
                               for your new home loan.
                             </p>
@@ -1133,7 +1196,7 @@ const HomeLoan = () => {
                           <div className=" mb-5 mb-lg-0">
                             <h4>Land Purchase</h4>
                             <p className="mb-0">
-                              Borrow Loan offers home loan for land purchase to
+                              JoyoMoneyoffers home loan for land purchase to
                               make your dream home. You can compare home loan
                               rates with our compare loan table. Apply online
                               for Home Loan.
@@ -1197,9 +1260,8 @@ const HomeLoan = () => {
                             </div>
                             <h4>Salaried &amp; Self Employed</h4>
                             <p>
-                              Maecenas in ultricies sem. Nunc eget orci mi. Sed
-                              porttitor s, tellus fringilla condimentum eglis
-                              elit dictum cerat.{" "}
+                            Home loans are available for both salaried individuals and self-employed individuals in India. Salaried individuals typically need to provide proof of stable income, employment details, and salary slips
+                            It's essential for applicants to understand the documentation and eligibility criteria specific to their employment status when applying for a home loan.
                             </p>
                           </div>
                         </div>
@@ -1219,9 +1281,7 @@ const HomeLoan = () => {
                             </div>
                             <h4>Loan For Agriculturists</h4>
                             <p>
-                              Pellentesque mollis, diam a viverra luctus, nisl
-                              dui vehicula erat, id congue ante hicula tellus
-                              sit amet.
+                            Home loans tailored for agriculturists in India are designed to accommodate the unique financial circumstances of individuals involved in agriculture. These specialized loans take into consideration the variability of agricultural income and typically require proof of land ownership, crop details, and income generated from farming activities. Collateral, often in the form of agricultural land, may be necessary to secure the loan
                             </p>
                           </div>
                         </div>
@@ -1244,9 +1304,7 @@ const HomeLoan = () => {
                             </div>
                             <h4>Home Loans For NRIs</h4>
                             <p>
-                              Our loan rates and charges are very attractive
-                              lorem ipsums sitamet uerse ipsum.Curabitulectus
-                              mattis vitae.{" "}
+                            Home loans for Non-Resident Indians (NRIs) in India are financial products specifically designed to facilitate property purchase for individuals living abroad. NRIs can apply for home loans to buy residential properties in India for self-occupation or as an investment. Lenders typically consider factors such as the applicant's income, employment stability, and creditworthiness
                             </p>
                           </div>
                         </div>
@@ -1266,9 +1324,7 @@ const HomeLoan = () => {
                             </div>
                             <h4>No Morgage</h4>
                             <p>
-                              Nunc eget orci mi. Sed porttitor lacus quis
-                              scelerisque dignissim. Nullam bibendu msfeus,
-                              isapien dolor et dui.
+                            A Balance Transfer (BT) Top-Up in the context of a home loan refers to an additional loan amount that a borrower can opt for when transferring their existing home loan from one lender to another. This facility allows borrowers to consolidate their outstanding home loan balance with an additional amount required for various purposes such as home renovations, debt consolidation, or any other financial requirements. 
                             </p>
                           </div>
                         </div>
@@ -1740,7 +1796,9 @@ const HomeLoan = () => {
                                   </div>                             
                               </div>
                                 ))}
-                               {/* Bank Deatils start End  */}  
+                               {/* Bank Deatils start End  */} 
+
+
 
                                         {dividendArr1.map((item, index) => (
                                           <div className="" key={index}>
@@ -4020,6 +4078,8 @@ const HomeLoan = () => {
                               </div>
                         
                           </div>
+
+
                         </form>
                       </div>
                     </div>

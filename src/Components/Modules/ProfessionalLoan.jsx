@@ -543,35 +543,90 @@ const ProfessionalLoan = () => {
                   >
                  <h2>About Professional Loan</h2>
                     <p className="lead">
-                      To make your Professional Loan journey a smooth sail, in this
-                      article we will help you to know eligibility criteria,
-                      rates of interest, process, necessary documents,
-                      comparison and transfer for lowest rates.
+                    A professional loan is a financial product designed to meet the unique 
+                    financing needs of self-employed professionals and business owners, such as doctors, 
+                    lawyers, architects, and chartered accountants. These loans are tailored to assist professionals
+                     in expanding their practices, investing in equipment, managing working capital,
+                     or meeting other business-related requirements. Here are key features of professional loans:
                     </p>
-                    <div className="row">
-                      <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-                        <p>
-                          Vestibulum accumsan, diam vitae consectetur sodales
-                          sapien felis vestibulum purus,ac porttitor elit dolor
-                          venenatis Cras condimacilicelerisque orci nisi sit
-                          amet neque.{" "}
-                        </p>
-                      </div>
-                      <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-                        <p>
-                          Pellentesque mollis, diam a viverra luctus, nisl dui
-                          vehicula erat, id congue ante justo nec ante. Nullam
-                          vehicula tellus sit amet dolor tristique, faucibus
-                          rhoncus velit elementum.
-                        </p>
-                      </div>
-                    </div>
                     <hr />
-                    <p>
-                      Phasellus tellus nunc, sollicitudin quist amet it simple
-                      nequeuisque lacus mi tesimly diummy cintenbt mpus nec
-                      purus vitae tempor placerat leo.{" "}
-                    </p>
+
+                      <h3>1.	Targeted Professionals:</h3>
+                      <ul className="text-decoration: none;">
+                        <li>	Professional loans are typically offered to individuals who are
+                           self-employed and engaged in professions like medicine, law, architecture, and accountancy.</li>
+                      </ul>
+
+                      <h3>2.	Unsecured Nature:</h3>
+                      <ul className="text-decoration: none;">
+                        <li>Similar to personal loans, professional loans are often unsecured,
+                           meaning borrowers do not need to provide collateral to secure the loan.</li>
+                      </ul>
+
+
+                      <h3>3.	Loan Amount and Tenure:</h3>
+                      <ul className="text-decoration: none;">
+                        <li>	The loan amount and repayment tenure depend on the borrower's 
+                          professional qualifications, income, and the nature of the business.</li>
+                      </ul>
+                              
+                      <h3>4.	Usage Flexibility:</h3>
+                      <ul className="text-decoration: none;">
+                        <li>	Professionals can utilize the loan amount for various purposes, including expanding their practice,
+                           purchasing equipment, meeting working capital needs, or setting up a new office.</li>
+                      </ul>
+
+                      <h3>5.	Interest Rates:</h3>
+                      <ul className="text-decoration: none;">
+                        <li>	Interest rates on professional loans can be fixed or variable, and they are influenced by factors
+                          such as the borrower's creditworthiness and the lender's policies.</li>
+                      </ul>
+
+                      <h3>7.	Repayment Structure:</h3>
+                      <ul className="text-decoration: none;">
+                        <li>	Repayment structures for professional loans may include 
+                          flexible options such as equated monthly installments (EMIs) or structured repayment schedules.</li>
+                      </ul>
+
+                      <h3>8.	Documentation:</h3>
+                      <ul className="text-decoration: none;">
+                        <li>	Documentation requirements may include proof of professional qualification, business vintage,
+                           income tax returns, bank statements, and other relevant financial documents.</li>
+                      </ul>
+
+            
+                      <h3>9.	Credit Score Impact:</h3>
+                      <ul className="text-decoration: none;">
+                        <li>Timely repayment of a professional loan can positively
+                           impact the borrower's credit score, enhancing their creditworthiness for future financial transactions.</li>
+                      </ul>
+
+                      <h3>10.	Loan Eligibility Criteria:</h3>
+                      <ul className="text-decoration: none;">
+                        <li>	Lenders assess the borrower's eligibility based on factors
+                           such as professional qualifications, business stability, income, and credit history.</li>
+                      </ul>
+
+                      <h3>11.	Online Application:</h3>
+                      <ul className="text-decoration: none;">
+                        <li>Many lenders offer online application processes for professional loans,
+                           making it convenient for borrowers to apply and submit necessary documents digitally.</li>
+                      </ul>
+
+
+                      <h3>12.	Risk for Lenders:</h3>
+                      <ul className="text-decoration: none;">
+                        <li>	While professional loans may be unsecured, lenders assess the risk based on the borrower's 
+                          professional qualifications, business stability, and financial track record.</li>
+                      </ul>
+
+                      <p className="lead">
+
+                       It's crucial for professionals to carefully review the terms and conditions 
+                       of professional loan offerings from different financial institutions, compare interest rates,
+                        and ensure that the loan aligns with their specific business needs and financial goals.
+                       </p>
+
                   </div>
                 </div>
               </div>
@@ -610,10 +665,8 @@ const ProfessionalLoan = () => {
                     </div>
                     <div>
                       <h3>Quick approval </h3>
-                      <p className="mb-0">
-                        Duis massa duilobortis vitae elitet acurusa felis sed
-                        arcu sagittis commodo.
-                      </p>
+                     <p>
+"Experience swift financial solutions with our quick approval process".</p>
                     </div>
                   </div>
                 </div>
@@ -639,10 +692,11 @@ const ProfessionalLoan = () => {
                     </div>
                     <div>
                       <h3>Easy Loan Repayment</h3>
-                      <p className="mb-0">
-                        Pelle ntesque habitant morbi trist ique ses uada fa mes
-                        lacust lorem ispum feugiat metus.{" "}
+                      <p>
+                        
+"Simplify your financial journey with easy loan repayment."
                       </p>
+                     
                     </div>
                   </div>
                 </div>
@@ -664,10 +718,10 @@ const ProfessionalLoan = () => {
                     </div>
                     <div>
                       <h3>100% Transparency</h3>
-                      <p className="mb-0">
-                        Aenean quis neque ac enim ferm entum feugiaro masla ndit
-                        tellus non cursus varius.
+                      <p>
+                      "Embrace the confidence of 100% transparency". 
                       </p>
+                   
                     </div>
                   </div>
                 </div>

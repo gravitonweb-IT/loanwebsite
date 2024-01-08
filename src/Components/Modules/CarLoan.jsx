@@ -533,16 +533,13 @@ const CarLone = () => {
                 <img
                   src={Featureimg}
                   alt="Borrow - Loan Company Responsive Website Templates"
-                  className="img-fluid rounded-3 w-100 mb-2 mb-lg-0"
+                  className="img-fluid rounded-3 w-80 mb-2 mb-lg-0"
                 />
               </div>
               <div className="offset-lg-1 col-lg-5 col-md-12">
                 <div className="mb-8">
                   <h1>Reason to Choose us</h1>
-                  <p>
-                    We offer award-winning, low-rate car loans with no ongoing
-                    fees,saving our customers thousands of dollars.
-                  </p>
+                  
                 </div>
                 <div className="d-flex mb-3">
                   <div className="fs-3 text-primary">
@@ -550,11 +547,7 @@ const CarLone = () => {
                   </div>
                   <div className="ms-3">
                     <h3>Easy Loan Approvals</h3>
-                    <p>
-                      {" "}
-                      Cum sociis natoque penatibus et nis dis parturgnis dis
-                      parturient montes, nascetur ridiculus mus.
-                    </p>
+                    
                   </div>
                 </div>
                 <div className="d-flex mb-3">
@@ -563,10 +556,7 @@ const CarLone = () => {
                   </div>
                   <div className="ms-3">
                     <h3>Lowest Possible Prices</h3>
-                    <p>
-                      Lorem ipsum dolor sit amet, consng elit estibulum
-                      scelerisque imperdiet lacus.
-                    </p>
+                   
                   </div>
                 </div>
                 <div className="d-flex mb-3">
@@ -575,10 +565,7 @@ const CarLone = () => {
                   </div>
                   <div className="ms-3">
                     <h3>Hassle free</h3>
-                    <p>
-                      Suspendisse potenti. Nunc ut tellus iquam imperdiet lacus
-                      s aliquam felis tincidunt.{" "}
-                    </p>
+                   
                   </div>
                 </div>
                 <div className="d-flex">
@@ -587,10 +574,7 @@ const CarLone = () => {
                   </div>
                   <div className="ms-3">
                     <h3>Secure Loan Processs</h3>
-                    <p>
-                      Nulla ornare bibendum laoreteger tempus alesuada libero
-                      imperdie fermentum senc a ornare risus.
-                    </p>
+                   
                   </div>
                 </div>
               </div>
@@ -605,8 +589,7 @@ const CarLone = () => {
                 <div className="mb-8 text-center">
                   <h1>Customer Reviews</h1>
                   <p>
-                    Porttitor aceseu efficitur non lorem acese its do
-                    remmselorem ipusm dolro sit commodo.
+                  "Smooth and Hassle-Free Car Loan Experience"
                   </p>
                 </div>
               </div>

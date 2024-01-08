@@ -38,12 +38,12 @@ const Navbar = () => {
           </Link>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <li><a class="dropdown-item" href="/homeloan">Home Loan</a></li>
-            <li><a class="dropdown-item" href="/studentloan">Student Loan</a></li>
             <li><a class="dropdown-item" href="/carloan">Car Loan</a></li>
             <li><a class="dropdown-item" href="/businessloan">Business Loan</a></li>
             <li><a class="dropdown-item" href="/personalloan">Personal Loan</a></li>
             <li><a class="dropdown-item" href="/professionalloan">Professional Loan</a></li>
             <li><a class="dropdown-item" href="/goldloan1"> Gold Loan</a></li>
+            <li><a class="dropdown-item" href="/studentloan">School/College Loan</a></li>
 
             
 

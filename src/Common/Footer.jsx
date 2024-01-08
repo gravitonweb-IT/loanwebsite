@@ -64,10 +64,10 @@ const Footer = () => {
             <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
               <div className="text-white-50 mb-3">
                 <p>
-                  Our goal at JoyoMoney Loan Company is to provide access to
-                  personal loans and education loan, car loan, home loan at
-                  insight competitive interest rates . We are the loan provider,
-                  you can use our loan product.{"              "}
+                  Our goal at JoyoMoney is to provide access to Personal Loans
+                  and Education Loan, Car Loan, Home Loan at insight competitive
+                  interest rates . We are the financial service provider, you
+                  can use our Financiial product.
                 </p>
 
                 <div className="row mt-6">
@@ -87,8 +87,7 @@ const Footer = () => {
                       </svg>
 
                       <div className="ms-3">
-                        NO.45, VRAJBHOOMI B/H. POST OFFICE Bayad Bayad
-                        Sabarkantha Gujarat - 383325 India
+                      NO.45, VRAJBHOOMI B/H. POST OFFICE BAYAD - ARAVALLI - 383325 India
                       </div>
                     </div>
                   </div>
@@ -282,7 +281,7 @@ const Footer = () => {
           <div className="row">
             <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
               <p className="fs-6 text-muted">
-                {"              "}© Copyright 2022 | JoyoMoney Loan Company
+                        © Copyright 2023 | JoyoMoney 
                 {"            "}
                 {/* © Copyright 2023 | Joyoglobe Technologies LLP */}
               </p>

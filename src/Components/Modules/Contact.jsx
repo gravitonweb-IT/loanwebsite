@@ -272,11 +272,10 @@ const Contact = () => {
                               </svg>
                             </div>
                             <h4 className="text-uppercase text-primary fw-semi-bold mb-2">
-                              Branch Office
+                            HEAD OFFICE
                             </h4>
                             <p>
-                              NO.45, VRAJBHOOMI B/H. POST OFFICE Bayad Bayad
-                              Sabarkantha Gujarat - 383325 India
+                            NO.45, VRAJBHOOMI B/H. POST OFFICE BAYAD –ARAVALLI* GUJARAT - 383325 India
                             </p>
                           </div>
                         </div>

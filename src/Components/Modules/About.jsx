@@ -247,8 +247,7 @@ const About = () => {
                                 Apply For Loan
                               </h4>
                               <p className="mb-4">
-                                Looking to buy a car or home loan? then apply
-                                for loan now.
+                              Looking to for loan? Then apply for loan now.
                               </p>
                               <a
                                 href="/contact"

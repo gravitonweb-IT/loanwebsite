@@ -147,7 +147,7 @@ const Home = () => {
   console.log("datasdsa", testimonials);
   return (
     <>
-      {showPopup && (
+      {/* {showPopup && (
         <div className="">
           <div className="popup " onClick={closePopup}>
             <div
@@ -162,7 +162,27 @@ const Home = () => {
             </div>
           </div>
         </div>
-      )}
+      )} */}
+
+{showPopup && (
+  <div className="modal fade show d-flex align-items-center" style={{ display: 'block' }} tabIndex="-1" role="dialog">
+    <div className="modal-dialog modal-dialog-centered w-100 h-100"  role="document">
+      <div className="modal-content">
+        <div className="modal-header">
+          <h5 className="modal-title">API Data</h5>
+          <button type="button" className="close" onClick={closePopup}>
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div className="modal-body">
+          <pre>{JSON.stringify(apiData, null, 2)}</pre>
+        </div>
+      
+      </div>
+    </div>
+  </div>
+)}
+
 
       <main>
         <section>
