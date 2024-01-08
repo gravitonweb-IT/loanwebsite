@@ -303,11 +303,11 @@ const Blog = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                    {/* <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                       <div>
-                        {/* post-holder */}
+                     
                         <div className=" bg-light-primary mb-4 p-5">
-                          {/* quote-block */}
+                        
                           <h2>Quote of the day</h2>
                           <p className="text-uppercase fs-6 text-dark fw-bold mb-4">
                             Jan 28, 2020
@@ -320,12 +320,12 @@ const Blog = () => {
                             </p>
                           </blockquote>
                         </div>
-                        {/* /.quote-block */}
+                     
                       </div>
-                      {/* /.post-holder */}
-                    </div>
-                    <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
-                      {/*st-pagination*/}
+                  
+                    </div> */}
+                    {/* <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
+                  
                       <nav aria-label="...">
                         <ul className="pagination ">
                           <li className="page-item disabled">
@@ -351,8 +351,8 @@ const Blog = () => {
                           </li>
                         </ul>
                       </nav>
-                      {/*/.st-pagination*/}
-                    </div>
+                   
+                    </div> */}
                   </div>
                 </div>
                 <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
@@ -368,7 +368,7 @@ const Blog = () => {
                         />
                       </form>
                     </div>
-                    {/* /input-group */}
+                
                   </div>
                   <div className="card bg-light mb-4">
                     <div className="card-body">

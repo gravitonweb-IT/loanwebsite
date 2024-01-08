@@ -1685,11 +1685,11 @@ const HomeLoan = () => {
                                           className="form-control"
                                           required
                                         />
-                                        {errors.bank_name && (
+                                        {/* {errors.bank_name && (
                                           <div className="text-danger">
                                             {errors.bank_name}
                                           </div>
-                                        )}
+                                        )} */}
                                       
                                       </div>
                                     </div>
@@ -1729,11 +1729,11 @@ const HomeLoan = () => {
                                             DEMAT Account
                                           </option>
                                         </select>
-                                        {errors.account_type && (
+                                        {/* {errors.account_type && (
                                           <div className="text-danger">
                                             {errors.account_type}
                                           </div>
-                                        )}
+                                        )} */}
                                       </div>
                                     </div>
                                     <div className="col-xl-3 col-lg-4 col-md-12 col-sm-12 col-12">
@@ -1758,11 +1758,11 @@ const HomeLoan = () => {
                                           placeholder="Account Number"
                                           className="form-control"
                                         />
-                                        {errors.account_number && (
+                                        {/* {errors.account_number && (
                                           <div className="text-danger">
                                             {errors.account_number}
                                           </div>
-                                        )}
+                                        )} */}
                                       </div>
                                     </div>
                                     <div className="col-xl-3 col-lg-4 col-md-12 col-sm-12 col-12">
@@ -1782,7 +1782,7 @@ const HomeLoan = () => {
                                           onChange={(e) =>
                                             handleInputChange1(e, index)
                                           }               
-                                          placeholder="Remarks "
+                                          placeholder="Remark "
                                           className="form-control"
                                         />
                                         {/* {errors.fast_remark && (
@@ -1792,7 +1792,8 @@ const HomeLoan = () => {
                                         )} */}
                                       </div>
                                    
-                                    </div>                                  
+                                    </div>     
+                                                                 
                                   </div>                             
                               </div>
                                 ))}
