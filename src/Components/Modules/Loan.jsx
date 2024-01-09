@@ -34,12 +34,12 @@ const Loan = () => {
                 <div>
                   <ul className="nav nav-fill nav-pills-gray-fill">
                     <li className="nav-item ">
-                      <a href="contact-us.html" className="nav-link">
+                      <a href="/contact" className="nav-link">
                         Give me call back
                       </a>
                     </li>
                     <li className="nav-item">
-                      <a href="#!" className="nav-link">
+                      <a href="/contact" className="nav-link">
                         Emi Caculator
                       </a>
                     </li>
@@ -77,11 +77,11 @@ const Loan = () => {
                             </a>
                           </h3>
                           <p>
-                            Discover flexible car financing options for new or
-                            used cars, and specialty vehicles nsequat.
+                          
+"Unlock possibilities with our low-interest personal loans – your key to financial freedom and empowerment."
                           </p>
                           <a
-                            href="personal-loan.html"
+                            href="/personalloan"
                             className="btn-link border-bottom border-primary border-2 fw-bold fs-5 "
                           >
                             Read more
@@ -102,16 +102,15 @@ const Loan = () => {
                         </div>
                         <div className="card-body">
                           <h3>
-                            <a href="home-loan.html" className="text-inherit">
+                            <a href="/homeloan" className="text-inherit">
                               Home Loan
                             </a>
                           </h3>
                           <p>
-                            Lorem ipsum dolor sitamet secteture adipiscing eilit
-                            mauris diem lorem ipsum eipit.{" "}
+                          "Turn your homeownership dreams into reality with our competitive rates and hassle-free home loan solutions."
                           </p>
                           <a
-                            href="home-loan.html"
+                            href="/homeloan"
                             className="btn-link border-bottom border-primary border-2 fw-bold fs-5 "
                           >
                             Read more
@@ -140,11 +139,11 @@ const Loan = () => {
                             </a>
                           </h3>
                           <p>
-                            Serlaoreet necroin lobortis diam sit rem sitamet
-                            urna porttitor lorem amesroces anois.
+                           
+"Invest in your future with our tailored education loans, making academic aspirations achievable and stress-free."
                           </p>
                           <a
-                            href="education-loan.html"
+                            href="/educationloan"
                             className="btn-link border-bottom border-primary border-2 fw-bold fs-5 "
                           >
                             Read more
@@ -165,16 +164,16 @@ const Loan = () => {
                         </div>
                         <div className="card-body">
                           <h3>
-                            <a href="#!" className="text-inherit">
+                            <a href="" className="text-inherit">
                               Business Loan
                             </a>
                           </h3>
                           <p>
-                            Etiam at urna ultricies, dignissim nunc vel,
-                            consequat dui. Morbi a nibh vitae vestibulum.{" "}
+                      
+"Fuel your business growth with our strategic financing solutions, to reach new heights confidently."
                           </p>
                           <a
-                            href="#!"
+                            href="/businessloan"
                             className="btn-link border-bottom border-primary border-2 fw-bold fs-5 "
                           >
                             Read more
@@ -201,11 +200,11 @@ const Loan = () => {
                           </h3>
                           <p>
                             {" "}
-                            Aenean pulvinar interdum commodo. Nam lobortis
-                            auctor odio, in imperdiet elintum ellus.{" "}
+                           
+"Drive  car with our easy and affordable car loan options, making ownership effortless."
                           </p>
                           <a
-                            href="car-loan.html"
+                            href="/carloan"
                             className="btn-link border-bottom border-primary border-2 fw-bold fs-5 "
                           >
                             Read more
@@ -226,18 +225,17 @@ const Loan = () => {
                         </div>
                         <div className="card-body">
                           <h3>
-                            <a href="#!" className="text-inherit">
-                              Debt Consolidation
-                            </a>
+                            <a href="" className="text-inherit">
+                             School & College Loan
+                             </a>
                           </h3>
                           <p>
                             {" "}
-                            Mauris consequat fringilla tempus Etiam egestas
-                            luctus diam vitae lorem ortaqelementum augulla
-                            facilisi.{" "}
+                          
+"Invest in education with our specialized loans, shaping futures and fostering academic success."
                           </p>
                           <a
-                            href="#!"
+                            href="/goldloan1"
                             className="btn-link border-bottom border-primary border-2 fw-bold fs-5 "
                           >
                             Read more

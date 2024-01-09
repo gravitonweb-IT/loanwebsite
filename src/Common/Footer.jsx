@@ -290,11 +290,11 @@ const Footer = () => {
             <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 text-md-end">
               <p className="fs-6 text-muted">
                 {"              "}
-                <a className="text-inherit" href="#">
+                <a className="text-inherit" href="/termcondation">
                   Terms of use
                 </a>{" "}
                 |{"              "}
-                <a className="text-inherit" href="#">
+                <a className="text-inherit" href="/termcondation">
                   Privacy Policy
                 </a>
               </p>

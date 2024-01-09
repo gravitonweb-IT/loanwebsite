@@ -45,8 +45,6 @@ const Navbar = () => {
             <li><a class="dropdown-item" href="/goldloan1"> Gold Loan</a></li>
             <li><a class="dropdown-item" href="/studentloan">School/College Loan</a></li>
 
-            
-
 
           </ul>
         </li>
