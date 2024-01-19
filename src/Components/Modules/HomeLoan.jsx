@@ -769,126 +769,232 @@ const HomeLoan = () => {
 
   const handleClick = (e) => {
     e.preventDefault();
-    console.log(formData);
+    console.log('formData------>', formData);
+    console.log(selectedLanguage);
+    console.log(dividendArr6)
+    console.log(dividendArr5)
+    console.log(dividendArr4)
+    console.log(dividendArr3)
+    console.log(dividendArr2)
+    console.log(dividendArr1)
+    console.log(dividendArr)
 
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      password: "",
-      start_form: "",
-      salary: "",
-      loan_type: "",
-      user_loan_type: "",
-      employment_type: "null",
-      address: "",
-      business_address: "",
-      bank_name: "",
-      account_type: "",
-      account_number: "",
-      fast_remark:'',
-      branch_name: "",
-      aaplication_pan_no: "",
-      adhar_no: "",
-      dob: "",
-      voter_id: "",
-      three_month_salary: null,
-      itr: null,
-      income_proof: null,
-      registration_proof: null,
-      last_two_year_six: null,
-      last_two_year_as: null,
-      spouse_name: "",
-      bank_nbfc: "",
-      emi: "",
-      pandding: "",
-      co_name: "",
-      yearly_income: "",
-      monthly_salary: "",
-      co_monthly_salary: "",
-      co_yearly_income: "",
-      co_bank_name: "",
-      co_account_type: "",
-      co_account_number: "",
-      co_remark: "",
-      co_bank_nbfc: "",
-      co_loan_type: "",
-      co_emi: "",
-      co_start_form: "",
-      co_pandding: "",
-      co_aaplication_pan_no: "",
-      co_dob: "",
-      co_voter_id: "",
-      co_spouse_name: "",
-      co_spouse_dob: "",
-      co_three_month_salary: null,
-      co_last_two_year_six: null,
-      co_income_proof: null,
-      co_itr: null,
-      co_registration_proof: null,
-      co_last_two_year_as: null,
-      co_address: "",
-      co_business_address: "",
+    // setDividendArr([
+    //   {
+    //     bank_name: "",
+    //     account_type: "",
+    //     account_number: "",
+    //     guar_remark: " ",
+      
+    //   },
+    // ])
+    // setDividendArr1([
+    //   {
+    //     bank_nbfc:'',
+    //     loan_type:'',
+    //     emi:'',
+    //     start_form:'',
+    //     pandding:'',
+    //     aaplication_pan_no:'',
+    //     adhar_no:'',
+    //     dob:'',
+    //     voter_id:'',
+    //     spouse_name:'',
+    //     spouse_dob:'',
+      
+    //   },
+    // ])
 
-      guar_name: "",
-      guar_email: "",
-      gura_phone: "",
-      guar_monthly_salary: "",
-      guar_yearly_income: "",
-      guar_address: "",
-      guar_business_address: "",
-      guar_bank_name: "",
-      guar_account_type: "",
-      guar_account_number: "",
-      guar_remark: "",
-      guar_bank_nbfc: "",
-      guar_loan_type: "",
-      guar_emi: "",
-      guar_start_form: "",
-      guar_pandding: "",
-      guar_aaplication_pan_no: "",
-      guar_adhar_no: "",
-      guar_dob: "",
-      guar_voter_id: "",
-      guar_spouse_name: "",
-      guar_spouse_dob: "",
-      guar_three_month_salary: null,
-      guar_last_two_year_six: null,
-      guar_income_proof: null,
-      guar_itr: null,
-      guar_registration_proof: null,
-      guar_last_two_year_as: null,
-    });
-    if (validateForm()) {
-      console.log(formData);
-      // If form validation fails, do not submit
-      return;
-    }
+    // setDividendArr2([
+    //   {
+    //     co_name:'',
+    //     co_email:'',
+    //    co_phone:'',
+    //    monthly_salary:'',
+    //    yearly_income:'',
+    //    co_address:'',
+    //  co_business_address:'',
+  
+    //   },
+    // ])
 
-    const formBody = new FormData();
-    for (const key in formData) {
-      formBody.append(key, formData[key]);
-    }
-    formBody.append("reference_name", "null");
+    // setDividendArr3([
+    //   {
+    //     co_bank_nbfc:'',
+    //     co_loan_type:'',
+    //     co_emi:'',
+    //     co_start_form:'',
+    //     co_pandding:'',
+    //     co_aaplication_pan_no:'',
+    //     co_adhar_no:'',
+    //     co_dob:'',
+    //     co_voter_id:'',
+    //     co_spouse_name:'',
+    //     co_spouse_dob:'',
+  
+      
+    //   },
+    // ])
 
-    // Make the API call
-    fetch("http://localhost:3000/loan_applications", {
-      method: "POST",
-      body: formBody,
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        console.log("API Response:", data);
-        // Handle the API response as needed
-        alert("sussefully stored");
-        toast("Application Submitted", "success");
-        console.log("Form Data:", formData);
-      })
-      .catch((error) => {
-        console.error("Error:", error);
-        toast("Error", "success");
-        // Handle errors
-      });
+    // setDividendArr4([
+    //   {
+    //     guar_name:'',
+    //     guar_email:'',
+    //     gura_phone:'',
+    //     guar_monthly_salary:'',
+    //     guar_yearly_income:'',
+    //     guar_address:'',
+    //     guar_business_address:'',
+      
+    //   },
+    // ])
+
+    // setDividendArr5([
+    //   {
+    //     guar_bank_name:'',
+    //     guar_account_type:'',
+    //     guar_account_number:'',
+    //     guar_remark:'',
+      
+    //   },
+    // ])
+
+    // setDividendArr6([
+    //   {
+    //     guar_bank_nbfc:'',
+    //     guar_loan_type:'',
+    //     guar_emi:'',
+    //     guar_start_form:'',
+    //     guar_pandding:'',
+    //     guar_aaplication_pan_no:'',
+    //     guar_adhar_no:'',
+    //     guar_dob:'',
+    //     guar_voter_id:'',
+    //     guar_spouse_name:'',
+    //     guar_spouse_dob:'',
+      
+    //   },
+    // ]);
+
+    // setSelectedLanguage('')
+
+    // setFormData({
+    //   name: "",
+    //   email: "",
+    //   phone: "",
+    //   password: "",
+    //   start_form: "",
+    //   salary: "",
+    //   loan_type: "",
+    //   user_loan_type: "",
+    //   employment_type: "null",
+    //   address: "",
+    //   business_address: "",
+    //   bank_name: "",
+    //   account_type: "",
+    //   account_number: "",
+    //   fast_remark:'',
+    //   branch_name: "",
+    //   aaplication_pan_no: "",
+    //   adhar_no: "",
+    //   dob: "",
+    //   voter_id: "",
+    //   three_month_salary: null,
+    //   itr: null,
+    //   income_proof: null,
+    //   registration_proof: null,
+    //   last_two_year_six: null,
+    //   last_two_year_as: null,
+    //   spouse_name: "",
+    //   bank_nbfc: "",
+    //   emi: "",
+    //   pandding: "",
+    //   co_name: "",
+    //   yearly_income: "",
+    //   monthly_salary: "",
+    //   co_monthly_salary: "",
+    //   co_yearly_income: "",
+    //   co_bank_name: "",
+    //   co_account_type: "",
+    //   co_account_number: "",
+    //   co_remark: "",
+    //   co_bank_nbfc: "",
+    //   co_loan_type: "",
+    //   co_emi: "",
+    //   co_start_form: "",
+    //   co_pandding: "",
+    //   co_aaplication_pan_no: "",
+    //   co_dob: "",
+    //   co_voter_id: "",
+    //   co_spouse_name: "",
+    //   co_spouse_dob: "",
+    //   co_three_month_salary: null,
+    //   co_last_two_year_six: null,
+    //   co_income_proof: null,
+    //   co_itr: null,
+    //   co_registration_proof: null,
+    //   co_last_two_year_as: null,
+    //   co_address: "",
+    //   co_business_address: "",
+    //   guar_name: "",
+    //   guar_email: "",
+    //   gura_phone: "",
+    //   guar_monthly_salary: "",
+    //   guar_yearly_income: "",
+    //   guar_address: "",
+    //   guar_business_address: "",
+    //   guar_bank_name: "",
+    //   guar_account_type: "",
+    //   guar_account_number: "",
+    //   guar_remark: "",
+    //   guar_bank_nbfc: "",
+    //   guar_loan_type: "",
+    //   guar_emi: "",
+    //   guar_start_form: "",
+    //   guar_pandding: "",
+    //   guar_aaplication_pan_no: "",
+    //   guar_adhar_no: "",
+    //   guar_dob: "",
+    //   guar_voter_id: "",
+    //   guar_spouse_name: "",
+    //   guar_spouse_dob: "",
+    //   guar_three_month_salary: null,
+    //   guar_last_two_year_six: null,
+    //   guar_income_proof: null,
+    //   guar_itr: null,
+    //   guar_registration_proof: null,
+    //   guar_last_two_year_as: null,
+    // });
+  //   if (validateForm()) {
+  //     console.log(formData);
+  //     // If form validation fails, do not submit
+  //     return;
+  //   }
+
+  //   const formBody = new FormData();
+  //   for (const key in formData) {
+  //     formBody.append(key, formData[key]);
+  //   }
+  //   formBody.append("reference_name", "null");
+
+  //   // Make the API call
+  //   fetch("http://localhost:3000/loan_applications", {
+  //     method: "POST",
+  //     body: formBody,
+  //   })
+  //     .then((response) => response.json())
+  //     .then((data) => {
+  //       console.log("API Response:", data);
+  //       // Handle the API response as needed
+  //       alert("sussefully stored");
+  //       toast("Application Submitted", "success");
+  //       console.log("Form Data:", formData);
+  //     })
+  //     .catch((error) => {
+  //       console.error("Error:", error);
+  //       toast("Error", "success");
+  //       // Handle errors
+  //     });
   };
 
   return (

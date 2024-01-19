@@ -1,6 +1,8 @@
 
 import React, { useState } from 'react';
 import './admin.css'
+import UserDashboard from '../UserDashbord';
+import Sidebar from '../UserDashbord/Sidebar';
 
 
 const UserData = () => {
@@ -132,7 +134,8 @@ const UserData = () => {
   };
 
   return (
-    <section className='py-lg-16 py-10'>
+   <Sidebar>
+    <section className='py-5'>
     <div className='container'>
       <h2 className='heading'>User Data</h2>
       <div className="custom-cards">
@@ -149,6 +152,8 @@ const UserData = () => {
       )}
     </div>
     </section>
+    </Sidebar>
+   
   );
 };
 

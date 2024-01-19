@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Sidebar from "../UserDashbord/Sidebar";
 
 const Intrestrate = () => {
   const [formData, setFormData] = useState({
@@ -47,7 +48,8 @@ const Intrestrate = () => {
   };
   return (
     <>
-      <section className="py-lg-20 py-10">
+    <Sidebar>
+      <section className="">
         <div className="container">
           <h3 className=" py-4">Dyanmic Interest Rate Changes</h3>
           <form onSubmit={handleSubmit}>
@@ -173,6 +175,7 @@ const Intrestrate = () => {
           </div>
         </div>
       </section>
+      </Sidebar>
     </>
   );
 };

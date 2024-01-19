@@ -68,7 +68,7 @@ const ProfessionalLoan = () => {
       bank_name: "",
       account_type: "",
       account_number: "",
-       remark: " ",
+      remark: " ",
 
     },
   ]);
@@ -91,26 +91,26 @@ const ProfessionalLoan = () => {
 
   const [dividendArr2, setDividendArr2] = useState([
     {
-      co_bank_name: "",
-    co_account_type: "",
-    co_account_number: "",
-    co_remark: "",
+      dividendArr2co_bank_name: "",
+    dividendArr2co_account_type: "",
+    dividendArr2co_account_number: "",
+    dividendArr2co_remark: "",
 
     },
   ]);
 
   const [dividendArr3, setDividendArr3] = useState([
     {
-      co_pan_no: "",
-      co_adhar_no: "",
-      co_spouse_name: "",
-      co_loan_type: "",
-      co_spouse_dob: "",
-      co_dob: "",
-      co_voter_id: "",
-      co_bank_nbfc: "",
-      co_emi: "",
-      co_pandding: "",
+      dividendArr3co_pan_no: "",
+      dividendArr3co_adhar_no: "",
+      dividendArr3co_spouse_name: "",
+      dividendArr3co_loan_type: "",
+      dividendArr3co_spouse_dob: "",
+      dividendArr3co_dob: "",
+      dividendArr3co_voter_id: "",
+      dividendArr3co_bank_nbfc: "",
+      dividendArr3co_emi: "",
+      dividendArr3co_pandding: "",
     },
   ]);
 
@@ -445,60 +445,65 @@ const ProfessionalLoan = () => {
   const handleClick = (e) => {
     e.preventDefault();
     console.log(formData);
+    console.log(dividendArr);
+    console.log(dividendArr1);
+    console.log(dividendArr2);
+    console.log(dividendArr3);
 
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      salary: "",
-      address: "",
-      business_address: "",
-      bank_name: "",
-      account_type: "",
-      account_number: "",
-      remark: "",
-      pan_no: "",
-      adhar_no: "",
-      spouse_name: "",
-      loan_type: "",
-      spouse_dob: "",
-      dob: "",
-      voter_id: "",
-      bank_nbfc: "",
-      emi: "",
-      pandding: "",
-      user_loan_type: "",
-      three_month_salary: null,
-      itr: null,
-      income_proof: null,
-      registration_proof: null,
-    co_name: "",
-    co_email: "",
-    co_phone: "",
-    co_application_no: "",
-    co_salary: "",
-    co_loan_type: "",
-    co_user_loan_type: "",
-    co_spouse_name: "",
-    co_address: "",
-    co_business_address: "",
-    co_bank_name: "",
-    co_account_type: "",
-    co_account_number: "",
-    co_remark: "",
-    co_pan_no: "",
-    co_adhar_no: "",
-    co_dob: "",
-    co_voter_id: "",
-    co_bank_nbfc: "",
-    co_emi: "",
-    co_pandding: "",
-    });
-    if (validateForm()) {
-      console.log(formData);
-      // If form validation fails, do not submit
-      return;
-    }
+
+    // setFormData({
+    //   name: "",
+    //   email: "",
+    //   phone: "",
+    //   salary: "",
+    //   address: "",
+    //   business_address: "",
+    //   bank_name: "",
+    //   account_type: "",
+    //   account_number: "",
+    //   remark: "",
+    //   pan_no: "",
+    //   adhar_no: "",
+    //   spouse_name: "",
+    //   loan_type: "",
+    //   spouse_dob: "",
+    //   dob: "",
+    //   voter_id: "",
+    //   bank_nbfc: "",
+    //   emi: "",
+    //   pandding: "",
+    //   user_loan_type: "",
+    //   three_month_salary: null,
+    //   itr: null,
+    //   income_proof: null,
+    //   registration_proof: null,
+    // co_name: "",
+    // co_email: "",
+    // co_phone: "",
+    // co_application_no: "",
+    // co_salary: "",
+    // co_loan_type: "",
+    // co_user_loan_type: "",
+    // co_spouse_name: "",
+    // co_address: "",
+    // co_business_address: "",
+    // co_bank_name: "",
+    // co_account_type: "",
+    // co_account_number: "",
+    // co_remark: "",
+    // co_pan_no: "",
+    // co_adhar_no: "",
+    // co_dob: "",
+    // co_voter_id: "",
+    // co_bank_nbfc: "",
+    // co_emi: "",
+    // co_pandding: "",
+    // });
+    // if (validateForm()) {
+    //   console.log(formData);
+    //   // If form validation fails, do not submit
+    //   return;
+    // }
   };
 
   

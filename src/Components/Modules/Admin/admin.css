@@ -100,12 +100,10 @@ gap: 10px;
 
 /* PendingWork */
 
-.container {
-  padding: 20px;
-}
+
 
 .heading {
-  text-align: center;
+  text-align: left;
   color: #007bff;
   margin-bottom: 20px;
 }

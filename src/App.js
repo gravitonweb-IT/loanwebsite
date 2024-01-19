@@ -1,6 +1,7 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import "./assets/css/theme.min.css";
+import 'bootstrap-icons/font/bootstrap-icons.css';
 import "./assets/fonts/flat-font-icons/css/flaticon.css";
 import "./assets/fonts/fontello-icons/fontello.css";
 import "./assets/libs/bootstrap-icons/font/bootstrap-icons.css";
@@ -36,13 +37,18 @@ import Intrestrate from "./Components/Modules/Admin/Intrestrate";
 import Testmonial from "./Components/Modules/Admin/Testmonial";
 import GalleryImages from "./Components/Modules/Admin/GalleryImages";
 import BankForm from "./Components/Modules/UserDashbord/BankForm";
-import { Status } from "./Components/Modules/UserDashbord/Status";
+
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import ProfessionalLoan from "./Components/Modules/ProfessionalLoan";
 import GoldLoan1 from "./Components/Modules/GoldLoan1";
 
 import Buttone from "./Components/Modules/Buttone";
+import UserDashboard from "./Components/Modules/UserDashbord";
+import Status from "./Components/Modules/UserDashbord/Status";
+import SupportForm from "./Components/Modules/UserDashbord/SupportForm";
+import Sidebar from "./Components/Modules/UserDashbord/Sidebar";
+import HomeServices from "./Components/Modules/UserDashbord/HomeServices";
 
 function App() {
   return (
@@ -64,7 +70,7 @@ function App() {
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/career" element={<Career />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/userdashbord" element={<UserDashbord />} />
+        <Route path="/userdashbord" element={<UserDashboard />} />
         <Route path="/admin" element={<Admin />} />
         <Route path="/agent" element={<Agent />} />
 
@@ -81,6 +87,12 @@ function App() {
         <Route path="/galleryimages" element={<GalleryImages />} />
         <Route path="/bankform" element={<BankForm />} />
         <Route path="/status" element={<Status />} />
+        <Route path="/support" element={<SupportForm />} />
+        <Route path="/sidebar" element={<Sidebar />} />
+        <Route path="/homeservices" element={<HomeServices />} />
+
+
+
       
         <Route path="/professionalloan" element={<ProfessionalLoan/>}/>
         <Route path="/goldloan1" element={<GoldLoan1/>}/>

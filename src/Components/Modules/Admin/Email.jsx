@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./admin.css";
+import Sidebar from "../UserDashbord/Sidebar";
 
 const Email = () => {
   const [formData, setFormData] = useState({
@@ -22,7 +23,8 @@ const Email = () => {
   };
 
   return (
-    <section className="py-lg-16 py-10">
+    <Sidebar>
+    <section className="">
       <div className="container">
         <div className=" col-lg-5 offset-lg-2 col-lg-5 col-md-6 col-sm-12 col-12">
         <h2 className="text-center">Email Panel</h2>
@@ -34,7 +36,7 @@ const Email = () => {
                 name="email"
                 type="text"
            
-                className="form-control mb-2"
+                className="form-control border-primary mb-2"
                 value={formData.email}
                 onChange={handleInputChange}
                 required
@@ -46,7 +48,7 @@ const Email = () => {
                 type="text"
                 id="subject"
                 name="subject"
-            
+              className="border-primary"
                 value={formData.subject}
                 onChange={handleInputChange}
                 required
@@ -59,14 +61,14 @@ const Email = () => {
               <textarea
                 id="content"
                 name="content"
-            
+                className="border-primary"
                 value={formData.content}
                 onChange={handleInputChange}
                 required
               ></textarea>
 
             </div>
-            <button type="submit" className="btn btn-secondary">
+            <button type="submit" className="btn btn-success">
               Send Email
             </button>
           </form>
@@ -81,6 +83,7 @@ const Email = () => {
         </div>
       </div>
     </section>
+    </Sidebar>
   );
 };
 
